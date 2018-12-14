@@ -1,4 +1,5 @@
-<div style="text-align: center"> DYLAN LABATT RANDLE </div>
+<div style="text-align: center"> <strong> DYLAN LABATT RANDLE </strong> </div>
+
 <div style="text-align: center"> +1-647-641-1994 | dylanrandle@g.harvard.edu | dylanrandle.github.io </div>
 ------
 
