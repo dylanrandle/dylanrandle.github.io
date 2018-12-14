@@ -1,6 +1,6 @@
 <div style="text-align: center"> DYLAN LABATT RANDLE </div>
-------
 <div style="text-align: center"> +1-647-641-1994 | dylanrandle@g.harvard.edu | dylanrandle.github.io </div>
+------
 
 <div style="text-align: center"> EDUCATION </div>
 ------
@@ -31,19 +31,14 @@ and David Sondak
   classification from financial documents. Saved $1MM+ per year by decreasing labor costs and service times
   by orders of magnitude from previously human-based system. Grew machine learning team from 0 to 5 people.
   Used Python, Tensorflow, Keras, AWS, PostgresSQL, Ansible
-
 - Built data visualizations for company intranet using Javascript, Python, C3
-
 - Presented results and recommendations to management team; delivered introductory machine learning lecture
   to audience of 60+ people
 
-**BMO Capital Markets**
-
+**BMO Capital Markets**    
 *Financial Products Summer Analyst* &nbsp;&nbsp; | &nbsp;&nbsp; Summer 2014
-
 - Conducted analysis of various debt products (swaps, swaptions, ABS, MBS). Wrote algorithm in C# to
   analyze relationship between delta-hedging frequency and returns for Canadian swaptions
-
 - Reviewed pitches and compiled summaries of daily trading activity
 
 <div style="text-align: center"> RELEVANT PROJECTS </div>
@@ -63,8 +58,7 @@ and David Sondak
 <div style="text-align: center"> LEADERSHIP EXPERIENCE  </div>
 ---------
 
-**Taylor Statten Camps**
-
+**Taylor Statten Camps**    
 *Long Trip Counselor* &nbsp;&nbsp; | &nbsp;&nbsp; Summer 2015/16
 
 - Led 50-day and 36-day wilderness canoe trips through Northern Ontario and Minnesota. Planned route and
