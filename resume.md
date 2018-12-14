@@ -3,7 +3,7 @@
 <div style="text-align: center"> +1-647-641-1994 | dylanrandle@g.harvard.edu | dylanrandle.github.io </div>
 ------
 
-<div style="text-align: center"> EDUCATION </div>
+<div style="text-align: center"> <strong> EDUCATION </strong> </div>
 ------
 
 **Harvard University**      
@@ -17,7 +17,7 @@ Systems Development for Computational Science, Computational Science Seminar
 - Relevant coursework: Statistics and Machine Learning, Probability, Forecasting, Mathematical Programming,
 Nonlinear and Discrete Optimization, Stochastic Processes
 
-<div style="text-align: center"> RELEVANT EXPERIENCE </div>
+<div style="text-align: center"> <strong> RELEVANT EXPERIENCE </strong> </div>
 ---------
 
 **Institute for Applied Computational Science, Harvard University**    
@@ -42,7 +42,7 @@ and David Sondak
   analyze relationship between delta-hedging frequency and returns for Canadian swaptions
 - Reviewed pitches and compiled summaries of daily trading activity
 
-<div style="text-align: center"> RELEVANT PROJECTS </div>
+<div style="text-align: center"> <strong> RELEVANT PROJECTS </strong> </div>
 ---------
 
 **Twitter Troll Detection:** https://dylanrandle.github.io/troll_classification
@@ -56,7 +56,7 @@ and David Sondak
 - Built a Python package implementing automatic differentiation (forward and reverse mode) in NumPy.
   Includes gradient descent and Adam optimizers, with extensive documentation.
 
-<div style="text-align: center"> LEADERSHIP EXPERIENCE  </div>
+<div style="text-align: center"> <strong> LEADERSHIP EXPERIENCE </strong> </div>
 ---------
 
 **Taylor Statten Camps**    
@@ -66,7 +66,7 @@ and David Sondak
   food drops, navigated 2500km+ of rugged wilderness, and ensured safety of numerous groups of 7 teenage
   boys
 
-<div style="text-align: center"> SKILLS </div>
+<div style="text-align: center"> <strong> SKILLS </strong> </div>
 ---------
 
 - Proficient in Python (numpy, pandas, scipy, scikit-learn, pytorch, tensorflow, pymc3), SQL, Git; familiar
