@@ -8,14 +8,14 @@ Hello! Welcome to my personal website. Here I provide links to my [resume](https
 
 ## Projects
 
-- Twitter Troll Detection: https://dylanrandle.github.io/troll_classification
+- Twitter Troll Detection: [https://dylanrandle.github.io/troll_classification](https://dylanrandle.github.io/troll_classification)
 
-- Automatic Differentiation: https://github.com/dylanrandle/autograd
+- Automatic Differentiation: [https://github.com/dylanrandle/autograd](https://github.com/dylanrandle/autograd)
 
 ## Profile
 
-- LinkedIn: https://linkedin.com/in/dylanrandle/
+- LinkedIn: [https://linkedin.com/in/dylanrandle/](https://linkedin.com/in/dylanrandle/)
 
-- GitHub: https://github.com/dylanrandle
+- GitHub: [https://github.com/dylanrandle](https://github.com/dylanrandle)
 
-- Resume: https://dylanrandle.github.io/resume.html
+- Resume: [https://dylanrandle.github.io/resume.html](https://dylanrandle.github.io/resume.html)

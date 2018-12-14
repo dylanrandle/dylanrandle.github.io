@@ -1,6 +1,6 @@
 theme: jekyll-theme-primer
-title: Dylan Randle Homepage
-description: Starting point for all things Dylan
+title: Dylan Randle's Website
+description: Website containing personal information and projects
 baseurl:
 markdown: kramdown
 kramdown:
