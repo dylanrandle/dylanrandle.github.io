@@ -3,19 +3,16 @@ title: Resume
 nav_include: 1
 ---
 
-Dylan Labatt Randle
-===================
-
--------------------     ----------------------------
-35 Oxford St.              dylanrandle@g.harvard.edu
-Cambridge, MA                  dylanrandle.github.io
-USA                                  +1-647-641-1994
--------------------     ----------------------------
-
-**EDUCATION**
+**<div style="text-align: center"> DYLAN LABATT RANDLE </div>**
 ---------
 
-**Harvard University**									            		                                     Cambridge, MA
+<div style="text-align: center"> +1-647-641-1994 | dylanrandle@g.harvard.edu | dylanrandle.github.io </div>
+
+
+**<div style="text-align: center"> EDUCATION </div>**
+---------
+
+**Harvard University**
 
 *M.S. in Data Science*				                            		          	               Expected May 2020
 
@@ -29,8 +26,8 @@ Systems Development for Computational Science, Computational Science Seminar
 - Relevant coursework: Statistics and Machine Learning, Probability, Forecasting, Mathematical Programming,
 Nonlinear and Discrete Optimization, Stochastic Processes
 
-**RELEVANT EXPERIENCE**
------------------------
+**<div style="text-align: center"> RELEVANT EXPERIENCE </div>**
+---------
 
 **Institute for Applied Computational Science, Harvard University**						                Cambridge, MA
 
@@ -62,8 +59,8 @@ and David Sondak
 
 - Reviewed pitches and compiled summaries of daily trading activity
 
-**RELEVANT PROJECTS**
------------------------
+**<div style="text-align: center"> RELEVANT PROJECTS </div>**
+---------
 
 **Twitter Troll Detection:** https://dylanrandle.github.io/troll_classification
 
@@ -76,8 +73,8 @@ and David Sondak
 - Built a Python package implementing automatic differentiation (forward and reverse mode) in NumPy.
   Includes gradient descent and Adam optimizers, with extensive documentation.
 
-  **LEADERSHIP EXPERIENCE**
-  -------------------------
+**<div style="text-align: center"> LEADERSHIP EXPERIENCE  </div>**
+---------
 
 **Taylor Statten Camps**							                     			                     Algonquin Park, Canada
 
@@ -87,8 +84,8 @@ and David Sondak
   food drops, navigated 2500km+ of rugged wilderness, and ensured safety of numerous groups of 7 teenage
   boys
 
-  **SKILLS**
-  ----------
+  **<div style="text-align: center"> SKILLS </div>**
+  ---------
 
 - Proficient in Python (numpy, pandas, scipy, scikit-learn, pytorch, tensorflow, pymc3), SQL, Git; familiar
   with Javascript, C++, MATLAB, Latex
