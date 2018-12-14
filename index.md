@@ -8,7 +8,7 @@ Hello! Welcome to my personal website.
 
 ![headshot](pics/headshot.jpg)
 
-My name is Dylan Randle and I am currently studying for my masters in Data Science at Harvard University, in the school of
+My name is Dylan Randle and I am currently studying for my masters in Data Science at Harvard University, in the School of
 Engineering & Applied Sciences. This summer, I will be interning with Amazon Robotics, where I hope to learn about the use
 of data science to analyze and predict performance in Amazon's robotics-driven fulfillment centers, at massive scale. I
 am also conducting research in physics-aware machine learning methods with applications to turbulence modeling under the
