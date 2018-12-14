@@ -32,7 +32,8 @@ supervision of Pavlos Protopapas and David Sondak.
 
 ## Personal
 
-I am an avid guitar player and adventurous outdoorsman; in the future, I may post some interesting guitar and/or outdoors-
-related content here! For now, enjoy this stunning sunset picture from one of my favorite places: Camp Ahmek on Canoe Lake!
+I am an avid guitar player and adventurous outdoorsman; in the future, I may post some interesting guitar and/or
+outdoors-related content here! For now, enjoy this stunning sunset picture from one of my favorite places: Camp Ahmek
+on Canoe Lake!
 
 ![camp](pics/camp.jpg)
