@@ -3,11 +3,6 @@ title: Resume
 nav_include: 1
 ---
 
-## Contents
-{:.no_toc}
-*  
-{: toc}
-
 ## DYLAN LABATT RANDLE
 
 +1-647-641-1994 | dylanrandle@g.harvard.edu | dylanrandle.github.io
