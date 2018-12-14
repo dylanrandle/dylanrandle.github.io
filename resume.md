@@ -12,7 +12,7 @@
 Systems Development for Computational Science, Computational Science Seminar
 
 **University of California, Berkeley**      
-*B.S. in Industrial Engineering & Operations Research, GPA: 3.9/4.0 (High Honors)* &nbsp;&nbsp; | &nbsp;&nbsp; May 2016
+*B.S. in Industrial Engineering & Operations Research, High Honors* &nbsp;&nbsp; | &nbsp;&nbsp; May 2016
 
 - Relevant coursework: Statistics and Machine Learning, Probability, Forecasting, Mathematical Programming,
 Nonlinear and Discrete Optimization, Stochastic Processes
