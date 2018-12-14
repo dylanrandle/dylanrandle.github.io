@@ -3,25 +3,22 @@ title: Resume
 nav_include: 1
 ---
 
-**<div style="text-align: center"> DYLAN LABATT RANDLE </div>**
+<div style="text-align: center"> DYLAN LABATT RANDLE </div>
 ---------
 
 <div style="text-align: center"> +1-647-641-1994 | dylanrandle@g.harvard.edu | dylanrandle.github.io </div>
 
 
-**<div style="text-align: center"> EDUCATION </div>**
+** <div style="text-align: center"> EDUCATION </div> **
 ---------
 
-**Harvard University**
-
-*M.S. in Data Science*				                            		          	               Expected May 2020
-
+**Harvard University**      
+*M.S. in Data Science*&nbsp;&nbsp;&nbsp;
 - Relevant coursework: Advanced Data Science, Stochastic Methods for Optimization, Modeling and Inference,
 Systems Development for Computational Science, Computational Science Seminar
 
-**University of California, Berkeley**							                		                       Berkeley, CA
-
-*B.S. in Industrial Engineering & Operations Research, GPA: 3.9/4.0 (High Honors)*                 May 2016
+**University of California, Berkeley**      
+*B.S. in Industrial Engineering & Operations Research, GPA: 3.9/4.0 (High Honors)*                 
 
 - Relevant coursework: Statistics and Machine Learning, Probability, Forecasting, Mathematical Programming,
 Nonlinear and Discrete Optimization, Stochastic Processes
