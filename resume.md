@@ -1,30 +1,22 @@
 <div style="text-align: center"> <strong> DYLAN LABATT RANDLE </strong> </div>
-
 <div style="text-align: center"> +1-647-641-1994 | dylanrandle@g.harvard.edu | dylanrandle.github.io </div>
-------
 
 <div style="text-align: center"> <strong> EDUCATION </strong> </div>
-------
-
 **Harvard University**      
 *M.S. in Data Science*&nbsp;&nbsp; | &nbsp;&nbsp; Expected May 2020
-- Relevant coursework: Advanced Data Science, Stochastic Methods for Optimization, Modeling and Inference,
-Systems Development for Computational Science, Computational Science Seminar
-
+<div style="text-align: justified"> Relevant coursework: Advanced Data Science, Stochastic Methods for Optimization, Modeling and Inference,
+Systems Development for Computational Science, Computational Science Seminar </div>
+<br>
 **University of California, Berkeley**      
 *B.S. in Industrial Engineering & Operations Research, High Honors* &nbsp;&nbsp; | &nbsp;&nbsp; May 2016
-
-- Relevant coursework: Statistics and Machine Learning, Probability, Forecasting, Mathematical Programming,
-Nonlinear and Discrete Optimization, Stochastic Processes
-
+<div style="text-align: justified"> Relevant coursework: Statistics and Machine Learning, Probability, Forecasting, Mathematical Programming,
+Nonlinear and Discrete Optimization, Stochastic Processes </div>
+<br>
 <div style="text-align: center"> <strong> RELEVANT EXPERIENCE </strong> </div>
----------
-
 **Institute for Applied Computational Science, Harvard University**    
 *Research Assistant*&nbsp;&nbsp; | &nbsp;&nbsp;Nov 2018 - Present
-
-- Researching physics-aware machine learning methods for turbulence modeling, supervised by Pavlos Protopapas
-and David Sondak
+<div style="text-align: justified"> Researching physics-aware machine learning methods for turbulence modeling, supervised by Pavlos Protopapas
+and David Sondak </div>
 
 **Hubdoc**    
 *Data Scientist & Machine Learning Engineer*&nbsp;&nbsp; | &nbsp;&nbsp;Feb 2017 - July 2018
