@@ -16,7 +16,7 @@ supervision of Pavlos Protopapas and David Sondak.
 
 ## Profile
 
-- [Resume](https://dylanrandle.github.io/resume.html)
+- <a href="http://dylanrandle.github.io/resume.pdf">Resume</a>
 
 - [LinkedIn](https://linkedin.com/in/dylanrandle/)
 
