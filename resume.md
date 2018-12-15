@@ -4,4 +4,4 @@ title: Resume
 
 ## Resume
 
-![resume](pics/resume.png)
+<embed src="https://dylanrandle.github.io/resume.pdf" type="application/pdf" />
