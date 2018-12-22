@@ -19,7 +19,7 @@ Amazon Robotics.
 
 - [Automatic Differentiation](https://github.com/dylanrandle/autograd)
 
-- [Bayesian Generative Adversarial Networks](https://github.com/dylanrandle/bayesgan.html)
+- [Bayesian Generative Adversarial Networks](https://dylanrandle.github.io/bayesgan.html)
 
 ## Profile
 
