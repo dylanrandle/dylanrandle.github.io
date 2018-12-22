@@ -123,7 +123,7 @@ Source:https://arxiv.org/pdf/1701.00160.pdf
 
 Thinking about GAN in mathematical terms, we note that the tension between the generator and the discriminator is a zero-sum game. Therefore, the loss functions offset each other as follows:
 
-$$\begin{equation}L^{(G)}=-L^{(D)}\end{equation}$$
+$$L^{(G)}=-L^{(D)}$$
 
 The opposing objectives of the generator and the discriminator can be summarized as follows:
 
