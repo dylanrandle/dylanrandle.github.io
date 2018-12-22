@@ -8,11 +8,18 @@ Hello! Welcome to my personal website.
 
 ![headshot](pics/headshot.jpg)
 
-My name is Dylan Randle and I am currently studying for my masters in Data Science at Harvard University, in the School of
-Engineering & Applied Sciences. This summer, I will be interning with Amazon Robotics, where I hope to learn about the use
-of data science to analyze and predict performance in Amazon's robotics-driven fulfillment centers, at massive scale. I
-am also conducting research in physics-aware machine learning methods with applications to turbulence modeling under the
-supervision of Pavlos Protopapas and David Sondak.
+My name is Dylan Randle and I am studying for my masters in Data Science at Harvard University, in the School of
+Engineering & Applied Sciences. I am also currently conducting research in physics-aware neural networks under the
+supervision of Pavlos Protopapas and David Sondak. This summer, I am excited to be working as a Data Scientist at
+Amazon Robotics.
+
+## Projects
+
+- [Twitter Troll Detection](https://dylanrandle.github.io/troll_classification)
+
+- [Automatic Differentiation](https://github.com/dylanrandle/autograd)
+
+- [Bayesian Generative Adversarial Networks](https://github.com/dylanrandle/bayesgan.html)
 
 ## Profile
 
@@ -21,14 +28,6 @@ supervision of Pavlos Protopapas and David Sondak.
 - [LinkedIn](https://linkedin.com/in/dylanrandle/)
 
 - [GitHub](https://github.com/dylanrandle)
-
-## Projects
-
-- [Twitter Troll Detection](https://dylanrandle.github.io/troll_classification)
-
-- [Automatic Differentiation](https://github.com/dylanrandle/autograd)
-
-- More in the works!
 
 ## Personal
 
