@@ -1,5 +1,5 @@
 ---
-title: Dylan Labatt Randle
+title: Dylan's Homepage
 ---
 
 Hello! Welcome to my personal website.
@@ -9,8 +9,14 @@ Hello! Welcome to my personal website.
 ![headshot](pics/headshot.jpg)
 
 My name is Dylan Randle and I am currentlystudying for my masters in Data Science at Harvard University.
-Previously I worked as a Data Scientist as Hubdoc. Before that, I studied Industrial Engineering & Operations
+Previously I worked as a Data Scientist at Hubdoc. Before that, I studied Industrial Engineering & Operations
 Research at UC Berkeley.
+
+- <a href="http://dylanrandle.github.io/resume.pdf">Resume</a>
+
+- [LinkedIn](https://linkedin.com/in/dylanrandle/)
+
+- [GitHub](https://github.com/dylanrandle)
 
 ## Projects
 
@@ -19,14 +25,6 @@ Research at UC Berkeley.
 - [Automatic Differentiation](https://github.com/dylanrandle/autograd)
 
 - [Bayesian Generative Adversarial Networks](https://dylanrandle.github.io/bayesgan.html)
-
-## Profile
-
-- <a href="http://dylanrandle.github.io/resume.pdf">Resume</a>
-
-- [LinkedIn](https://linkedin.com/in/dylanrandle/)
-
-- [GitHub](https://github.com/dylanrandle)
 
 ## Personal
 
