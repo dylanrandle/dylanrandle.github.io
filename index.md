@@ -1,5 +1,5 @@
 ---
-title: Dylan's Homepage
+title: Dylan's Homepage !
 ---
 
 Hello! Welcome to my personal website.
