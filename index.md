@@ -10,13 +10,9 @@ Hello! Welcome to my personal website.
 
 My name is Dylan Randle and I am currently studying for my masters in Data Science at Harvard University.
 Previously I worked as a Data Scientist at Hubdoc. Before that, I studied Industrial Engineering & Operations
-Research at UC Berkeley. For those who are interested, here is some more info:
+Research at UC Berkeley.
 
-- <a href="http://dylanrandle.github.io/resume.pdf">Resume</a>
-
-- [LinkedIn](https://linkedin.com/in/dylanrandle/)
-
-- [GitHub](https://github.com/dylanrandle)
+<a href="http://dylanrandle.github.io/resume.pdf">Resume</a> | [LinkedIn](https://linkedin.com/in/dylanrandle/) | [GitHub](https://github.com/dylanrandle)
 
 ## Projects
 
