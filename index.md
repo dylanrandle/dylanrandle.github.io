@@ -8,10 +8,9 @@ Hello! Welcome to my personal website.
 
 ![headshot](pics/headshot.jpg)
 
-My name is Dylan Randle and I am studying for my masters in Data Science at Harvard University, in the School of
-Engineering & Applied Sciences. I am also currently conducting research in physics-aware neural networks under the
-supervision of Pavlos Protopapas and David Sondak. This summer, I am excited to be working as a Data Scientist at
-Amazon Robotics.
+My name is Dylan Randle and I am currentlystudying for my masters in Data Science at Harvard University.
+Previously I worked as a Data Scientist as Hubdoc. Before that, I studied Industrial Engineering & Operations
+Research at UC Berkeley.
 
 ## Projects
 
@@ -31,8 +30,6 @@ Amazon Robotics.
 
 ## Personal
 
-I am an avid guitar player and adventurous outdoorsman; in the future, I may post some interesting guitar and/or
-outdoors-related content here! For now, enjoy this stunning sunset picture from one of my favorite places: Camp Ahmek
-on Canoe Lake!
+In my spare time, I enjoy playing guitar and spending time in the wilderness :)
 
 ![camp](pics/camp.jpg)
