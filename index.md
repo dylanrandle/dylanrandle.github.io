@@ -12,7 +12,7 @@ My name is Dylan Randle and I am currently studying for my masters in Data Scien
 Previously I worked as a Data Scientist at Hubdoc. Before that, I studied Industrial Engineering & Operations
 Research at UC Berkeley.
 
-<a href="http://dylanrandle.github.io/resume.pdf">Resume</a> | [LinkedIn](https://linkedin.com/in/dylanrandle/) | [GitHub](https://github.com/dylanrandle)
+<a href="http://dylanrandle.github.io/resume.pdf">Resume</a> | [GitHub](https://github.com/dylanrandle) | [LinkedIn](https://linkedin.com/in/dylanrandle/)
 
 ## Projects
 
