@@ -27,6 +27,6 @@ demo of Bayesian GANs.
 
 ![ski](pics/ski.jpg)
 
-![camp](pics/camp.jpg)
-
 ![waterski](pics/waterski.jpg)
+
+![camp](pics/camp.jpg)
