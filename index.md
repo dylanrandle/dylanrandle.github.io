@@ -25,8 +25,14 @@ demo of Bayesian GANs.
 
 ## Personal
 
-![ski](pics/ski.jpg)
+I like to waterski...
 
 ![waterski](pics/waterski.jpg)
 
+watch the sunset...
+
 ![camp](pics/camp.jpg)
+
+and play the guitar...
+
+![guitar](pics/guitar.jpg)
