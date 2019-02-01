@@ -1,5 +1,5 @@
 ---
-title: Dylan's Homepage
+title: Dylan Labatt Randle
 ---
 
 ## About
