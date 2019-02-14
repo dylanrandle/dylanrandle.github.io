@@ -1,23 +1,23 @@
 ---
-title: Dylan Labatt Randle
+title: Dylan's Landing Page
 ---
-
-## About
 
 ![headshot](pics/headshot.jpg)
 
-My name is ***Dylan Labatt Randle*** and I am currently studying for my masters in **Data Science at Harvard University**.
-Previously I worked as a **Data Scientist at Hubdoc** where I developed a production *deep NLP system* delivering massive cost
-and speed improvements. Before that, I studied **Industrial Engineering & Operations Research at UC Berkeley**, graduating
+I am currently studying for my masters in **Data Science at Harvard University**.
+Previously I worked as a **Data Scientist at Hubdoc** where I developed a production
+*deep NLP system* delivering massive cost and speed improvements. Before that, I
+studied **Industrial Engineering & Operations Research at UC Berkeley**, graduating
 with High Honors and a 3.9/4.0 GPA.
 
 <a href="http://dylanrandle.github.io/resume.pdf">Resume</a> | [GitHub](https://github.com/dylanrandle) | [LinkedIn](https://linkedin.com/in/dylanrandle/)
 
 ## Research
 
-- I am currently researching **physics-aware neural networks** for solving partial differential equations. The goal of this
-this research is a) to invent new architectures that obey laws of physics, and b) to achieve generalizable higher-resolution
-solutions to differential equations of important scientific and engineering interest (e.g. Navier-Stokes equations).
+- I am currently researching **physics-aware neural networks** for solving partial differential equations.
+- The goal of this this research is a) to invent new architectures that obey laws of physics, and b) to
+achieve generalizable higher-resolution solutions to differential equations of important scientific and
+engineering interest (e.g. Navier-Stokes equations).
 
 ## Projects
 
