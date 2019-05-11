@@ -17,10 +17,12 @@ with High Honors.
 ## Research
 
 - I am currently a member of the research group at the **Institute of Applied Computational Science** at Harvard University where
-I am investigating ways to use deep learning methods to solve ordinary and partial differential equations.
+I am investigating ways to use deep learning methods to solve ordinary and partial differential equations. Repository: [here](https://github.com/dylanrandle/pde_nn), website: forthcoming.
 
 ## Projects
 
+- [Spark Tensorflow](https://github.com/dylanrandle/spark-tensorflow): training neural networks with Tensorflow
+on a Spark/Hadoop-YARN cluster with AWS Elastic Map Reduce
 - [Twitter Troll Detection](https://dylanrandle.github.io/troll_classification): project to identify Twitter
 trolls from data collected in relation to a 2016 U.S. indictment of the Russian Internet Research Agency.
 - [Automatic Differentiation](https://github.com/dylanrandle/autograd): Python package that performs automatic
