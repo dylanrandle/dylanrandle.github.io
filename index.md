@@ -14,10 +14,12 @@ Previously I was the first and head **Data Scientist** at **Hubdoc, Inc.** ([acq
 studied Industrial Engineering & Operations Research at UC Berkeley, graduating
 with High Honors.
 
+[harvard](pics/SEAS_IACS.png) | [berkeley](pics/berkeley-engineering-logo.jpg)
+
 ## Research
 
-- I am currently a member of the research group at the **Institute of Applied Computational Science** at Harvard University where
-I am investigating ways to use deep learning methods to solve ordinary and partial differential equations. Repository: [here](https://github.com/dylanrandle/pde_nn), website: forthcoming
+- [Neural Nets for Differential Equations](https://dylanrandle.github.io/ac299_website/) ([code](https://github.com/dylanrandle/pde_nn)): I am currently a member of the research group at the **Institute of Applied Computational Science** at Harvard University where
+I am investigating ways to use deep learning methods to solve ordinary and partial differential equations.
 
 ## Projects
 

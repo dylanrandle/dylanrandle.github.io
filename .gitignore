@@ -2,7 +2,6 @@ _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
-_support/
 .DS_Store
 .ipynb_checkpoints
 pics/.DS_Store
