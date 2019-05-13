@@ -4,34 +4,34 @@ title: Dylan's Homepage
 
 ![headshot](pics/headshot.jpg)
 
-<a href="http://dylanrandle.github.io/resume2.pdf">Resume</a> | [GitHub](https://github.com/dylanrandle) | [LinkedIn](https://linkedin.com/in/dylanrandle/)
+[![resume](pics/Resume-512.png){:height="100px" width="100px"}](http://dylanrandle.github.io/resume2.pdf) | [![gitlogo](pics/GitHub-Mark.png){:height="100px" width="100px"}](https://github.com/dylanrandle) | [![linkedinlogo](pics/linkedin.png){:height="100px" width="100px"}](https://linkedin.com/in/dylanrandle/)
 
 ## Summary
 
-I am currently studying for my masters in **Data Science** at **Harvard University**.
-Previously I was the first and head **Data Scientist** at **Hubdoc, Inc.** ([acquired](https://www.zdnet.com/article/xero-scoops-up-hubdoc-in-70-million-acquisition/) by Xero Limited) where I developed a production
-**deep NLP system** delivering massive cost and speed improvements. Before that, I
+I am currently studying for my masters in Data Science at Harvard University.
+Previously I was the first and head Data Scientist at Hubdoc, Inc. ([acquired by Xero Ltd.](https://www.zdnet.com/article/xero-scoops-up-hubdoc-in-70-million-acquisition/)) where I developed a production
+deep NLP system delivering massive cost and speed improvements. Before that, I
 studied Industrial Engineering & Operations Research at UC Berkeley, graduating
-with High Honors.
+Phi Beta Kappa with High Honors.
 
 ![harvard](pics/SEAS_IACS.png){:height="200px" width="800px"} | ![berkeley](pics/berkeley-engineering-logo.jpg){:height="200px" width="200px"}
 
 ## Research
 
-- [Neural Nets for Differential Equations](https://dylanrandle.github.io/ac299_website/) ([code](https://github.com/dylanrandle/pde_nn)): I am currently a member of the research group at the **Institute of Applied Computational Science** at Harvard University where
-I am investigating ways to use deep learning methods to solve ordinary and partial differential equations.
+- [Neural Nets for Differential Equations](https://dylanrandle.github.io/ac299_website/) ([code](https://github.com/dylanrandle/pde_nn)): I am currently a member of the research group at the Institute of Applied Computational Science (IACS) at Harvard University where
+I am investigating ways to use deep learning methods to solve ordinary and partial differential equations
 
 ## Projects
 
+- [Automatic Differentiation](https://github.com/dylanrandle/autograd): Python package that performs automatic
+differentiation, supporting both forward and reverse modes
 - [Spark Tensorflow](https://github.com/dylanrandle/spark-tensorflow): training neural networks with Tensorflow
 on a Spark/Hadoop-YARN cluster with AWS Elastic Map Reduce
 - [Twitter Troll Detection](https://dylanrandle.github.io/troll_classification): project to identify Twitter
 trolls from data collected in relation to a 2016 U.S. indictment of the Russian Internet Research Agency
-- [Automatic Differentiation](https://github.com/dylanrandle/autograd): Python package that performs automatic
-differentiation, supporting both forward and reverse modes
 - [Bayesian Generative Adversarial Networks](https://dylanrandle.github.io/bayesgan.html): paper review and
 demo of Bayesian GANs
 
 ## Personal
 
-In my spare time I like to learn new things, spend time in the outdoors (hiking, skiing, canoeing), and work on interesting machine learning projects.
+In my spare time I love to learn new things, read books, spend time outside, and work on interesting machine learning projects.
