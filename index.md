@@ -14,7 +14,7 @@ deep NLP system delivering massive cost and speed improvements. Before that, I
 studied Industrial Engineering & Operations Research at UC Berkeley, graduating
 Phi Beta Kappa with High Honors.
 
-![harvard](pics/SEAS_IACS.png){:height="200px" width="800px"} | ![berkeley](pics/berkeley-engineering-logo.jpg){:height="200px" width="200px"}
+![harvard](pics/SEAS_IACS.png){:height="100px" width="400px"} | ![berkeley](pics/berkeley-engineering-logo.jpg){:height="100px" width="100px"}
 
 ## Research
 
