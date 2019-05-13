@@ -14,7 +14,7 @@ Previously I was the first and head **Data Scientist** at **Hubdoc, Inc.** ([acq
 studied Industrial Engineering & Operations Research at UC Berkeley, graduating
 with High Honors.
 
-[harvard](pics/SEAS_IACS.png) | [berkeley](pics/berkeley-engineering-logo.jpg)
+![harvard](pics/SEAS_IACS.png){:height="200px" width="800px"} | ![berkeley](pics/berkeley-engineering-logo.jpg){:height="200px" width="200px"}
 
 ## Research
 
