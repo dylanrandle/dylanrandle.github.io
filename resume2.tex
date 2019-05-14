@@ -88,6 +88,10 @@
     \resumeSubheading
       {University of California at Berkeley, College of Engineering}{Berkeley, CA}
       {Bachelor of Science in Industrial Engineering \& Operations Research;  GPA: 3.9}{Sep 2012 -- May 2016}
+      \resumeItemListStart
+        \resumeItem{Awards}
+          {High Honors, Phi Beta Kappa, Tau Beta Pi}
+      \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 
@@ -100,21 +104,28 @@
       {Research Assistant}{Nov 2018 -- Present}
       \resumeItemListStart
         \resumeItem{Generative Adversarial Networks}
-          {Researching GANs for generative modeling of solutions to ordinary and partial differential equations.}
-        \resumeItem{Computational Fluid Dynamics}
-          {Researched neural network methods for turbulence modeling; demonstrated solutions to Reynolds-Averaged Navier Stokes equations.}
+          {Researching GANs for generative modeling of solutions to ordinary and partial differential equations}
+        \resumeItem{Machine Learning Turbulence}
+          {Researched and developed neural network methods for unsupervised learning of solutions to
+          Reynolds-Averaged Navier Stokes equations}
       \resumeItemListEnd
 
     \resumeSubheading
-      {Hubdoc, Inc. (acquired by Xero Limited)}{Toronto, Canada}
-      {Head Data Scientist}{Jan 2017 -- Jul 2018}
+      {Hubdoc, Inc. (acquired by Xero Ltd.)}{Toronto, Canada}
+      {Lead Data Scientist}{Jan 2017 -- Jul 2018}
       \resumeItemListStart
         \resumeItem{Production Deep Learning System}
-          {Developed and deployed production deep learning system using LSTMs \& CNNs for information extraction (i.e. entity recognition and classification) from financial documents. Greatly reduced labor costs (\$1-3MM/year) and increased speed of service (14,000x for 80\% of documents). Tech stack: Python, Keras, Postgres, Ansible, AWS.}
+          {Developed and deployed production deep learning system using LSTMs \& CNNs for information extraction
+          (i.e. entity recognition and classification) from financial documents. Greatly reduced labor costs
+          (\$1-3MM/year) and increased speed of service (14,000x for 80\% of documents). Tech stack:
+          Python, Keras, Postgres, Ansible, AWS}
         \resumeItem{Business Analytics}
-          {Conducted business analyses as needed: e.g. capacity planning of labor, anomaly detection of web scrapers, and prioritization of scraper maintenance. Built reports and data visualizations for intranet.}
+          {Conducted business analyses as needed: e.g. capacity planning of labor, anomaly detection of web
+          scrapers, and prioritization of scraper maintenance. Built reports and data visualizations for intranet}
         \resumeItem{Management}
-          {Regularly presented results and recommendations to C-suite. Integral in crafting team strategy and roadmap. Coordinated with product and marketing teams. Involved in fundraising and presentations to investors. Delivered machine learning lecture to 60+ people.}
+          {Regularly presented results and recommendations to C-suite. Integral in crafting team strategy and
+          roadmap. Coordinated with product and marketing teams. Involved in fundraising and presentations to
+          investors. Delivered machine learning lecture to 60+ people}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -122,35 +133,46 @@
       {Financial Products Analyst}{Summer 2014}
       \resumeItemListStart
         \resumeItem{Fixed Income Derivatives}
-          {Conducted analyses of various debt products (swaps, swaptions, ABS, MBS). Wrote custom C\# algorithm to analyze relationship between delta-hedging frequency and returns for Canadian swaptions; found possible trading opportunities.}
+          {Conducted analyses of various debt products (swaps, swaptions, ABS, MBS). Wrote custom C\# algorithm
+          to analyze relationship between delta-hedging frequency and returns for Canadian swaptions;
+          found possible trading opportunities}
         \resumeItem{Sales \& Trading}
-          {Compiled daily summaries of trading activity. Reviewed and analyzed sales product pitches. Supported both sales and trading with various data analyses.}
+          {Compiled daily summaries of trading activity. Reviewed and analyzed sales product pitches. Supported
+          both sales and trading with various data analyses}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
 
 %-----------PROJECTS-----------------
-\section{Projects (click titles for links)}
+\section{Projects}
   \resumeSubHeadingListStart
+
     \resumeSubItem{\href{https://github.com/dylanrandle/autograd}{Automatic Differentiation}}
-      {Python package implementing automatic differentiation (forward and reverse mode). Additionally implemented gradient-based optimizers and provided extensive documentation.}
+      {Python package implementing automatic differentiation, supporting both forward and reverse modes}
+
+    \resumeSubItem{\href{https://github.com/dylanrandle/spark-tensorflow}{Spark Tensorflow}}
+      {Training neural networks with Tensorflow on a Spark/Hadoop-YARN cluster with AWS Elastic Map Reduce}
+
     \resumeSubItem{\href{https://dylanrandle.github.io/troll_classification}{Twitter Troll Classification}}
-      {Achieved 96\% accuracy in classifying tweets as trolls, using a dataset of Twitter handles indicted for meddling in the 2016 U.S. presidential election.}
+      {Project achieving 96\% accuracy classifying Twitter trolls using tweets scraped from accounts indicted
+       for meddling in the 2016 U.S. elections}
+
     \resumeSubItem{\href{https://dylanrandle.github.io/bayesgan.html}{Bayesian Generative Adversarial Networks}}
-      {Paper review, implementation, and demo of Bayesian Generative Adversarial Networks.}
+      {Paper review, implementation, and demo of Bayesian GANs}
+
   \resumeSubHeadingListEnd
 
 %
 %--------PROGRAMMING SKILLS------------
 \section{Programming Skills}
-  \resumeSubHeadingListStart
-    \item{
-      \textbf{Languages}{: Python (numpy, pandas, scikit-learn, pytorch, keras, pymc3), SQL, C/C++, Javascript}
-      \hfill
-      \textbf{Technologies}{: AWS, Spark, OpenMP, MPI, Git}
-    }
-  \resumeSubHeadingListEnd
+  %\resumeSubHeadingListStart
+  %  \item{
+  \textbf{Languages}{: Python (numpy, pandas, scikit-learn, pytorch, keras, pymc3), SQL, C/C++}
+  \linebreak
+  \textbf{Technologies}{: AWS, Spark, MPI, OpenMP, OpenACC, Git, LaTeX}
+  %  }
+  % \resumeSubHeadingListEnd
 
 
 %-------------------------------------------

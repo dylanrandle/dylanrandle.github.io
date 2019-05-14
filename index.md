@@ -23,13 +23,12 @@ I am investigating ways to use deep learning methods to solve ordinary and parti
 
 ## Projects
 
-- [Automatic Differentiation](https://github.com/dylanrandle/autograd): Python package that performs automatic
+- [Automatic Differentiation](https://github.com/dylanrandle/autograd): Python package implementing automatic
 differentiation, supporting both forward and reverse modes
-- [Spark Tensorflow](https://github.com/dylanrandle/spark-tensorflow): training neural networks with Tensorflow
+- [Spark Tensorflow](https://github.com/dylanrandle/spark-tensorflow): Training neural networks with Tensorflow
 on a Spark/Hadoop-YARN cluster with AWS Elastic Map Reduce
-- [Twitter Troll Detection](https://dylanrandle.github.io/troll_classification): project to identify Twitter
-trolls from data collected in relation to a 2016 U.S. indictment of the Russian Internet Research Agency
-- [Bayesian Generative Adversarial Networks](https://dylanrandle.github.io/bayesgan.html): paper review and
+- [Twitter Troll Detection](https://dylanrandle.github.io/troll_classification): Project achieving 96% accuracy classifying Twitter trolls using tweets scraped from accounts indicted for meddling in the 2016 U.S. elections
+- [Bayesian Generative Adversarial Networks](https://dylanrandle.github.io/bayesgan.html): Paper review, implementation, and
 demo of Bayesian GANs
 
 ## Personal
