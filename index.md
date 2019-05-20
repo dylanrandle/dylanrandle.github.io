@@ -4,7 +4,7 @@ title: Dylan's Homepage
 
 ![headshot](pics/headshot.jpg)
 
-[![resume](pics/Resume-512.png){:height="100px" width="100px"}](http://dylanrandle.github.io/resume2.pdf) | [![gitlogo](pics/GitHub-Mark.png){:height="100px" width="100px"}](https://github.com/dylanrandle) | [![linkedinlogo](pics/linkedin.png){:height="100px" width="100px"}](https://linkedin.com/in/dylanrandle/)
+[![resume](pics/Resume-512.png){:height="50px" width="50px"}](http://dylanrandle.github.io/resume2.pdf) | [![gitlogo](pics/GitHub-Mark.png){:height="50px" width="50px"}](https://github.com/dylanrandle) | [![linkedinlogo](pics/linkedin.png){:height="50px" width="50px"}](https://linkedin.com/in/dylanrandle/)
 
 ## Summary
 
