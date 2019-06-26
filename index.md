@@ -1,8 +1,8 @@
 ---
-title: Dylan's Homepage
+title: Dylan Labatt Randle's Homepage
 ---
 
-# In God We Trust, All Others Must Bring Data
+*In God We Trust, All Others Must Bring Data*
 
 ![headshot](pics/headshot.jpg)
 
