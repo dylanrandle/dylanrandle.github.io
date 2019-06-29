@@ -9,9 +9,9 @@ title: Dylan Labatt Randle's Homepage
 # Summary
 
 - Currently data science intern at Amazon Robotics (summer 2019)
-- Pursuing my M.S. in Data Science at Harvard University (2018-2020)
-- Previously, lead data scientist at Hubdoc, Inc. ([acquired by Xero Ltd.](https://www.zdnet.com/article/xero-scoops-up-hubdoc-in-70-million-acquisition/)) where I developed a production deep NLP system delivering massive cost and speed improvements.
-- Received my B.S. in Industrial Engineering & Operations Research from UC Berkeley.
+- Pursuing M.S. in Data Science at Harvard University (2018-2020). Conducting research on deep learning for physics.
+- Previously lead data scientist at Hubdoc, Inc. ([acquired by Xero Ltd.](https://www.zdnet.com/article/xero-scoops-up-hubdoc-in-70-million-acquisition/)). Developed a production deep NLP system delivering massive cost and speed improvements.
+- Received B.S. in Industrial Engineering & Operations Research from UC Berkeley.
 
 ![harvard](pics/SEAS_IACS.png){:height="100px" width="400px"} | ![berkeley](pics/berkeley-engineering-logo.jpg){:height="100px" width="100px"}
 
