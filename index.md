@@ -2,7 +2,7 @@
 title: Dylan Labatt Randle's Homepage
 ---
 
-*In God We Trust, All Others Must Bring Data*
+*Data Scientist*
 
 ![headshot](pics/headshot.jpg)
 
