@@ -4,7 +4,7 @@ title: Dylan Labatt Randle's Homepage
 
 ![headshot](pics/headshot.jpg)
 
-[![resume](pics/Resume-logo-LEG.png){:height="50px" width="50px"}](http://dylanrandle.github.io/DylanRandleResume.pdf) | [![gitlogo](pics/GitHub-Mark.png){:height="50px" width="50px"}](https://github.com/dylanrandle) | [![linkedinlogo](pics/linkedin.png){:height="50px" width="50px"}](https://linkedin.com/in/dylanrandle/)
+[![resume](pics/cv.jpg){:height="50px" width="50px"}](http://dylanrandle.github.io/DylanRandleResume.pdf) | [![gitlogo](pics/GitHub-Mark.png){:height="50px" width="50px"}](https://github.com/dylanrandle) | [![linkedinlogo](pics/linkedin.png){:height="50px" width="50px"}](https://linkedin.com/in/dylanrandle/)
 
 # Summary
 
