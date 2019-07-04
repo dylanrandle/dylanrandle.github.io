@@ -2,7 +2,7 @@
 title: Dylan Labatt Randle's Homepage
 ---
 
-Please check out my blog in the navigation links above!
+Check out my [blog](https://dylanrandle.github.io/blog.html).
 
 ![headshot](pics/headshot.jpg)
 
