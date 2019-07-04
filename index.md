@@ -2,6 +2,8 @@
 title: Dylan Labatt Randle's Homepage
 ---
 
+Please check out my blog in the navigation links above!
+
 ![headshot](pics/headshot.jpg)
 
 [![resume](pics/cv.jpg){:height="50px" width="50px"}](http://dylanrandle.github.io/DylanRandleResume.pdf) | [![gitlogo](pics/GitHub-Mark.png){:height="50px" width="50px"}](https://github.com/dylanrandle) | [![linkedinlogo](pics/linkedin.png){:height="50px" width="50px"}](https://linkedin.com/in/dylanrandle/)
