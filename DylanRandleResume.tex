@@ -103,16 +103,31 @@
 \section{Relevant Experience}
   \resumeSubHeadingListStart
 
-    \resumeSubheading
-      {Harvard University}{Cambridge, MA}
-      {Graduate Research Assistant}{Nov 2018 -- Present}
-      \resumeItemListStart
-        \resumeItem{Deep Learning in Physics}
-          {Researching methods for training generative adversarial networks for solving differential equations
-           in an unsupervised fashion.
-           Researched and developed neural network methods for unsupervised learning of solutions to
-           Reynolds-Averaged Navier Stokes equations}
-      \resumeItemListEnd
+  \resumeSubheading
+    {Amazon Robotics, LLC}{Boston, MA}
+    {Data Science Intern}{Jun 2019 - Aug 2019}
+    \resumeItemListStart
+      \resumeItem{Data Engineering}
+        {Built fully-automated, scalable data pipelines for big data queries with Spark \& Hive on AWS Elastic Map Reduce}
+      \resumeItem{Data Science}
+        {Developed tree and neural network models for product performance predictions; additionally
+        incorporated interpretability methods (ALE, LIME, Shapley values) and uncertainty quantification}
+      \resumeItem{Data Product}
+        {Prototyped a user interface in IPython and Jupyter for delivering models to customers
+        to empower their decision-making}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Harvard University}{Cambridge, MA}
+    {Graduate Researcher}{Nov 2018 -- Present}
+    \resumeItemListStart
+      \resumeItem{GANs for Physics}
+        {Researching methods for training generative adversarial networks (GANs) for solving differential equations
+         in an unsupervised fashion}
+      \resumeItem{Neural Networks in Turbulence}
+         {Researched and developed neural network methods for unsupervised learning of solutions to
+         Reynolds-Averaged Navier Stokes (RANS) equations}
+    \resumeItemListEnd
 
     \resumeSubheading
       {Hubdoc, Inc. (acquired by Xero Ltd.)}{Toronto, Canada}
@@ -167,13 +182,14 @@
      for meddling in the 2016 U.S. elections}
 
     \resumeSubItem{\href{https://github.com/dylanrandle/autograd}{Automatic Differentiation}}
-      {Python package implementing automatic differentiation, supporting both forward and reverse modes}
+      {Python package implementing automatic differentiation, supporting both forward and reverse modes;
+       stochastic gradient descent and Adam optimizers implemented as example use-case}
 
-    \resumeSubItem{\href{https://github.com/dylanrandle/spark-tensorflow}{Spark Tensorflow}}
-      {Training neural networks with Tensorflow on a Spark/Hadoop-YARN cluster with AWS Elastic Map Reduce}
+    \resumeSubItem{\href{https://dylanrandle.github.io/bayesgan.html}{Bayesian GANs}}
+      {Paper review, implementation, and demo of Bayesian generative adversarial networks (GANs)}
 
-    \resumeSubItem{\href{https://dylanrandle.github.io/bayesgan.html}{Bayesian Generative Adversarial Networks}}
-      {Paper review, implementation, and demo of Bayesian GANs}
+    \resumeSubItem{\href{https://github.com/dylanrandle/spark-tensorflow}{Tensorflow on Spark}}
+      {Training neural networks on a 1.5 TB dataset with Tensorflow on a Spark/Hadoop cluster with AWS Elastic Map Reduce}
 
   \resumeSubHeadingListEnd
 
@@ -184,7 +200,7 @@
   %  \item{
   \textbf{Languages}{: Python (numpy, pandas, scikit-learn, pytorch, keras, pymc3), SQL, C/C++}
   \linebreak
-  \textbf{Technologies}{: AWS (EC2, EMR, S3), Spark, Git}
+  \textbf{Technologies}{: AWS (EC2, EMR, S3), PySpark, OpenMP, Git}
   %  }
   % \resumeSubHeadingListEnd
 
