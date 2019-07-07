@@ -1,18 +1,28 @@
 ---
-title: Dylan Labatt Randle's Homepage
+title: Dylan's Homepage
 ---
+
+{:.no_toc}
+*  
+{: toc}
 
 Check out my [blog](https://dylanrandle.github.io/blog.html).
 
+# About me
+
 ![headshot](pics/headshot.jpg)
 
-[![resume](pics/cv.jpg){:height="50px" width="50px"}](http://dylanrandle.github.io/DylanRandleResume.pdf) | [![gitlogo](pics/GitHub-Mark.png){:height="50px" width="50px"}](https://github.com/dylanrandle) | [![linkedinlogo](pics/linkedin.png){:height="50px" width="50px"}](https://linkedin.com/in/dylanrandle/)
-
-# Summary
+[![resume](pics/resume-cv-logo.png){:height="50px" width="59px"}](http://dylanrandle.github.io/DylanRandleResume.pdf) | [![gitlogo](pics/GitHub-Mark.png){:height="50px" width="59px"}](https://github.com/dylanrandle) | [![linkedinlogo](pics/linkedin.png){:height="50px" width="59px"}](https://linkedin.com/in/dylanrandle/)
 
 Passionate data scientist interested in understanding complexity and developing new techniques for doing so.
 
-![harvard](pics/SEAS_IACS.png){:height="100px" width="400px"} | ![berkeley](pics/berkeley-engineering-logo.jpg){:height="100px" width="100px"}
+![harvard](pics/SEASLogo.png){:height="100px" width="273px"}
+
+- M.S. in Data Science, *Harvard University, School of Engineering & Applied Sciences*
+
+![berkeley](pics/berkeley-engineering-logo.jpg){:height="100px" width="100px"}
+
+- B.S. in Industrial Engineering & Operations Research, *University of California, Berkeley, College of Engineering*
 
 # Research
 
@@ -26,8 +36,8 @@ Passionate data scientist interested in understanding complexity and developing 
 - [Automatic Differentiation](https://github.com/dylanrandle/autograd): Python package implementing automatic differentiation, supporting both forward and reverse modes; stochastic gradient descent and Adam optimizers implemented as example use-case
 - [Bayesian GANs](https://dylanrandle.github.io/bayesgan.html): Paper review, implementation, and demo of Bayesian generative adversarial networks (GANs)
 - [Tensorflow on Spark](https://github.com/dylanrandle/spark-tensorflow): Training neural networks on a 1.5 TB dataset with Tensorflow on a Spark/Hadoop cluster with AWS Elastic Map Reduce
-- [Microbiome Prediction with cLSTM](https://github.com/dylanrandle/microbiome): Forthcoming (protected IP)
-- [Safe Autonomous Vehicles](https://dylanrandle.github.io/safe_avs.html): Critical thinking through strategies for overcoming difficulties in deploying safe autonomous vehicles (federated learning, differential privacy, policy)
+- [Microbiome Dynamics](https://github.com/dylanrandle/microbiome): Modeling Granger causality with causal-LSTM model of high-dimensional experimental microbiome time-series data from mice
+- [Safe Autonomous Vehicles](https://dylanrandle.github.io/safe_avs.html): Critical thinking project demonstrating methods (federated learning, differential privacy, secure multi-party computation) and evaluating policies
 
 
 # Personal

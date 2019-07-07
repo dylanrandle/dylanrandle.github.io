@@ -104,17 +104,14 @@
   \resumeSubHeadingListStart
 
   \resumeSubheading
-    {Amazon Robotics}{Boston, MA}
+    {Amazon}{Boston, MA}
     {Data Science Intern}{Jun 2019 - Aug 2019}
     \resumeItemListStart
       \resumeItem{Data Engineering}
-        {Built fully-automated, scalable data pipelines for big data queries with Spark \& Hive on AWS Elastic Map Reduce}
+        {Built fully automated, scalable data pipeline for big data queries with Spark \& Hive on AWS Elastic Map Reduce}
       \resumeItem{Data Science}
-        {Developed tree and neural network models for product performance predictions; additionally
-        incorporated interpretability methods (ALE, LIME, Shapley values) and uncertainty quantification}
-      \resumeItem{Data Product}
-        {Prototyped a user interface in IPython and Jupyter for delivering models to customers
-        to empower their decision-making}
+        {Developed tree and neural network models for product performance predictions;
+        incorporated black-box interpretability methods (PDP, ALE, SHAP)}
     \resumeItemListEnd
 
   \resumeSubheading
@@ -175,21 +172,31 @@
 
 %-----------PROJECTS-----------------
 \section{Relevant Projects}
+
+ (Titles link to project websites.)
+
   \resumeSubHeadingListStart
 
   \resumeSubItem{\href{https://dylanrandle.github.io/troll_classification}{Twitter Troll Classification}}
     {Project achieving 96\% accuracy classifying Twitter trolls using tweets scraped from accounts indicted
      for meddling in the 2016 U.S. elections}
 
-    \resumeSubItem{\href{https://github.com/dylanrandle/autograd}{Automatic Differentiation}}
-      {Python package implementing automatic differentiation, supporting both forward and reverse modes;
-       stochastic gradient descent and Adam optimizers implemented as example use-case}
+  \resumeSubItem{\href{https://github.com/dylanrandle/autograd}{Automatic Differentiation}}
+    {Python package implementing automatic differentiation, supporting both forward and reverse modes;
+     stochastic gradient descent and Adam optimizers implemented as example use-case}
 
-    \resumeSubItem{\href{https://dylanrandle.github.io/bayesgan.html}{Bayesian GANs}}
-      {Paper review, implementation, and demo of Bayesian generative adversarial networks (GANs)}
+  \resumeSubItem{\href{https://dylanrandle.github.io/bayesgan.html}{Bayesian GANs}}
+    {Paper review, implementation, and demo of Bayesian generative adversarial networks (GANs)}
 
-    \resumeSubItem{\href{https://github.com/dylanrandle/spark-tensorflow}{Tensorflow on Spark}}
-      {Training neural networks on a 1.5 TB dataset with Tensorflow on a Spark/Hadoop cluster with AWS Elastic Map Reduce}
+  \resumeSubItem{\href{https://github.com/dylanrandle/spark-tensorflow}{Tensorflow on Spark}}
+    {Training neural networks on a 1.5 TB dataset with Tensorflow on a Spark/Hadoop cluster with AWS Elastic Map Reduce}
+
+  \resumeSubItem{\href{https://github.com/dylanrandle/microbiome}{Microbiome Dynamics}}
+    {Modeling Granger causality with causal-LSTM model of high-dimensional experimental microbiome time-series data from mice}
+
+  \resumeSubItem{\href{https://dylanrandle.github.io/safe_avs.html}{Safe Autonomous Vehicles}}
+    {Critical thinking project demonstrating methods (federated learning, differential privacy,
+    secure multi-party computation) and evaluating policies}
 
   \resumeSubHeadingListEnd
 
@@ -198,9 +205,9 @@
 \section{Programming Skills}
   %\resumeSubHeadingListStart
   %  \item{
-  \textbf{Languages}{: Python (numpy, pandas, scikit-learn, pytorch, keras, pymc3), SQL, C/C++}
+  \textbf{Languages}{: Python (NumPy, Pandas, scikit-learn, PyTorch, Keras, PyMC3, boto3), SQL, C}
   \linebreak
-  \textbf{Technologies}{: AWS (EC2, EMR, S3), PySpark, OpenMP, Git}
+  \textbf{Technologies}{: AWS (EC2, EMR, S3), Hadoop, Spark, OpenMP, OpenACC, MPI, Git, LaTeX, Markdown}
   %  }
   % \resumeSubHeadingListEnd
 
