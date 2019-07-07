@@ -13,17 +13,17 @@ Check out my [blog](https://dylanrandle.github.io/blog.html).
 
 # About me
 
-[![resume](pics/resume-cv-logo.png){:height="50px" width="59px"}](http://dylanrandle.github.io/DylanRandleResume.pdf) | [![gitlogo](pics/GitHub-Mark.png){:height="50px" width="59px"}](https://github.com/dylanrandle) | [![linkedinlogo](pics/linkedin.png){:height="50px" width="59px"}](https://linkedin.com/in/dylanrandle/)
+[![resume](pics/resume-cv-logo.png){:height="50px" width="50px"}](http://dylanrandle.github.io/DylanRandleResume.pdf) | [![gitlogo](pics/GitHub-Mark.png){:height="50px" width="50px"}](https://github.com/dylanrandle) | [![linkedinlogo](pics/linkedin.png){:height="50px" width="50px"}](https://linkedin.com/in/dylanrandle/)
 
 Passionate data scientist interested in understanding complexity and developing new techniques for doing so.
 
 ![harvard](pics/SEASLogo.png){:height="100px" width="273px"}
 
-- M.S. in Data Science, *Harvard University, School of Engineering & Applied Sciences*
+- **M.S. in Data Science**, *Harvard University, School of Engineering & Applied Sciences*
 
 ![berkeley](pics/berkeley-engineering-logo.jpg){:height="100px" width="100px"}
 
-- B.S. in Industrial Engineering & Operations Research, *University of California, Berkeley, College of Engineering*
+- **B.S. in Industrial Engineering & Operations Research**, *University of California, Berkeley, College of Engineering*
 
 # Research
 
