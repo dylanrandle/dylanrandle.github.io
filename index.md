@@ -2,6 +2,9 @@
 title: Dylan's Homepage
 ---
 
+![headshot](pics/headshot.jpg)
+
+### On this page
 {:.no_toc}
 *  
 {: toc}
@@ -9,8 +12,6 @@ title: Dylan's Homepage
 Check out my [blog](https://dylanrandle.github.io/blog.html).
 
 # About me
-
-![headshot](pics/headshot.jpg)
 
 [![resume](pics/resume-cv-logo.png){:height="50px" width="59px"}](http://dylanrandle.github.io/DylanRandleResume.pdf) | [![gitlogo](pics/GitHub-Mark.png){:height="50px" width="59px"}](https://github.com/dylanrandle) | [![linkedinlogo](pics/linkedin.png){:height="50px" width="59px"}](https://linkedin.com/in/dylanrandle/)
 
