@@ -10,7 +10,7 @@ nav_include: 1
 *  
 {: toc}
 
-## Some Advice to Data Scientists & Machine Learners
+## Practical Data Science | Ep. 1: Prediction vs Inference
 
 Recently in my role as a data scientist at Amazon, I have been facing one of the fundamental dichotomies in data science: the tradeoff between inference and prediction, aptly discussed in [this Harvard Data Science Review article](https://hdsr.mitpress.mit.edu/pub/a7gxkn0a). Often in data science there is an underlying tension between *understanding* the data-generating process and making *predictions* about it. In a computer vision system, for example, we would typically only care about how often a model is correct in classifying certain objects; we would not worry about explaining what features of the pixel distributions explain an object's "cat-ness", for example. In contrast, if we are fitting a model to predict some serious illness in the real world, it would be paramount to understand the relationships among features and explain the model; not just for the peace-of-mind of doctor and patient, but even for the development of the science of medicine itself.
 
