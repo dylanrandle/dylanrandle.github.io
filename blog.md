@@ -30,7 +30,7 @@ On the other hand, we may develop a prediction-focused solution in which a power
 
 Each approach leads to a significantly different workflow: in inference we must place greater emphasis on understanding the data and carefully abiding by the assumptions of our modeling approach, while in prediction our focus is on fitting the data extremely well and in a way that we can confidently say will generalize to future scenarios. For inference it is very often the case that a simple model (e.g. linear/logistic regression) will be the best method, but it is paramount to understand the intricacies of the data and modeling assumptions. For prediction, optimal performance on the test data may be achieved with a neural network or gradient boosting machine trained on the largest possible amount of data, without too much thought into the data being used (we assume our model's training algorithm will discriminate among the features for us).
 
-Whatever the case, being clear-eyed about the ultimate focus of the problem will save much back-and-forth between the data customer and streamline the process from conception to solution. Ultimately, data scientists are tasked with finding a sensible balance between prediction and inference that best suits our use-case and delivers the greatest value to our customer.
+Whatever the case, being clear-eyed about the ultimate focus of the problem will save much back-and-forth between the data customer and streamline the process from conception to solution. Ultimately, data scientists are tasked with finding a sensible balance between prediction and inference that best suits our use-case and delivers the greatest value to our customer. *-Dylan Randle (August 18, 2019)*
 
 ## My 10,000 Hours
 

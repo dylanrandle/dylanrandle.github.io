@@ -6,7 +6,7 @@ title: Dylan's Homepage
 *  
 {: toc}
 
-Check out my [blog](https://dylanrandle.github.io/blog.html).
+Check out my new [blog](https://dylanrandle.github.io/blog.html)!
 
 # About me
 
@@ -39,6 +39,9 @@ Passionate data scientist interested in understanding complexity and developing 
 - [Microbiome Dynamics](https://github.com/dylanrandle/microbiome): Modeling Granger causality with causal-LSTM model of high-dimensional experimental microbiome time-series data from mice
 - [Safe Autonomous Vehicles](https://dylanrandle.github.io/safe_avs.html): Critical thinking project demonstrating methods (federated learning, differential privacy, secure multi-party computation) and evaluating policies
 
+# Blog
+
+I have recently started a [blog](https://dylanrandle.github.io/blog.html) to share my thoughts on things I am reading, learning, and doing.
 
 # Personal
 
