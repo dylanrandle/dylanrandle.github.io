@@ -10,27 +10,38 @@ nav_include: 1
 *  
 {: toc}
 
-## Practical Data Science | Ep. 1: Prediction vs Inference
+## Prediction vs Inference
 
-Recently in my role as a data scientist at Amazon, I have been facing one of the fundamental dichotomies in data science: the tradeoff between inference and prediction, aptly discussed in [this Harvard Data Science Review article](https://hdsr.mitpress.mit.edu/pub/a7gxkn0a). Often in data science there is an underlying tension between *understanding* the data-generating process and making *predictions* about it. In a computer vision system, for example, we would typically only care about how often a model is correct in classifying certain objects; we would not worry about explaining what features of the pixel distributions explain an object's "cat-ness", for example. In contrast, if we are fitting a model to predict some serious illness in the real world, it would be paramount to understand the relationships among features and explain the model; not just for the peace-of-mind of doctor and patient, but even for the development of the science of medicine itself.
+Recently, in my role as Data Scientist at Amazon, I have been faced with one of the fundamental dichotomies of data science: the tradeoff between inference and prediction (aptly discussed in [this Harvard Data Science Review article](https://hdsr.mitpress.mit.edu/pub/a7gxkn0a)). The situation is best described through example: consider a computer vision system that predicts if an image contains a cat; in this setting, we would only care about the accuracy of our model and would not be focused on explaining why a prediction was made--either there's a cat or there isn't. In contrast, if we are fitting a model to predict an illness, for example, it would be paramount to understand why the model made a certain prediction. Not just for the peace-of-mind of the doctor and patient, but, even more fundamentally, for the development of science itself.
 
-In most cases, prediction and inference must be traded off for one another: adding more "inference" generally means we give up some predictive power if we hold the amount of computation constant. In this post, I want to explain why the framing of data science problems in terms of prediction and inference is a crucial step in designing and implementing any data science solution.
+As the word "tradeoff" implies, it is unfortunately not often the case that we can "have our cake an eat it too", so to speak. In most cases, prediction and inference must be traded off for one another: adding more "inference" generally means we give up some predictive power if we hold the amount of computation constant. In this post, I want to explain why the framing of data science problems in terms of prediction and inference is a crucial step in designing and implementing any data science solution.
 
-As is the case in so many aspects of life, stepping back and remembering the fundamentals helps. There are usually two main reasons we want to fit a model to data:
-1. We want to predict outcome *y* for some new, unseen data *X* (*prediction*)
-2. We want to understand something about the data-generating process that yields *y* from *X* (*inference*)
+The prediction vs. inference question can be boiled down to the following two cases:
+1. We want to predict *y* for some new, unseen *X*
+2. We want to understand the data-generating process that leads from *X* to *y*
 
-Being clear about which question we are trying to answer will make our lives *much* easier.
+If the first case seems like the correct choice, then your problem is primarily one of prediction, and vice-versa for inference. Being clear about which question we are trying to answer will make our lives easier.
 
-Let's step back and understand what this really means in practice. Suppose we are working for a store owner who wishes to employ data science in his/her business. Further imagine that the owner is primarily focused on the time a customer is inside her/his store (from entering to exiting). Given the relevant data (e.g. customer identity, historical preferences, demographic cohort, browsing patterns, etc.), there are many different things we could do. It is up to us, as data scientists, to refine the problem by asking relevant questions of the store owner.
+### A practical scenario
 
-In terms of inference, we could explore how customer features lead to sales and use this *understanding* to inform future business decisions. We would need to be very careful about which features we use (picking only relevant features, dealing with multicollinearity, etc.), how we select representative samples, and which models we fit (leaning towards interpretability and carefully validating underlying assumptions).
+Let's step back and understand, in concrete terms, how this might play out in practice. Suppose, for example, that we are approached by a shop owner who would like to "leverage his/her customer data to increase sales". This is typical of the questions encountered "in the wild": vague and underspecified. We must dive deeper to probe for the answer to the prediction/inference tradeoff.
 
-On the other hand, we may develop a prediction-focused solution in which a powerful model is deployed to predict, on an individual basis, the probability a customer will make a purchase. The goal would be to use this information to inform real-time decision making (e.g. whether to offer a customer an exclusive deal), but without any need to explain the decisions to a human. Here we would not worry about multicollinearity in our feature set, which data to include or exclude (for the most part), or using only models with strong notions of interpretability. Our focus would be on achieving the highest possible accuracy on a representative test set. We could fit a big honking neural network that performs well on our test set and call it a day.
+In this case, we might ask the following questions:
+- "How important is understanding which aspects of the data drive sales?"
+- "Do you want to gain insights about your customer and convey these to your sales associates?"
+- "Would you be willing to employ a system for predicting customer-by-customer shopping behavior?"
 
-Each approach leads to a significantly different workflow: in inference we must place greater emphasis on understanding the data and carefully abiding by the assumptions of our modeling approach, while in prediction our focus is on fitting the data extremely well and in a way that we can confidently say will generalize to future scenarios. For inference it is very often the case that a simple model (e.g. linear/logistic regression) will be the best method, but it is paramount to understand the intricacies of the data and modeling assumptions. For prediction, optimal performance on the test data may be achieved with a neural network or gradient boosting machine trained on the largest possible amount of data, without too much thought into the data being used (we assume our model's training algorithm will discriminate among the features for us).
+The answers to these questions provide meaningful insights. If they come back on the inference spectrum (i.e. "understanding is paramount to me, I am not comfortable with deploying a machine learning solution in my store"), we want to err on the side of **simple, interpretable models** and be very careful about:
+1. Understanding the data we have been given
+2. Cleaning and filtering it to obtain an appropriate sample
+3. Dealing with multicollinearity, testing model assumptions, and crafting useful visualizations
 
-Whatever the case, being clear-eyed about the ultimate focus of the problem will save much back-and-forth between the data customer and streamline the process from conception to solution. Ultimately, data scientists are tasked with finding a sensible balance between prediction and inference that best suits our use-case and delivers the greatest value to our customer. *-Dylan Randle (August 18, 2019)*
+On the other hand, a prediction-focused answer might sound something like "I could care less about why my customers buy something, I just want to know who is likely to buy and who is not!". In this example, we would need to dive deeper to brainstorm ways in which predictions could be used to facilitate the owner's goals of increasing sales. One potential idea could be to use this information to inform real-time decision making (e.g. whether to offer a customer a deal), but without any need to explain the decisions to a human. Here we should focus on the best possible **performance on the test set** and doggedly pursue the following steps:
+1. Select data and generate training, testing and validation sets that is/are representative of the future (as far as we can tell)
+2. Train and evaluate models in order of increasing complexity (don't worry about interpretability: tree ensembles & neural networks are fair game); inspect model training to balance under/over-fitting
+3. Employ cross-validation to tune hyper-parameters (if computation is a bottleneck, focus on scalable methods for implementing this step, e.g. multi-GPU/distributed processing)
+
+Each approach leads to vastly different workflows: in inference we place greater emphasis on understanding the data and carefully abiding by the assumptions of our model, while in prediction we focus on fitting the data extremely well and in a way that we are confident will generalize to future scenarios. Whatever the case, being clear-eyed about the ultimate focus of the problem will save much back-and-forth and streamline the process from conception to solution. Ultimately, data scientists are tasked with finding a sensible balance between prediction and inference that best suits the use-case and delivers the greatest value. I believe it is paramount to understand this tradeoff to become an effective data scientist. *-Dylan Randle (September 6, 2019)*
 
 ## My 10,000 Hours
 
