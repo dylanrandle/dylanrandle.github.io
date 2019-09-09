@@ -12,9 +12,9 @@ nav_include: 1
 
 ## Prediction vs Inference
 
-*Dylan Randle*
+September 6, 2019
 
-*September 6, 2019*
+*Dylan Randle*
 
 Recently, in my role as Data Scientist at Amazon, I have been faced with one of the fundamental dichotomies of data science: the tradeoff between inference and prediction (aptly discussed in [this Harvard Data Science Review article](https://hdsr.mitpress.mit.edu/pub/a7gxkn0a)). The situation is best described through example: consider a computer vision system that predicts if an image contains a cat; in this setting, we would only care about the accuracy of our model and would not be focused on explaining why a prediction was made--either there's a cat or there isn't. In contrast, if we are fitting a model to predict an illness, for example, it would be paramount to understand why the model made a certain prediction. Not just for the peace-of-mind of the doctor and patient, but, even more fundamentally, for the development of science itself.
 
@@ -49,9 +49,9 @@ Each approach leads to vastly different workflows: in inference we place greater
 
 ## The "AI-Revolution"
 
-*Dylan Randle*
+July 4, 2019
 
-*July 4, 2019*
+*Dylan Randle*
 
 I recently re-read an [article](https://hdsr.mitpress.mit.edu/pub/wot7mkc1) which I have become very fond of: "Artificial Intelligence: The Revolution Hasn't Happened Yet" by one of the most respected researchers in the world of computer science and statistics, Michael I. Jordan. The article is his take on the AI hype, and serves as an important framing of the new field of "data science" for all the researchers in the field.
 
@@ -65,9 +65,9 @@ We lack an ability to bring together disparate data across time and space and to
 
 ## My 10,000 Hours
 
-*Dylan Randle*
+July 4, 2019
 
-*July 4, 2019*
+*Dylan Randle*
 
 Last night, I started reading Malcolm Gladwell's book, *Outliers*, and today I would like to write down my thoughts about it. In *Outliers*, Gladwell seeks to uncover the hidden alchemy of success and dispel the widespread myths surrounding it. He asserts that our common notion that success is achieved through some kind of utopian meritocratic process is patently false. In hockey, he explains, the vast majority of successful players share a single characteristic: their birthdate's proximity to January 1. Why is this? It's simple: hockey's age cutoff begins on January 1, and so players born closest to the cutoff will be the most mature in their cohort.
 
