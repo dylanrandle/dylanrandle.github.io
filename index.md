@@ -27,16 +27,16 @@ Passionate data scientist interested in understanding complexity and developing 
 # Research
 
 - [Deep Learning in Physics](https://dylanrandle.github.io/ac299_website/): I am currently a member of the research group at the Institute of Applied Computational Science (IACS) at Harvard University where I am investigating ways to use deep learning methods to solve ordinary and partial differential equations. Code is currently private but will be forthcoming
-  1. [Neural Networks in Turbulence](https://dylanrandle.github.io/ac299_website/Channel_Flow.html)
-  2. [GANs for Differential Equations](https://dylanrandle.github.io/ac299_website/GAN.html#baby-equation)
+  1. [Neural Networks in Turbulence](https://dylanrandle.github.io/ac299_website/Channel_Flow.html): Researched and developed methods for solving Reynolds-Averaged Navier-Stokes (RANS) equations with neural networks in a fully unsupervised manner.
+  2. [GANs for Differential Equations](https://dylanrandle.github.io/ac299_website/GAN.html): Researching methods for training Generative Adversarial Networks (GANs) and ensembles of neural networks to solve differential equations without access to ground truth data. Tech stack: Python, PyTorch, Google Colab
 
 # Projects
 
-- [Twitter Troll Detection](https://dylanrandle.github.io/troll_classification): Project achieving 96% accuracy classifying Twitter trolls using tweets scraped from accounts indicted for meddling in the 2016 U.S. elections
-- [Automatic Differentiation](https://github.com/dylanrandle/autograd): Python package implementing automatic differentiation, supporting both forward and reverse modes; stochastic gradient descent and Adam optimizers implemented as example use-case
-- [Bayesian GANs](https://dylanrandle.github.io/bayesgan.html): Paper review, implementation, and demo of Bayesian generative adversarial networks (GANs)
 - [Tensorflow on Spark](https://github.com/dylanrandle/spark-tensorflow): Training neural networks on a 1.5 TB dataset with Tensorflow on a Spark/Hadoop cluster with AWS Elastic Map Reduce
 - [Microbiome Dynamics](https://github.com/dylanrandle/microbiome): Modeling Granger causality with causal-LSTM model of high-dimensional experimental microbiome time-series data from mice
+- [Automatic Differentiation](https://github.com/dylanrandle/autograd): Python package implementing automatic differentiation, supporting both forward and reverse modes; stochastic gradient descent and Adam optimizers implemented as example use-case
+- [Twitter Troll Detection](https://dylanrandle.github.io/troll_classification): Project achieving 96% accuracy classifying Twitter trolls using tweets scraped from accounts indicted for meddling in the 2016 U.S. elections
+- [Bayesian GANs](https://dylanrandle.github.io/bayesgan.html): Paper review, implementation, and demo of Bayesian generative adversarial networks (GANs)
 - [Safe Autonomous Vehicles](https://dylanrandle.github.io/safe_avs.html): Critical thinking project demonstrating methods (federated learning, differential privacy, secure multi-party computation) and evaluating policies
 
 # Blog
