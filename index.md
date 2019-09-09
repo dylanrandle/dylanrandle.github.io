@@ -2,11 +2,13 @@
 title: Dylan's Homepage
 ---
 
+**Hello world** and welcome to my personal website! Use the links below to navigate my page.
+
 {:.no_toc}
 *  
 {: toc}
 
-Check out my new [blog](https://dylanrandle.github.io/blog.html)!
+Check out my new **[blog](https://dylanrandle.github.io/blog.html)**!
 
 # About me
 
