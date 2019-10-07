@@ -107,12 +107,11 @@
     {Harvard University}{Cambridge, MA}
     {Graduate Researcher}{Nov 2018 -- Present}
     \resumeItemListStart
-      \resumeItem{Deep Learning for Turbulence}
-        {Researched and developed methods for solving Reynolds-Averaged Navier-Stokes (RANS) equations with
-        neural networks in a fully unsupervised manner. Tech stack: Python, PyTorch, Harvard Odyssey Supercomputer}
-      \resumeItem{GANs for Differential Equations}
-        {Researching methods for training Generative Adversarial Networks (GANs) and ensembles of neural networks
-        to solve differential equations without access to ground truth data. Tech stack: Python, PyTorch, Google Colab}
+      \resumeItem{Deep Differential Equation Solvers}
+        {Researched and developed fully unsupervised methods for solving Reynolds-Averaged Navier-Stokes equations with
+        neural networks; discovered sampling method leading to improved convergence. Researching methods for training
+        semi-supervised Generative Adversarial Networks (GANs) for solving differential equations; developed novel
+        multi-discriminator training algorithm enabling tractable learning. Tech: Python, PyTorch, Harvard Supercomputer}
     \resumeItemListEnd
 
   \resumeSubheading
@@ -120,17 +119,17 @@
     {Data Science Intern}{Jun 2019 - Aug 2019}
     \resumeItemListStart
       \resumeItem{Data Engineering}
-        {Built automated, scalable data pipeline for big data queries (500+ billion rows), storage, cleaning,
-        and transformation. Tech stack: Python, Apache Spark/Hive/Hadoop, AWS EMR/S3/Athena}
+        {Built automated, scalable data pipeline for big data (500+ billion rows) querying, storage, cleaning,
+        and transformation. Tech: Python, Apache Spark/Hive/Hadoop, AWS EMR/Athena/S3}
       \resumeItem{Data Science}
         {Developed machine learning package for proprietary internal project. Built API for data filtering,
         feature selection, training, tuning, and testing models. Developed visualizations and interpretability algorithms
-        (e.g. accumulated local effects, Shapley additive explanations) for model explanations. Tech stack: Python, AWS SageMaker,
-        JupyterLab, Pandas, NumPy, scikit-learn, XGBoost, Keras}
+        (e.g. accumulated local effects, Shapley additive explanations) for model explanations. Greatly reduced complexity
+        for training machine learning models. Tech: Python, AWS SageMaker, Jupyter, Pandas, scikit-learn, XGBoost, Keras}
       \resumeItem{Data Product}
-        {Prototyped interactive user-interface and developed example use cases allowing technical and non-technical
-        users to easily train machine learning models for a broad set of tasks. Reduced analysis time from weeks to hours.
-        Presented project to teams from across the organization. Tech stack: Jupyter Notebook/Widgets}
+        {Prototyped interactive user-interface and developed example use-cases allowing technical and non-technical
+        users to easily train machine learning models for a broad set of tasks. Presented project to teams from across
+        the organization}
     \resumeItemListEnd
 
     \resumeSubheading
@@ -141,14 +140,27 @@
           {Developed and deployed production deep learning system using LSTMs \& CNNs for entity extraction and
           text classification of financial documents. Models trained on over 10 TB of text and image documents.
           Reduced extraction time from 24 hours to 5 seconds with highly scalable, asynchronous pipeline. Cost savings
-          estimated at \$2MM/year. Tech stack: Python, Keras, Tensorflow-Serving, AWS EC2/S3/KMS, PostgresSQL, RabbitMQ}
+          estimated at \$2MM/year. Tech: Python, Keras, Tensorflow-Serving, AWS EC2/S3/KMS, PostgresSQL, RabbitMQ}
         \resumeItem{Data Science}
           {Conducted business and engineering analyses: e.g. prediction of labor requirements and anomaly detection of web
-          scrapers. Wrote reports and built data visualizations for company intranet. Tech stack: Python, NumPy, scikit-learn,
+          scrapers. Wrote reports and built data visualizations for company intranet. Tech: Python, NumPy, scikit-learn,
           JavaScript, D3.js}
         \resumeItem{Leadership}
           {Regularly presented results and recommendations to C-suite. Integral in crafting team strategy and
           roadmap. Involved in fundraising and presentations to investors. Delivered machine learning lecture to 60+ people}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Bank of Montreal, Capital Markets}{Toronto, Canada}
+      {Financial Products Analyst}{Summer 2014}
+      \resumeItemListStart
+        \resumeItem{Fixed Income}
+          {Conducted analyses of various debt products (swaps, swaptions, ABS, MBS). Wrote custom C\# algorithm
+          to analyze relationship between delta-hedging frequency and returns for Canadian swaptions;
+          found possible trading opportunities}
+        \resumeItem{Sales \& Trading}
+          {Compiled daily summaries of trading activity. Reviewed and analyzed sales product pitches. Supported
+          both sales and trading with various data analyses}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -159,19 +171,19 @@
 
   \resumeSubHeadingListStart
 
-  \resumeSubItem{\href{https://github.com/dylanrandle/spark-tensorflow}{Tensorflow with Spark}}
-    {Training recurrent neural networks on a 1.5 TB dataset with Tensorflow on a Spark/Hadoop cluster with AWS Elastic Map Reduce}
-
-  \resumeSubItem{\href{https://github.com/dylanrandle/microbiome}{Modeling Microbiome Dynamics}}
-    {Modeling Granger causality with causal-LSTM model of high-dimensional experimental microbiome time-series data from mice}
-
-  \resumeSubItem{\href{https://github.com/dylanrandle/autograd}{Automatic Differentiation Package}}
+  \resumeSubItem{\href{https://github.com/dylanrandle/autograd}{Automatic Differentiation}}
     {Python package implementing automatic differentiation, supporting both forward and reverse modes;
      stochastic gradient descent and Adam optimizers implemented as example use cases}
 
   \resumeSubItem{\href{https://dylanrandle.github.io/troll_classification}{Twitter Troll Classification}}
     {Project achieving 96\% accuracy classifying Twitter trolls using tweets scraped from accounts indicted
      for meddling in the 2016 U.S. elections}
+
+  \resumeSubItem{\href{https://github.com/dylanrandle/spark-tensorflow}{Tensorflow with Spark}}
+    {Training recurrent neural networks on a 1.5 TB dataset with Tensorflow on a Spark/Hadoop cluster with AWS Elastic Map Reduce}
+
+  \resumeSubItem{\href{https://github.com/dylanrandle/microbiome}{Microbiome Dynamics}}
+    {Modeling Granger causality with causal-LSTM model of high-dimensional experimental microbiome time-series data from mice}
 
   \resumeSubHeadingListEnd
 
