@@ -24,12 +24,9 @@ Passionate data scientist interested in understanding complexity and developing 
 
 - B.S. in *Industrial Engineering & Operations Research*, **University of California, Berkeley**, College of Engineering
 
-# Research
+# Research & Projects
 
-- [Deep Learning in Physics](https://dylanrandle.github.io/ac299_website/): Researched and developed fully unsupervised methods for solving Reynolds-Averaged Navier-Stokes equations with neural networks; discovered sampling method leading to improved convergence. Researching methods for training semi-supervised Generative Adversarial Networks (GANs) for solving differential equations; developed novel multi-discriminator training algorithm enabling tractable learning
-
-# Projects
-
+- [Deep Learning in Physics](https://dylanrandle.github.io/ac299_website/): Website describing methods and results for solving differential equations with neural networks
 - [Automatic Differentiation](https://github.com/dylanrandle/autograd): Python package implementing automatic differentiation, supporting both forward and reverse modes; stochastic gradient descent and Adam optimizers implemented as example use-case
 - [Twitter Troll Detection](https://dylanrandle.github.io/troll_classification): Project achieving 96% accuracy classifying Twitter trolls using tweets scraped from accounts indicted for meddling in the 2016 U.S. elections
 - [Tensorflow on Spark](https://github.com/dylanrandle/spark-tensorflow): Training neural networks on a 1.5 TB dataset with Tensorflow on a Spark/Hadoop cluster with AWS Elastic Map Reduce
