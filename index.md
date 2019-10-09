@@ -1,18 +1,16 @@
 ---
-title: Dylan's Homepage
+title: Homepage
 ---
 
 {:.no_toc}
 *  
 {: toc}
 
-# About me
-
 ![headshot](pics/headshot.jpg)
 
 [![resume](pics/resume-cv-logo.png){:height="50px" width="50px"}](http://dylanrandle.github.io/DylanRandleResume.pdf) | [![gitlogo](pics/GitHub-Mark.png){:height="50px" width="50px"}](https://github.com/dylanrandle) | [![linkedinlogo](pics/linkedin.png){:height="50px" width="50px"}](https://linkedin.com/in/dylanrandle/)
 
-## Education
+# Education
 
 ![harvard](pics/SEASLogo.png){:height="100px" width="273px"}
 
@@ -32,8 +30,8 @@ title: Dylan's Homepage
 
 # Blog
 
-I have a [blog](https://dylanrandle.github.io/blog.html).
+I started a [blog](https://dylanrandle.github.io/blog.html)!
 
 # Personal
 
-In my spare time I love to read, learn about new machine learning methods, and spend time outdoors.
+In my spare time I like to read, learn new machine learning techniques, and spend time outdoors.
