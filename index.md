@@ -15,7 +15,7 @@ title: Homepage
 ![harvard](pics/SEASLogo.png){:height="100px" width="273px"} | ![berkeley](pics/berkeley-engineering-logo.jpg){:height="100px" width="100px"}
 
 - **M.S. in Data Science**, *Harvard University, School of Engineering & Applied Sciences*
-- **B.S. in Industrial Engineering & Operations Research**, *University of California, Berkeley, College of Engineering*
+- **B.S. in Industrial Engineering & Operations Research**, *University of California at Berkeley, College of Engineering*
 
 # Research & Projects
 
