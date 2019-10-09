@@ -28,7 +28,3 @@ title: Homepage
 # Blog
 
 I started a [blog](https://dylanrandle.github.io/blog.html)!
-
-# Personal
-
-In my spare time I like to read, learn new machine learning techniques, and spend time outdoors.
