@@ -6,15 +6,13 @@ title: Dylan's Homepage
 *  
 {: toc}
 
-Check out my new **[blog](https://dylanrandle.github.io/blog.html)**!
-
 # About me
 
 ![headshot](pics/headshot.jpg)
 
 [![resume](pics/resume-cv-logo.png){:height="50px" width="50px"}](http://dylanrandle.github.io/DylanRandleResume.pdf) | [![gitlogo](pics/GitHub-Mark.png){:height="50px" width="50px"}](https://github.com/dylanrandle) | [![linkedinlogo](pics/linkedin.png){:height="50px" width="50px"}](https://linkedin.com/in/dylanrandle/)
 
-Passionate data scientist interested in understanding complexity and developing new techniques for doing so.
+## Education
 
 ![harvard](pics/SEASLogo.png){:height="100px" width="273px"}
 
@@ -26,18 +24,16 @@ Passionate data scientist interested in understanding complexity and developing 
 
 # Research & Projects
 
-- [Deep Learning in Physics](https://dylanrandle.github.io/ac299_website/): Website describing methods and results for solving differential equations with neural networks
-- [Automatic Differentiation](https://github.com/dylanrandle/autograd): Python package implementing automatic differentiation, supporting both forward and reverse modes; stochastic gradient descent and Adam optimizers implemented as example use-case
-- [Twitter Troll Detection](https://dylanrandle.github.io/troll_classification): Project achieving 96% accuracy classifying Twitter trolls using tweets scraped from accounts indicted for meddling in the 2016 U.S. elections
-- [Tensorflow on Spark](https://github.com/dylanrandle/spark-tensorflow): Training neural networks on a 1.5 TB dataset with Tensorflow on a Spark/Hadoop cluster with AWS Elastic Map Reduce
+- [Automatic Differentiation](https://github.com/dylanrandle/autograd): Python package implementing automatic differentiation, including both forward and reverse modes; usage demonstrated through gradient-descent optimization
+- [Deep Learning in Physics](https://dylanrandle.github.io/ac299_website/): Methods and results for solving differential equations with neural networks. Includes demonstrations of superior grid sampling and problem formulation in terms of Generative Adversarial Networks
+- [Twitter Troll Detection](https://dylanrandle.github.io/troll_classification): Project investigating methods for, and achieving high accuracy in, classifying Twitter trolls indicted for U.S. election meddling
 - [Microbiome Dynamics](https://github.com/dylanrandle/microbiome): Modeling Granger causality with causal-LSTM model of high-dimensional experimental microbiome time-series data from mice
-- [Bayesian GANs](https://dylanrandle.github.io/bayesgan.html): Paper review, implementation, and demo of Bayesian generative adversarial networks (GANs)
-- [Safe Autonomous Vehicles](https://dylanrandle.github.io/safe_avs.html): Critical thinking project demonstrating methods (federated learning, differential privacy, secure multi-party computation) and evaluating policies
+- [Tensorflow on Spark](https://github.com/dylanrandle/spark-tensorflow): Training neural networks on a 1.5 TB dataset with Tensorflow on a Spark/Hadoop cluster with AWS Elastic Map Reduce
 
 # Blog
 
-I have recently started a [blog](https://dylanrandle.github.io/blog.html) to share my thoughts on things I am reading, learning, and doing.
+I have a [blog](https://dylanrandle.github.io/blog.html).
 
 # Personal
 
-In my spare time I love to learn new things, read books, spend time outside, and work on interesting machine learning projects.
+In my spare time I love to read, learn about new machine learning methods, and spend time outdoors.
