@@ -20,7 +20,7 @@ title: Homepage
 # Research & Projects
 
 - [Automatic Differentiation](https://github.com/dylanrandle/autograd): Python package implementing automatic differentiation, including both forward and reverse modes; usage demonstrated through gradient-descent optimization
-- [Deep Learning in Physics](https://dylanrandle.github.io/ac299_website/): Methods and results for solving differential equations with neural networks. Includes demonstrations of superior grid sampling and problem formulation in terms of Generative Adversarial Networks
+- [Deep Learning for Differential Equations](https://dylanrandle.github.io/ac299_website/): Methods and results for solving differential equations with neural networks. Includes demonstrations of superior grid sampling and problem formulation in terms of Generative Adversarial Networks
 - [Twitter Troll Detection](https://dylanrandle.github.io/troll_classification): Project investigating methods for, and achieving high accuracy in, classifying Twitter trolls indicted for U.S. election meddling
 - [Microbiome Dynamics](https://github.com/dylanrandle/microbiome): Modeling Granger causality with causal-LSTM model of high-dimensional experimental microbiome time-series data from mice
 - [Tensorflow on Spark](https://github.com/dylanrandle/spark-tensorflow): Training neural networks on a 1.5 TB dataset with Tensorflow on a Spark/Hadoop cluster with AWS Elastic Map Reduce
