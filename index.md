@@ -2,9 +2,10 @@
 title: Homepage
 ---
 
+<!--
 {:.no_toc}
 *  
-{: toc}
+{: toc} -->
 
 ![headshot](pics/headshot.jpg)
 
