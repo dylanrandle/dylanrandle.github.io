@@ -9,3 +9,5 @@ title: Safe Autonomous Vehicles
 ## Poster
 
 ![poster](safe_avs_poster.jpg)
+
+[Click to download large version of poster](safe_avs_poster.jpg)
