@@ -16,13 +16,11 @@ November 26, 2019
 
 *Dylan Randle*
 
-This post echos the [points made by Michael Jordan](https://medium.com/@mijordan3/artificial-intelligence-the-revolution-hasnt-happened-yet-5e1d5812e1e7) but attempts to be more broadly accessible.
-
 The inspiration for writing this article is the following image:
 ![cat-ai-hype](pics/ai_meme.jpeg)
 
 With the recent (remarkable) successes in machine learning (particularly in *deep learning* with neural networks),
-many otherwise intelligent folks (Steven Hawking, Elon Musk, etc.) have posited highly questionable theories about
+many otherwise intelligent folks have posited highly questionable theories about
 runaway AI super-intelligence. The problem with listening to these views is that these people *have no idea what
 they're talking about*.
 
