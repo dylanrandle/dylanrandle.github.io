@@ -10,6 +10,36 @@ nav_include: 1
 *  
 {: toc}
 
+## The AI Anti-Hype
+
+November 26, 2019
+
+*Dylan Randle*
+
+This post echos the [points made by Michael Jordan](https://medium.com/@mijordan3/artificial-intelligence-the-revolution-hasnt-happened-yet-5e1d5812e1e7) but attempts to be more broadly accessible.
+
+The inspiration for writing this article is the following image:
+![cat-ai-hype](pics/ai_meme.jpeg)
+
+With the recent (remarkable) successes in machine learning (particularly in *deep learning* with neural networks),
+many otherwise intelligent folks (Steven Hawking, Elon Musk, etc.) have posited highly questionable theories about
+runaway AI super-intelligence. The problem with listening to these views is that these people *have no idea what
+they're talking about*.
+
+The development of "AI" has always been a product of *human ingenuity* and nothing else. There is
+this idea that "we don't know what neural networks are doing" and "they're learning" and "what if they keep learning at
+this exponential rate and overtake our own intelligence"? But this is completely and utterly misguided.
+
+Firstly, the notion that we don't know neural nets are doing is false. While we may not be able to *explain* or *understand* precisely the mechanisms by which neural networks make their predictions, we have very clear ideas and evidence about what is happening. Neural networks are simply a convenient substrate over which to optimize parameters for machine learning tasks. They are flexible, and our optimization procedures can utilize this to great effect.
+
+Further, the personification of "learning" is taken too literally. This is just a convenient term to describe the process
+of optimizing parametric models. How we judge learning is a whole other story. Generally we talk about generalizability to a test set, but this is prone to many well-understood problems (i.e. covariate shift, the scenario in which new real-world data is different from the distribution of data that generated the training and test sets). It is not something that can "run away" from us. This is something that AI practitioners spend countless hours carefully tweaking to obtain the desired result. And it is not something that can done mindlessly by a computer as it often an understanding of the real-world process that generated the data.
+
+Now let's address the point of "overtaking" our own intelligence. After having spent the last few years immersed in the actual research being conducted in AI, this notion is particularly striking. The improvements we have been seeing in AI algorithms is
+**a direct result of hard work, ingenuity and effort** by incredibly talented, creative, and intelligent researchers. Every algorithm ever created was created by a human. (And, by the way, we have tried to get "AI" to construct algorithms and they have so far been pitifully miserable at this task.) Research proceeds in ebs and flows with major breakthroughs peppered throughout. But what is the nature of these breakthroughs? Is it a computer which suddenly divines new methods which no human could have thought of? Absolutely not, it is the careful work of dedicated human researchers.
+
+The engineering of AI will be furthered by passionate and energetic *humans*. We do not need to worry about runaway intelligent algorithms. We *should* be careful about how we use these new powerful tools, however. But, at each step of the way, progress will be delivered by human ingenuity and not by computers alone.
+
 ## Prediction vs Inference
 
 September 6, 2019
