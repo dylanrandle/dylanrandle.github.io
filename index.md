@@ -28,7 +28,7 @@ I grew up in Toronto, Canada where I attended Upper Canada College for high scho
 
 ### Work Experience
 
-![amazon](pics/amazon.jpg){:height="100px" width="200px"} | ![hubdoc](pics/hubdoc.png){:height="60px" width="200px"}
+![amazon](pics/amazon.jpg){:height="100px" width="175px"} | ![hubdoc](pics/hubdoc.png){:height="60px" width="200px"}
 
 - *Data Science Intern* @ Amazon
 - *First Data Scientist* @ Hubdoc (acquired by Xero)
