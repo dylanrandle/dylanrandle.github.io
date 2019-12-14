@@ -3,9 +3,13 @@ title: "Dylan's Blog"
 nav_include: 1
 ---
 
-*In God we trust... all others must bring data.*
+# Dylan's Blog
 
-## Posts
+**In God we trust... all others must bring data.**
+
+*Disclaimer: The views and opinions expressed in this blog are those of the authors and are not endorsed by any organization or entity.*
+
+## Content
 {:.no_toc}
 *  
 {: toc}

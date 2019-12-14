@@ -1,0 +1,157 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{Dylan Labatt Randle} % Your name
+% \address{B-1 \\ II , U.P. 208016} % Your address
+%\address{123 Pleasant Lane \\ City, State 12345} % Your secondary addess (optional)
+\address{\url{dylanrandle@g.harvard.edu} \\ \url{dylanrandle.github.io}} % Your phone number and email
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+
+{\bf Harvard University, School of Engineering \& Applied Sciences} \hfill { Cambridge, MA} 
+\\ {\em M.S. in Data Science} \hfill {\em May 2020 (Expected)}
+\\ Scholarship in Applied Computation
+%Minor in Linguistics \smallskip \\
+%Member of Eta Kappa Nu \\
+%Member of Upsilon Pi Epsilon \\
+
+{\bf University of California at Berkeley, College of Engineering} \hfill {Berkeley, CA} 
+\\ {\em B.S. in Industrial Engineering \& Operations Research} \hfill {\em May 2016}
+\\ High Honors, Phi Beta Kappa, Tau Beta Pi
+
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Technical Skills}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Expert & Python (Numpy, Pandas, Scikit-Learn, Pytorch, Tensorflow) \\
+Proficient & AWS, Apache Spark, SQL, Git, Jupyter, Latex \\
+Familiar & Javascript, Matlab, C \\
+\end{tabular}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Work Experience}
+
+\begin{rSubsection}{Amazon Robotics}{North Reading, MA}{Data Science Intern}{Jun 2019 - Aug 2019}
+\item 
+    Developed machine learning package for proprietary internal use cases. 
+    Built automated and scalable data pipeline for big data querying, cleaning, and loading ($\sim 1 \times 10^{12}$ rows). 
+    Implemented API for feature selection, model training, hyperparameter tuning, and testing. 
+    Included interpretable visualizations (PDP, SHAP) for model explanations.
+
+\item 
+    Greatly increased speed and reduced complexity of model development. 
+    Wrote documentation and published code to internal repositories. 
+    % Tools: Python, Spark, AWS EMR
+\end{rSubsection}
+
+%------------------------------------------------
+
+\begin{rSubsection}{Harvard University}{Cambridge, MA}{Graduate Researcher \& Teaching Fellow}{Jan 2019 -- Present}
+\item 
+    Developed method for training unsupervised generative adversarial networks to solve differential equations.
+    Invented grid sampling procedure leading to improved convergence. Paper in progress.
+\item 
+    Applied decision sets and explainable boosting machines to reinforcement learning to learn interpretable policies targeted at healthcare applications. Paper in progress.
+\item 
+    Prepared lecture materials on boosting, neural networks, gradient descent, backpropagation, and regularization.
+    Explanations and visualizations praised by students for their clarity and simplicity.
+\end{rSubsection}
+
+%------------------------------------------------
+
+\begin{rSubsection}{Hubdoc (acquired by Xero)}{Toronto, Canada}{Data Scientist}{Jan 2017 - Jul 2018}
+\item 
+    First data scientist hired. 
+    Grew team threefold while creating highly valuable ``text extraction" product, a crucial piece driving the Xero acquisition.
+    
+\item 
+    Developed production deep learning system (LSTMs \& CNNs) for entity extraction and text classification of financial documents.
+    Built scalable, asynchronous pipeline for serving predictions.
+    Deployed fault-tolerant system to main web application, with live monitoring and alerting.
+    % Tools: Python, Tensorflow, AWS
+    
+\item 
+    Regularly presented results and recommendations to C-suite.
+    Pitched machine learning strategy to investors.
+    Delivered lectures to audiences of 40-60 people.
+    Built data visualizations for company intranet. 
+\end{rSubsection}
+
+%------------------------------------------------
+
+\end{rSection}
+
+% RELEVANT PROJECTS
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Relevant Projects}
+
+Please see my website for all of my available work: \url{dylanrandle.github.io}
+
+% \begin{rSubsection}{Twitter Troll Detection: \url{https://dylanrandle.github.io/troll_classification}}{}{}{}
+% \item Achieved 96\% accuracy in classifying tweets as trolls, using a dataset of Twitter handles from the Internet Research Agency, an organization indicted by prosecutors for meddling in the 2016 U.S. presidential election
+% \end{rSubsection}
+
+% %------------------------------------------------
+
+% \begin{rSubsection}{Automatic Differentiation: \url{https://github.com/dylanrandle/autograd }}{}{}{}
+% \item Built a Python package implementing automatic differentiation (forward and reverse mode) in NumPy. Includes gradient descent and Adam optimizers, with extensive documentation.
+% \end{rSubsection}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% LEADERSHIP
+%----------------------------------------------------------------------------------------
+
+% \begin{rSection}{LEADERSHIP EXPERIENCE}
+
+% \begin{rSubsection}{Taylor Statten Camps}{Algonquin Park, Canada}{Long Trip Counselor}{Summer 2015/2016}
+% \item Led 50-day and 36-day wilderness canoe trips through Northern Ontario and Minnesota. Planned route and food drops, navigated 2500km+ of rugged wilderness, and ensured safety of numerous groups of 7 teenage boys
+% \end{rSubsection}
+
+% \end{rSection}
+
+\end{document}
+

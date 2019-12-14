@@ -1,6 +1,6 @@
 theme: jekyll-theme-minimal
 title: Dylan Labatt Randle
-description: Personal website
+description: A personal website
 baseurl:
 markdown: kramdown
 kramdown:

@@ -4,10 +4,10 @@ title: Safe Autonomous Vehicles
 
 ## Writeup
 
-[Click to download the full writeup](safe_avs_writeup.pdf)
+[Click to download the full writeup](safe_avs/safe_avs_writeup.pdf)
 
 ## Poster
 
-![poster](safe_avs_poster.jpg)
+![poster](safe_avs/safe_avs_poster.jpg)
 
-[Click to download large version of poster](safe_avs_poster.jpg)
+[Click to download large version of poster](safe_avs/safe_avs_poster.jpg)
