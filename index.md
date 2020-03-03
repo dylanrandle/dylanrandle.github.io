@@ -17,17 +17,17 @@ I grew up in Toronto, Canada where I attended Upper Canada College for high scho
 
 For undergraduate, I enrolled in the College of Engineering at UC Berkeley, where I studied Industrial Engineering & Operations Research and fell in love with mathematical optimization and statistics.
 
-I worked for two years after undergrad at a startup (which was later acquired) as its first data scientist. I designed, developed, and deployed their first machine learning system (a text extraction service using LSTMs) and hired two great engineers to join my team.
+I worked for two years after undergrad at a startup called Hubdoc, which was later acquired, as the first data scientist. I designed, developed, and deployed their first deep learning system (an information extraction service using LSTMs) and hired two great engineers to join my team.
 
 Currently I'm studying Data Science at Harvard.
 
 ### Education
 
-![harvard](pics/SEASLogo.png){:height="100px" width="250px"} | ![berkeley](pics/berkeley-engineering-logo.jpg){:height="100px" width="100px"}
+![harvard](pics/seas_new.jpg){:height="150px" width="300px"} | ![berkeley](pics/berkeley-engineering-logo.jpg){:height="100px" width="100px"}
 
 ### Work Experience
 
-![amazon](pics/amazon-robotics-logo-feature.jpg){:height="100px" width="175px"} | ![hubdoc](pics/hubdoc.png){:height="60px" width="200px"}
+![amazon](pics/amazon-robotics-logo-feature.jpg){:height="120px" width="200px"} | ![hubdoc](pics/hubdoc.png){:height="60px" width="175px"}
 
 ## Projects
 
