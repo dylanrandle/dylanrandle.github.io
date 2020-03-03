@@ -11,29 +11,23 @@ title: Homepage
 
 [![resume](pics/resume-cv-logo.png){:height="50px" width="50px"}](resume/resume.pdf) | [![gitlogo](pics/GitHub-Mark.png){:height="50px" width="50px"}](https://github.com/dylanrandle) | [![linkedinlogo](pics/linkedin.png){:height="50px" width="50px"}](https://linkedin.com/in/dylanrandle/)
 
-<!-- ## Background -->
+## Background
 
-<!-- I grew up in Toronto, Canada where I attended Upper Canada College for high school. I graduated with an International Baccalaureate diploma, taking higher-levels in math, physics, and economics. I was an active member of Model United Nations and traveled across North America to compete in debates.
+I grew up in Toronto, Canada where I attended Upper Canada College for high school. I graduated with an International Baccalaureate diploma, taking higher-levels in math, physics, and economics. I was an active member of Model United Nations and traveled across North America to compete in debates.
 
 For undergraduate, I enrolled in the College of Engineering at UC Berkeley, where I studied Industrial Engineering & Operations Research and fell in love with mathematical optimization and statistics.
 
 I worked for two years after undergrad at a startup (which was later acquired) as its first data scientist. I designed, developed, and deployed their first machine learning system (a text extraction service using LSTMs) and hired two great engineers to join my team.
 
-Currently I'm studying Data Science at Harvard. -->
+Currently I'm studying Data Science at Harvard.
 
-<!-- ### Education
+### Education
 
 ![harvard](pics/SEASLogo.png){:height="100px" width="250px"} | ![berkeley](pics/berkeley-engineering-logo.jpg){:height="100px" width="100px"}
 
-- *MS in Data Science*, Harvard University
-- *BS in Industrial Engineering & Operations Research*, UC Berkeley
-
 ### Work Experience
 
-![amazon](pics/amazon.jpg){:height="100px" width="175px"} | ![hubdoc](pics/hubdoc.png){:height="60px" width="200px"}
-
-- *Data Scientist*, Amazon
-- *First Data Scientist*, Hubdoc (acquired by Xero) -->
+![amazon](pics/amazon-robotics-logo-feature.jpg){:height="100px" width="175px"} | ![hubdoc](pics/hubdoc.png){:height="60px" width="200px"}
 
 ## Projects
 
@@ -56,7 +50,7 @@ Currently I'm studying Data Science at Harvard. -->
 - [Bayesian GANs: A Paper Review](bayesgan.md)
 - [Autonomous Vehicles: A Critical Analysis](safe_avs.md)
 
-## Workshops & Presentations
+### Workshops
 - [ComputeFest 2020: Notebook to Cloud](https://colab.research.google.com/drive/1HUxNsHqqTZ1FRuveu6SS6gr6lCVe6QqO)
 
 ## Blog
