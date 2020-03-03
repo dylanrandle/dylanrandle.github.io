@@ -3,9 +3,9 @@ title: Homepage
 ---
 
 **Welcome to my website.** Here you can find:
-- My [CV](resume/resume.pdf), [GitHub](https://github.com/dylanrandle), and [LinkedIn](https://linkedin.com/in/dylanrandle/)
-- [Research](index.md#research), [personal projects](index.md#personal), and [group work](index.md#group)
-- [A nascent blog](blog.md)
+- My [resume](resume/resume.pdf), [GitHub](https://github.com/dylanrandle), and [LinkedIn](https://linkedin.com/in/dylanrandle/)
+- [Research and applied projects](index.md#projects)
+- [A blog](blog.md)
 
 ![headshot](pics/headshot.jpg)
 
@@ -19,7 +19,7 @@ For undergraduate, I enrolled in the College of Engineering at UC Berkeley, wher
 
 I worked for two years after undergrad at a startup (which was later acquired) as its first data scientist. I designed, developed, and deployed their first machine learning system (a text extraction service using LSTMs) and hired two great engineers to join my team.
 
-Currently I'm studying Data Science at Harvard where I have relished the opportunity to learn alongside such fantastic peers and teachers. -->
+Currently I'm studying Data Science at Harvard. -->
 
 <!-- ### Education
 
@@ -43,10 +43,12 @@ Currently I'm studying Data Science at Harvard where I have relished the opportu
 
 ### Personal
 - [Deep Generative Modeling](https://github.com/dylanrandle/deepgen)
+![deepgen_gif](https://github.com/dylanrandle/deepgen/blob/master/examples/gif_new_faces.gif?raw=true)
 - [Interpretable Machine Learning](https://github.com/dylanrandle/pynterp)
 
 ### Group
 - [Differentiable Neural Architecture Search](https://towardsdatascience.com/investigating-differentiable-neural-architecture-search-for-scientific-datasets-62899be8714e?source=friends_link&sk=bece331a719b31f24118c4b538b71d4f)
+![darts_img](https://miro.medium.com/max/3200/0*2yeQXLShQeMR29WC)
 - [Twitter Troll Detection](https://dylanrandle.github.io/troll_classification)
 - [Automatic Differentiation](https://github.com/dylanrandle/autograd)
 - [Modeling Microbiome Dynamics with LSTMs](https://github.com/dylanrandle/microbiome)
@@ -54,8 +56,11 @@ Currently I'm studying Data Science at Harvard where I have relished the opportu
 - [Bayesian GANs: A Paper Review](bayesgan.md)
 - [Autonomous Vehicles: A Critical Analysis](safe_avs.md)
 
+## Workshops & Presentations
+- [ComputeFest 2020: Notebook to Cloud](https://colab.research.google.com/drive/1HUxNsHqqTZ1FRuveu6SS6gr6lCVe6QqO)
+
 ## Blog
 Some of my [thoughts](blog.md) on various topics.
 
-## Awards
-Some of the [recognitions](awards.md) I have been fortunate to receive.
+<!-- ## Awards
+Some of the [recognitions](awards.md) I have been fortunate to receive. -->
