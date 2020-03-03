@@ -59,9 +59,9 @@
 \begin{rSection}{Technical Skills}
 
 \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-Expert & Python (Pandas, Numpy, Scikit-Learn, Pytorch, Tensorflow) \\
-Proficient & SQL, AWS, Spark, Git, Jupyter, Latex \\
-Familiar & C, Matlab, Javascript \\
+Expert & Python (Pytorch, Tensorflow, Pandas, Numpy, Scipy, Scikit-Learn) \\
+Proficient & AWS, Apache Spark, SQL, Git, Jupyter, Latex \\
+Familiar & C/C++, Javascript \\
 \end{tabular}
 
 \end{rSection}
@@ -73,6 +73,7 @@ Familiar & C, Matlab, Javascript \\
 \begin{rSection}{Work Experience}
 
 \begin{rSubsection}{Amazon Robotics}{North Reading, MA}{Data Science Intern}{Jun 2019 - Aug 2019}
+
 \item
     Developed machine learning package for proprietary internal use cases.
     Built automated and scalable data pipeline for big data querying, cleaning, and loading ($\sim 1 \times 10^{12}$ rows).
@@ -80,54 +81,94 @@ Familiar & C, Matlab, Javascript \\
     Included interpretable visualizations (e.g. PDP, SHAP) for model explanations.
 
 \item
-    Greatly increased speed and reduced complexity of model development.
+    Greatly increased speed and reduced complexity of model development and analysis.
     Wrote documentation and published code to internal repositories.
-    % Tools: Python, Spark, AWS EMR
+    
 \end{rSubsection}
 
 %------------------------------------------------
 
-\begin{rSubsection}{Harvard University}{Cambridge, MA}{Graduate Researcher \& Teaching Fellow}{Jan 2019 -- Present}
+\begin{rSubsection}{Harvard University}{Cambridge, MA}{Teaching Fellow}{Nov 2019 -- Present}
+
 \item
-    Developed method for training unsupervised generative adversarial networks to solve differential equations.
-    Invented grid sampling procedure leading to improved convergence. Paper in progress.
+    CS109a/AC209a: \emph{Introduction to Data Science}. Helped prepare lecture materials on boosting, neural networks, gradient descent, backpropagation, and regularization.
+    Explanations and visualizations praised by students for clarity and simplicity.
+    
 \item
-    Applied decision sets and explainable boosting machines to reinforcement learning to learn interpretable policies targeted at healthcare applications. Paper in progress.
-\item
-    Prepared lecture materials on boosting, neural networks, gradient descent, backpropagation, and regularization.
-    Explanations and visualizations praised by students for their clarity and simplicity.
+    CS205: \emph{Computing Foundations for Computational Science}. Led hands-on lab sections covering AWS, Docker, OpenACC, OpenMP, MPI, Hadoop, Spark. Held weekly office hours and answered student questions.
+    
 \end{rSubsection}
 
 %------------------------------------------------
 
-\begin{rSubsection}{Hubdoc (acquired by Xero)}{Toronto, Canada}{Data Scientist}{Jan 2017 - Jul 2018}
+\begin{rSubsection}{Hubdoc Inc. (acquired by Xero)}{Toronto, Canada}{Data Scientist}{Jan 2017 - Jul 2018}
 \item
     First data scientist hired.
-    Grew team threefold while creating highly valuable ``text extraction" product, a crucial piece driving the Xero acquisition.
+    Built highly valuable deep learning system for information extraction from financial documents. 
+    Hired and led team of two additional data scientists.
 
 \item
-    Developed production deep learning system (LSTMs \& CNNs) for entity extraction and text classification of financial documents.
-    Built scalable, asynchronous pipeline for serving predictions.
-    Deployed fault-tolerant system to main web application, with live monitoring and alerting.
-    % Tools: Python, Tensorflow, AWS
+    Architect and visionary of production deep learning system levering LSTMs and CNNs for entity extraction and text classification of financial documents.
+    Built and deployed scalable, asynchronous pipeline for serving predictions with robust fault-tolerance and monitoring.
 
 \item
     Regularly presented results and recommendations to C-suite.
-    Pitched machine learning strategy to investors.
-    Delivered lectures to audiences of 40-60 people.
+    Pitched machine learning strategy to potential investors.
+    Delivered lectures to audiences of $\sim 50$ people.
     Built data visualizations for company intranet.
+    
+\end{rSubsection}
+
+%------------------------------------------------
+
+\begin{rSubsection}{Taylor Statten Camps}{Algonquin Park, Canada}{Long Trip Counselor}{Summers 2015, 2016}
+
+\item
+    Led 36 and 50-day canoe trips through remote wilderness. Responsible for groups of seven teenage boys. In charge of planning, 
+    safety, and navigation. All trips finished successfully with no injuries or major issues.
+
+\end{rSubsection}
+
+%------------------------------------------------
+
+\begin{rSubsection}{BMO Capital Markets}{Toronto, Canada}{Financial Products Analyst}{May 2014 - Aug 2014}
+
+\item
+    Conducted analyses of various debt products (swaps, swaptions, ABS, MBS).
+    Developed algorithm to model relationship between frequency of delta-hedging and expected returns for Canadian swaptions.
+    Discovered potential trading opportunities.
+
 \end{rSubsection}
 
 %------------------------------------------------
 
 \end{rSection}
 
-% RELEVANT PROJECTS
+% RESEARCH & Projects
 %----------------------------------------------------------------------------------------
 
-\begin{rSection}{Relevant Projects}
+\begin{rSection}{Projects \& Research}
+
+\begin{rSubsection}{GANs for Differential Equations}{}{}{}
+
+\item Developed novel method for unsupervised training of neural networks for solving differential equations. Leveraged generative adversarial networks (GANs) to learn the loss function. Demonstrated efficacy on a range of problems, increasing accuracy by orders of magnitude over previous methods.
+
+\end{rSubsection}
+
+\begin{rSubsection}{Interpretable Reinforcement Learning}{}{}{}
+
+\item Researched interpretable machine learning methods and their application to high-stakes reinforcement learning problems. Employed imitation learning to train rules-based models. 
+
+\end{rSubsection}
+
+\begin{rSubsection}{Deep Generative Modeling}{}{}{}
+\item Project focused on various deep generative models (VAEs, GANs). Currently implemented a ResNet VAE which produces fairly realistic samples.
+\end{rSubsection}
 
 Please see my website for all of my available work: \url{dylanrandle.github.io}
+
+\end{rSection}
+
 
 % \begin{rSubsection}{Twitter Troll Detection: \url{https://dylanrandle.github.io/troll_classification}}{}{}{}
 % \item Achieved 96\% accuracy in classifying tweets as trolls, using a dataset of Twitter handles from the Internet Research Agency, an organization indicted by prosecutors for meddling in the 2016 U.S. presidential election
@@ -139,18 +180,46 @@ Please see my website for all of my available work: \url{dylanrandle.github.io}
 % \item Built a Python package implementing automatic differentiation (forward and reverse mode) in NumPy. Includes gradient descent and Adam optimizers, with extensive documentation.
 % \end{rSubsection}
 
-\end{rSection}
-
 %----------------------------------------------------------------------------------------
 % LEADERSHIP
 %----------------------------------------------------------------------------------------
 
-% \begin{rSection}{LEADERSHIP EXPERIENCE}
+\begin{rSection}{Leadership Experience}
 
-% \begin{rSubsection}{Taylor Statten Camps}{Algonquin Park, Canada}{Long Trip Counselor}{Summer 2015/2016}
-% \item Led 50-day and 36-day wilderness canoe trips through Northern Ontario and Minnesota. Planned route and food drops, navigated 2500km+ of rugged wilderness, and ensured safety of numerous groups of 7 teenage boys
-% \end{rSubsection}
+\begin{rSubsection}{Harvard Graduate Canadian Club}{Cambridge, MA}{Treasurer}{Sep 2019 - May 2020}
 
-% \end{rSection}
+\item Co-organizer of various activities aimed at engaging the community of Canadian graduate students. Met with leaders of Canadian Embassy to plan future engagements. In charge of managing club finances, preparing budgets and fundraising requests.  
+
+\end{rSubsection}
+
+\begin{rSubsection}{Berkeley IEOR Honors Society}{Berkeley, CA}{Vice President}{Sep 2015 - May 2016}
+
+\item Co-organizer of company information sessions aimed at IEOR students. Engaged faculty members to participate in program fostering student-faculty collaboration on research with society members.
+
+\end{rSubsection}
+
+\end{rSection}
+
+
+%----------------------------------------------------------------------------------------
+% Workshops / Presentations
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Workshops \& Presentations}
+
+\begin{rSubsection}{ComputeFest 2020}{Cambridge, MA}{Presenter}{Jan 2020}
+
+\item Developed and presented ``Notebook to Cloud" workshop as part of IACS ComputeFest 2020. Led section on containerization using Docker. Illustrated utility of Docker through the deployment of a Tensorflow sentiment analysis model.
+
+\end{rSubsection}
+
+\begin{rSubsection}{Toronto Machine Learning Summit}{Toronto Canada}{Presenter}{Nov 2017}
+
+\item Presented Hubdoc's deep learning infrastructure to group of $\sim 100$ data scientists and engineers. Discussed best practices for deploying deep learning with Tensorflow. 
+
+\end{rSubsection}
+
+\end{rSection}
+
 
 \end{document}
