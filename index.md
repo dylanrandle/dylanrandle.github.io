@@ -3,25 +3,25 @@ title: Homepage
 ---
 
 **Welcome to my website.** Here you can find:
-- A brief [background](index.md#background) and links to my, [CV](resume/resume.pdf), [GitHub](https://github.com/dylanrandle), and [LinkedIn](https://linkedin.com/in/dylanrandle/)
-- Links to [research](index.md#research), [personal](index.md#personal), and [group](index.md#group) projects I have worked on
-- A [blog](blog.md) I recently started
+- My [CV](resume/resume.pdf), [GitHub](https://github.com/dylanrandle), and [LinkedIn](https://linkedin.com/in/dylanrandle/)
+- [Research](index.md#research), [personal projects](index.md#personal), and [group work](index.md#group)
+- [A nascent blog](blog.md)
 
 ![headshot](pics/headshot.jpg)
 
 [![resume](pics/resume-cv-logo.png){:height="50px" width="50px"}](resume/resume.pdf) | [![gitlogo](pics/GitHub-Mark.png){:height="50px" width="50px"}](https://github.com/dylanrandle) | [![linkedinlogo](pics/linkedin.png){:height="50px" width="50px"}](https://linkedin.com/in/dylanrandle/)
 
-## Background
+<!-- ## Background -->
 
-I grew up in Toronto, Canada where I attended Upper Canada College for high school. I graduated with an International Baccalaureate diploma, taking higher-levels in math, physics, and economics. I was an active member of Model United Nations and traveled across North America to compete in debates.
+<!-- I grew up in Toronto, Canada where I attended Upper Canada College for high school. I graduated with an International Baccalaureate diploma, taking higher-levels in math, physics, and economics. I was an active member of Model United Nations and traveled across North America to compete in debates.
 
 For undergraduate, I enrolled in the College of Engineering at UC Berkeley, where I studied Industrial Engineering & Operations Research and fell in love with mathematical optimization and statistics.
 
 I worked for two years after undergrad at a startup (which was later acquired) as its first data scientist. I designed, developed, and deployed their first machine learning system (a text extraction service using LSTMs) and hired two great engineers to join my team.
 
-Currently I'm studying Data Science at Harvard where I have relished the opportunity to learn alongside such fantastic peers and teachers.
+Currently I'm studying Data Science at Harvard where I have relished the opportunity to learn alongside such fantastic peers and teachers. -->
 
-### Education
+<!-- ### Education
 
 ![harvard](pics/SEASLogo.png){:height="100px" width="250px"} | ![berkeley](pics/berkeley-engineering-logo.jpg){:height="100px" width="100px"}
 
@@ -33,7 +33,7 @@ Currently I'm studying Data Science at Harvard where I have relished the opportu
 ![amazon](pics/amazon.jpg){:height="100px" width="175px"} | ![hubdoc](pics/hubdoc.png){:height="60px" width="200px"}
 
 - *Data Scientist*, Amazon
-- *First Data Scientist*, Hubdoc (acquired by Xero)
+- *First Data Scientist*, Hubdoc (acquired by Xero) -->
 
 ## Projects
 
