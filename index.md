@@ -34,6 +34,7 @@ Realizing that the future of data science and machine learning would be bright, 
 
 ### Research
 - Unsupervised Generative Adversarial Networks for Differential Equations (in progress)
+![deqgan_diagram](pics/DEQGAN_diagram.png)
 - Interpretable Reinforcement Learning for Healthcare (in progress)
 
 ### Applied
