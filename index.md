@@ -2,7 +2,7 @@
 title: Home
 ---
 
-![headshot](pics/headshot.jpg){:height="300px" width="240px"} | ![headshot_neuralstyle](pics/dylan_style.png){:height="300px" width="240px"}
+![headshot](pics/headshot.jpg){:height="248px" width="200px"} | ![headshot_neuralstyle](pics/dylan_style.png){:height="248px" width="200px"}
 
 # **Welcome to my website!**
 
@@ -20,13 +20,13 @@ I grew up in [Toronto, Canada](https://en.wikipedia.org/wiki/Toronto), attending
 
 <!-- ### *Education* -->
 
-![berkeley](pics/UCBEngineering_logo.png){:height="40px" width="275px"} | ![hubdoc](pics/hubdoc.png){:height="50px" width="150px"}
+![berkeley](pics/UCBEngineering_logo.png){:height="32px" width="250px"} | ![hubdoc](pics/hubdoc.png){:height="42px" width="150px"}
 
 Thereafter, I became the first data scientist at an exciting Toronto startup called [Hubdoc](https://www.hubdoc.com/), where I worked with bright and talented colleagues to design, develop and deploy a client-facing, production deep-learning system for information extraction from financial documents. This system was central to the company's value proposition and [later acquisition](https://www.zdnet.com/article/xero-scoops-up-hubdoc-in-70-million-acquisition/).
 
 <!-- ### *Work Experience* -->
 
-![harvard](pics/H_SEAS_logo_RGB.jpg){:height="75px" width="250px"} | ![amazon](pics/amazon-robotics-logo-feature.jpg){:height="90px" width="200px"}
+![harvard](pics/H_SEAS_logo_RGB.jpg){:height="64px" width="225px"} | ![amazon](pics/amazon-robotics-logo-feature.jpg){:height="56px" width="175px"}
 
 Realizing that the future of data science and machine learning would be bright, I enrolled in [Harvard's data science program](https://www.seas.harvard.edu/applied-computation/graduate-programs/masters-data-science) to gain a deeper understanding of the field. At Harvard I have relished the chance to work and learn with incredible colleagues and mentors. Over the summer I interned with Amazon Robotics in Boston, MA, and greatly enjoyed the technical and engineering work being done there.
 
