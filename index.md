@@ -2,7 +2,7 @@
 title: Home
 ---
 
-![headshot](pics/headshot.jpg){:height="248px" width="200px"} | ![headshot_neuralstyle](pics/dylan_style.png){:height="248px" width="200px"}
+![headshot](pics/headshot.jpg){:height="186px" width="150px"} | ![headshot_neuralstyle](pics/dylan_style.png){:height="186px" width="150px"}
 
 # **Welcome to my website!**
 
@@ -10,31 +10,27 @@ title: Home
 - Examples of [research](index.md#research) and [applied projects](index.md#applied) I have worked on
 - My [resume](resume/resume.pdf) and a brief [background](index.md#background)
 - Links to my [GitHub](https://github.com/dylanrandle) and [LinkedIn](https://linkedin.com/in/dylanrandle/) profiles
-- An informal [blog](blog.md)
+- A [blog](blog.md)
 
 [![resume](pics/resume-clipart-icons-3.png){:height="50px" width="50px"}](resume/resume.pdf) | [![gitlogo](pics/GitHub-Mark.png){:height="60px" width="60px"}](https://github.com/dylanrandle) | [![linkedinlogo](pics/linkedin.png){:height="70px" width="70px"}](https://linkedin.com/in/dylanrandle/)
 
 ## Background
 
-I grew up in [Toronto, Canada](https://en.wikipedia.org/wiki/Toronto), attending [Upper Canada College](https://www.ucc.on.ca/) for high school, and studying math, physics, and economics. For college, I moved across the continent to [Berkeley, California](https://en.wikipedia.org/wiki/Berkeley,_California) where I had the privilege of studying at [UC Berkeley's College of Engineering](https://engineering.berkeley.edu/), and majored in [Industrial Engineering & Operations Research](https://ieor.berkeley.edu/) (a branch of applied mathematics focusing on business applications).
-
-<!-- ### *Education* -->
+I grew up in Toronto, Canada where I attended [Upper Canada College](https://www.ucc.on.ca/) and enjoyed studying math, physics, and economics. For college, I moved to Berkeley, California where I had the privilege of studying at [UC Berkeley's College of Engineering](https://engineering.berkeley.edu/), majoring in [Industrial Engineering & Operations Research](https://ieor.berkeley.edu/) (a branch of applied mathematics focusing on business applications).
 
 ![berkeley](pics/UCBEngineering_logo.png){:height="32px" width="250px"} | ![hubdoc](pics/hubdoc.png){:height="42px" width="150px"}
 
-Thereafter, I became the first data scientist at an exciting Toronto startup called [Hubdoc](https://www.hubdoc.com/), where I worked with bright and talented colleagues to design, develop and deploy a client-facing, production deep-learning system for information extraction from financial documents. This system was central to the company's value proposition and [later acquisition](https://www.zdnet.com/article/xero-scoops-up-hubdoc-in-70-million-acquisition/).
-
-<!-- ### *Work Experience* -->
+Later I became the first data scientist at an exciting Toronto startup called [Hubdoc](https://www.hubdoc.com/), where I got to work with bright and talented colleagues to design, develop, and deploy a client-facing, production deep-learning system for information extraction from financial documents. This system was central to the company's value proposition and [later acquisition](https://www.zdnet.com/article/xero-scoops-up-hubdoc-in-70-million-acquisition/).
 
 ![harvard](pics/H_SEAS_logo_RGB.jpg){:height="64px" width="225px"} | ![amazon](pics/amazon-robotics-logo-feature.jpg){:height="56px" width="175px"}
 
-Realizing that the future of data science and machine learning would be bright, I enrolled in [Harvard's data science program](https://www.seas.harvard.edu/applied-computation/graduate-programs/masters-data-science) to gain a deeper understanding of the field. At Harvard I have relished the chance to work and learn with incredible colleagues and mentors. Over the summer I interned with Amazon Robotics in Boston, MA, and greatly enjoyed the technical and engineering work being done there.
+Realizing that the future of data science and machine learning would be bright, I enrolled in [Harvard's data science program](https://www.seas.harvard.edu/applied-computation/graduate-programs/masters-data-science) to gain a deeper understanding of the field. At Harvard I have relished the chance to work and learn alongside incredible peers and professors. Recently, I interned with Amazon Robotics where I greatly enjoyed taking part in the technical and engineering work being done there.
 
 ## Researh & Applied Projects
 
 ### Research
 - Unsupervised Generative Adversarial Networks for Differential Equations (in progress)
-![deqgan_diagram](pics/DEQGAN_diagram.png)
+<!-- ![deqgan_diagram](pics/DEQGAN_diagram.png) -->
 - Interpretable Reinforcement Learning for Healthcare (in progress)
 
 ### Applied
@@ -56,6 +52,3 @@ Realizing that the future of data science and machine learning would be bright, 
 
 ## Blog
 My [thoughts](blog.md) on various topics.
-
-<!-- ## Awards
-Some of the [recognitions](awards.md) I have been fortunate to receive. -->
