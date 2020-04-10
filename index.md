@@ -2,7 +2,9 @@
 title: Home
 ---
 
-![headshot](pics/headshot.jpg){:height="186px" width="150px"} | ![headshot_neuralstyle](pics/dylan_style.png){:height="186px" width="150px"}
+<!-- ![headshot](pics/headshot.jpg){:height="186px" width="150px"} | ![headshot_neuralstyle](pics/dylan_style.png){:height="186px" width="150px"} -->
+
+![headshot](pics/dylan.gif){:height="248px" width="200px"}
 
 # **Welcome to my website!**
 
