@@ -4,7 +4,7 @@ title: Home
 
 <!-- ![headshot](pics/headshot.jpg){:height="186px" width="150px"} | ![headshot_neuralstyle](pics/dylan_style.png){:height="186px" width="150px"} -->
 
-![headshot](pics/dylan.gif){:height="248px" width="200px"}
+![revy](pics/Revy.JPG)
 
 ## Welcome to my website!
 
@@ -17,6 +17,10 @@ title: Home
 [![resume](pics/resume-clipart-icons-3.png){:height="50px" width="50px"}](resume/resume.pdf) | [![gitlogo](pics/GitHub-Mark.png){:height="60px" width="60px"}](https://github.com/dylanrandle) | [![linkedinlogo](pics/linkedin.png){:height="70px" width="70px"}](https://linkedin.com/in/dylanrandle/)
 
 ## Background
+
+![headshot](pics/headshot.jpg){:height="248px" width="200px"} | ![style-headshot](pics/dylan_style.png){:height="248px" width="200px"}
+
+<!-- ![style-headshot-gif](pics/dylan.gif){:height="248px" width="200px"} -->
 
 I grew up in Toronto, Canada where I attended [Upper Canada College](https://www.ucc.on.ca/) and enjoyed studying math, physics, and economics. For college, I moved to Berkeley, California where I had the privilege of studying at [UC Berkeley's College of Engineering](https://engineering.berkeley.edu/), majoring in [Industrial Engineering & Operations Research](https://ieor.berkeley.edu/) (a branch of applied mathematics focusing on business applications).
 
