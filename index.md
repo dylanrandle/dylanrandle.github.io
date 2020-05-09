@@ -2,7 +2,7 @@
 title: Home
 ---
 
-![revy](pics/Revy.JPG)
+![revy](pics/Revy.JPG){:height="215px" width="400px"}
 
 # Welcome to my website!
 
@@ -19,14 +19,19 @@ title: Home
 
 ## Research
 - [Unsupervised Generative Adversarial Networks for Differential Equations](denn.md) (in progress)
+
 ![denn_gif](pics/sir_2x.gif)
+
 - Interpretable Reinforcement Learning for Healthcare (in progress)
 - [Differentiable Neural Architecture Search](https://towardsdatascience.com/investigating-differentiable-neural-architecture-search-for-scientific-datasets-62899be8714e?source=friends_link&sk=bece331a719b31f24118c4b538b71d4f)
+
 ![darts_img](https://miro.medium.com/max/3200/0*2yeQXLShQeMR29WC)
 
 ## Applied
 - [Deep Generative Modeling](https://github.com/dylanrandle/deepgen)
+
 ![deepgen_gif](https://github.com/dylanrandle/deepgen/blob/master/examples/gif_new_faces.gif?raw=true)
+
 - [Interpretable Machine Learning](https://github.com/dylanrandle/pynterp)
 - [ComputeFest 2020 Workshop: Notebook to Cloud](https://colab.research.google.com/drive/1HUxNsHqqTZ1FRuveu6SS6gr6lCVe6QqO)
 - [Twitter Troll Detection](https://dylanrandle.github.io/troll_classification)
