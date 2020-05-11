@@ -16,7 +16,7 @@ title: Home
 # Projects
 
 ## Research
-- [Unsupervised Generative Adversarial Networks for Differential Equations](denn.md)
+- [Generative Adversarial Networks for Solving Differential Equations](denn.md)
 
 <!-- [![exp_gif](denn/exp_2x.gif)](denn.html)s -->
 [![sho_gif](denn/sho_2x.gif)](denn.html)

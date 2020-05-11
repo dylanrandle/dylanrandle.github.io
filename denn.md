@@ -1,18 +1,12 @@
-# DENN
+# Unsupervised Neural Network Methods for Solving Differential Equations
 
-## Method
-![deqgan_diagram](pics/DEQGAN_diagram.png)
+## Differential Equation GAN
+![deqgan_diagram](denn/DEQGAN_diagram.png)
 
-## Live Examples
+<br />
 
-### Exponential
-![exp_gif](pics/exp_2x.gif)
-
-### Simple Harmonic Oscillator
-![sho_gif](pics/sho_2x.gif)
-
-### Nonlinear Oscillator
-![nlo_gif](pics/nlo_2x.gif)
-
-### SIR Model
-![sir_gif](pics/sir_2x.gif)
+## Experiments
+![exp_gif](denn/exp_2x.gif)
+![sho_gif](denn/sho_2x.gif)
+![nlo_gif](denn/nlo_2x.gif)
+![sir_gif](denn/sir_2x.gif)
