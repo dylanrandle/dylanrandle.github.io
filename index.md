@@ -2,20 +2,16 @@
 title: Home
 ---
 
-![headshot](pics/headshot.jpg){:height="248px" width="200px"}![style-headshot](pics/dylan_style.png){:height="248px" width="200px"}
-
-<!-- ![style-gif](pics/dylan_style.gif){:height="248px" width="200px"} -->
+![headshot](pics/headshot.jpg){:height="300px" width="250px"}![style-headshot](pics/dylan_style.png){:height="300px" width="250px"}
 
 # Welcome to my website!
 
-### On this page:
-- [Research](index.md#research) and [applied](index.md#applied) projects
-- [Resume](resume/resume.pdf), [GitHub](https://github.com/dylanrandle), and [LinkedIn](https://linkedin.com/in/dylanrandle/)
-- My [blog](index.md#blog)
+## On this page:
+- ### [Research](index.md#research) and [applied](index.md#applied) projects
+- ### [Resume](resume/resume.pdf), [GitHub](https://github.com/dylanrandle), and [LinkedIn](https://linkedin.com/in/dylanrandle/)
+- ### My [blog](index.md#blog)
 
 [![resume](pics/cv_no_back.png){:height="75px" width="50px"}](resume/resume.pdf)&nbsp;&nbsp;&nbsp;&nbsp;[![gitlogo](pics/GitHub-Mark-120px-plus.png){:height="75px" width="75px"}](https://github.com/dylanrandle)&nbsp;&nbsp;&nbsp;&nbsp;[![linkedinlogo](pics/linkedin.png){:height="75px" width="75px"}](https://linkedin.com/in/dylanrandle/)
-
-<!-- # Projects -->
 
 # Research
 ## [Generative Adversarial Networks for Solving Differential Equations](denn/denn.md)
@@ -32,12 +28,6 @@ title: Home
 
 # Applied
 ## [Deep Generative Modeling of Faces](https://github.com/dylanrandle/deepgen)
-
-<!-- [![deepgen_gif](https://github.com/dylanrandle/deepgen/blob/master/examples/gif_new_faces.gif?raw=true){:height="300px" width="600px"}](https://github.com/dylanrandle/deepgen) -->
-
-<!-- {:height="200px" width="750px"} -->
-
-<!-- https://github.com/dylanrandle/deepgen/raw/master/examples/all_attr_matrix.gif -->
 
 [![deepgen_gif](https://github.com/dylanrandle/deepgen/raw/master/examples/gif_test_examples.gif){:height="250px" width="750px"}](https://github.com/dylanrandle/deepgen)
 

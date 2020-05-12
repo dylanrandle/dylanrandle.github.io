@@ -1,6 +1,6 @@
-theme: minima # jekyll-theme-slate
+theme: minima
 title: Dylan Labatt Randle
-description: A personal website
+description: Copyright © 2018 Dylan Labatt Randle. All rights reserved.
 logo: pics/R.png
 github: [metadata]
 markdown: kramdown
