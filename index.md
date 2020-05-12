@@ -19,8 +19,8 @@ title: Home
 - [Generative Adversarial Networks for Solving Differential Equations](denn.md)
 
 <!-- [![exp_gif](denn/exp_2x.gif)](denn.html)s -->
-[![sho_gif](denn/sho_2x.gif){:height="150px" width="500px"}](denn.html)
-[![nlo_gif](denn/nlo_2x.gif){:height="150px" width="500px"}](denn.html)
+<!-- [![sho_gif](denn/sho_2x.gif){:height="150px" width="500px"}](denn.html) -->
+<!-- [![nlo_gif](denn/nlo_2x.gif){:height="150px" width="500px"}](denn.html) -->
 [![denn_gif](denn/sir_2x.gif){:height="150px" width="500px"}](denn.html)
 
 - [Differentiable Neural Architecture Search for Scientific Datasets](https://towardsdatascience.com/investigating-differentiable-neural-architecture-search-for-scientific-datasets-62899be8714e?source=friends_link&sk=bece331a719b31f24118c4b538b71d4f)
