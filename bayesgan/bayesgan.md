@@ -1,7 +1,10 @@
 ---
-title: Bayesian GAN
+title: Bayesian GANs
 notebook: bayesgan.ipynb
+mathjax: true
 ---
+
+{% include mathjax.html %}
 
 # APMTH 207: Advanced Scientific Computing:
 ## Stochastic Methods for Data Analysis, Inference and Optimization
