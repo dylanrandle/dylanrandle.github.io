@@ -11,7 +11,7 @@ title: Home
 - ### [Resume](resume/resume.pdf), [GitHub](https://github.com/dylanrandle), and [LinkedIn](https://linkedin.com/in/dylanrandle/)
 - ### My [blog](index.md#blog)
 
-[![resume](pics/cv_no_back.png){:height="75px" width="50px"}](resume/resume.pdf)&nbsp;&nbsp;&nbsp;&nbsp;[![gitlogo](pics/GitHub-Mark-120px-plus.png){:height="75px" width="75px"}](https://github.com/dylanrandle)&nbsp;&nbsp;&nbsp;&nbsp;[![linkedinlogo](pics/linkedin.png){:height="75px" width="75px"}](https://linkedin.com/in/dylanrandle/)
+[![resume](pics/cv_no_back.png){:height="75px" width="75px"}](resume/resume.pdf)&nbsp;&nbsp;&nbsp;&nbsp;[![gitlogo](pics/GitHub-Mark-120px-plus.png){:height="75px" width="75px"}](https://github.com/dylanrandle)&nbsp;&nbsp;&nbsp;&nbsp;[![linkedinlogo](pics/linkedin.png){:height="75px" width="75px"}](https://linkedin.com/in/dylanrandle/)
 
 # Research
 ## [Generative Adversarial Networks for Solving Differential Equations](denn/denn.md)
