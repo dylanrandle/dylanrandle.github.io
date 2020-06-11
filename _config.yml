@@ -10,5 +10,6 @@ kramdown:
     syntax_highlighter: rouge
 header_pages:
   - index.md
+  - research.md
+  - applied.md
   - blog.md
-  - denn/denn.md
