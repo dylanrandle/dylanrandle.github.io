@@ -25,6 +25,10 @@ $$ \eta_{D} = \nabla_{\theta_{d}} \frac{1}{m} \sum_{i=1}^{m} \left[ \log D \left
 
 alternating between gradient ascent and descent steps for $D$ and $G$, respectively.
 
+# Experiment Visualizations
+
+![deqgan_gif](deqgan.gif)
+
 # Paper
 
 <object data="GAN_Paper__NeurIPS_Preprint.pdf" type="application/pdf" width="700px" height="500px">
@@ -34,10 +38,3 @@ alternating between gradient ascent and descent steps for $D$ and $G$, respectiv
 </object>
 
 <br />
-
-<!-- # Experiment GIFs
-![exp_gif](exp_2x.gif)
-![sho_gif](sho_2x.gif)
-![nlo_gif](nlo_2x.gif)
-![sir_gif](sir_2x.gif)
-![coo_gif](coo_2x.gif) -->
