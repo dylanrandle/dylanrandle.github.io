@@ -2,7 +2,7 @@
 title: IRL
 ---
 
-# Interpretable Reinforcement Learning with Logical Features
+# Interpretable Reinforcement Learning for Healthcare with Decision Sets
 
 ## Report
 

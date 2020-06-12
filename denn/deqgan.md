@@ -1,15 +1,17 @@
 ---
-title: Differential Equation GAN (DEQGAN)
+title: DEQGAN
 mathjax: true
 ---
 
 {% include mathjax.html %}
 
+# Unsupervised Learning of Solutions to Differential Equations with Generative Adversarial Networks
+
 Consider differential equations of the form
 
 $$F\left(t, \hat{\Psi}(t), \Delta \hat{\Psi}(t), \Delta^2 \hat{\Psi}(t), ...\right) = 0.$$
 
-To set up the problem for DEQGAN, we let
+To set up the problem for Differential Equation GAN (DEQGAN), we let
 
 $$ LHS = F\left(t, \hat{\Psi}(t), \Delta \hat{\Psi}(t), \Delta^2 \hat{\Psi}(t), ...\right), $$
 
@@ -33,9 +35,9 @@ alternating between gradient ascent and descent steps for $D$ and $G$, respectiv
 
 <br />
 
-# Experiment GIFs
+<!-- # Experiment GIFs
 ![exp_gif](exp_2x.gif)
 ![sho_gif](sho_2x.gif)
 ![nlo_gif](nlo_2x.gif)
 ![sir_gif](sir_2x.gif)
-![coo_gif](coo_2x.gif)
+![coo_gif](coo_2x.gif) -->

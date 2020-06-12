@@ -37,9 +37,4 @@ where $\Psi_{\theta}$ is a neural network parameterized by $\theta$, $\mathcal{D
 
 <br />
 
-# Defense
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=bq2FurxD2Xo
-"><img src="http://img.youtube.com/vi/bq2FurxD2Xo/0.jpg"
-alt="DENN Defense Video" width="700px" height="500px" border="0" /></a>
-
-<br />
+*Note:* You can watch a recorded video of my defense [here](https://www.youtube.com/watch?feature=player_embedded&v=bq2FurxD2Xo).
