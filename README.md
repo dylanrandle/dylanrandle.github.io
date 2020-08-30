@@ -6,4 +6,4 @@
 
 - To run locally: `bundle exec jekyll serve`
 
-- To update gem: `bundle update`
+- To update gem: `bundle update` (or, more specifically: `bundle update github-pages`)
