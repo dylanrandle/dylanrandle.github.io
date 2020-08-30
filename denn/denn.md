@@ -17,7 +17,7 @@ $$\min_{\theta}{\sum_{t \in \mathcal{D}}{F(t, \Psi_{\theta}(t), \Delta \Psi_{\th
 
 where $\Psi_{\theta}$ is a neural network parameterized by $\theta$, $\mathcal{D}$ is the domain of the problem, and we compute derivatives with automatic differentiation.
 
-*Note:* Some of this work overlaps with my work on [DEQGAN](deqgan.html).
+- *Note:* Some of this work overlaps with [DEQGAN](deqgan.html).
 
 # Paper
 <object data="Harvard_Masters_Thesis_Submit.pdf" type="application/pdf" width="700px" height="500px">

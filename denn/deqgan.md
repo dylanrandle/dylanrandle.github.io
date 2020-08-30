@@ -7,6 +7,8 @@ mathjax: true
 
 # Unsupervised Learning of Solutions to Differential Equations with Generative Adversarial Networks
 
+- *Paper now published on [arXiv](https://arxiv.org/abs/2007.11133).*
+
 Consider differential equations of the form
 
 $$F\left(t, \hat{\Psi}(t), \Delta \hat{\Psi}(t), \Delta^2 \hat{\Psi}(t), ...\right) = 0.$$

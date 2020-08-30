@@ -23,11 +23,12 @@
 \documentclass{resume} % Use the custom resume.cls style
 
 \usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
 \name{Dylan Labatt Randle}
 \address{Email: \href{mailto:dylanrandle@gmail.com}{\texttt{dylanrandle@gmail.com}} \\ Phone: \texttt{+1-857-999-7442 }}
-\address{Website: \href{https://dylanrandle.github.io/}{\texttt{dylanrandle.github.io}}  \\ GitHub: \href{https://github.com/dylanrandle}{\texttt{dylanrandle}} \\ LinkedIn: \href{https://www.linkedin.com/in/dylanrandle/}{\texttt{dylanrandle}}}
+\address{Website: \href{https://dylanrandle.github.io/}{\texttt{dylanrandle.github.io}} \\ LinkedIn: \href{https://www.linkedin.com/in/dylanrandle/}{\texttt{dylanrandle}}  \\ GitHub: \href{https://github.com/dylanrandle}{\texttt{dylanrandle}} }
 \begin{document}
 
 %----------------------------------------------------------------------------------------
@@ -39,8 +40,8 @@
 %, School of Engineering \& Applied Sciences
 {\bf Harvard University} \hfill { Cambridge, MA}
 	\\ {\em M.S. Data Science} \hfill {\em May 2020}
-	\\ Applied Computation Scholarship, Special Distinction in Teaching
-	\\ {\bf Thesis:} Unsupervised Neural Network Methods for Solving Differential Equations
+	\\ Scholarship in Applied Computation, Special Distinction in Teaching
+	\\ {\bf \href{https://dylanrandle.github.io/denn/denn.html}{Thesis:}} Unsupervised Neural Network Methods for Solving Differential Equations
 	%Minor in Linguistics \smallskip \\
 	%Member of Eta Kappa Nu \\
 	%Member of Upsilon Pi Epsilon \\
@@ -56,9 +57,17 @@
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 
-\begin{rSection}{Work Experience}
+\begin{rSection}{Relevant Work Experience}
 
-\begin{rSubsection}{Amazon Robotics}{North Reading, MA}{Data Scientist, Intern}{Jun 2019 - Aug 2019}
+%------------------------------------------------
+
+\begin{rSubsection}{Amazon Robotics}{North Reading, MA}{Data Scientist II}{July 2020 - Present}
+
+	\item Leveraging data science to improve automated fulfillment systems responsible for delivering billions of packages to customers across the globe
+    
+\end{rSubsection}
+
+\begin{rSubsection}{Amazon Robotics}{North Reading, MA}{Data Scientist Intern}{Jun 2019 - Aug 2019}
 
 	\item Built automated big data pipeline for querying, cleaning, transforming, and loading trillion-row datasets with PySpark on AWS EMR
 	\item Developed machine learning (ML) package in Python for data exploration, modeling (training, validation, testing, visualization), hyperparameter tuning, and feature selection
@@ -70,9 +79,9 @@
 
 \begin{rSubsection}{Hubdoc, Inc.}{Toronto, Canada}{Data Scientist}{Jan 2017 - Jul 2018}
 
-	\item Acquired by Xero for \$70 million USD; first data scientist; hired and led team of two ML engineers
+	\item Acquired by Xero for \$70 million USD; first data scientist hired; hired and led team of two data scientists
 	\item Designed, developed, and deployed deep learning-based natural language processing (NLP) product for text classification and information extraction from financial documents
-	\item Product praised by customers, leadership, and investors; significant piece of Hubdoc's value proposition at acquisition
+	\item Product praised by customers, leadership, and investors; highly significant value-added element of acquisition by Xero; core technology now central to Xero's AI capabilities
     
 \end{rSubsection}
 
@@ -80,11 +89,21 @@
 
 \begin{rSubsection}{Harvard University, School of Engineering \& Applied Sciences}{Cambridge, MA}{Teaching Fellow}{Nov 2019 -- May 2020}
 
-\item Introduction to Data Science (CS 109a); prepared lectures on boosting, neural networks, gradient descent, backpropagation, and regularization
+\item Introduction to Data Science (CS 109a); prepared lectures on gradient boosting, neural networks, stochastic gradient descent, backpropagation, and regularization
 \item Computing Foundations for Computational Science (CS 205); instructor for labs on AWS, Docker, OpenMP, OpenACC, MPI, Hadoop, and Spark
-\item Recipient of Special Distinction in Teaching Award
+\item Special Distinction in Teaching award recipient
     
 \end{rSubsection}
+%------------------------------------------------
+
+\begin{rSubsection}{BMO Capital Markets}{Toronto, Canada}{Financial Products Analyst}{May 2014 - Aug 2014}
+
+\item Conducted analyses of interest rate swaps and swaptions; developed algorithm to model relationship between returns and delta-hedging frequency
+\item Discovered profit-generating market opportunities; results praised by fixed-income derivatives traders
+    
+\end{rSubsection}
+%------------------------------------------------
+
 
 \end{rSection}
 
@@ -92,25 +111,31 @@
 % RESEARCH & Projects
 %----------------------------------------------------------------------------------------
 
-\begin{rSection}{Research \& Applied Projects}
+\begin{rSection}{Selected Projects}
 
 \begin{rSubsection}{Unsupervised Neural Network Methods for Differential Equations}{}{}{}
 
-  \item Researched and developed methods for solving differential equations with unsupervised neural networks; formulated novel generative adversarial network (GAN) training algorithm leading to multiple orders of magnitude improvement over classical methods on multiple problems
+  \item Researched and developed methods for solving differential equations with unsupervised neural networks; formulated novel generative adversarial network (GAN) training algorithm leading to multiple orders of magnitude improvement over classical methods on multiple problems; \href{https://dylanrandle.github.io/denn/deqgan.html}{paper} published on \href{https://arxiv.org/abs/2007.11133}{arXiv (2007.11133)}
   
+\end{rSubsection}
+
+\begin{rSubsection}{Interpretable Reinforcement Learning for Healthcare}{}{}{}
+
+	\item Leveraged imitation learning to train interpretable models guided by black-box policies for reinforcement learning problems in healthcare; \href{https://dylanrandle.github.io/irl/irl.html}{results} demonstrated potential of learning explicitly interpretable policies in high-stakes domains
+	
 \end{rSubsection}
 
 \begin{rSubsection}{Neural Architecture Search for Scientific Datasets}{}{}{}
 
-  \item Harvard data science capstone research project investigating differentiable neural architecture search (DARTS) for applications to scientific datasets; results and blog post on ``Towards Data Science" viewed thousands of times
+  \item Investigated differentiable neural architecture search (DARTS) for applications to scientific datasets; results highlighted necessity of careful hyperparameter tuning and underscored strength of random search; \href{https://towardsdatascience.com/investigating-differentiable-neural-architecture-search-for-scientific-datasets-62899be8714e}{blog post} viewed thousands of times
   
 \end{rSubsection}
 
-\begin{rSubsection}{Deep Generative Modeling for Faces}{}{}{}
-
-	\item Project developing variational auto-encoder (VAE) generative models of images with convolutional neural networks; implemented ResNet VAE producing fairly realistic samples with conditional attributes which allow direct modification of output images
-	
-\end{rSubsection}
+%\begin{rSubsection}{Deep Generative Modeling for Faces}{}{}{}
+%
+%	\item \href{https://github.com/dylanrandle/deepgen}{Personal project} which developed variational auto-encoder (VAE) generative models of images with convolutional neural networks; implemented ResNet VAE and produced realistic samples; enabled control of high-level image features by conditioning on auxiliary input data
+%	
+%\end{rSubsection}
 
 For all available work, see my website: \url{dylanrandle.github.io}
 
@@ -124,9 +149,10 @@ For all available work, see my website: \url{dylanrandle.github.io}
 
 \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
 
-	Languages & Python (Pytorch, Tensorflow, Scikit-Learn, Pandas, Numpy, Scipy), SQL, C \\
-	Tools & Spark, Hadoop, Docker, Git, Jupyter, Latex, Markdown \\
+	Languages & Python (Numpy, Pandas, Scipy, Scikit-Learn, Pytorch, Tensorflow), SQL, C \\
+	Tools & Ray, Spark, Hadoop, Docker, Git, Jupyter, Latex, Markdown \\
 	Platforms & AWS (EC2, EMR, S3, Athena), MacOS, Linux \\
+	Methods & Machine \& Deep Learning, Generative Models, Bayesian Inference, Optimization \\
 
 \end{tabular}
 
@@ -146,8 +172,9 @@ For all available work, see my website: \url{dylanrandle.github.io}
 
 \end{rSubsection}
 
-\begin{rSubsection}{Berkeley Industrial Engineering Honor Society}{Berkeley, CA}{Vice President}{Sep 2015 - May 2016}
+\begin{rSubsection}{Alpha Pi Mu, Berkeley Chapter}{Berkeley, CA}{Vice President}{Sep 2015 - May 2016}
 
+	\item National industrial engineering honor society
 	\item Co-organized recruiting events, research talks, and ceremonies
 	\item Engaged students and faculty in program fostering research collaboration
 
@@ -162,17 +189,17 @@ For all available work, see my website: \url{dylanrandle.github.io}
 \begin{rSection}{Awards \& Recognitions}
 
 \begin{rSubsection}{Harvard University}{Cambridge, MA}{School of Engineering \& Applied Sciences}{Aug 2018 - May 2020}
-	\item Applied Computation Scholarship: \$20,000 scholarship towards research in data science
-       	\item Special Distinction in Teaching: awarded for exemplary teaching and leadership during spring 2020
+	\item Scholarship in Applied Computation: scholarship (\$20,000) awarded for master's student research in applied computation (data science \& computational science)
+       	\item Special Distinction in Teaching: department certificate awarded for exemplary teaching and leadership
 \end{rSubsection}
 
 \begin{rSubsection}{University of California, Berkeley}{Berkeley, CA}{College of Engineering}{Sep 2012 - May 2016}
-	\item High Honors: top 10\% of class at graduation
-        \item Dean's Honors: top 10\% of class in each semester (held throughout)
-        \item Kraft Award: perfect (4.0) GPA entering sophomore year
-        \item Phi Beta Kappa: national academic honor society
-	\item Tau Beta Pi: national engineering honor society
-        \item Alpha Pi Mu: national industrial engineering honor society
+	\item High Honors: awarded to top 10\% of class (GPA) at graduation
+        \item Dean's Honors: awarded to top 10\% of class (GPA) in a semester (held throughout)
+        \item Kraft Award: awarded for attaining maximum GPA (4.0) in freshman year
+        \item Phi Beta Kappa: academic achievement recognized by national honor society (arts \& sciences) 
+	\item Tau Beta Pi: academic achievement recognized by national honor society (engineering) 
+        \item Alpha Pi Mu: academic achievement recognized by national honor society (industrial engineering) 
 \end{rSubsection}
 
 %\begin{rSubsection}{Upper Canada College}{Toronto, Canada}{High School}{Sep 2011 - Jun 2012}
@@ -186,9 +213,12 @@ For all available work, see my website: \url{dylanrandle.github.io}
 \end{rSection}
 
 \begin{rSection}{Additional Work Experience}
+
 %------------------------------------------------
 
-\begin{rSubsection}{Taylor Statten Camps}{Algonquin Park, Canada}{Canoe Trip Guide}{Summers 2015, 2016}
+%------------------------------------------------
+
+\begin{rSubsection}{Taylor Statten Camps}{Algonquin Park, Canada}{Canoe Trip Guide}{Summers: 2015, 2016}
 
 \item Co-leader of 36 and 50-day canoe trips through remote Canadian wilderness; responsible for groups of seven teenage boys
 \item Planned, led, and completed trips covering ${\sim}3000$ km of rugged wilderness by canoe and portage
@@ -196,17 +226,7 @@ For all available work, see my website: \url{dylanrandle.github.io}
 \end{rSubsection}
 
 %------------------------------------------------
-
-\begin{rSubsection}{BMO Capital Markets}{Toronto, Canada}{Financial Products Analyst}{May 2014 - Aug 2014}
-
-\item Conducted analyses of interest rate swaps and swaptions; developed algorithm to model relationship between returns and delta-hedging frequency
-\item Discovered potential market opportunities; results praised by fixed-income traders
-    
-\end{rSubsection}
-
 \end{rSection}
-
-%------------------------------------------------
 
 %----------------------------------------------------------------------------------------
 % Workshops / Presentations

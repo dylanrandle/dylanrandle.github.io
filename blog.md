@@ -1,29 +1,19 @@
 ---
 title: Blog
-nav_include: 1
+mathjax: true
 ---
+{% include mathjax.html %}
 
-<!-- # Dylan's Blog -->
+[![revy](pics/Revy.JPG)](blog.html)
 
-# Dylan's Blog
+*Disclaimer: The views and opinions expressed in this blog are those of the author and are not endorsed by any organization, person, or entity.*
+
+# Posts
 {:.no_toc}
 *  
 {: toc}
 
-*Disclaimer: The views and opinions expressed in this blog are those of the author and are not endorsed by any organization, person, or entity.*
-
-<!-- ## Articles
-- [My 10,000 Hours](blog.md#my-10000-hours)
-- [The AI Revolution](blog.md#the-ai-revolution)
-- [Prediction vs Inference](blog.md#prediction-vs-inference)
-- [The AI Anti-Hype](blog.md#the-ai-anti-hype) -->
-
-
 ## My 10,000 Hours
-
-July 4, 2019
-
-*Dylan Randle*
 
 Last night, I started reading Malcolm Gladwell's book, *Outliers*, and today I would like to write down my thoughts about it. In *Outliers*, Gladwell seeks to uncover the hidden alchemy of success and dispel the widespread myths surrounding it. He asserts that our common notion that success is achieved through some kind of utopian meritocratic process is patently false. In hockey, he explains, the vast majority of successful players share a single characteristic: their birthdate's proximity to January 1. Why is this? It's simple: hockey's age cutoff begins on January 1, and so players born closest to the cutoff will be the most mature in their cohort.
 
@@ -35,11 +25,9 @@ This led me to think: "what are my 10,000 hours?" and what would I like to do wi
 
 In high school I was in the advanced math class, a member of the math society, and wrote my high school thesis on a subject in mathematics; I had a tutor who would take me through advanced topics every week, and my innate passion for the subject has led me to pursue a master's in data science and to work on math-related subjects in my professional life. If we group together the disparate fields in which I have worked (mathematics, physics, operations research, data science), and place them all under the banner of mathematics, my rough accounting estimates I have spent between 8,000 and 10,000 hours in the practice of mathematics. I hope I am soon be due for my masterpiece!
 
+-*Dylan Randle* (2019-07-04)
+
 ## The "AI-Revolution"
-
-July 5, 2019
-
-*Dylan Randle*
 
 I recently re-read an [article](https://hdsr.mitpress.mit.edu/pub/wot7mkc1) which I have become very fond of: "Artificial Intelligence: The Revolution Hasn't Happened Yet" by one of the most respected researchers in the world of computer science and statistics, Michael I. Jordan. The article is his take on the AI hype, and serves as an important framing of the new field of "data science" for all the researchers in the field.
 
@@ -51,11 +39,9 @@ The point is this: don't become enthralled by the "AI" achievements we are seein
 
 We lack an ability to bring together disparate data across time and space and to make appropriate conclusions from it. We are behind in the pursuit of augmented intelligence, whereby data can assist humans in decision-making by strengthening our quantitative abilities (which turns out to be the place in which computers have us beat, for now). We should remain inspired and continue to drive the field of AI forward, but it is important not to lose sight of the bigger picture and, in doing so, forget there are many tangible issues *right now* (not just AI!) that require distributed systems, statistics, privacy, and machine learning solutions.
 
+-*Dylan Randle* (2019-07-05)
+
 ## Prediction vs Inference
-
-September 6, 2019
-
-*Dylan Randle*
 
 Recently, in my role as Data Scientist at Amazon, I have been faced with one of the fundamental dichotomies of data science: the tradeoff between inference and prediction (aptly discussed in [this Harvard Data Science Review article](https://hdsr.mitpress.mit.edu/pub/a7gxkn0a)). The situation is best described through example: consider a computer vision system that predicts if an image contains a cat; in this setting, we would only care about the accuracy of our model and would not be focused on explaining why a prediction was made--either there's a cat or there isn't. In contrast, if we are fitting a model to predict an illness, for example, it would be paramount to understand why the model made a certain prediction. Not just for the peace-of-mind of the doctor and patient, but, even more fundamentally, for the development of science itself.
 
@@ -88,12 +74,9 @@ On the other hand, a prediction-focused answer might sound something like "I cou
 
 Each approach leads to vastly different workflows: in inference we place greater emphasis on understanding the data and carefully abiding by the assumptions of our model, while in prediction we focus on fitting the data extremely well and in a way that we are confident will generalize to future scenarios. Whatever the case, being clear-eyed about the ultimate focus of the problem will save much back-and-forth and streamline the process from conception to solution. Ultimately, data scientists are tasked with finding a sensible balance between prediction and inference that best suits the use-case and delivers the greatest value. I believe it is paramount to understand this tradeoff to become an effective data scientist.
 
+-*Dylan Randle* (2019-09-06)
 
 ## The AI Anti-Hype
-
-November 26, 2019
-
-*Dylan Randle*
 
 The inspiration for writing this article is the following image:
 ![cat-ai-hype](pics/ai_meme.jpeg)
@@ -116,3 +99,56 @@ Now let's address the point of "overtaking" our own intelligence. After having s
 **a direct result of hard work, ingenuity and effort** by incredibly talented, creative, and intelligent researchers. Every algorithm ever created was created by a human. (And, by the way, we have tried to get "AI" to construct algorithms and they have so far been pitifully miserable at this task.) Research proceeds in ebs and flows with major breakthroughs peppered throughout. But what is the nature of these breakthroughs? Is it a computer which suddenly divines new methods which no human could have thought of? Absolutely not. It is the careful work of dedicated human researchers.
 
 The engineering of AI will be furthered by passionate and energetic *humans*. We do not need to worry about runaway intelligent algorithms, because we are the builders that imbue computers with "intelligence". We *should* be careful about how we *use* these new powerful tools. But, at each step of the way, we can rest easy knowing that progress will be delivered by human ingenuity and not by some evil super-intelligence.
+
+-*Dylan Randle* (2019-11-26)
+
+## Graduation from Harvard
+![gradgif](pics/HarvardGrad2-min.gif)
+
+```
+training completed (epoch 2/2); test accuracy = 100%
+```
+
+It was almost exactly two years ago today that I arrived at Perkins Hall to begin my studies at Harvard. Back then, I had only a vague idea of the incredible experience I was about to enjoy during my master's in data science at Harvard.
+
+Over the last two years I have benefited greatly from meeting and working with incredible professors, instructors, researchers, and fellow students. I started this program with a desire to rigorously develop fundamentals in data science (from statistics and machine learning to differential privacy and data ethics), and I could not have asked for better preparation than I received at Harvard. I expect that data science will be central to applications in industry and academia for quite some time, and feel extremely well prepared for this future.
+
+I am particularly glad that I decided to stay for an extra semester to pursue a substantial research project and complete a [thesis](denn/denn.html). It was one of the best learning experiences of my life as I got to meet weekly with seasoned researchers (mostly physicists) to discuss and develop research projects (not only my own, but also those of the rest of the group). These intellectual conversations fostered a new level of critical thinking within me, and I find it difficult to overstate its impact on my thinking and work.
+
+As I begin the next chapter, I think back to how much I have grown intellectually and personally over the last two years. I am enormously grateful to my family and friends for supporting me through this adventure, and I look forward to what lies ahead.
+
+-*Dylan Randle* (2020-08-29)
+
+## Data Science Quotes
+
+Some quotes I like.
+
+- "If you torture the data enough it shall confess." -Ronald Coase
+- "In God we trust; all others must bring data." -W. Edwards Deming
+- "There's no data like *more* data." -Unknown
+- "There are three things that matter in data science: data, data, data." -Xiao-Li Meng
+
+<!-- ## Statistical Musings
+
+- Summary of Comp. Age Stat. Inf.?
+
+- bayesian vs frequentist
+  - subjective belief vs. long-run frequency
+  - parameters are random variables vs. data are random variables (parameters are fixed, but unknown)
+
+- hypothesis testing, p-values, multiple testing, confidence intervals
+- bayesian inference, prior specification, credible intervals
+
+[p-value wiki](https://en.wikipedia.org/wiki/P-value])
+
+Hypothesis testing:
+
+$$H_0: \theta = 0 \quad H_1: \theta \neq 0$$
+
+Probability of observing data given $H_0$ is true:
+
+$$p = P(\theta = 0 | H_0) $$
+
+Posterior probability:
+
+$$p\left(\theta | D \right) \propto p\left(D | \theta \right) p\left(\theta\right)$$ -->
