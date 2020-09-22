@@ -123,10 +123,21 @@ As I begin the next chapter, I think back to how much I have grown intellectuall
 
 Some quotes I like.
 
-- "If you torture the data enough it shall confess." -Ronald Coase
-- "In God we trust; all others must bring data." -W. Edwards Deming
-- "There's no data like *more* data." -Unknown
-- "There are three things that matter in data science: data, data, data." -Xiao-Li Meng
+- In God we trust; all others must bring data.
+- There's no data like *more data*.
+- The three keys to data science are: data, data, more data.
+
+<!-- ## Mathematics
+
+$$
+Y = X^{T} W + \epsilon
+$$
+
+where $\epsilon \sim N(0, \sigma^2)$.
+
+$$
+\implies E\left[Y|X \right] = X^{T}W
+$$ -->
 
 <!-- ## Statistical Musings
 
