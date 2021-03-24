@@ -15,7 +15,7 @@ This is the personal website of Dylan Labatt Randle.
   <img style="float: left; margin:0px 2px" src="pics/linkedin.png" width="50" height="50">
 </a>
 <a href="https://github.com/dylanrandle">
-  <img style="float: left; margin:0px 2px" src="pics/Github-Mark-120px-plus.png" width="50" height="50">
+  <img style="float: left; margin:0px 2px" src="pics/github.png" width="50" height="50">
 </a>
 
 <br>
