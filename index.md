@@ -1,16 +1,30 @@
 ---
-title: Home
+title: Homepage
 ---
 
-![headshot](pics/headshot.jpg)![style-headshot](pics/dylan_style.png)
+<img style="float: right;" src="pics/dylan_style.gif">
 
-# Welcome to my website!
+## Welcome to my website!
+
+This is the personal website of Dylan Labatt Randle.
+
+<a href="resume/resume.pdf">
+  <img style="float: left; margin:0px 2px;" src="pics/cv-clear.png" width="50" height="50">
+</a>
+<a href="https://linkedin.com/in/dylanrandle/">
+  <img style="float: left; margin:0px 2px" src="pics/linkedin.png" width="50" height="50">
+</a>
+<a href="https://github.com/dylanrandle">
+  <img style="float: left; margin:0px 2px" src="pics/Github-Mark-120px-plus.png" width="50" height="50">
+</a>
+
+<br>
+<br>
 
 ## Contents:
 - ### [Research](research.html) and [applied projects](applied.html)
 - ### [Resume](resume/resume.pdf), [GitHub](https://github.com/dylanrandle), and [LinkedIn](https://linkedin.com/in/dylanrandle/)
-[![resume](pics/cv_no_back.png){:height="60px" width="60px"}](resume/resume.pdf)&nbsp;&nbsp;&nbsp;&nbsp;[![gitlogo](pics/GitHub-Mark-120px-plus.png){:height="60px" width="60px"}](https://github.com/dylanrandle)&nbsp;&nbsp;&nbsp;&nbsp;[![linkedinlogo](pics/linkedin.png){:height="60px" width="60px"}](https://linkedin.com/in/dylanrandle/)
-- ### My [blog](blog.html)
+- ### [Blog](blog.html)
 
 ## Updates:
 - ### (2020-07-21) My [paper](denn/deqgan.html) on unsupervised solutions to differential equations with generative adversarial networks has been published on [arXiv](https://arxiv.org/abs/2007.11133)!

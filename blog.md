@@ -4,8 +4,6 @@ mathjax: true
 ---
 {% include mathjax.html %}
 
-[![revy](pics/Revy.JPG)](blog.html)
-
 *Disclaimer: The views and opinions expressed in this blog are those of the author and are not endorsed by any organization, person, or entity.*
 
 # Posts
@@ -76,7 +74,7 @@ Each approach leads to vastly different workflows: in inference we place greater
 
 -*Dylan Randle* (2019-09-06)
 
-## The AI Anti-Hype
+<!-- ## The AI Anti-Hype
 
 The inspiration for writing this article is the following image:
 ![cat-ai-hype](pics/ai_meme.jpeg)
@@ -100,13 +98,13 @@ Now let's address the point of "overtaking" our own intelligence. After having s
 
 The engineering of AI will be furthered by passionate and energetic *humans*. We do not need to worry about runaway intelligent algorithms, because we are the builders that imbue computers with "intelligence". We *should* be careful about how we *use* these new powerful tools. But, at each step of the way, we can rest easy knowing that progress will be delivered by human ingenuity and not by some evil super-intelligence.
 
--*Dylan Randle* (2019-11-26)
+-*Dylan Randle* (2019-11-26) -->
 
 ## Graduation from Harvard
 ![gradgif](pics/HarvardGrad2-min.gif)
 
 ```
-training completed (epoch 2/2); test accuracy = 100%
+training completed (year 2/2)
 ```
 
 It was almost exactly two years ago today that I arrived at Perkins Hall to begin my studies at Harvard. Back then, I had only a vague idea of the incredible experience I was about to enjoy during my master's in data science at Harvard.
@@ -119,13 +117,13 @@ As I begin the next chapter, I think back to how much I have grown intellectuall
 
 -*Dylan Randle* (2020-08-29)
 
-## Data Science Quotes
+<!-- ## Data Science Quotes
 
 Some quotes I like.
 
 - In God we trust; all others must bring data.
 - There's no data like *more data*.
-- The three keys to data science are: data, data, more data.
+- The three keys to data science are: data, data, more data. -->
 
 <!-- ## Mathematics
 
