@@ -26,163 +26,160 @@
 \hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+
+%-------------------------------------------------------
 \name{Dylan Labatt Randle}
-\address{Website: \href{https://dylanrandle.github.io/}{\texttt{dylanrandle.github.io}} \\ LinkedIn: \href{https://www.linkedin.com/in/dylanrandle/}{\texttt{dylanrandle}}  \\ GitHub: \href{https://github.com/dylanrandle}{\texttt{dylanrandle}} }
+\address{Website: \href{https://dylanrandle.github.io/}{\texttt{dylanrandle.github.io}} \\ 
+	LinkedIn: \href{https://www.linkedin.com/in/dylanrandle/}{\texttt{dylanrandle}} \\ 
+	GitHub: \href{https://github.com/dylanrandle}{\texttt{dylanrandle}} }
+%-------------------------------------------------------
+
 \begin{document}
 
 %----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
+%	EDUCATION
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Education}
 
-{\bf Harvard University} \hfill { Cambridge, MA}
-	\\ {\em M.S. Data Science} \hfill {\em May 2020}
-	\\ Applied Computation Scholarship, Special Distinction in Teaching
-	\\ {\bf Thesis:} Unsupervised Neural Network Methods for Solving Differential Equations
-
-{\bf University of California, Berkeley} \hfill {Berkeley, CA}
-	\\ {\em B.S. Industrial Engineering \& Operations Research} \hfill {\em May 2016}
-	\\ High Honors, Dean's Honors, Frank Kraft Award
-	\\ {\bf Coursework:} Statistics, Optimization, Stochastic Processes, Simulation, Decision Analysis
+%-------------------------------------------------------
+\begin{rSubsection}{Harvard University}{Cambridge, MA}{M.S. Data Science}{2018 - 2020}
+	\item Thesis: ``Unsupervised Neural Network Methods for Solving Differential Equations"
+	\item Awards: Scholarship in Applied Computation, Special Distinction in Teaching
+\end{rSubsection}
+%-------------------------------------------------------
+\begin{rSubsection}{University of California, Berkeley}{Berkeley, CA}{B.S. Industrial Engineering \& Operations Research}{2012 - 2016}
+	\item Courses: Machine Learning, Statistics, Probability, Optimization, Stochastic Processes, Simulation
+	\item Awards: High Honors at Graduation, Dean's Honors, Frank Kraft Award
+\end{rSubsection}
+%-------------------------------------------------------
 
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
-%	TECHNICAL STRENGTHS SECTION
+%	WORK
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Work Experience}
+
+%-------------------------------------------------------
+\begin{rSubsection}{Amazon Robotics}{North Reading, MA}{Data Scientist II}{2020 - Present}
+	\item Leveraging data science to improve automated robotic fulfillment and transportation systems responsible for delivering billions of packages to customers across the globe
+\end{rSubsection}
+%-------------------------------------------------------
+\begin{rSubsection}{Harvard University, School of Engineering \& Applied Sciences}{Cambridge, MA}{Teaching Fellow}{2019 - 2020}
+	\item Introduction to Data Science
+	\item Computing Foundations for Computational Science
+	\item Awarded Special Distinction in Teaching
+\end{rSubsection}
+%-------------------------------------------------------
+\begin{rSubsection}{Amazon Robotics}{North Reading, MA}{Data Scientist, Intern}{Summer 2019}
+	\item Developed AutoML package encapsulating data preprocessing with PySpark on AWS EMR and model development with PyTorch, Scikit-Learn, Statsmodels, and SHAP on AWS SageMaker
+	\item Reduced time and complexity of ML model development and analysis; code package used by multiple analysts for a broad set of applications on a daily basis
+\end{rSubsection}
+%-------------------------------------------------------
+\begin{rSubsection}{Hubdoc}{Toronto, Canada}{Lead Data Scientist}{2017 - 2018}
+	\item Developed and deployed deep learning NLP system for information extraction from financial documents
+	\item First data scientist; hired and led team of two data scientists
+	\item Acquired by Xero for \$70 million USD
+\end{rSubsection}
+%-------------------------------------------------------
+\begin{rSubsection}{Taylor Statten Camps}{Algonquin Park, Canada}{Camp Counselor}{Summers 2011, 2012, 2013, 2015, 2016}
+	\item Led canoe trips ranging from 2 to 50 days
+	\item Responsible for groups of 8 to 16 year-old campers
+	\item Covered ${\sim}4000$ km of remote North American wilderness
+\end{rSubsection}
+%-------------------------------------------------------
+\begin{rSubsection}{BMO Capital Markets}{Toronto, Canada}{Financial Products Analyst}{Summer 2014}
+	\item Delta-hedging frequency optimization algorithm for interest rate swaps/swaptions
+	\item Uncovered trading opportunities for fixed-income traders
+\end{rSubsection}
+%-------------------------------------------------------
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL SKILLS
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Technical Skills}
 
-\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-
-	Languages & Python (Pandas, Numpy, Scipy, Scikit-Learn, Pytorch, Tensorflow) \\
-	Tools & AWS, Ray, Spark, Docker, Git, Jupyter \\
-	Topics & Machine/deep learning, statistical modeling/inference, optimization \\
-
-\end{tabular}
+%-------------------------------------------------------
+\begin{rSubsection}{Programming Languages}{}{}{}
+	\item Fluent: Python, Java, SQL
+	\item Experienced: Javascript, C++, MATLAB
+\end{rSubsection}
+%-------------------------------------------------------
+\begin{rSubsection}{Development Platforms}{}{}{}
+	\item MacOS/Linux, Amazon Web Services, Docker, Git, Conda, Jupyter
+\end{rSubsection}
+%-------------------------------------------------------
+\begin{rSubsection}{Software Libraries}{}{}{}
+	\item Modeling: \texttt{pytorch}, \texttt{keras}, \texttt{tensorflow}, \texttt{sklearn}, \texttt{statsmodels}, \texttt{pymc3}
+	\item Distributed/big-data computing: \texttt{ray}, \texttt{spark}
+	\item General: \texttt{numpy}, \texttt{pandas}, \texttt{scipy}
+\end{rSubsection}
+%-------------------------------------------------------
 
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE SECTION
+% 	PROJECTS
 %----------------------------------------------------------------------------------------
-
-\begin{rSection}{Relevant Work Experience}
-
-%------------------------------------------------
-
-\begin{rSubsection}{Amazon Robotics}{North Reading, MA}{Data Scientist II}{July 2020 - Present}
-
-	\item Leveraging data science to improve automated robotic fulfillment and transportation systems responsible for delivering billions of packages to customers across the globe
-    
-\end{rSubsection}
-
-\begin{rSubsection}{Amazon Robotics}{North Reading, MA}{Data Scientist, Intern}{Jun 2019 - Aug 2019}
-
-	\item Developed AutoML package encapsulating data preprocessing with PySpark on AWS EMR and model development with PyTorch, Scikit-Learn, Statsmodels, and SHAP on AWS SageMaker
-	\item Reduced time and complexity of ML model development and analysis; code package used by multiple analysts for a broad set of applications on a daily basis
-    
-\end{rSubsection}
-
-%------------------------------------------------
-
-\begin{rSubsection}{Hubdoc, Inc.}{Toronto, Canada}{Data Scientist}{Jan 2017 - Jul 2018}
-
-	\item Designed, developed, and deployed deep learning NLP system for information extraction from financial documents
-	\item First data scientist hired; hired and led team of two data scientists
-	\item Acquired by Xero for \$70 million USD
-	    
-\end{rSubsection}
-
-%------------------------------------------------
-
-\begin{rSubsection}{Harvard University, School of Engineering \& Applied Sciences}{Cambridge, MA}{Teaching Fellow}{Nov 2019 -- May 2020}
-
-\item Introduction to Data Science (boosting, deep learning); Computing Foundations for Computational Science (AWS, Hadoop, Spark)
-\item Special Distinction in Teaching
-    
-\end{rSubsection}
-
-%------------------------------------------------
-
-\end{rSection}
-
-%----------------------------------------------------------------------------------------
-% RESEARCH & Projects
-%----------------------------------------------------------------------------------------
-
-\newpage
 
 \begin{rSection}{Selected Projects}
 
+%-------------------------------------------------------
 \begin{rSubsection}{Unsupervised Learning of Solutions to Differential Equations with Generative Adversarial Networks}{}{}{}
-
-\item Researched and developed novel \emph{unsupervised} generative adversarial network training \href{https://dylanrandle.github.io/denn/deqgan.html}{algorithm} leading to orders of magnitude higher accuracy over traditional deep learning approaches for solving differential equations
-  
+	\item Researched and developed novel unsupervised generative adversarial network training \href{https://dylanrandle.github.io/denn/deqgan.html}{algorithm} leading to orders of magnitude higher accuracy over traditional deep learning approaches for solving differential equations; paper published on \href{https://arxiv.org/abs/2007.11133}{arXiv}
 \end{rSubsection}
-
+%-------------------------------------------------------
 \begin{rSubsection}{Differentiable Neural Architecture Search for Scientific Datasets}{}{}{}
-
-\item Applied differentiable neural architecture search to scientific datasets (graphene cutting, galaxy zoo, chest x-rays); documented results and provided practical recommendations in \href{https://towardsdatascience.com/investigating-differentiable-neural-architecture-search-for-scientific-datasets-62899be8714e}{blog post}
-	
+	\item Applied differentiable neural architecture search to scientific datasets (graphene cutting, galaxy zoo, chest x-rays); results documented in a \href{https://towardsdatascience.com/investigating-differentiable-neural-architecture-search-for-scientific-datasets-62899be8714e}{blog post}
 \end{rSubsection}
-
+%-------------------------------------------------------
 \begin{rSubsection}{Interpretable Reinforcement Learning for Healthcare with Decision Sets}{}{}{}
-
-\item Applied imitation learning and decision sets to learn explicitly interpretable policies for sepsis treatment; \href{https://dylanrandle.github.io/irl/irl.html}{results} achieved performance parity with black-box models
-	
+	\item Applied imitation learning and decision sets to learn explicitly interpretable policies for sepsis treatment; \href{https://dylanrandle.github.io/irl/irl.html}{results} achieved performance parity with black-box models
 \end{rSubsection}
-
-For a complete portfolio of my work see: \url{dylanrandle.github.io}
+%-------------------------------------------------------
 
 \end{rSection}
 
-%------------------------------------------------
-% ADDITIONAL WORK EXPERIENCE
-%------------------------------------------------
+%----------------------------------------------------------------------------------------
+% 	CERTIFICATES
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Certificates}
 
-\begin{rSection}{Additional Work \& Leadership Experience}
-
-\begin{rSubsection}{Harvard Graduate Canadian Club}{Cambridge, MA}{Treasurer}{2019-2020}
-
-\item Responsible for maintaining club finances
-\item Co-led and organized events for graduate students (e.g. Thanksgiving dinner, election viewing party)
-\item Met with Canadian Ambassador in Boston to discuss future engagements
-
+%-------------------------------------------------------
+\begin{rSubsection}{EdX}{}{}{}
+	\item Software Development Fundamentals (in progress)
 \end{rSubsection}
-
-%------------------------------------------------
-
-\begin{rSubsection}{Taylor Statten Camps}{Algonquin Park, Canada}{Canoe Trip Guide}{Summer 2015, 2016}
-
-\item Co-leader of 36 and 50-day canoe trips through remote Canadian/American wilderness
-\item Navigated ${\sim}3000$ km of rugged landscape by canoe and portage
-
+%-------------------------------------------------------
+\begin{rSubsection}{Coursera}{}{}{}
+	\item Divide and Conquer, Sorting and Searching, and Randomized Algorithms (ZQ5K6VY43UN5)
+	\item Graph Search, Shortest Paths, and Data Structures (ERUDV3QR9773)
 \end{rSubsection}
-
-%------------------------------------------------
-
-\begin{rSubsection}{BMO Capital Markets}{Toronto, Canada}{Financial Products Analyst}{Summer 2014}
-
-\item Delta-hedging frequency optimization algorithm for interest rate swaps/swaptions
-\item Analysis uncovered market opportunities for fixed-income derivatives traders
-    
-\end{rSubsection}
-
-%------------------------------------------------
-
-\begin{rSubsection}{Berkeley Industrial Engineering Honors Society}{Berkeley, CA}{Vice President}{2013-2014}
-
-\item Vice president responsible for engaging with faculty members and organizing events for members
-\item Organized and participated in IEOR research meetings
-
-\end{rSubsection}
-
-%------------------------------------------------
+%-------------------------------------------------------
 
 \end{rSection}
 
-%------------------------------------------------
+%----------------------------------------------------------------------------------------
+% 	AWARDS
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Awards}
+
+%-------------------------------------------------------
+\begin{rSubsection}{Harvard University}{Cambridge, MA}{Graduate Student}{2018-2020}
+	\item Scholarship in Applied Computation: \$20,000 scholarship for research in data science
+	\item Special Distinction in Teaching: Recognition for exemplary teaching and leadership
+\end{rSubsection}
+%-------------------------------------------------------
+\begin{rSubsection}{University of California, Berkeley}{Berkeley, CA}{Undergraduate Student}{2012-2016}
+	\item High Honors at Graduation: Top 10\% in College of Engineering at graduation
+	\item Dean's Honors: Top 10\% in College of Engineering in each semester
+	\item Frank Kraft Award: Perfect (4.0) GPA after freshman year
+\end{rSubsection}
+%-------------------------------------------------------
+
+\end{rSection}
 
 \end{document}
