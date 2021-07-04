@@ -1,27 +1,20 @@
 ---
-title: Homepage
+title: Home
 ---
 
 <img style="float: right;" src="pics/dylan_style.gif">
 
-## Welcome to my website!
-
-This is the personal website of Dylan Labatt Randle.
+This is the personal website of Dylan Randle.
 
 <a href="resume/resume.pdf">
-  <img style="float: left; margin:0px 2px;" src="pics/cv-clear.png" width="50" height="50">
+  <img style="float: left; margin:5px 5px;" src="pics/cv-clear.png" width="50" height="50">
 </a>
 <a href="https://linkedin.com/in/dylanrandle/">
-  <img style="float: left; margin:0px 2px" src="pics/linkedin.png" width="50" height="50">
+  <img style="float: left; margin:5px 5px" src="pics/linkedin.png" width="50" height="50">
 </a>
 <a href="https://github.com/dylanrandle">
-  <img style="float: left; margin:0px 2px" src="pics/github.png" width="50" height="50">
+  <img style="float: left; margin:5px 5px" src="pics/github.png" width="50" height="50">
 </a>
 
 <br>
 <br>
-
-## Contents:
-- ### [Research](research.html) and [applied projects](applied.html)
-- ### [Resume](resume/resume.pdf), [GitHub](https://github.com/dylanrandle), and [LinkedIn](https://linkedin.com/in/dylanrandle/)
-- ### [Blog](blog.html)
