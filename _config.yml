@@ -10,6 +10,6 @@ kramdown:
     syntax_highlighter: rouge
 header_pages:
   - index.md
-  - research.md
-  - applied.md
+  - projects.md
+  - recognition.md
   - blog.md

@@ -8,6 +8,7 @@ mathjax: true
 # Unsupervised Learning of Solutions to Differential Equations with Generative Adversarial Networks
 
 - *Paper now published on [arXiv](https://arxiv.org/abs/2007.11133).*
+- This work was part of my master's thesis. See the full thesis [here](denn.md).
 
 Consider differential equations of the form
 
