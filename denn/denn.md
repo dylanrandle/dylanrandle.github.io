@@ -7,6 +7,8 @@ mathjax: true
 
 # Unsupervised Neural Network Methods for Solving Differential Equations
 
+- Code available on [GitHub](https://github.com/dylanrandle/denn/tree/master/denn).
+
 Consider differential equations of the form
 
 $$F\left(t, \hat{\Psi}(t), \Delta \hat{\Psi}(t), \Delta^2 \hat{\Psi}(t), ...\right) = 0.$$
