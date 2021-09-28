@@ -8,6 +8,8 @@ mathjax: true
 # Unsupervised Neural Network Methods for Solving Differential Equations
 
 - Code available on [GitHub](https://github.com/dylanrandle/denn/tree/master/denn).
+- You can watch a recorded video of my defense [here](https://www.youtube.com/watch?feature=player_embedded&v=bq2FurxD2Xo).
+- Some of this work overlaps with [DEQGAN](deqgan.html).
 
 Consider differential equations of the form
 
@@ -18,8 +20,6 @@ To approximately solve the equation, we optimize
 $$\min_{\theta}{\sum_{t \in \mathcal{D}}{F(t, \Psi_{\theta}(t), \Delta \Psi_{\theta}(t), \Delta^2 \Psi_{\theta}(t), \ldots)^2}}$$
 
 where $\Psi_{\theta}$ is a neural network parameterized by $\theta$, $\mathcal{D}$ is the domain of the problem, and we compute derivatives with automatic differentiation.
-
-- *Note:* Some of this work overlaps with [DEQGAN](deqgan.html).
 
 # Paper
 <object data="Harvard_Masters_Thesis_Submit.pdf" type="application/pdf" width="700px" height="500px">
@@ -38,5 +38,3 @@ where $\Psi_{\theta}$ is a neural network parameterized by $\theta$, $\mathcal{D
 </object>
 
 <br />
-
-*Note:* You can watch a recorded video of my defense [here](https://www.youtube.com/watch?feature=player_embedded&v=bq2FurxD2Xo).

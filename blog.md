@@ -74,90 +74,19 @@ Each approach leads to vastly different workflows: in inference we place greater
 
 -*Dylan Randle* (2019-09-06)
 
-<!-- ## The AI Anti-Hype
-
-The inspiration for writing this article is the following image:
-![cat-ai-hype](pics/ai_meme.jpeg)
-
-With the recent (remarkable) successes in machine learning (particularly in *deep learning* with neural networks),
-many otherwise intelligent folks have posited highly questionable theories about
-runaway AI super-intelligence. The problem with listening to these views is that these people *have no idea what
-they're talking about*.
-
-The development of "AI" has always been a product of *human ingenuity* and nothing else. There is
-this idea that "we don't know what neural networks are doing" and "they're learning" and "what if they keep learning at
-this exponential rate and overtake our own intelligence"? But this is completely and utterly misguided.
-
-Firstly, the notion that we don't know what neural nets are doing is false. While we may not be able to *explain* or *understand* precisely the mechanisms by which neural networks make their predictions, we have very clear ideas and evidence about what is happening. Neural networks are simply a convenient substrate over which to optimize parameters for machine learning tasks. They are flexible, and our optimization procedures can utilize this to great effect.
-
-Further, the personification of "learning" is taken too literally. This is just a convenient term to describe the process
-of optimizing parametric models. How we judge learning is a whole other story. Generally we talk about generalizability to a test set, but this is prone to many well-understood problems (i.e. covariate shift, the scenario in which new real-world data is different from the distribution of data that generated the training and test sets). It is not something that can "run away" from us. This is something that AI practitioners spend countless hours carefully tweaking to obtain the desired result. And it is not something that can be done mindlessly by a computer as it requires an understanding of the real-world process that generated the data.
-
-Now let's address the point of "overtaking" our own intelligence. After having spent the last few years immersed in the actual research being conducted in AI, this notion is particularly striking. The improvements we have been seeing in AI algorithms are
-**a direct result of hard work, ingenuity and effort** by incredibly talented, creative, and intelligent researchers. Every algorithm ever created was created by a human. (And, by the way, we have tried to get "AI" to construct algorithms and they have so far been pitifully miserable at this task.) Research proceeds in ebs and flows with major breakthroughs peppered throughout. But what is the nature of these breakthroughs? Is it a computer which suddenly divines new methods which no human could have thought of? Absolutely not. It is the careful work of dedicated human researchers.
-
-The engineering of AI will be furthered by passionate and energetic *humans*. We do not need to worry about runaway intelligent algorithms, because we are the builders that imbue computers with "intelligence". We *should* be careful about how we *use* these new powerful tools. But, at each step of the way, we can rest easy knowing that progress will be delivered by human ingenuity and not by some evil super-intelligence.
-
--*Dylan Randle* (2019-11-26) -->
-
 ## Graduation from Harvard
-![gradgif](pics/HarvardGrad2-min.gif)
+![gradgif](blog/images/HarvardGrad2-min.gif)
 
 ```
-training completed (year 2/2)
+Training completed! (year 2/2)
 ```
 
 It was almost exactly two years ago today that I arrived at Perkins Hall to begin my studies at Harvard. Back then, I had only a vague idea of the incredible experience I was about to enjoy during my master's in data science at Harvard.
 
 Over the last two years I have benefited greatly from meeting and working with incredible professors, instructors, researchers, and fellow students. I started this program with a desire to rigorously develop fundamentals in data science (from statistics and machine learning to differential privacy and data ethics), and I could not have asked for better preparation than I received at Harvard. I expect that data science will be central to applications in industry and academia for quite some time, and feel extremely well prepared for this future.
 
-I am particularly glad that I decided to stay for an extra semester to pursue a substantial research project and complete a [thesis](denn/denn.html). It was one of the best learning experiences of my life as I got to meet weekly with seasoned researchers (mostly physicists) to discuss and develop research projects (not only my own, but also those of the rest of the group). These intellectual conversations fostered a new level of critical thinking within me, and I find it difficult to overstate its impact on my thinking and work.
+I am particularly glad that I decided to stay for an extra semester to pursue a substantial research project and complete a [thesis](projects/denn/denn.html). It was one of the best learning experiences of my life as I got to meet weekly with seasoned researchers (mostly physicists) to discuss and develop research projects (not only my own, but also those of the rest of the group). These intellectual conversations fostered a new level of critical thinking within me, and I find it difficult to overstate its impact on my thinking and work.
 
 As I begin the next chapter, I think back to how much I have grown intellectually and personally over the last two years. I am enormously grateful to my family and friends for supporting me through this adventure, and I look forward to what lies ahead.
 
 -*Dylan Randle* (2020-08-29)
-
-<!-- ## Data Science Quotes
-
-Some quotes I like.
-
-- In God we trust; all others must bring data.
-- There's no data like *more data*.
-- The three keys to data science are: data, data, more data. -->
-
-<!-- ## Mathematics
-
-$$
-Y = X^{T} W + \epsilon
-$$
-
-where $\epsilon \sim N(0, \sigma^2)$.
-
-$$
-\implies E\left[Y|X \right] = X^{T}W
-$$ -->
-
-<!-- ## Statistical Musings
-
-- Summary of Comp. Age Stat. Inf.?
-
-- bayesian vs frequentist
-  - subjective belief vs. long-run frequency
-  - parameters are random variables vs. data are random variables (parameters are fixed, but unknown)
-
-- hypothesis testing, p-values, multiple testing, confidence intervals
-- bayesian inference, prior specification, credible intervals
-
-[p-value wiki](https://en.wikipedia.org/wiki/P-value])
-
-Hypothesis testing:
-
-$$H_0: \theta = 0 \quad H_1: \theta \neq 0$$
-
-Probability of observing data given $H_0$ is true:
-
-$$p = P(\theta = 0 | H_0) $$
-
-Posterior probability:
-
-$$p\left(\theta | D \right) \propto p\left(D | \theta \right) p\left(\theta\right)$$ -->

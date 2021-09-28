@@ -11,5 +11,5 @@ kramdown:
 header_pages:
   - index.md
   - projects.md
-  - recognition.md
+  - profile.md
   - blog.md
