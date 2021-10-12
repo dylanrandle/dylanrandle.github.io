@@ -2,17 +2,9 @@
 title: Profile
 ---
 
-<a href="resume/DylanRandleResume.pdf">
-  <img style="float: center; margin:5px" src="images/cv-clear.png" width="50" height="50">
-</a>
-<a href="https://linkedin.com/in/dylanrandle/">
-  <img style="float: center; margin:5px" src="images/linkedin.png" width="50" height="50">
-</a>
-<a href="https://github.com/dylanrandle">
-  <img style="float: center; margin:5px" src="images/github.png" width="50" height="50">
-</a>
+# Resume
 
-<object data="resume/DylanRandleResume.pdf" type="application/pdf" width="800px" height="1200px">
+<object data="resume/DylanRandleResume.pdf" type="application/pdf" width="600px" height="850px">
     <embed src="resume/DylanRandleResume.pdf">
         <p>This browser does not support PDFs. Please download the PDF to view it: <a href="resume/DylanRandleResume.pdf">Download PDF</a>.</p>
     </embed>
@@ -20,13 +12,9 @@ title: Profile
 
 <br>
 
----
+# Additional Information (Not Included In Resume)
 
-# Additional Information
-
-For information not included in the resume.
-
-# Work Experience
+#### Work Experience
 
 **Taylor Statten Camps** (Algonquin Park, Canada), Summers 2011-2016
 
@@ -40,11 +28,12 @@ For information not included in the resume.
 - Developed interest rate swap/swaption delta-hedging optimization algorithm
 - Uncovered market opportunities for fixed-income traders
 
-# Awards
+#### Awards
 
 - Higher Level Economics Prize (Upper Canada College, 2012): top student in IB HL economics
 - Moderns Prize in SL French (Upper Canada College, 2012): top student in IB SL french
 - General Proficiency Award (Upper Canada College, 2012): top 10% of students
 
-# Certificates
+#### Certificates
+
 - Software Development Fundamentals (edX: in progress)

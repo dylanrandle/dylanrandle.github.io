@@ -1,7 +1,6 @@
 theme: minima
 title: Dylan Randle
 description: Copyright © 2021. All rights reserved.
-logo: pics/R.png
 github: [metadata]
 markdown: kramdown
 kramdown:
@@ -10,6 +9,5 @@ kramdown:
     syntax_highlighter: rouge
 header_pages:
   - index.md
-  - projects.md
   - profile.md
   - blog.md
