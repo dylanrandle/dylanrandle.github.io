@@ -1,13 +1,12 @@
-theme: minima
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+- jekyll-remote-theme # add this line to the plugins list if you already have one
 title: Dylan Randle
 description: Copyright © 2021. All rights reserved.
+logo: images/headshot.jpg
 github: [metadata]
 markdown: kramdown
 kramdown:
     math_engine: mathjax
     input: GFM
     syntax_highlighter: rouge
-header_pages:
-  - index.md
-  - profile.md
-  - blog.md

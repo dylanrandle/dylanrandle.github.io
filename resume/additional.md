@@ -1,17 +1,3 @@
----
-title: Profile
----
-
-# Resume
-
-<object data="resume/DylanRandleResume.pdf" type="application/pdf" width="600px" height="850px">
-    <embed src="resume/DylanRandleResume.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="resume/DylanRandleResume.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
-
-<br>
-
 # Additional Information (Not Included In Resume)
 
 #### Work Experience
