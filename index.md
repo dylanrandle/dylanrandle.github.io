@@ -1,27 +1,25 @@
-# Intro
+---
+title: About
+---
+
+<img style="float: right; margin:10px" src="images/headshot.jpg">
 
 I am a passionate **data scientist** with a particular interest in **deep learning**. I have worked on NLP and CV problems as well as more exotic applications like solving differential equations and differentiable neural architecture search. I love reading papers and staying up to date on the latest techniques. My focus is on solving challenging **applied research** problems.
 
 In my spare time, I enjoy skiing (water and snow), hiking, camping, golfing, playing guitar, listening to music (country, folk, western, hip-hop, electronic), and watching sports (hockey, football, golf).
 
 <p style="text-align: center;">
-  <a href="resume/DylanRandleResume.pdf">
-    Resume
-  </a>
+  <a href="resume/DylanRandleResume.pdf">Resume</a>
   |
-  <a href="https://linkedin.com/in/dylanrandle/">
-    LinkedIn
-  </a>
+  <a href="https://linkedin.com/in/dylanrandle/">LinkedIn</a>
   |
-  <a href="https://github.com/dylanrandle">
-    GitHub
-  </a>
+  <a href="https://github.com/dylanrandle">GitHub</a>
 </p>
 
 # Projects
 
-### [Analysis of Golf Swings with Computer Vision (In Progress)](index.md)
-![golf_kps](projects/images/golf_kps.gif)
+### [Analysis of Golf Swings with Computer Vision (In Progress)](index.html)
+[![golf_kps](projects/images/golf_kps.gif)](index.html)
 
 ### [Unsupervised Learning of Solutions to Differential Equations with Generative Adversarial Networks](projects/denn/deqgan.html)
 [![denn_diagram](projects/denn/DEQGAN_diagram.png)](projects/denn/deqgan.html)
