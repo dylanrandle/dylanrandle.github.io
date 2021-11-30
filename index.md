@@ -6,7 +6,7 @@ title: About
 
 I am a passionate **data scientist** with a particular interest in **deep learning**. I have worked on NLP and CV problems as well as more exotic applications like solving differential equations and differentiable neural architecture search. I love reading papers and staying up to date on the latest techniques. My focus is on solving challenging **applied research** problems.
 
-In my spare time, I enjoy skiing (water and snow), hiking, camping, golfing, playing guitar, listening to music (country, folk, western, hip-hop, electronic), and watching sports (hockey, football, golf).
+In my spare time, I enjoy skiing (water and snow), hiking, camping, golfing, playing guitar, listening to music, and watching sports.
 
 <p style="text-align: center;">
   <a href="resume/DylanRandleResume.pdf">Resume</a>
