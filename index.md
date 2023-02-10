@@ -2,42 +2,39 @@
 title: About
 ---
 
-<img style="float: right; margin:10px" src="images/headshot.jpg">
+<img style="float: right; margin-left:10px; border-radius:5%" height="200" width="auto" src="images/headshot.jpg">
 
-I am a passionate **data scientist** with a particular interest in **deep learning**. I have worked on NLP and CV problems as well as more exotic applications like solving differential equations and differentiable neural architecture search. I love reading papers and staying up to date on the latest techniques. My focus is on solving challenging **applied research** problems.
-
-In my spare time, I enjoy skiing (water and snow), hiking, camping, golfing, playing guitar, listening to music, and watching sports.
-
-<p style="text-align: center;">
-  <a href="resume/DylanRandleResume.pdf">Resume</a>
-  |
-  <a href="https://linkedin.com/in/dylanrandle/">LinkedIn</a>
-  |
-  <a href="https://github.com/dylanrandle">GitHub</a>
-</p>
+I am a data scientist with a focus on machine learning. I have worked on a variety of projects spanning natural language processing, computer vision, reinforcement learning, robotics, and physics-informed machine learning.
+- [Resume](resume/DylanRandleResume.pdf)
+- [LinkedIn](https://linkedin.com/in/dylanrandle/)
+- [GitHub](https://github.com/dylanrandle)
 
 # Projects
 
-### [Analysis of Golf Swings with Computer Vision (In Progress)](index.html)
-[![golf_kps](projects/images/golf_kps.gif)](index.html)
+### [Physics-Informed Neural Networks](projects/docs/Harvard_Masters_Thesis_Submit.pdf)
 
-### [Unsupervised Learning of Solutions to Differential Equations with Generative Adversarial Networks](projects/denn/deqgan.html)
-[![denn_diagram](projects/denn/DEQGAN_diagram.png)](projects/denn/deqgan.html)
+Work conducted for my [thesis](projects/docs/Harvard_Masters_Thesis_Submit.pdf) ([slides](projects/docs/Thesis_Defense_Presentation_Final.pdf), [defense](https://www.youtube.com/watch?feature=player_embedded&v=bq2FurxD2Xo)). Published as a [preprint](projects/docs/GAN_Paper_Preprint.pdf) and ICML workshop [paper](projects/docs/GAN_Paper_AI4Science.pdf).
 
-### [Generating Faces with a ResNet VAE](https://github.com/dylanrandle/deepgen)
+[![denn_diagram](projects/images/deqgan.png)](projects/docs/Harvard_Masters_Thesis_Submit.pdf)
+
+### [Generating Faces with a Variational Autoencoder](https://github.com/dylanrandle/deepgen)
+
+A fun [project](https://github.com/dylanrandle/deepgen) in which I trained a ResNet VAE to generate faces.
+
 [![deepgen_gif](projects/images/deepgen.gif)](https://github.com/dylanrandle/deepgen)
 
-### [Learning Interpretable Decision Sets for Healthcare with Reinforcement Learning](projects/irl/irl.html)
-[![dagger_dset_rules](projects/irl/dagger_dset_rules.png)](projects/irl/irl.html)
+### And more...
 
-### [Evaluating Differentiable Neural Architecture Search for Scientific Datasets](https://towardsdatascience.com/investigating-differentiable-neural-architecture-search-for-scientific-datasets-62899be8714e?source=friends_link&sk=bece331a719b31f24118c4b538b71d4f)
-[![darts_img](projects/images/darts_img.png)](https://towardsdatascience.com/investigating-differentiable-neural-architecture-search-for-scientific-datasets-62899be8714e?source=friends_link&sk=bece331a719b31f24118c4b538b71d4f)
+- [Interpretable Imitation Learning](projects/docs/IRL_Final_Report.pdf)
+- [Differentiable Neural Architecture Search](https://towardsdatascience.com/investigating-differentiable-neural-architecture-search-for-scientific-datasets-62899be8714e?source=friends_link&sk=bece331a719b31f24118c4b538b71d4f)
+- [Detecting Trolls on Twitter](https://dylanrandle.github.io/troll_classification)
+- [Interpretable Machine Learning Package](https://github.com/dylanrandle/pynterp)
+- [Automatic Differentiation from Scratch](https://github.com/dylanrandle/autograd)
 
-### [Causal LSTMs for Mouse Microbiome Modeling](https://github.com/dylanrandle/microbiome)
-[![microbiome_pic](projects/images/microbiome_causality.png)](https://github.com/dylanrandle/microbiome)
-
-### [Detecting Trolls on Twitter](https://dylanrandle.github.io/troll_classification)
-[![sentence_eda](projects/images/sentence_eda.png)](https://dylanrandle.github.io/troll_classification)
-
-### [Implementation of Automatic Differentiation](https://github.com/dylanrandle/autograd)
-[![autograd_pic](https://github.com/dylanrandle/autograd/raw/master/docs/img/display.png)](https://github.com/dylanrandle/autograd)
+<!-- 
+# CUT
+- [A Review of Bayesian GANs](projects/bayesgan/bayesgan.html)
+- [Workshop on Containerized Cloud Computing](https://colab.research.google.com/drive/1HUxNsHqqTZ1FRuveu6SS6gr6lCVe6QqO)
+- [Training Tensorflow Models on a Spark Cluster](https://github.com/dylanrandle/spark-tensorflow)
+- [Causal LSTMs for Mouse Microbiome Modeling](https://github.com/dylanrandle/microbiome)
+-->
