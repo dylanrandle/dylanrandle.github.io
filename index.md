@@ -4,7 +4,7 @@ title: About
 
 <img style="float: right; margin-left:10px; border-radius:5%" height="200" width="auto" src="images/headshot.jpg">
 
-I am a data scientist with a focus on machine learning. I have worked on a variety of projects spanning natural language processing, computer vision, reinforcement learning, robotics, and physics-informed machine learning.
+I am a highly skilled data scientist with over **4 years of experience** building **machine learning systems** for applications in **robotics**, **computer vision**, and **natural language processing**. My work has been **published** and **patented**, and I was invited to present it at both **MIT** and **Harvard**.
 - [Resume](resume/DylanRandleResume.pdf)
 - [LinkedIn](https://linkedin.com/in/dylanrandle/)
 - [GitHub](https://github.com/dylanrandle)
