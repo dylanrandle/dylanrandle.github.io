@@ -4,7 +4,10 @@ title: About
 
 <img style="float: right; margin-left:10px; border-radius:5%" height="200" width="auto" src="images/headshot.jpg">
 
-I am a highly skilled data scientist with over **4 years of experience** building **machine learning systems** for applications in **robotics**, **computer vision**, and **natural language processing**. My work has been **published** and **patented**, and I was invited to present it at both **MIT** and **Harvard**.
+I am a highly skilled data scientist with a half decade of experience building artificial intelligence applications in **robotics**,
+**computer vision**, and **natural language processing**. My work has been published and patented, and I have presented it at top
+institutions like MIT and Harvard.
+
 - [Resume](resume/DylanRandleResume.pdf)
 - [LinkedIn](https://linkedin.com/in/dylanrandle/)
 - [GitHub](https://github.com/dylanrandle)
@@ -31,7 +34,7 @@ A fun [project](https://github.com/dylanrandle/deepgen) in which I trained a Res
 - [Interpretable Machine Learning Package](https://github.com/dylanrandle/pynterp)
 - [Automatic Differentiation from Scratch](https://github.com/dylanrandle/autograd)
 
-<!-- 
+<!--
 # CUT
 - [A Review of Bayesian GANs](projects/bayesgan/bayesgan.html)
 - [Workshop on Containerized Cloud Computing](https://colab.research.google.com/drive/1HUxNsHqqTZ1FRuveu6SS6gr6lCVe6QqO)
