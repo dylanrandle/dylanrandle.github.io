@@ -6,7 +6,9 @@ title: About
 
 Machine learning scientist with 5+ years experience and a proven track record building and deploying AI systems for **robotics, computer vision, and natural language processing**.
 
-[Resume](resume/DylanRandleResume.pdf) | [LinkedIn](https://linkedin.com/in/dylanrandle/) | [GitHub](https://github.com/dylanrandle)
+- [Resume](resume/DylanRandleResume.pdf)
+- [LinkedIn](https://linkedin.com/in/dylanrandle/)
+- [GitHub](https://github.com/dylanrandle)
 
 # Projects
 
