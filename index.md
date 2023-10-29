@@ -9,6 +9,7 @@ Machine learning scientist with 5+ years experience and a proven track record bu
 - [Resume](resume/DylanRandleResume.pdf)
 - [LinkedIn](https://linkedin.com/in/dylanrandle/)
 - [GitHub](https://github.com/dylanrandle)
+- [Scholar](https://scholar.google.com/citations?user=62z1l9cAAAAJ)
 
 # Projects
 
