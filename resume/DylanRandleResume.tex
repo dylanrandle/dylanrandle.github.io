@@ -1,73 +1,40 @@
-%-------------------------
-% Rezume, a latex resume template for developers
-% Author : Nanu Panchamurthy
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
-
-% Hope this resume template helps you land an awesome job. If you found this helpful, please consider starring the github repo here, .
-%-------------------------
-
-
-
-%------------PACKAGES----------------
 \documentclass[a4paper,11pt]{article}
+\usepackage{verbatim}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{latexsym}
+\usepackage{marvosym}
+\usepackage[empty]{fullpage}
+\usepackage[hidelinks]{hyperref}
+\usepackage[normalem]{ulem}
+\usepackage[english]{babel}
+\usepackage{graphicx}
 
-\usepackage{verbatim} % reimplements the "verbatim" and "verbatim*" environments
+\input glyphtounicode
+\pdfgentounicode=1
 
-\usepackage{titlesec} % provides an interface to sectioning commands i.e. custom elements
+\usepackage[default]{sourcesanspro}
+\urlstyle{same}
 
-\usepackage{color} % provides both foreground and background color management
+\pagestyle{fancy}
+\fancyhf{}
 
-\usepackage{enumitem} % provides control over enumerate, itemize and description
+\renewcommand{\headrulewidth}{0in}
+\renewcommand{\footrulewidth}{0in}
 
-\usepackage{fancyhdr} % provides extensive facilities for constructing headers, footers and also controlling their use
+\setlength{\tabcolsep}{0in}
 
-\usepackage{tabularx} % defines an environment tabularx, extension of "tabular" with an extra designator x, paragraph like column whose width automatically expands to fill the width of the environment
-
-\usepackage{latexsym} % provides mathematical symbols
-
-\usepackage{marvosym} % provides martin vogel's symbol font which contains various symbols
-
-\usepackage[empty]{fullpage} % sets margins to one inch and removes headers, footers etc..
-
-\usepackage[hidelinks]{hyperref} % removes color and shadow of hyperlinks
-
-\usepackage[normalem]{ulem} % provides "\ul" (uline) command which will break at line breaks
-
-\usepackage[english]{babel} % provides culturally determined typographical rules for wide range of languages
-%-----------------------------------------
-
-\input glyphtounicode % converts glyph names to unicode
-\pdfgentounicode=1 % ensures pdfs generated are ats readable
-
-%----------FONT OPTIONS-------------------
-\usepackage[default]{sourcesanspro} % uses the font source sans pro
-\urlstyle{same} % changes url font from default urlfont to font being used by the document
-%-----------------------------------------
-
-
-%----------MARGIN OPTIONS-----------------
-\pagestyle{fancy} % set page style to one configured by fancyhdr
-\fancyhf{} % clear all header and footer fields
-
-\renewcommand{\headrulewidth}{0in} % sets thickness of linerule under header to zero
-\renewcommand{\footrulewidth}{0in} % sets thickness of linerule over footer to zero
-
-\setlength{\tabcolsep}{0in} % sets thickness of column separator in tables to zero
-
-% origin of the document is one inch from the top and from and the left
-% oddsidemargin and evensidemargin both refer to the left margin
-% right margin is indirectly set using oddsidemargin
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\topmargin}{-0.5in}
 
-\addtolength{\textwidth}{1.0in} % sets width of text area in the page to one inch
-\addtolength{\textheight}{1.0in} % sets height of text area in the page to one inch
+\addtolength{\textwidth}{1.0in}
+\addtolength{\textheight}{1.0in}
 
-\raggedbottom{} % makes all pages the height of current page, no extra vertical space added
-\raggedright{} % makes all pages the width of current page, no extra horizontal space added
-%------------------------------------------
-
+\raggedbottom{}
+\raggedright{}
 
 %--------SECTIONING COMMANDS---------
 % \titleformat{<command>}
@@ -89,10 +56,7 @@
 
 
 %--------REDEFINITIONS----------------
-% redefines the style of the bullet point
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-% redefines the underline depth to 2pt
 \renewcommand{\ULdepth}{2pt}
 %-------------------------------------
 
@@ -151,129 +115,86 @@
   \begin{itemize}[leftmargin=0.15in, label={}]
 }
 \newcommand{\resumeHeadingListEnd}{\end{itemize}}
+
+
 %-------------------------------------------
 
 
-%__________________RESUME____________________
-% You can rearrange sections in any order you may prefer
 \begin{document}
 
-%-----------CONTACT DETAILS------------------
-% Make sure all the details are correct, you can add more links in the first row of second column if needed
 
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Huge Dylan Labatt Randle \vspace{2pt}} &
-  \href{https://dylanrandle.github.io/}{\uline{Website}} $|$
-  \href{https://linkedin.com/in/dylanrandle}{\uline{LinkedIn}} $|$
-  \href{https://github.com/dylanrandle}{\uline{GitHub}} $|$
-  \href{https://scholar.google.com/citations?user=62z1l9cAAAAJ}{\uline{Scholar}}
-\end{tabular*}
-%--------------------------------------------
-
-
-%-----------SUMMARY--------------------------
-% Keep this short, simple and straigth to point
-
-\section{Summary}
-\small{
-  Machine learning scientist with 5+ years experience and a proven track record building and deploying AI systems for \textbf{robotics, computer vision, and natural language processing}. 
+\begin{tabularx}{\linewidth}{@{}m{0.8\textwidth} m{0.2\textwidth}@{}}
+{
+    \textbf{\Huge Dylan Labatt Randle \vspace{2pt}} \newline
+    \href{https://dylanrandle.github.io/}{\uline{Website}} \textbf{·}
+    \href{https://linkedin.com/in/dylanrandle}{\uline{LinkedIn}} \textbf{·}
+    \href{https://github.com/dylanrandle}{\uline{GitHub}} \textbf{·}
+    \href{https://scholar.google.com/citations?user=62z1l9cAAAAJ}{\uline{Scholar}}
+    \section{Summary}
+    \small{
+      Machine learning scientist and leader with 5+ years experience and a proven track record building and deploying AI systems for robotics, computer vision, and natural language processing.
+    }
+} & 
+{
+    \hfill
+    \includegraphics[scale=0.3]{headshot.jpg}
 }
-%--------------------------------------------
+\end{tabularx}
 
-
-%-----------EXPERIENCE-----------------------
-% Distill all your talking points to small bullet points which follow the pattern "challenge-action-result" for maximum efficiency. Try to quantify (use numbers) your points whenver possible, highlist words of importance
 
 \section{Experience}
 \resumeHeadingListStart{}
   \resumeQuadHeading{Senior Data Scientist, Machine Learning}{North Reading, MA, USA}
   {Amazon Robotics}{Jul 2020 -- Present}
     \resumeItemListStart{}
-      \resumeItem{Developed machine learning and optimization systems for \textbf{robotic manipulation} and \textbf{path planning}}
-      \resumeItem{Delivered performance improvements of \textbf{+35\%} and cost savings of \textbf{\$10 million/year}}
-      \resumeItem{Received \textbf{Inventor Award (x2)}}
+      \resumeItem{Led a team of scientists developing AI systems for robotic manipulation and path planning}
+      \resumeItem{Delivered performance improvements of +35\% and cost savings of \$10 million/year}
+      \resumeItem{Named inventor on two patents}
     \resumeItemListEnd{}
-
   \resumeQuadHeading{Data Scientist, Machine Learning}{Toronto, ON, Canada}
   {Hubdoc}{Feb 2017 -- Jul 2018}
     \resumeItemListStart{}
-      \resumeItem{Developed machine learning system for \textbf{natural language processing} of financial documents}
-      \resumeItem{Deployed to production with \textbf{99\% precision} at \textbf{95\% recall}, while reducing extraction time by \textbf{99.99\%}}
+        \resumeItem{First machine learning engineer at the startup company (acquired for \$70MM USD)}
+        \resumeItem{Developed machine learning system for natural language processing of financial documents}
+        \resumeItem{Deployed to production with 99\% precision at 95\% recall, while reducing extraction time by 99.99\%}
     \resumeItemListEnd{}
 \resumeHeadingListEnd{}
-%---------------------------------------------
 
-
-%-----------EDUCATION-------------------------
-% Mention your CGPA, if its good, in the first row of second column
 
 \section{Education}
   \resumeHeadingListStart{}
     \resumeQuadHeading{Harvard University}{Cambridge, MA, USA}
     {Master of Science in Data Science (GPA: 4.0)}{Aug 2018 -- May 2020}
     \resumeItemListStart{}
-      \resumeItem{\textbf{Scholarship} in Applied Computation, \textbf{Distinction} in Teaching}
+      \resumeItem{Thesis: \textit{``Unsupervised Neural Network Methods for Solving Differential Equations"}}
+      \resumeItem{Recipient of Scholarship in Applied Computation}
+      \resumeItem{Recognized with Distinction in Teaching}
     \resumeItemListEnd{}
     \resumeQuadHeading{University of California, Berkeley}{Berkeley, CA, USA}
     {Bachelor of Science in Industrial Engineering \& Operations Research (GPA: 3.9)}{Aug 2012 -- May 2016}
     \resumeItemListStart{}
-      \resumeItem{\textbf{High Honors} (\textit{magna cum laude}), Frank Kraft Award, \textbf{Phi Beta Kappa}, Tau Beta Pi, Alpha Pi Mu}
+      \resumeItem{Recognized with High Honors (\textit{magna cum laude})}
+      \resumeItem{Recipient of Frank Kraft Award}
+      \resumeItem{Inducted into Phi Beta Kappa, Tau Beta Pi, Alpha Pi Mu}
     \resumeItemListEnd{}
   \resumeHeadingListEnd{}
-%---------------------------------------------
 
 
-%-----------PROJECTS--------------------------
-% Use resumeQuadHeading if four elements are feasible (ex: demo video link), else use resumeTrioHeading. Keep the bullet points simple and concise and try to cover wide variety of skills you have used to build these projects
-
-\section{Projects}
-  \resumeHeadingListStart{}
-    \resumeTrioHeading{Grasp Learning for Robotic Item Manipulation}{}{\emph{Amazon Robotics}}
-      \resumeItemListStart{}
-        \resumeItem{Developed \textbf{Vision Transformer} and \textbf{PointNet++} models for learned grasp generation and ranking}
-        \resumeItem{Achieved \textbf{+22\% improvement} in grasp evaluation performance}
-      \resumeItemListEnd{}
-
-    \resumeTrioHeading{Computer Vision for Robotic Damage Detection}{}{\emph{Amazon Robotics}}
-        \resumeItemListStart{}
-            \resumeItem{Developed \textbf{ResNet}-based visual anomaly detection model for damage detection}
-            \resumeItem{Achieved \textbf{+25\% improvement} in damage detection performance}
-        \resumeItemListEnd{}
-    \resumeTrioHeading{Simulation-Based Optimization for Robotic Path Planning}{}{\emph{Amazon Robotics}}
-        \resumeItemListStart{}
-            \resumeItem{Developed simulation-based optimizer for \textbf{path planning} on fleets of thousands of mobile robots}
-            \resumeItem{Achieved \textbf{+10\% improvement} in robotic system throughput}
-        \resumeItemListEnd{}
-    \resumeTrioHeading{Physics-Informed Neural Networks}{}{\emph{Harvard University}}
-      \resumeItemListStart{}
-        \resumeItem{Developed \textbf{generative adversarial networks} for solving differential equations}
-        \resumeItem{Workshop \href{https://github.com/dylanrandle/denn}{\uline{paper}} published at \textbf{ICML 2022}}
-      \resumeItemListEnd{}
-  \resumeHeadingListEnd{}
-%--------------------------------------------
+\section{Sample Projects}
+    \resumeItemListStart{}
+        \resumeItem{\textbf{Grasp Learning for Robotic Item Manipulation:} Developed ViT and PointNet models for learned grasp generation and ranking. Deployed to production with 36\% reduction in grasp failures.}
+        \resumeItem{\textbf{Computer Vision for Robotic Damage Detection:} Developed ResNet-based visual anomaly detection model for damage detection. Achieved +25\% improvement in performance in offline testing.}
+        \resumeItem{\textbf{Simulation-Based Optimization for Robotic Path Planning:} Developed simulation-based optimizer for path planning on fleets of thousands of mobile robots. Achieved +10\% improvement in robotic system throughput. Paper published at internal conference.}
+        \resumeItem{\textbf{Physics-Informed Neural Networks for Solving Differential Equations:} Developed generative adversarial networks for solving differential equations. Achieved orders of magnitude reduction in solution error over classical approaches. Paper published at ICML 2022 workshop.}
+    \resumeItemListEnd{}
 
 
-%----------------OTHERS----------------------
-% You can add your acheivements, accolades, certifications etc. here.
-
-% \section{Certifications}
-%   \resumeItemListStart{}
-%     \resumeItem{\href{https://dummy-certification.com}{\uline{Certified Web Developer by the W3C}}}
-%     \resumeItem{\href{https://dummy-certification.com}{\uline{Microsoft Certified: Azure Developer Associate}}}
-%     \resumeItem{\href{https://dummy-certification.com}{\uline{AWS Certified Developer - Associate}}}
-%   \resumeItemListEnd{}
-%--------------------------------------------
-
-
-%--------------SKILLS------------------------
-% Add or remove resumeSectionTypes according to your needs
-
-\section{Skills}
+\section{Technical Skills}
     \resumeItemListStart{}
         \resumeItem{\textbf{Languages:} Python, C++, Javascript/Typescript, SQL}
         \resumeItem{\textbf{Libraries:} PyTorch, Keras/Tensorflow, OpenCV, Open3D, Pandas, NumPy, SciPy, Scikit-Learn, React}
         \resumeItem{\textbf{Platforms:} AWS, Docker, Firebase, Linux, MacOS}
-      \resumeItemListEnd{}
-%--------------------------------------------
+    \resumeItemListEnd{}
+
 
 \end{document}

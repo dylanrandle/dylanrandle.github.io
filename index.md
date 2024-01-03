@@ -4,7 +4,7 @@ title: About
 
 <img style="float: right; margin-left:10px; border-radius:5%" height="200" width="auto" src="images/headshot.jpg">
 
-Machine learning scientist with 5+ years experience and a proven track record building and deploying AI systems for **robotics, computer vision, and natural language processing**.
+Machine learning scientist and leader with 5+ years experience and a proven track record building and deploying AI systems for robotics, computer vision, and natural language processing.
 
 - [Resume](resume/DylanRandleResume.pdf)
 - [LinkedIn](https://linkedin.com/in/dylanrandle/)
