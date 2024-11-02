@@ -75,7 +75,7 @@ Each approach leads to vastly different workflows: in inference we place greater
 -*Dylan Randle* (2019-09-06)
 
 ## Graduation from Harvard
-![gradgif](images/HarvardGrad2-min.gif)
+![gradgif](images/harvard-grad.gif)
 
 ```
 Training completed! (year 2/2)
