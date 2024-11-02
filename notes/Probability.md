@@ -1,6 +1,5 @@
 ---
 title: Probability
-mathjax: true
 ---
 
 {% include mathjax.html %}

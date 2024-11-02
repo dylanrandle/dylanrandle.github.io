@@ -1,10 +1,14 @@
-theme: minima
 title: Dylan Randle
 description: Copyright © 2022. All rights reserved.
-github: [metadata]
+
+theme: minima
+
 markdown: kramdown
 kramdown:
-    math_engine: mathjax
+  math_engine: mathjax
+
+github: [metadata]
+
 header_pages:
   - index.md
   - blog/blog.md

@@ -1,6 +1,5 @@
 ---
 title: Expectations
-mathjax: true
 ---
 
 {% include mathjax.html %}

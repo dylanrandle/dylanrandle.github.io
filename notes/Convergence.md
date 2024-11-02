@@ -1,6 +1,5 @@
 ---
 title: Convergence of Random Variables
-mathjax: true
 ---
 
 {% include mathjax.html %}

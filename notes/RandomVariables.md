@@ -1,6 +1,5 @@
 ---
 title: Random Variables
-mathjax: true
 ---
 
 {% include mathjax.html %}

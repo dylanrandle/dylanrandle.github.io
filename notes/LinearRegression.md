@@ -1,6 +1,5 @@
 ---
 title: Linear Regression
-mathjax: true
 ---
 
 {% include mathjax.html %}

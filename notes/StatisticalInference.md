@@ -1,6 +1,5 @@
 ---
-title: Statistical Inference (aka "Learning")
-mathjax: true
+title: Statistical Inference
 ---
 
 {% include mathjax.html %}
@@ -11,7 +10,7 @@ mathjax: true
 - Frequentist: data are random variables and parameters are fixed quantities
 - Bayesian: data are fixed quantities and parameters are random variables
 
-### Point Estimation ("Best Guess")
+### Point Estimation
 
 - Examples:
   - parameter of a parametric model, 

@@ -11,12 +11,12 @@ Machine learning scientist and leader with 5+ years experience and a proven trac
 # Projects
 
 ### [Rubik's Cube Solver Robot](https://github.com/dylanrandle/rubiks-cube-solver)
+
 I built a robot that can solve a Rubik's cube in under 3 seconds!
 
 <video width="auto" height="512" controls muted autoplay loop style="border-radius:5px">
   <source src="projects/videos/rubiks-cube-robot.MOV" type="video/mp4">
 </video>
-
 
 ### Analysis of Golf Swings with Computer Vision
 
