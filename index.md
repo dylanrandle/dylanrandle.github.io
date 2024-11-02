@@ -2,13 +2,25 @@
 title: About
 ---
 
-<img style="float: right; margin-left:10px; border-radius:5%" height="200" width="auto" src="images/headshot.jpg">
+<img style="float: right; margin-left:10px; border-radius:20px" height="200" width="auto" src="images/headshot.jpg">
 
 Machine learning scientist and leader with 5+ years experience and a proven track record building and deploying AI systems for robotics, computer vision, and natural language processing.
 
 [Resume](resume/DylanRandleResume.pdf) · [LinkedIn](https://linkedin.com/in/dylanrandle/) · [GitHub](https://github.com/dylanrandle) · [Scholar](https://scholar.google.com/citations?user=62z1l9cAAAAJ)
 
 # Projects
+
+### [Rubik's Cube Solver Robot](https://github.com/dylanrandle/rubiks-cube-solver)
+I built a robot that can solve a Rubik's cube in under 3 seconds!
+
+<video width="auto" height="512" controls muted autoplay loop style="border-radius:5px">
+  <source src="projects/videos/rubiks-cube-robot.MOV" type="video/mp4">
+</video>
+
+
+### Analysis of Golf Swings with Computer Vision
+
+<img src="projects/images/golf-cv.gif" style="border-radius:5px">
 
 ### [Physics-Informed Neural Networks](projects/docs/Harvard_Masters_Thesis_Submit.pdf)
 
