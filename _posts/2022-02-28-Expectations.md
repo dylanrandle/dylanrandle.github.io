@@ -1,8 +1,10 @@
 ---
-title: Expectations
+title: Expectations of Random Variables
+date: 2022-02-28 16:00:00 +/-TTTT
+categories: [Math]
+tags: [notes, statistics]
+math: true
 ---
-
-{% include mathjax.html %}
 
 ## Definitions
 - Expected value: $E[X] = \int x f(x) dx$

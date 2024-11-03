@@ -1,8 +1,10 @@
 ---
 title: Statistical Inference
+date: 2022-02-14 16:00:00 +/-TTTT
+categories: [Math]
+tags: [notes, statistics]
+math: true
 ---
-
-{% include mathjax.html %}
 
 ## Fundamentals
 

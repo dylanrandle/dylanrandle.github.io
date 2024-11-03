@@ -1,8 +1,10 @@
 ---
 title: Convergence of Random Variables
+date: 2022-02-28 16:00:00 +/-TTTT
+categories: [Math]
+tags: [notes, statistics]
+math: true
 ---
-
-{% include mathjax.html %}
 
 ## Preamble
 
