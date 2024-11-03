@@ -16,7 +16,7 @@ A collection of my publicly available work, showcasing some of the things I'm pr
 
 I built a robot 🦾 that can solve a Rubik's cube in under 3 seconds!
 
-<video width="auto" height="400" controls muted autoplay loop style="border-radius:5px">
+<video width="auto" height="400" controls muted autoplay loop style="border-radius:5px; margin-bottom:15px">
   <source src="projects/videos/rubiks-cube-robot.MOV" type="video/mp4">
 </video>
 
@@ -24,7 +24,7 @@ I built a robot 🦾 that can solve a Rubik's cube in under 3 seconds!
 
 I used 3D human pose estimation to try to improve my golf swing ⛳.
 
-<video width="auto" height="256" controls muted autoplay loop style="border-radius:5px">
+<video width="auto" height="256" controls muted autoplay loop style="border-radius:5px; margin-bottom:15px">
   <source src="projects/videos/golf-cv.MOV" type="video/mp4">
 </video>
 
