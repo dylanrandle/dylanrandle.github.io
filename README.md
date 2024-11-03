@@ -1,3 +1,12 @@
 # README
 
-Run locally with `bundle exec jekyll serve`.
+## Installation
+```
+git submodule init
+bundle install
+```
+
+## Developing
+```
+bundle exec jekyll serve
+````
