@@ -10,29 +10,35 @@ Machine learning scientist and leader with 5+ years experience and a proven trac
 
 # Projects
 
-### [Rubik's Cube Solver Robot](https://github.com/dylanrandle/rubiks-cube-solver)
+A collection of my publicly available work, showcasing some of the things I'm proud of.
 
-I built a robot that can solve a Rubik's cube in under 3 seconds!
+## [Rubik's Cube Solver Robot 🔗](https://github.com/dylanrandle/rubiks-cube-solver)
 
-<video width="auto" height="512" controls muted autoplay loop style="border-radius:5px">
+I built a robot 🦾 that can solve a Rubik's cube in under 3 seconds!
+
+<video width="auto" height="400" controls muted autoplay loop style="border-radius:5px">
   <source src="projects/videos/rubiks-cube-robot.MOV" type="video/mp4">
 </video>
 
-### Analysis of Golf Swings with Computer Vision
+## [Analysis of Golf Swings with Computer Vision 🔗](https://dylanrandle-golf-cv.streamlit.app)
 
-<img src="projects/images/golf-cv.gif" style="border-radius:5px">
+I used 3D human pose estimation to try to improve my golf swing ⛳.
 
-### [Physics-Informed Neural Networks](projects/docs/Harvard_Masters_Thesis_Submit.pdf)
+<video width="auto" height="256" controls muted autoplay loop style="border-radius:5px">
+  <source src="projects/videos/golf-cv.MOV" type="video/mp4">
+</video>
+
+## [Physics-Informed Neural Networks 🔗](projects/docs/Harvard_Masters_Thesis_Submit.pdf)
 
 Work conducted for my [thesis](projects/docs/Harvard_Masters_Thesis_Submit.pdf) ([slides](projects/docs/Thesis_Defense_Presentation_Final.pdf), [defense](https://www.youtube.com/watch?feature=player_embedded&v=bq2FurxD2Xo)). Published as a [preprint](projects/docs/GAN_Paper_Preprint.pdf) and ICML workshop [paper](projects/docs/GAN_Paper_AI4Science.pdf).
 
-[![denn_diagram](projects/images/deqgan.png)](projects/docs/Harvard_Masters_Thesis_Submit.pdf)
+<img height="128" width="auto" src="projects/images/deqgan.png" style="border-radius:5px" >
 
-### [Generating Faces with a Variational Autoencoder](https://github.com/dylanrandle/deepgen)
+## [Generating Faces with a Variational Autoencoder 🔗](https://github.com/dylanrandle/deepgen)
 
 A fun [project](https://github.com/dylanrandle/deepgen) in which I trained a ResNet VAE to generate faces.
 
-[![deepgen_gif](projects/images/deepgen.gif)](https://github.com/dylanrandle/deepgen)
+<img height="256" width="auto" src="projects/images/deepgen.gif" style="border-radius:5px" >
 
 ### And more...
 
