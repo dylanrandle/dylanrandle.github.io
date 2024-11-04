@@ -1,6 +1,6 @@
 ---
 title: The AI Revolution
-date: 2019-07-05 16:00:00 +/-TTTT
+date: 2019-07-05 16:00:00 -0500
 categories: [Musings]
 tags: [machine learning, artificial intelligence]
 ---

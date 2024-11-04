@@ -1,6 +1,6 @@
 ---
 title: Prediction vs Inference
-date: 2019-07-06 16:00:00 +/-TTTT
+date: 2019-07-06 16:00:00 -0500
 categories: [Musings]
 tags: [statistical inference, machine learning]
 ---

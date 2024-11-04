@@ -1,7 +1,7 @@
 ---
 layout: page
 icon: fas fa-info-circle
-order: 2
+order: 4
 ---
 
 Machine learning scientist and leader with 5+ years experience and a proven track record building and deploying AI systems for robotics, computer vision, and natural language processing.
