@@ -5,7 +5,7 @@ categories: [Updates]
 tags: [harvard, graduation]
 ---
 
-![gradgif](../assets/img/harvard-grad.gif)
+![gradgif](../../assets/img/harvard-grad.gif)
 
 It was almost exactly two years ago today that I arrived at Perkins Hall to begin my studies at Harvard. Back then, I had only a vague idea of the incredible experience I was about to enjoy during my master's in data science at Harvard.
 
