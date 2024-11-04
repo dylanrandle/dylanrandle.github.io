@@ -2,8 +2,9 @@
 
 ## Installation
 ```
-git submodule init
 bundle install
+git submodule init
+git submodule update
 ```
 
 ## Developing
