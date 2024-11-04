@@ -4,7 +4,6 @@ description: I built a robot that can solve a Rubik's cube in under 3 seconds! ð
 date: 2024-11-03 23:51:00 -0500
 categories: [Projects]
 tags: [robotics]
-pin: true
 image: /assets/img/rubiks-cube-robot.jpg
 ---
 
