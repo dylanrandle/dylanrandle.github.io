@@ -5,7 +5,7 @@ date: 2024-11-03 23:51:00 -0500
 categories: [Projects]
 tags: [robotics]
 pin: true
-image: /assets/img/rubiks-cube-robot.tiff
+image: /assets/img/rubiks-cube-robot.jpg
 ---
 
 <!-- TODO: add writeup -->
