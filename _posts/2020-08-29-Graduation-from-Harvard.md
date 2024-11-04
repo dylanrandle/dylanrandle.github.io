@@ -1,6 +1,6 @@
 ---
 title: Graduation from Harvard
-date: 2019-08-29 16:00:00 -0500
+date: 2020-08-29 16:00:00 -0500
 categories: [Updates]
 tags: [harvard, graduation]
 image: /assets/img/harvard-grad.gif
