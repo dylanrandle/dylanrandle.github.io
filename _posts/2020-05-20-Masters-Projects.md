@@ -15,4 +15,4 @@ tags: [machine learning, artificial intelligence, data science, masters]
 - [Training Tensorflow Models on a Spark Cluster](https://github.com/dylanrandle/spark-tensorflow)
 - [Causal LSTMs for Mouse Microbiome Modeling](https://github.com/dylanrandle/microbiome)
 
-<!-- Not featured: Bayesian GANs, safe autonomous driving >
+<!-- Not featured: Bayesian GANs, safe autonomous driving -->
