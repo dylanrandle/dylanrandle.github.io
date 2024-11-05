@@ -15,8 +15,14 @@ image: /assets/img/rubiks-cube-robot.jpg
 
 Here is a video of the robot solving a randomly scrambled Rubik's cube.
 
-<video width="auto" height="700" controls muted autoplay loop style="border-radius:5px; margin-bottom:15px">
-  <source src="/assets/videos/rubiks-cube-robot.MOV" type="video/mp4">
-</video>
+{%
+  include embed/video.html
+  src='/assets/videos/rubiks-cube-robot.mp4'
+  autoplay=true
+  loop=true
+  muted=true
+%}
 
-The control code is available [here](https://github.com/dylanrandle/rubiks-cube-solver).
+## Further Reading
+
+The code for this project is available [here](https://github.com/dylanrandle/rubiks-cube-solver).
