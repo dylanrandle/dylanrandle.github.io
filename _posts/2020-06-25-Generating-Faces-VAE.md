@@ -7,4 +7,5 @@ tags: [artificial intelligence, machine learning, generative models]
 image: /assets/img/deepgen.gif
 ---
 
-The source code and write-up (see `README.md`) is available here: [https://github.com/dylanrandle/deepgen](https://github.com/dylanrandle/deepgen)
+> The source code and write-up (see `README.md`) is available here: [https://github.com/dylanrandle/deepgen](https://github.com/dylanrandle/deepgen)
+{: .prompt-info }
