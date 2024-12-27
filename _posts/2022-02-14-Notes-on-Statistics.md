@@ -1,6 +1,6 @@
 ---
 title: Notes on Statistics
-description: A concise collection of references notes for statistics.
+description: A concise collection of reference notes for statistics.
 date: 2022-02-14 16:00:00 -0500
 categories: [Math]
 tags: [notes, statistics]
