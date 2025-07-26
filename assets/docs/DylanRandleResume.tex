@@ -106,7 +106,7 @@
 \newcommand{\resumeQuadHeadingChild}[2]{
   \item
   \begin{tabular*}{0.96\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{\small#1} & {\small#2} \\
+    \textit{\small#1} & \textit{\small#2} \\
   \end{tabular*}
 }
 
@@ -125,7 +125,7 @@
 
 \begin{tabularx}{\linewidth}{@{}m{0.8\textwidth} m{0.2\textwidth}@{}}
 {
-    \textbf{\Huge Dylan Labatt Randle \vspace{2pt}} \newline
+    \textbf{\Huge Dylan L Randle \vspace{2pt}} \newline
     \href{https://dylanrandle.github.io/}{\uline{Website}} \textbf{·}
     \href{https://linkedin.com/in/dylanrandle}{\uline{LinkedIn}} \textbf{·}
     \href{https://github.com/dylanrandle}{\uline{GitHub}} \textbf{·}
@@ -144,19 +144,32 @@
 
 \section{Experience}
 \resumeHeadingListStart{}
-  \resumeQuadHeading{Senior Applied Scientist}{North Reading, MA, USA}
-  {Amazon}{Jul 2020 -- Present}
+  \resumeQuadHeading{Amazon Robotics}{North Reading, MA, USA}{Senior Applied Scientist}{Apr 2024 -- Present}
+    \resumeItemListStart
+      \resumeItem{Developing closed-loop AI policy learning systems for dexterous bimanual robotic manipulation using imitation and reinforcement learning}
+      \resumeItem{Demonstrated capabilities to Jeff Bezos, Andy Jassy, and Amazon Board of Directors}
+    \resumeItemListEnd
+  \resumeQuadHeadingChild{Senior Data Scientist}{Apr 2023 -- Apr 2024}
+    \resumeItemListStart
+      \resumeItem{Developed AI systems for robotic manipulation (grasp generation, damage prediction, box packing)}
+      \resumeItem{Delivered performance improvements of +35\% and savings of \$10 million/year}
+    \resumeItemListEnd
+  \resumeQuadHeadingChild{Data Scientist II}{Jul 2020 -- Apr 2023}
+    \resumeItemListStart
+      \resumeItem{Developed learned path planning optimization system for large-scale mobile robot fleets}
+      \resumeItem{Published paper demonstrating +15\% throughput improvement and potential \$150 million/year savings}
+    \resumeItemListEnd
+  \resumeQuadHeadingChild{Data Scientist I}{Jun 2019 -- Aug 2019}
+    \resumeItemListStart
+      \resumeItem{Developed AutoML system for training, evaluating, and interpreting ML models trained on trillion-row robotics datasets}
+      \resumeItem{Used by multiple scientists to speed up research and analysis workflows}
+    \resumeItemListEnd
+  \resumeQuadHeading{Hubdoc}{Toronto, ON, Canada}
+  {Data Scientist}{Feb 2017 -- Jul 2018}
     \resumeItemListStart{}
-      \resumeItem{Led team of scientists developing AI systems for robotic manipulation and path planning}
-      \resumeItem{Delivered performance improvements of +35\% and cost savings of \$10 million/year}
-      \resumeItem{Named inventor on multiple patents}
-    \resumeItemListEnd{}
-  \resumeQuadHeading{Data Scientist}{Toronto, ON, Canada}
-  {Hubdoc (acquired for \$70MM USD)}{Feb 2017 -- Jul 2018}
-    \resumeItemListStart{}
-        \resumeItem{Started and led machine learning (ML) team at successful startup from ideation to production deployment}
-        \resumeItem{Developed \& deployed AI system for natural language processing of financial documents, reducing data extraction time by ~99\% compared to manual processes}
-        \resumeItem{Built the entire ML stack from model training to production inference}
+        \resumeItem{Started and led ML team from ideation to acquisition for \$70 million USD}
+        \resumeItem{Developed NLP AI system for automated data extraction from financial documents}
+        \resumeItem{Reduced data extraction time from hours to seconds}
     \resumeItemListEnd{}
 \resumeHeadingListEnd{}
 
@@ -166,9 +179,9 @@
     \resumeQuadHeading{Harvard University}{Cambridge, MA, USA}
     {Master of Science in Data Science (GPA: 4.0)}{Aug 2018 -- May 2020}
     \resumeItemListStart{}
+        \resumeItem{Thesis: \textit{``Unsupervised Neural Network Methods for Solving Differential Equations"}}
         \resumeItem{Recognized with Scholarship in Applied Computation and Distinction in Teaching}
         \resumeItem{Research and coursework focused on machine learning}
-        \resumeItem{Thesis: \textit{``Unsupervised Neural Network Methods for Solving Differential Equations"}}
       
     \resumeItemListEnd{}
     \resumeQuadHeading{University of California, Berkeley}{Berkeley, CA, USA}
@@ -181,11 +194,13 @@
   \resumeHeadingListEnd{}
 
 
-\section{Sample Projects}
+\section{Publications}
     \resumeItemListStart{}
-        \resumeItem{\textbf{Grasp Learning for Robotic Item Manipulation:} Developed ViT and PointNet models for learned grasp generation and ranking. Deployed to production with 36\% reduction in grasp failures.}
-        \resumeItem{\textbf{Computer Vision for Robotic Damage Detection:} Developed ResNet-based visual anomaly detection model for damage detection. Achieved +25\% improvement in performance in offline testing.}
-        \resumeItem{\textbf{Simulation-Based Optimization for Robotic Path Planning:} Developed simulation-based optimizer for path planning on fleets of thousands of mobile robots. Achieved +10\% improvement in robotic system throughput. Paper published at internal conference.}
+        \resumeItem{\textbf{Demonstrating Multi-Suction Item Picking at Scale via Multi-Modal Learning of Pick Success.} C Wang, J van Baar, C Mitash, S Li, \textbf{D Randle}, W Wang, S Sontakke, K E Bekris, K Katyal. RSS 2025.}
+        \resumeItem{\textbf{MuST: Multi-Head Skill Transformer for Long-Horizon Dexterous Manipulation with Skill Progress.} K Gao, F Wang, E Aduh, \textbf{D Randle}, J Shi. ICRA 2024.}
+        \resumeItem{\textbf{Learning Object Properties Using Robot Proprioception via Differentiable Robot-Object Interaction.} PY Chen, C Liu, P Ma, J Eastman, D Rus, \textbf{D Randle}, Y Ivanov, W Matusik. ICRA 2024.}
+        \resumeItem{\textbf{Avoiding Object Damage in Robotic Manipulation.} E Aduh, F Wang, \textbf{D Randle}, K Wang, P Shah, C Mitash, M Nambi. IROS 2024.}
+        \resumeItem{\textbf{DEQGAN: Learning the Loss Function for PINNs with Generative Adversarial Networks.} B Bullwinkel*, \textbf{D Randle*}, P Protopapas, D Sondak. ICML 2022, AI for Science.}
     \resumeItemListEnd{}
 
 
