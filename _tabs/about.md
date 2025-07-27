@@ -4,7 +4,6 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-Artificial intelligence (AI) scientist, engineer, and leader with 5+ years experience and proven track
-record building and deploying AI systems for robotics, computer vision, and natural language processing.
+Artificial intelligence (AI) and machine learning (ML) leader, scientist, and engineer with 5+ years experience and proven track record building and deploying AI/ML systems for robotics, computer vision (CV), and natural language processing (NLP).
 
 [Resume](../assets/docs/DylanRandleResume.pdf) · [LinkedIn](https://linkedin.com/in/dylanrandle/) · [GitHub](https://github.com/dylanrandle) · [Scholar](https://scholar.google.com/citations?user=62z1l9cAAAAJ)
