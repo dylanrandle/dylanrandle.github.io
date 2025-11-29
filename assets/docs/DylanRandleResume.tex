@@ -8,7 +8,7 @@
 \usepackage{latexsym}
 \usepackage{marvosym}
 \usepackage[empty]{fullpage}
-\usepackage[hidelinks]{hyperref}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
 \usepackage[normalem]{ulem}
 \usepackage[english]{babel}
 \usepackage{graphicx}
@@ -32,6 +32,8 @@
 
 \addtolength{\textwidth}{1.0in}
 \addtolength{\textheight}{1.0in}
+
+\setlength{\footskip}{4.08003pt}
 
 \raggedbottom{}
 \raggedright{}
@@ -132,7 +134,7 @@
     \href{https://scholar.google.com/citations?user=62z1l9cAAAAJ}{\uline{Scholar}}
     \section{Summary}
     \small{
-      Artificial intelligence (AI) and machine learning (ML) leader, scientist, and engineer with 7+ years experience and proven track record building and deploying AI/ML systems for robotics, computer vision (CV), and natural language processing (NLP).
+      Artificial intelligence (AI) and machine learning (ML) technical leader, scientist, and engineer with 7+ years experience and proven track record building and deploying AI/ML systems for robotics, computer vision (CV), and natural language processing (NLP).
     }
 } & 
 {
@@ -146,30 +148,30 @@
 \resumeHeadingListStart{}
   \resumeQuadHeading{Amazon Robotics}{North Reading, MA, USA}{Senior Applied Scientist}{Apr 2024 -- Present}
     \resumeItemListStart
-      \resumeItem{Developed closed-loop AI policy learning systems for dexterous bimanual robotic manipulation using imitation and reinforcement learning}
-      \resumeItem{Demonstrated capabilities to Jeff Bezos, Andy Jassy, and Amazon Board of Directors}
+      \resumeItem{Technical leader developing closed-loop AI policy learning systems for dexterous bimanual robotic manipulation using imitation and reinforcement learning.}
+      \resumeItem{Demonstrated capabilities to Jeff Bezos, Andy Jassy, and Amazon Board of Directors.}
     \resumeItemListEnd
   \resumeQuadHeadingChild{Senior Data Scientist}{Apr 2023 -- Apr 2024}
     \resumeItemListStart
-      \resumeItem{Developed production ML systems for robotic manipulation (grasp generation, damage prediction, box packing)}
-      \resumeItem{Delivered performance improvements of +35\% and savings of \$10 million/year}
+      \resumeItem{Developed production ML systems for robotic manipulation (grasp generation, damage prediction, box packing).}
+      \resumeItem{Delivered performance improvements of +35\% and savings of \$10 million/year.}
     \resumeItemListEnd
   \resumeQuadHeadingChild{Data Scientist II}{Jul 2020 -- Apr 2023}
     \resumeItemListStart
-      \resumeItem{Developed ML path planning optimization system for large-scale mobile robot fleets}
-      \resumeItem{Published paper demonstrating +15\% throughput improvement and potential \$150 million/year savings}
+      \resumeItem{Developed ML path planning optimization system for large-scale mobile robot fleets.}
+      \resumeItem{Published paper demonstrating +15\% throughput improvement and potential \$150 million/year savings.}
     \resumeItemListEnd
   \resumeQuadHeadingChild{Data Scientist I}{Jun 2019 -- Aug 2019}
     \resumeItemListStart
-      \resumeItem{Developed AutoML system for training, evaluating, and interpreting ML models trained on trillion-row robotics datasets}
-      \resumeItem{Used by multiple scientists to speed up research and analysis workflows}
+      \resumeItem{Developed AutoML system for training, evaluating, and interpreting ML models trained on trillion-row robotics datasets.}
+      \resumeItem{Used by multiple scientists to speed up research and analysis workflows.}
     \resumeItemListEnd
   \resumeQuadHeading{Hubdoc}{Toronto, ON, Canada}
   {Data Scientist}{Feb 2017 -- Jul 2018}
     \resumeItemListStart{}
-        \resumeItem{Started and led ML team from ideation to \$70 million USD acquisition}
-        \resumeItem{Developed ML-based NLP system for automated data extraction from unstructured financial documents}
-        \resumeItem{Reduced data extraction time from hours to seconds}
+        \resumeItem{Started and led ML team from ideation to \$70 million USD acquisition.}
+        \resumeItem{Developed ML-based NLP system for automated data extraction from unstructured financial documents.}
+        \resumeItem{Reduced data extraction time from hours to seconds.}
     \resumeItemListEnd{}
 \resumeHeadingListEnd{}
 
@@ -179,17 +181,17 @@
     \resumeQuadHeading{Harvard University}{Cambridge, MA, USA}
     {Master of Science in Data Science (GPA: 4.0)}{Aug 2018 -- May 2020}
     \resumeItemListStart{}
-        \resumeItem{Thesis: \textit{``Unsupervised Neural Network Methods for Solving Differential Equations"}}
-        \resumeItem{Recognized with Scholarship in Applied Computation and Distinction in Teaching}
-        \resumeItem{Research and coursework focused on machine learning}
+        \resumeItem{Thesis: \textit{``Unsupervised Neural Network Methods for Solving Differential Equations"}.}
+        \resumeItem{Recognized with Scholarship in Applied Computation and Distinction in Teaching.}
+        \resumeItem{Research and coursework focused on machine learning.}
       
     \resumeItemListEnd{}
     \resumeQuadHeading{University of California, Berkeley}{Berkeley, CA, USA}
     {Bachelor of Science in Industrial Engineering \& Operations Research (GPA: 3.9)}{Aug 2012 -- May 2016}
     \resumeItemListStart{}
-      \resumeItem{Recognized with High Honors (\textit{magna cum laude}) and Frank Kraft Award}
-      \resumeItem{Inducted into Phi Beta Kappa, Tau Beta Pi, Alpha Pi Mu}
-      \resumeItem{Coursework focused on statistics and optimization}
+      \resumeItem{Recognized with High Honors (\textit{magna cum laude}) and Frank Kraft Award.}
+      \resumeItem{Inducted into Phi Beta Kappa, Tau Beta Pi, Alpha Pi Mu.}
+      \resumeItem{Coursework focused on statistics and optimization.}
     \resumeItemListEnd{}
   \resumeHeadingListEnd{}
 
@@ -203,12 +205,20 @@
         \resumeItem{\textbf{DEQGAN: Learning the Loss Function for PINNs with Generative Adversarial Networks.} B Bullwinkel*, \textbf{D Randle*}, P Protopapas, D Sondak. ICML 2022, AI for Science. *Equal contribution.}
     \resumeItemListEnd{}
 
+\section{Projects}
+    \resumeItemListStart{}
+        \resumeItem{
+            \textbf{Rubik's Cube Solving Robot:}
+            A robot that autonomously solves a Rubik's cube in under 3 seconds. Leverages integrated perception to inspect the cube, Kociemba's algorithm to plan a solution, and stepper motors to solve it. Demo available on my \href{https://dylanrandle.github.io/posts/Rubiks-Cube-Robot/}
+            {\uline{website}.}
+        }
+    \resumeItemListEnd{}
 
 \section{Technical Skills}
     \resumeItemListStart{}
-        \resumeItem{\textbf{Languages:} Python, C++, Javascript/Typescript, SQL}
-        \resumeItem{\textbf{Libraries:} PyTorch, Keras/Tensorflow, OpenCV, Open3D, Pandas, NumPy, SciPy, Scikit-Learn, React}
-        \resumeItem{\textbf{Platforms:} AWS, Docker, Firebase, Linux, MacOS}
+        \resumeItem{\textbf{Languages:} Python, C++, Javascript/Typescript, SQL.}
+        \resumeItem{\textbf{Libraries:} PyTorch, Keras/Tensorflow, OpenCV, Open3D, Pandas, NumPy, SciPy, Scikit-Learn, React.}
+        \resumeItem{\textbf{Platforms:} AWS, Docker, Firebase, Linux, MacOS.}
     \resumeItemListEnd{}
 
 
