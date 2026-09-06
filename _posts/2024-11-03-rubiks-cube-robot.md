@@ -3,8 +3,8 @@ title: Rubik's Cube Solving Robot
 description: A robot that autonomously solves a Rubik's cube.
 date: 2024-11-03 23:51:00 -0500
 categories: [Projects]
-tags: [robotics]
-image: /assets/img/rubiks-cube-robot.jpg
+tags: [robotics, computer vision, hardware]
+image: /assets/img/rubiks-cube-robot.webp
 ---
 
 ## Background

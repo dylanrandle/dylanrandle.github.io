@@ -3,8 +3,11 @@ title: Notes on Statistics
 description: A concise collection of reference notes for statistics.
 date: 2022-02-14 16:00:00 -0500
 categories: [Math]
-tags: [notes, statistics]
+tags: [statistics, probability, statistical inference]
 math: true
+image:
+  path: /assets/img/statistics-notes.webp
+  alt: Bayes' theorem surrounded by a normal distribution, probability tree, overlapping sets, and sample distributions
 ---
 
 ## Probability

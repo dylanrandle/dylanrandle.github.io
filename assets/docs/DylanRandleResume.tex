@@ -16,7 +16,7 @@
 \input glyphtounicode
 \pdfgentounicode=1
 
-\usepackage[default]{sourcesanspro}
+\usepackage[default]{sourcesans}
 \urlstyle{same}
 
 \pagestyle{fancy}
@@ -71,8 +71,11 @@
   \item\small{#1}
 }
 
-% commands to start and end itemization of resumeItem, rightmargin set to 0.11in to avoid the overflow of resumetItem beyond whatever resumeItemHeading is being used
-\newcommand{\resumeItemListStart}{\begin{itemize}[rightmargin=0.11in]}
+% Commands to start and end itemization of resumeItem. Use the same compact
+% spacing throughout the resume while retaining enough separation to scan.
+\newcommand{\resumeItemListStart}{
+  \begin{itemize}[rightmargin=0.11in, itemsep=2pt, topsep=4pt, parsep=0pt, partopsep=0pt]
+}
 \newcommand{\resumeItemListEnd}{\end{itemize}}
 
 % resumeSectionType renders a bolded type to be used under a section, used as skill type here, middle element is used to keep ":"s in the same vertical line
@@ -134,12 +137,12 @@
     \href{https://scholar.google.com/citations?user=62z1l9cAAAAJ}{\uline{Scholar}}
     \section{Summary}
     \small{
-      Technical lead with 7+ years experience in AI, robotics, and machine learning. Expert in developing closed-loop policies for dexterous manipulation using imitation and reinforcement learning. Proven track record building and deploying AI/ML systems for robotics, computer vision, and natural language processing.
+      Technical lead with 8+ years experience in AI, robotics, and machine learning. Expert in developing closed-loop policies for dexterous manipulation using imitation and reinforcement learning. Proven track record building and deploying AI/ML systems for robotics, computer vision, and natural language processing.
     }
 } & 
 {
     \hfill
-    \includegraphics[scale=0.3]{headshot.jpg}
+    \includegraphics[scale=0.3]{../img/headshot.jpg}
 }
 \end{tabularx}
 
@@ -154,7 +157,7 @@
   \resumeQuadHeadingChild{Senior Data Scientist}{Apr 2023 -- Apr 2024}
     \resumeItemListStart
       \resumeItem{Developed production ML systems for robotic manipulation (grasp generation, damage prediction, box packing).}
-      \resumeItem{Deployed first learned action model for Amazon's \href{https://www.aboutamazon.com/news/operations/amazon-introduces-sparrow-a-state-of-the-art-robot-that-handles-millions-of-diverse-products}{\uline{Sparrow}} robot. Delivered performance improvements of +35\% and savings of \$10 million/year.}
+      \resumeItem{Deployed first learned action model for Amazon's Sparrow robot. Delivered performance improvements of +35\% and savings of \$10 million/year.}
     \resumeItemListEnd
   \resumeQuadHeadingChild{Data Scientist II}{Jul 2020 -- Apr 2023}
     \resumeItemListStart
@@ -173,6 +176,12 @@
         \resumeItem{Developed ML-based NLP system for automated data extraction from unstructured financial documents.}
         \resumeItem{Reduced data extraction time from hours to seconds.}
     \resumeItemListEnd{}
+  \resumeQuadHeading{BMO Capital Markets}{Toronto, Canada}
+  {Financial Products Analyst}{Jun 2014 -- Aug 2014}
+    \resumeItemListStart{}
+        \resumeItem{Developed interest rate swap/swaption delta-hedging optimization algorithm.}
+        \resumeItem{Uncovered market opportunities for fixed-income traders.}
+    \resumeItemListEnd{}
 \resumeHeadingListEnd{}
 
 
@@ -186,6 +195,7 @@
         \resumeItem{Research and coursework focused on machine learning.}
       
     \resumeItemListEnd{}
+    \newpage
     \resumeQuadHeading{University of California, Berkeley}{Berkeley, CA, USA}
     {Bachelor of Science in Industrial Engineering \& Operations Research (GPA: 3.9)}{Aug 2012 -- May 2016}
     \resumeItemListStart{}
@@ -199,8 +209,8 @@
 \section{Publications}
     \resumeItemListStart{}
         \resumeItem{\textbf{Demonstrating Multi-Suction Item Picking at Scale via Multi-Modal Learning of Pick Success.} C Wang, J van Baar, C Mitash, S Li, \textbf{D Randle}, W Wang, S Sontakke, K E Bekris, K Katyal. RSS 2025.}
-        \resumeItem{\textbf{MuST: Multi-Head Skill Transformer for Long-Horizon Dexterous Manipulation with Skill Progress.} K Gao, F Wang, E Aduh, \textbf{D Randle}, J Shi. ICRA 2024.}
-        \resumeItem{\textbf{Learning Object Properties Using Robot Proprioception via Differentiable Robot-Object Interaction.} PY Chen, C Liu, P Ma, J Eastman, D Rus, \textbf{D Randle}, Y Ivanov, W Matusik. ICRA 2024.}
+        \resumeItem{\textbf{MuST: Multi-Head Skill Transformer for Long-Horizon Dexterous Manipulation with Skill Progress.} K Gao, F Wang, E Aduh, \textbf{D Randle}, J Shi. ICRA 2025.}
+        \resumeItem{\textbf{Learning Object Properties Using Robot Proprioception via Differentiable Robot-Object Interaction.} PY Chen, C Liu, P Ma, J Eastman, D Rus, \textbf{D Randle}, Y Ivanov, W Matusik. ICRA 2025.}
         \resumeItem{\textbf{Avoiding Object Damage in Robotic Manipulation.} E Aduh, F Wang, \textbf{D Randle}, K Wang, P Shah, C Mitash, M Nambi. IROS 2024.}
         \resumeItem{\textbf{DEQGAN: Learning the Loss Function for PINNs with Generative Adversarial Networks.} B Bullwinkel*, \textbf{D Randle*}, P Protopapas, D Sondak. ICML 2022, AI for Science. *Equal contribution.}
         \resumeItem{\textbf{Unsupervised Learning of Solutions to Differential Equations with Generative Adversarial Networks.} \textbf{D Randle}, P Protopapas, D Sondak. arXiv:2007.11133, 2020.}
@@ -210,9 +220,48 @@
 \section{Projects}
     \resumeItemListStart{}
         \resumeItem{
-            \textbf{Rubik's Cube Solving Robot:}
-            A robot that autonomously solves a Rubik's cube in under 3 seconds. Leverages integrated perception to inspect the cube, Kociemba's algorithm to plan a solution, and stepper motors to solve it. Demo available on my \href{https://dylanrandle.github.io/posts/Rubiks-Cube-Robot/}
-            {\uline{website}.}
+            \textbf{Rubik's Cube Solving Robot} \textit{(Nov 2024)}:
+            Built a robot that solves a cube in under 3 seconds using camera-based perception, Kociemba's planning algorithm, and custom stepper-motor hardware.
+        }
+        \resumeItem{
+            \textbf{Real-Time Quantitative Trading System} \textit{(Jun 2023)}:
+            Built and deployed a live quantitative trading system that uses real-time NLP analysis of news articles to generate market signals and execute trades.
+        }
+        \resumeItem{
+            \textbf{Golf Swing Analysis with Computer Vision} \textit{(Jul 2020)}:
+            Applied monocular 3D human-pose estimation to analyze body mechanics throughout a golf swing.
+        }
+        \resumeItem{
+            \textbf{ResNet Variational Autoencoder} \textit{(Jun 2020)}:
+            Trained a residual-network VAE on CelebA to learn a generative latent representation and synthesize faces.
+        }
+        \resumeItem{
+            \textbf{Differentiable Neural Architecture Search} \textit{(Dec 2019)}:
+            Partnered with Google AI to adapt and evaluate DARTS across materials science, astronomy, and medical-imaging datasets.
+        }
+        \resumeItem{
+            \textbf{Interpretable Reinforcement Learning} \textit{(Dec 2019)}:
+            Distilled black-box policies into readable decision sets using DAgger, quantified the interpretability-performance tradeoff in an HIV treatment simulator, and released \texttt{pynterp}, an open-source package providing some interpretable algorithms.
+        }
+        \resumeItem{
+            \textbf{Distributed YouTube-8M Classification} \textit{(May 2019)}:
+            Trained bidirectional LSTM video classifiers with Spark, TensorFlow, Elephas, HDFS, and a custom AWS EMR cluster.
+        }
+        \resumeItem{
+            \textbf{Causal LSTM Microbiome Modeling} \textit{(May 2019)}:
+            Used sparse LSTMs, neural Granger-causality analysis, and Bayesian optimization to compare microbial interactions in healthy and IBD mice.
+        }
+        \resumeItem{
+            \textbf{Bayesian Generative Adversarial Networks} \textit{(Dec 2018)}:
+            Reproduced and evaluated Bayesian GANs using stochastic-gradient HMC, demonstrating mode diversity on four-shapes data and semi-supervised MNIST.
+        }
+        \resumeItem{
+            \textbf{Twitter Troll Detection} \textit{(Dec 2018)}:
+            Built NLP classifiers for identifying Internet Research Agency tweets, achieving 95.9\% accuracy on a temporally separated test set.
+        }
+        \resumeItem{
+            \textbf{Automatic Differentiation from Scratch} \textit{(Dec 2018)}:
+            Built and published the \texttt{dragongrad} Python package with forward- and reverse-mode differentiation, Jacobians, and gradient-based optimization.
         }
     \resumeItemListEnd{}
 

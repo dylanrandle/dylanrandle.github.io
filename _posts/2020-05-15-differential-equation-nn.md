@@ -1,10 +1,13 @@
 ---
 title: Physics-Informed Generative Adversarial Networks for Differential Equations
 description: We developed a novel GAN formulation for solving differential equations with physics-informed neural networks.
-date: 2020-08-30 16:00:00 -0500
+date: 2020-05-15 16:00:00 -0500
 categories: [Research]
-tags: [artificial intelligence, machine learning, differential equations, masters]
+tags: [scientific machine learning, physics-informed neural networks, differential equations, generative adversarial networks, harvard]
 math: true
+image:
+  path: /assets/img/deqgan.webp
+  alt: Diagram of the DEQGAN generator, differential equation residual, and discriminator
 ---
 
 ## Background
@@ -27,20 +30,17 @@ $$ \eta_{D} = \nabla_{\theta_{d}} \frac{1}{m} \sum_{i=1}^{m} \left[ \log D \left
 
 alternating between gradient ascent and descent steps for $D$ and $G$, respectively.
 
-![deqgan](/assets/img/deqgan.png)
-_Visual representation of DEQGAN formulation._
-
 ## Results
 
 We obtain *orders of magnitude lower error* when compared to classic unsupervised neural-network approaches that use traditional loss functions (L1, L2, and Huber).
 
-![deqgan_result](/assets/img/deqgan-results.png)
+![DEQGAN predictions against analytical solutions](/assets/img/deqgan-results.webp)
 _Comparison of DEQGAN to traditional physics-informed NNs on various problems._
 
 ## Further Reading
 - My master's thesis
-    - [Manuscript](/assets/docs/Harvard_Masters_Thesis_Submit.pdf)
-    - [Slides](/assets/docs/Thesis_Defense_Presentation_Final.pdf)
+    - [Manuscript](/assets/docs/harvard-thesis.pdf)
+    - [Slides](/assets/docs/harvard-defense.pdf)
     - [Defense](https://www.youtube.com/watch?feature=player_embedded&v=bq2FurxD2Xo)
-- [Preprint paper](/assets/docs/GAN_Paper_Preprint.pdf)
-- [ICML AI4Science paper](/assets/docs/GAN_Paper_AI4Science.pdf)
+- [Preprint paper](/assets/docs/deqgan-arxiv.pdf)
+- [ICML AI4Science paper](/assets/docs/deqgan-icml.pdf)

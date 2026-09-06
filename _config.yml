@@ -8,7 +8,7 @@ theme: jekyll-theme-chirpy
 # otherwise, the layout language will use the default value of 'en'.
 lang: en
 
-# Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
+# Change to your timezone › https://zones.arilyn.cc
 timezone: America/New_York
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
@@ -35,6 +35,7 @@ social:
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Dylan Randle
   email: dylanrandle@gmail.com
+  fediverse_handle:
   links:
     # The first element serves as the copyright owner's link
     - https://github.com/dylanrandle
@@ -105,6 +106,13 @@ social_preview_image: # string, local or CORS resources
 # boolean type, the global switch for TOC in posts.
 toc: true
 
+actions:
+  # Display "Edit this post" action on each post page to encourage contributions.
+  edit_post:
+    enabled: false
+    url: ""
+    static_url: false
+
 comments:
   # Global switch for the post-comment system. Keeping it empty means disabled.
   provider: # [disqus | utterances | giscus]
@@ -130,7 +138,7 @@ comments:
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
 assets:
   self_host:
-    enabled: # boolean, keep empty means false
+    enabled: false
     # specify the Jekyll environment, empty means both
     # only works if `assets.self_host.enabled` is 'true'
     env: # [development | production]
@@ -204,12 +212,23 @@ compress_html:
     envs: [development]
 
 exclude:
+  # Publish the compiled resume PDF, but not its LaTeX source. Keeping the
+  # source out of `_site` also prevents editor auto-build tools from compiling
+  # the copied file and creating auxiliary files in the generated site.
+  - assets/docs/DylanRandleResume.tex
+  - "**/.DS_Store"
+  - "**/*.aux"
+  - "**/*.fdb_latexmk"
+  - "**/*.fls"
+  - "**/*.log"
+  - "**/*.out"
   - "*.gem"
   - "*.gemspec"
   - docs
   - tools
   - README.md
   - LICENSE
+  - purgecss.js
   - "*.config.js"
   - package*.json
 

@@ -2,7 +2,7 @@
 title: The AI Revolution
 date: 2019-07-05 16:00:00 -0500
 categories: [Musings]
-tags: [machine learning, artificial intelligence]
+tags: [artificial intelligence, machine learning, data science]
 ---
 
 I recently re-read an [article](https://hdsr.mitpress.mit.edu/pub/wot7mkc1) which I have become very fond of: "Artificial Intelligence: The Revolution Hasn't Happened Yet" by one of the most respected researchers in the world of computer science and statistics, Michael I. Jordan. The article is his take on the AI hype, and serves as an important framing of the new field of "data science" for all the researchers in the field.

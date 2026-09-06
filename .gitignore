@@ -1,7 +1,6 @@
 # Bundler cache
 .bundle
 vendor
-Gemfile.lock
 
 # Jekyll cache
 .jekyll-cache
@@ -15,6 +14,31 @@ _site
 node_modules
 package-lock.json
 
+# LaTeX auxiliary and intermediate files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.dvi
+*.fdb_latexmk
+*.fls
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.pdfsync
+*.run.xml
+*.snm
+*.synctex.gz
+*.synctex(busy)
+*.toc
+*.vrb
+*.xdv
+
 # IDE configurations
 .idea
 .vscode/*
@@ -23,8 +47,10 @@ package-lock.json
 !.vscode/tasks.json
 
 # Misc
-_sass/dist
+_sass/vendors
 assets/js/dist
 
-# Mac OS
+# Hidden system files
+*~
 .DS_Store
+Thumbs.db

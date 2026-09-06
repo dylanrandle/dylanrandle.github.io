@@ -2,7 +2,7 @@
 title: Prediction vs Inference
 date: 2019-07-06 16:00:00 -0500
 categories: [Musings]
-tags: [statistical inference, machine learning]
+tags: [data science, statistics, statistical inference, machine learning]
 ---
 
 Recently, in my role as Data Scientist at Amazon, I have been faced with one of the fundamental dichotomies of data science: the tradeoff between inference and prediction (aptly discussed in [this Harvard Data Science Review article](https://hdsr.mitpress.mit.edu/pub/a7gxkn0a)). The situation is best described through example: consider a computer vision system that predicts if an image contains a cat; in this setting, we would only care about the accuracy of our model and would not be focused on explaining why a prediction was made--either there's a cat or there isn't. In contrast, if we are fitting a model to predict an illness, for example, it would be paramount to understand why the model made a certain prediction. Not just for the peace-of-mind of the doctor and patient, but, even more fundamentally, for the development of science itself.
