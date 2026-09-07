@@ -5,6 +5,11 @@ date: 2025-05-19T16:00:00-05:00
 category: Research
 tags: [robotics, imitation learning, transformers, dexterous manipulation, amazon]
 image: /assets/images/must-skill-transformer.webp
+previewImages:
+  - src: /assets/images/must-skill-transformer-480w.webp
+    width: 480
+  - src: /assets/images/must-skill-transformer.webp
+    width: 887
 imageAlt: MuST chaining flipping, picking, packing, and pushing skills using progress-guided selection
 ---
 

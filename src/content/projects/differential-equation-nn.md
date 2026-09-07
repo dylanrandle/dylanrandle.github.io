@@ -5,6 +5,11 @@ date: 2020-05-15T16:00:00-05:00
 category: Research
 tags: [scientific machine learning, physics-informed neural networks, differential equations, generative adversarial networks, harvard]
 image: /assets/images/deqgan.webp
+previewImages:
+  - src: /assets/images/deqgan-480w.webp
+    width: 480
+  - src: /assets/images/deqgan-960w.webp
+    width: 960
 imageAlt: Diagram of the DEQGAN generator, differential equation residual, and discriminator
 ---
 

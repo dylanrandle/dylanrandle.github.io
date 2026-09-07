@@ -5,6 +5,11 @@ date: 2024-10-14T16:00:00-05:00
 category: Research
 tags: [robotics, machine learning, multimodal learning, warehouse automation, amazon]
 image: /assets/images/robotic-object-damage.webp
+previewImages:
+  - src: /assets/images/robotic-object-damage-480w.webp
+    width: 480
+  - src: /assets/images/robotic-object-damage-960w.webp
+    width: 960
 imageAlt: An Amazon Robotics workcell, an object flagged as high risk, and an example of package damage
 ---
 

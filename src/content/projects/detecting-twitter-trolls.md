@@ -5,6 +5,11 @@ date: 2018-12-15T16:03:00-05:00
 category: Projects
 tags: [machine learning, natural language processing, social media, harvard]
 image: /assets/images/twitter-troll-detection.webp
+previewImages:
+  - src: /assets/images/twitter-troll-detection-480w.webp
+    width: 480
+  - src: /assets/images/twitter-troll-detection.webp
+    width: 915
 imageAlt: Principal-component projections showing troll and non-troll tweets separating across neural-network layers
 ---
 

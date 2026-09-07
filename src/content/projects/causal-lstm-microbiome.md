@@ -5,6 +5,11 @@ date: 2019-05-01T16:06:00-05:00
 category: Projects
 tags: [deep learning, time series, causality, computational biology, harvard]
 image: /assets/images/microbiome-causal-lstm.webp
+previewImages:
+  - src: /assets/images/microbiome-causal-lstm-480w.webp
+    width: 480
+  - src: /assets/images/microbiome-causal-lstm-960w.webp
+    width: 960
 imageAlt: Estimated microbial interaction networks for healthy and IBD mice
 ---
 

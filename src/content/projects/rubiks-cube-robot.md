@@ -5,10 +5,15 @@ date: 2024-11-03T23:51:00-05:00
 category: Projects
 tags: [robotics, computer vision, hardware]
 image: /assets/images/rubiks-cube-robot.webp
+previewImages:
+  - src: /assets/images/rubiks-cube-robot-480w.webp
+    width: 480
+  - src: /assets/images/rubiks-cube-robot-960w.webp
+    width: 960
 imageAlt: A custom six-motor robot holding a Rubik's Cube
 imageFit: cover
 video: /assets/videos/rubiks-cube-robot-solve.mp4
-previewVideo: /assets/videos/rubiks-cube-robot-solve-preview.mp4
+previewVideo: /assets/videos/rubiks-cube-robot-solve-960w.mp4
 ---
 
 ## Background

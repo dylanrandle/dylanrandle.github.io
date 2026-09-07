@@ -203,17 +203,23 @@ test('motion-focused projects use muted looping video previews and heroes', asyn
   const projects = [
     {
       id: 'golf-cv',
-      previewVideo: '/assets/videos/golf-cv-preview.mp4',
+      previewPoster: '/assets/images/golf-cv-960w.webp',
+      previewVideo: '/assets/videos/golf-cv-960w.mp4',
       video: '/assets/videos/golf-cv.mp4',
     },
     {
       id: 'rubiks-cube-robot',
-      previewVideo: '/assets/videos/rubiks-cube-robot-solve-preview.mp4',
+      previewPoster: '/assets/images/rubiks-cube-robot-960w.webp',
+      previewVideo: '/assets/videos/rubiks-cube-robot-solve-960w.mp4',
       video: '/assets/videos/rubiks-cube-robot-solve.mp4',
     },
   ];
 
   await page.goto(CONTENT_SECTIONS.projects.indexPath);
+  const indexResponse = await page.request.get(
+    CONTENT_SECTIONS.projects.indexPath,
+  );
+  const indexMarkup = await indexResponse.text();
 
   for (const project of projects) {
     const detailPath = contentDetailPath(CONTENT_SECTIONS.projects, project.id);
@@ -226,6 +232,7 @@ test('motion-focused projects use muted looping video previews and heroes', asyn
 
     const source = await cardVideo.locator('source').getAttribute('src');
     expect(source).toBe(project.previewVideo);
+    expect(indexMarkup).toContain(`poster="${project.previewPoster}"`);
 
     await page.goto(detailPath);
     const heroVideo = page.locator('video.article-hero');
@@ -263,6 +270,35 @@ test('loaded video previews show their first frame instead of the poster', async
       .toBe(true);
     await expect(video).not.toHaveAttribute('poster', /.+/);
     await expect(video).toHaveJSProperty('paused', true);
+  }
+});
+
+test('all image cards use responsive preview assets', async ({ page }) => {
+  const sections = [
+    { path: CONTENT_SECTIONS.projects.indexPath, imageCount: 14 },
+    { path: CONTENT_SECTIONS.posts.indexPath, imageCount: 2 },
+  ];
+
+  for (const section of sections) {
+    await page.goto(section.path);
+    const cardImages = page.locator('.content-card img');
+    await expect(cardImages).toHaveCount(section.imageCount);
+
+    for (let index = 0; index < section.imageCount; index += 1) {
+      const cardImage = cardImages.nth(index);
+      await expect(cardImage).toHaveAttribute('srcset', / 480w(?:,|$)/);
+      await expect(cardImage).toHaveAttribute(
+        'sizes',
+        '(max-width: 600px) calc(100vw - 1.5rem), (max-width: 1200px) 30vw, 348px',
+      );
+
+      await cardImage.scrollIntoViewIfNeeded();
+      await expect
+        .poll(() =>
+          cardImage.evaluate((image: HTMLImageElement) => image.currentSrc),
+        )
+        .toMatch(/-480w\.webp$/);
+    }
   }
 });
 

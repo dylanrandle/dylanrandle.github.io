@@ -11,6 +11,15 @@ const contentSchema = z
     tags: z.array(z.string()).default([]),
     draft: z.boolean().default(false),
     image: z.string().optional(),
+    previewImages: z
+      .array(
+        z.object({
+          src: z.string(),
+          width: z.number().int().positive(),
+        }),
+      )
+      .min(1)
+      .optional(),
     video: z.string().optional(),
     previewVideo: z.string().optional(),
     imageAlt: z.string().trim().min(1).optional(),
@@ -30,6 +39,20 @@ const contentSchema = z
         code: 'custom',
         message: 'image is required as a poster and fallback when video is set',
         path: ['image'],
+      });
+    }
+    if (entry.previewImages && !entry.image) {
+      context.addIssue({
+        code: 'custom',
+        message: 'image is required when previewImages is set',
+        path: ['image'],
+      });
+    }
+    if (entry.image && !entry.previewImages) {
+      context.addIssue({
+        code: 'custom',
+        message: 'previewImages is required when image is set',
+        path: ['previewImages'],
       });
     }
     if (entry.previewVideo && !entry.video) {

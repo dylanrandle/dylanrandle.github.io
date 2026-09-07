@@ -20,17 +20,32 @@ const resolveTarget = (href) => {
   return path.join(root, relative, 'index.html');
 };
 
+const extractReferences = (html) => {
+  const references = [
+    ...html.matchAll(/\b(?:href|src|poster)=["']([^"']+)["']/g),
+  ].map((match) => match[1]);
+
+  for (const match of html.matchAll(/\bsrcset=["']([^"']+)["']/g)) {
+    for (const candidate of match[1].split(',')) {
+      const [url] = candidate.trim().split(/\s+/, 1);
+      if (url) references.push(url);
+    }
+  }
+
+  return references;
+};
+
 await walk(root);
 const missing = [];
 for (const file of htmlFiles) {
   const html = await fs.readFile(file, 'utf8');
-  for (const match of html.matchAll(/(?:href|src)=["']([^"']+)["']/g)) {
-    const target = resolveTarget(match[1]);
+  for (const reference of extractReferences(html)) {
+    const target = resolveTarget(reference);
     if (!target) continue;
     try {
       await fs.access(target);
     } catch {
-      missing.push(`${path.relative(root, file)} -> ${match[1]}`);
+      missing.push(`${path.relative(root, file)} -> ${reference}`);
     }
   }
 }

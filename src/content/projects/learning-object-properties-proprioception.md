@@ -5,6 +5,11 @@ date: 2025-05-19T16:05:00-05:00
 category: Research
 tags: [robotics, differentiable simulation, system identification, proprioception, amazon]
 image: /assets/images/differentiable-robot-object-interaction.webp
+previewImages:
+  - src: /assets/images/differentiable-robot-object-interaction-480w.webp
+    width: 480
+  - src: /assets/images/differentiable-robot-object-interaction-960w.webp
+    width: 960
 imageAlt: Differentiable-physics calibration of object mass and material properties using robot joint positions
 ---
 

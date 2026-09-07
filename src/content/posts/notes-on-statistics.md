@@ -5,6 +5,11 @@ date: 2022-02-14T16:00:00-05:00
 category: Math
 tags: [statistics, probability, statistical inference]
 image: /assets/images/statistics-notes.webp
+previewImages:
+  - src: /assets/images/statistics-notes-480w.webp
+    width: 480
+  - src: /assets/images/statistics-notes-960w.webp
+    width: 960
 imageAlt: Bayes' theorem surrounded by a normal distribution, probability tree, overlapping sets, and sample distributions
 ---
 

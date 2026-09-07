@@ -5,6 +5,11 @@ date: 2019-12-15T16:02:00-05:00
 category: Projects
 tags: [deep learning, neural architecture search, automl, scientific machine learning, harvard]
 image: /assets/images/darts-scientific-datasets.webp
+previewImages:
+  - src: /assets/images/darts-scientific-datasets-480w.webp
+    width: 480
+  - src: /assets/images/darts-scientific-datasets.webp
+    width: 720
 imageAlt: Training, validation, and test learning curves for a DARTS model on graphene kirigami data
 ---
 

@@ -5,6 +5,11 @@ date: 2025-06-21T16:00:00-05:00
 category: Research
 tags: [robotics, computer vision, multimodal learning, warehouse automation, amazon]
 image: /assets/images/multi-suction-pick-success.webp
+previewImages:
+  - src: /assets/images/multi-suction-pick-success-480w.webp
+    width: 480
+  - src: /assets/images/multi-suction-pick-success-960w.webp
+    width: 960
 imageAlt: A multimodal perception model scoring candidate multi-suction picks in an industrial workcell
 ---
 

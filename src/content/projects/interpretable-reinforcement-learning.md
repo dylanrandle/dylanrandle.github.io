@@ -5,6 +5,11 @@ date: 2019-12-15T16:01:00-05:00
 category: Projects
 tags: [reinforcement learning, imitation learning, interpretable machine learning, healthcare, harvard]
 image: /assets/images/interpretable-rl.webp
+previewImages:
+  - src: /assets/images/interpretable-rl-480w.webp
+    width: 480
+  - src: /assets/images/interpretable-rl.webp
+    width: 806
 imageAlt: Cumulative rewards of interpretable models trained with DAgger in an HIV simulator
 ---
 

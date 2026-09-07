@@ -5,6 +5,11 @@ date: 2019-05-01T16:05:00-05:00
 category: Projects
 tags: [deep learning, computer vision, distributed systems, video classification, harvard]
 image: /assets/images/spark-tensorflow.webp
+previewImages:
+  - src: /assets/images/spark-tensorflow-480w.webp
+    width: 480
+  - src: /assets/images/spark-tensorflow.webp
+    width: 846
 imageAlt: Measured training speedup as the number of Spark worker nodes increases
 ---
 

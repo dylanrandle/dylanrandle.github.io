@@ -5,6 +5,9 @@ date: 2020-08-29T16:00:00-05:00
 category: Updates
 tags: [education, harvard, graduation]
 image: /assets/images/harvard-grad.webp
+previewImages:
+  - src: /assets/images/harvard-grad-480w.webp
+    width: 480
 imageAlt: Dylan Randle in graduation robes outside Harvard's Memorial Hall
 imageFit: cover
 ---

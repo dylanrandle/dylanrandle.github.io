@@ -20,6 +20,15 @@ const formatter = new Intl.DateTimeFormat(CONTENT_DATE_FORMAT.locale, {
   year: 'numeric',
   timeZone: CONTENT_DATE_FORMAT.timeZone,
 });
+const previewImageSrcset = entry.data.previewImages
+  ?.map(({ src, width }) => `${src} ${width}w`)
+  .join(', ');
+const previewPoster =
+  entry.data.previewImages?.reduce((largest, candidate) =>
+    candidate.width > largest.width ? candidate : largest,
+  ).src ?? entry.data.image;
+const previewImageSizes =
+  '(max-width: 600px) calc(100vw - 1.5rem), (max-width: 1200px) 30vw, 348px';
 ---
 
 <article class="content-card">
@@ -35,7 +44,7 @@ const formatter = new Intl.DateTimeFormat(CONTENT_DATE_FORMAT.locale, {
           loop
           playsinline
           preload="auto"
-          poster={entry.data.image}
+          poster={previewPoster}
           aria-hidden="true"
           tabindex="-1"
           data-autoplay-video
@@ -52,6 +61,8 @@ const formatter = new Intl.DateTimeFormat(CONTENT_DATE_FORMAT.locale, {
             { cover: entry.data.imageFit === 'cover' },
           ]}
           src={entry.data.image}
+          srcset={previewImageSrcset}
+          sizes={previewImageSrcset ? previewImageSizes : undefined}
           alt={entry.data.imageAlt ?? ''}
           loading="lazy"
           width="1200"

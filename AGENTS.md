@@ -74,6 +74,32 @@ npm run check:resume
   write-ups in `src/content/projects/`. Both indexes sort published entries
   newest first.
 
+## Image and video conventions
+
+- Keep the full-detail asset at an unsuffixed path such as `example.webp` or
+  `demo.mp4`. Name derived card media with its actual pixel width, such as
+  `example-480w.webp`, `example-960w.webp`, or `demo-960w.mp4`; the `w` makes
+  explicit that the number is the pixel width. Do not use generic
+  suffixes such as `-preview`.
+- Every content `image` must define `previewImages` with accurate width
+  descriptors. List candidates smallest to largest for readability. Generate a
+  480-pixel-wide WebP and, when the source is large enough, a 960-pixel-wide
+  WebP. Never upscale; reuse an already-small optimized source as the upper
+  candidate when appropriate.
+- Preserve animation frame count, timing, transparency, and looping when
+  deriving previews from animated WebP sources.
+- Keep `video` pointed at the full-resolution detail asset and `previewVideo`
+  pointed at the 960-pixel-wide card encode. Card video posters should use the
+  largest `previewImages` candidate.
+- Encode published MP4 files as H.264 High Profile with `yuv420p` pixel format
+  and fast-start metadata. Preserve source frame rate, aspect ratio, and color
+  tags; omit audio when the source is silent. The current balanced encode uses
+  a slow preset and CRF 25.
+- Video preload is intentionally eager so playback is ready before a visitor
+  scrolls it into view. Keep autoplay muted and viewport-aware, remove posters
+  only after the first frame is decoded, respect reduced-motion preferences,
+  and leave native controls disabled.
+
 ## Deployment and safety
 
 Pushes to `main` or `master` trigger the Pages workflow. Other branches do not

@@ -5,6 +5,11 @@ date: 2018-12-15T16:04:00-05:00
 category: Projects
 tags: [machine learning, automatic differentiation, optimization, python, harvard]
 image: /assets/images/autograd.webp
+previewImages:
+  - src: /assets/images/autograd-480w.webp
+    width: 480
+  - src: /assets/images/autograd.webp
+    width: 505
 imageAlt: Gradient descent following a path across a three-dimensional objective surface
 ---
 

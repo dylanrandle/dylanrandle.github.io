@@ -4,7 +4,12 @@ description: I built a live trading system that used topic models over financial
 date: 2023-06-01T16:00:00-04:00
 category: Projects
 tags: [quantitative finance, natural language processing, topic modeling, real-time systems]
-image: /assets/images/stocks-lda.png
+image: /assets/images/stocks-lda.webp
+previewImages:
+  - src: /assets/images/stocks-lda-480w.webp
+    width: 480
+  - src: /assets/images/stocks-lda-960w.webp
+    width: 960
 imageAlt: Illustration of a document represented as a mixture of latent topics and word assignments
 ---
 
