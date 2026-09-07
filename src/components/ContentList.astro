@@ -1,0 +1,33 @@
+---
+import type { ContentEntry } from '../lib/content';
+import type { ContentSection } from '../config';
+import ContentCard from './ContentCard.astro';
+
+interface Props {
+  entries: ContentEntry[];
+  section: ContentSection;
+  headingLevel?: 'h2' | 'h3';
+}
+
+const { entries, section, headingLevel = 'h2' } = Astro.props;
+---
+
+<div class="content-list">
+  {
+    entries.map((entry) => (
+      <ContentCard
+        entry={entry}
+        section={section}
+        headingLevel={headingLevel}
+      />
+    ))
+  }
+</div>
+
+<style>
+  .content-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+</style>

@@ -1,1 +1,12 @@
-*.md
+dist/
+.astro/
+node_modules/
+.cache/
+coverage/
+playwright-report/
+test-results/
+tmp/
+public/assets/
+resume/
+src/content/
+package-lock.json

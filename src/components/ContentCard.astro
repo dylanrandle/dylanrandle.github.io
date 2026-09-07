@@ -1,0 +1,200 @@
+---
+import type { ContentEntry } from '../lib/content';
+import {
+  CONTENT_DATE_FORMAT,
+  contentDetailPath,
+  type ContentSection,
+} from '../config';
+
+interface Props {
+  entry: ContentEntry;
+  section: ContentSection;
+  headingLevel?: 'h2' | 'h3';
+}
+
+const { entry, section, headingLevel = 'h2' } = Astro.props;
+const Heading = headingLevel;
+const formatter = new Intl.DateTimeFormat(CONTENT_DATE_FORMAT.locale, {
+  day: 'numeric',
+  month: 'short',
+  year: 'numeric',
+  timeZone: CONTENT_DATE_FORMAT.timeZone,
+});
+---
+
+<article class="content-card">
+  <a href={contentDetailPath(section, entry.id)}>
+    {
+      entry.data.video ? (
+        <video
+          class:list={[
+            'content-card-media',
+            { cover: entry.data.imageFit === 'cover' },
+          ]}
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster={entry.data.image}
+          aria-hidden="true"
+          tabindex="-1"
+          data-autoplay-video
+        >
+          <source src={entry.data.video} type="video/mp4" />
+        </video>
+      ) : entry.data.image ? (
+        <img
+          class:list={[
+            'content-card-media',
+            { cover: entry.data.imageFit === 'cover' },
+          ]}
+          src={entry.data.image}
+          alt={entry.data.imageAlt ?? ''}
+          loading="lazy"
+          width="1200"
+          height="675"
+        />
+      ) : (
+        <div class="content-card-placeholder" aria-hidden="true">
+          <span>{entry.data.category ?? section.singularLabel}</span>
+        </div>
+      )
+    }
+    <div class="content-card-body">
+      <div class="content-card-meta">
+        <span>{entry.data.category ?? section.singularLabel}</span>
+        <time datetime={entry.data.date.toISOString()}>
+          {formatter.format(entry.data.date)}
+        </time>
+      </div>
+      <Heading class="content-card-title">{entry.data.title}</Heading>
+      <p>{entry.data.description}</p>
+    </div>
+  </a>
+</article>
+
+<style>
+  .content-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    transition:
+      transform 180ms ease,
+      border-color 180ms ease;
+  }
+
+  .content-card:hover {
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
+  }
+
+  .content-card > a {
+    min-height: 13rem;
+    display: grid;
+    grid-template-columns: minmax(12rem, 30%) minmax(0, 1fr);
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .content-card-media,
+  .content-card-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 13rem;
+    background: var(--surface-solid);
+  }
+
+  .content-card-media {
+    object-fit: contain;
+  }
+
+  .content-card-media.cover {
+    object-fit: cover;
+  }
+
+  .content-card-placeholder {
+    display: grid;
+    place-items: center;
+    background:
+      radial-gradient(
+        circle at 72% 28%,
+        color-mix(in srgb, var(--accent) 24%, transparent),
+        transparent 42%
+      ),
+      linear-gradient(145deg, var(--accent-soft), var(--surface-solid));
+  }
+
+  .content-card-placeholder span {
+    color: var(--accent-strong);
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .content-card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(1.35rem, 3vw, 2.15rem);
+  }
+
+  .content-card-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 0.69rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .content-card-meta span {
+    overflow: hidden;
+    color: var(--accent);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .content-card-meta time {
+    flex: none;
+  }
+
+  .content-card-title {
+    margin-bottom: 0.65rem;
+    font-size: clamp(1.25rem, 2.4vw, 1.65rem);
+  }
+
+  p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 600px) {
+    .content-card > a {
+      min-height: 0;
+      grid-template-columns: 1fr;
+    }
+
+    .content-card-media,
+    .content-card-placeholder {
+      height: auto;
+      min-height: 0;
+      aspect-ratio: 16 / 9;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .content-card-body {
+      padding: 1.25rem;
+    }
+  }
+</style>

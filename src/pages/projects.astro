@@ -1,0 +1,31 @@
+---
+import ContentList from '../components/ContentList.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { CONTENT_SECTIONS, SITE, UI_LABELS } from '../config';
+import { getPublishedProjects } from '../lib/content';
+
+const projects = await getPublishedProjects();
+---
+
+<BaseLayout
+  title={CONTENT_SECTIONS.projects.label}
+  description={`Projects and research in robotics, machine learning, and applied artificial intelligence by ${SITE.title}.`}
+>
+  <header class="page-header shell">
+    <p class="eyebrow">{CONTENT_SECTIONS.projects.label}</p>
+    <h1>Projects &<br />research.</h1>
+    <p class="lede">
+      Work across robotics, machine learning, computer vision, and applied
+      artificial intelligence.
+    </p>
+  </header>
+  <section class="projects shell" aria-label={UI_LABELS.projectsAndResearch}>
+    <ContentList entries={projects} section={CONTENT_SECTIONS.projects} />
+  </section>
+</BaseLayout>
+
+<style>
+  .projects {
+    padding-bottom: clamp(5rem, 9vw, 8rem);
+  }
+</style>

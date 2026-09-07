@@ -1,0 +1,33 @@
+---
+import { render } from 'astro:content';
+import ContentLayout from '../../layouts/ContentLayout.astro';
+import { getPublishedProjects } from '../../lib/content';
+import { CONTENT_SECTIONS } from '../../config';
+
+export async function getStaticPaths() {
+  const projects = await getPublishedProjects();
+  return projects.map((project) => ({
+    params: { slug: project.id },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content, headings } = await render(project);
+---
+
+<ContentLayout
+  title={project.data.title}
+  description={project.data.description}
+  date={project.data.date}
+  updated={project.data.updated}
+  tags={project.data.tags}
+  image={project.data.image}
+  video={project.data.video}
+  imageAlt={project.data.imageAlt}
+  imageFit={project.data.imageFit}
+  headings={headings}
+  eyebrow={project.data.category ?? CONTENT_SECTIONS.projects.singularLabel}
+>
+  <Content />
+</ContentLayout>

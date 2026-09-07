@@ -1,0 +1,105 @@
+---
+import ContentList from '../components/ContentList.astro';
+import Portrait from '../components/Portrait.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { profile } from '../data/profile';
+import { getPublishedProjects } from '../lib/content';
+import { CONTENT_SECTIONS, ROUTES, UI_LABELS } from '../config';
+
+const projects = await getPublishedProjects();
+---
+
+<BaseLayout>
+  <section class="intro shell">
+    <div class="intro-copy">
+      <p class="eyebrow">{profile.intro.eyebrow}</p>
+      <h1>{profile.displayName}<span>.</span></h1>
+      <p class="intro-lede">{profile.intro.headline}</p>
+      <p class="intro-detail">{profile.intro.detail}</p>
+      <div class="button-row">
+        <a class="button primary" href={ROUTES.about.href}>More about me</a>
+        <a class="button" href={profile.links.cv}>Download CV</a>
+      </div>
+      <div class="intro-links" aria-label="Professional profiles">
+        <a href={profile.links.github}>GitHub ↗</a>
+        <a href={profile.links.linkedin}>LinkedIn ↗</a>
+        <a href={profile.links.scholar}>Google Scholar ↗</a>
+      </div>
+    </div>
+    <Portrait />
+  </section>
+
+  <section class="projects-section shell" aria-labelledby="projects-heading">
+    <h2 class="projects-heading" id="projects-heading">
+      {UI_LABELS.projectsAndResearch}
+    </h2>
+    <ContentList
+      entries={projects}
+      section={CONTENT_SECTIONS.projects}
+      headingLevel="h3"
+    />
+  </section>
+</BaseLayout>
+
+<style>
+  .intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: clamp(2.5rem, 7vw, 6rem);
+    align-items: start;
+    padding-block: clamp(4.5rem, 9vw, 7.5rem);
+  }
+
+  .intro h1 {
+    font-size: clamp(3rem, 6.5vw, 5rem);
+  }
+
+  .intro h1 span {
+    color: var(--accent);
+  }
+
+  .intro-lede {
+    max-width: 44rem;
+    margin: 1.5rem 0 0.75rem;
+    font-size: clamp(1.3rem, 2.6vw, 1.9rem);
+    font-weight: 610;
+    letter-spacing: -0.025em;
+    line-height: 1.4;
+  }
+
+  .intro-detail {
+    max-width: 40rem;
+    color: var(--muted);
+    font-size: 1.02rem;
+  }
+
+  .intro .button-row {
+    margin-top: 1.75rem;
+  }
+
+  .intro-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin-top: 1.35rem;
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
+  .projects-section {
+    padding-bottom: clamp(5rem, 9vw, 8rem);
+  }
+
+  .projects-heading {
+    margin-bottom: 1.75rem;
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  }
+
+  @media (max-width: 700px) {
+    .intro {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+</style>

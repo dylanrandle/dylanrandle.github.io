@@ -1,0 +1,145 @@
+---
+import {
+  CONTENT_DATE_FORMAT,
+  NAV_ITEMS,
+  ROUTES,
+  SITE,
+  THEME,
+  UI_LABELS,
+} from '../config';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  type?: 'website' | 'article';
+}
+
+const {
+  title,
+  description = SITE.description,
+  image = SITE.image,
+  type = 'website',
+} = Astro.props;
+const pageTitle = title
+  ? `${title} · ${SITE.title}`
+  : `${SITE.title} · ${SITE.tagline}`;
+const canonical = new URL(Astro.url.pathname, SITE.url);
+const socialImage = new URL(image, SITE.url);
+const activePath = Astro.url.pathname;
+const themeVariables = `
+  :root {
+    --accent: ${THEME.light.accent};
+    --accent-strong: ${THEME.light.accentStrong};
+    --accent-soft: ${THEME.light.accentSoft};
+  }
+  :root[data-theme='dark'] {
+    --accent: ${THEME.dark.accent};
+    --accent-strong: ${THEME.dark.accentStrong};
+    --accent-soft: ${THEME.dark.accentSoft};
+  }
+`;
+---
+
+<!doctype html>
+<html lang={CONTENT_DATE_FORMAT.locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content={THEME.light.accent} />
+    <link rel="canonical" href={canonical} />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon.svg"
+      type="image/svg+xml"
+    />
+    <link rel="icon" href="/assets/img/favicons/favicon.ico" sizes="any" />
+    <link
+      rel="apple-touch-icon"
+      href="/assets/img/favicons/apple-touch-icon.png"
+    />
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={socialImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+    <title>{pageTitle}</title>
+    <style is:inline set:html={themeVariables}></style>
+    <script is:inline>
+      const storedTheme = localStorage.getItem('theme');
+      const preferredDark = window.matchMedia(
+        '(prefers-color-scheme: dark)',
+      ).matches;
+      document.documentElement.dataset.theme =
+        storedTheme || (preferredDark ? 'dark' : 'light');
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header class="site-header">
+      <nav class="nav shell" aria-label="Primary navigation">
+        <a
+          class="wordmark"
+          href={ROUTES.home.href}
+          aria-label={`${SITE.title} home`}
+        >
+          {SITE.title}<span class="wordmark-mark">.</span>
+        </a>
+        <div class="nav-links">
+          {
+            NAV_ITEMS.map((item) => (
+              <a
+                href={item.href}
+                aria-current={
+                  activePath.startsWith(item.href) ? 'page' : undefined
+                }
+              >
+                {item.label}
+              </a>
+            ))
+          }
+        </div>
+        <button
+          class="theme-toggle"
+          type="button"
+          aria-label={UI_LABELS.themeToggle}
+          title={UI_LABELS.themeToggle}
+        >
+          <span aria-hidden="true">◐</span>
+        </button>
+      </nav>
+    </header>
+    <main id="content">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="footer-inner shell">
+        <span>© {new Date().getFullYear()} {SITE.title}</span>
+        <div class="footer-links">
+          <a href={SITE.links.github}>GitHub</a>
+          <a href={SITE.links.linkedin}>LinkedIn</a>
+          <a href={SITE.links.scholar}>Scholar</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      import { initializeAutoplayVideos } from '../scripts/autoplay-videos';
+
+      initializeAutoplayVideos();
+
+      const toggle = document.querySelector('.theme-toggle');
+      toggle?.addEventListener('click', () => {
+        const next =
+          document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+        document.documentElement.dataset.theme = next;
+        localStorage.setItem('theme', next);
+      });
+    </script>
+  </body>
+</html>

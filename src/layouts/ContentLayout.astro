@@ -1,0 +1,99 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+import Tags from '../components/Tags.astro';
+import { CONTENT_DATE_FORMAT } from '../config';
+
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  date?: Date;
+  updated?: Date;
+  tags?: string[];
+  image?: string;
+  video?: string;
+  imageAlt?: string;
+  imageFit?: 'contain' | 'cover';
+  headings?: Heading[];
+  eyebrow?: string;
+}
+
+const {
+  title,
+  description,
+  date,
+  updated,
+  tags = [],
+  image,
+  video,
+  imageAlt = '',
+  imageFit = 'contain',
+  headings = [],
+  eyebrow = 'Writing',
+} = Astro.props;
+const formatDate = (value: Date) =>
+  new Intl.DateTimeFormat(CONTENT_DATE_FORMAT.locale, {
+    dateStyle: 'long',
+    timeZone: CONTENT_DATE_FORMAT.timeZone,
+  }).format(value);
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  image={image}
+  type="article"
+>
+  <header class="page-header shell">
+    <p class="eyebrow">{eyebrow}</p>
+    <h1>{title}</h1>
+    <p class="lede">{description}</p>
+    {
+      date && (
+        <p class="post-date">
+          <time datetime={date.toISOString()}>{formatDate(date)}</time>
+          {updated && ` · Updated ${formatDate(updated)}`}
+        </p>
+      )
+    }
+    {tags.length > 0 && <Tags tags={tags} />}
+    <slot name="links" />
+  </header>
+  {
+    video ? (
+      <video
+        class="article-hero"
+        controls
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster={image}
+        aria-label={imageAlt}
+        data-autoplay-video
+      >
+        <source src={video} type="video/mp4" />
+      </video>
+    ) : image ? (
+      <img
+        class:list={['article-hero', { cover: imageFit === 'cover' }]}
+        src={image}
+        alt={imageAlt}
+        width="1600"
+        height="900"
+      />
+    ) : null
+  }
+  <div class="article-shell shell">
+    <article class="prose">
+      <slot />
+    </article>
+    <TableOfContents headings={headings} />
+  </div>
+</BaseLayout>

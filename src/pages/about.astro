@@ -1,0 +1,377 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ROUTES } from '../config';
+import Portrait from '../components/Portrait.astro';
+import { profile } from '../data/profile';
+
+const { education, experience, projects, publications, skills, summary } =
+  profile.resume;
+---
+
+<BaseLayout title={ROUTES.about.label} description={profile.intro.headline}>
+  <header class="about-header shell">
+    <div>
+      <p class="eyebrow">About</p>
+      <h1>{profile.intro.aboutHeading}</h1>
+      <p class="lede">{profile.intro.headline}</p>
+      <p class="about-detail">{profile.intro.detail}</p>
+      <div class="button-row">
+        <a class="button primary" href={profile.links.cv}>Download résumé</a>
+        <a class="button" href={`mailto:${profile.email}`}>Get in touch</a>
+      </div>
+    </div>
+    <Portrait />
+  </header>
+
+  <div class="resume-layout shell">
+    <nav class="resume-nav" aria-label="Résumé sections">
+      <p class="eyebrow">Résumé</p>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Technical skills</a>
+    </nav>
+
+    <article class="resume-content">
+      <section class="resume-section summary" aria-labelledby="summary-heading">
+        <h2 id="summary-heading">Summary</h2>
+        <p>{summary}</p>
+      </section>
+
+      <section class="resume-section" id="experience">
+        <p class="eyebrow">Experience</p>
+        <h2>Building intelligent systems at scale.</h2>
+        {
+          experience.map((employer) => (
+            <article class="organization">
+              <div class="organization-heading">
+                <h3>{employer.organization}</h3>
+                <span>{employer.location}</span>
+              </div>
+              {employer.roles.map((role) => (
+                <div class="role">
+                  <div class="role-heading">
+                    <h4>{role.title}</h4>
+                    <span>{role.period}</span>
+                  </div>
+                  <ul>
+                    {role.bullets.map((bullet) => (
+                      <li>{bullet}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </article>
+          ))
+        }
+      </section>
+
+      <section class="resume-section" id="education">
+        <p class="eyebrow">Education</p>
+        <h2>Mathematical and computational foundations.</h2>
+        {
+          education.map((entry) => (
+            <article class="organization education-entry">
+              <div class="organization-heading">
+                <h3>{entry.school}</h3>
+                <span>{entry.location}</span>
+              </div>
+              <p class="degree">{entry.degree}</p>
+              <p class="period">{entry.period}</p>
+              <ul>
+                {entry.bullets.map((bullet) => (
+                  <li>{bullet}</li>
+                ))}
+              </ul>
+            </article>
+          ))
+        }
+      </section>
+
+      <section class="resume-section" id="publications">
+        <p class="eyebrow">Publications</p>
+        <h2>Applied research.</h2>
+        <ol class="publication-list">
+          {
+            publications.map((publication) => (
+              <li>
+                <h3>
+                  <a href={publication.href}>{publication.title}</a>
+                </h3>
+                <p>{publication.authors}</p>
+                <span>{publication.venue}</span>
+              </li>
+            ))
+          }
+        </ol>
+      </section>
+
+      <section class="resume-section" id="projects">
+        <p class="eyebrow">Projects</p>
+        <h2>Selected systems and experiments.</h2>
+        <ol class="project-list">
+          {
+            projects.map((project) => (
+              <li>
+                <div>
+                  <h3>{project.title}</h3>
+                  <span>{project.date}</span>
+                </div>
+                <p>{project.description}</p>
+              </li>
+            ))
+          }
+        </ol>
+      </section>
+
+      <section class="resume-section" id="skills">
+        <p class="eyebrow">Technical skills</p>
+        <h2>Tools for research and production.</h2>
+        <dl class="skill-list">
+          {
+            skills.map((skill) => (
+              <div>
+                <dt>{skill.label}</dt>
+                <dd>{skill.value}</dd>
+              </div>
+            ))
+          }
+        </dl>
+      </section>
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .about-header {
+    max-width: var(--page);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: clamp(2.5rem, 6vw, 5rem);
+    align-items: start;
+    padding-block: clamp(4.5rem, 9vw, 8rem);
+  }
+
+  .about-header h1 {
+    font-size: clamp(2.8rem, 6vw, 4.8rem);
+  }
+
+  .about-header .lede {
+    margin-top: 1.25rem;
+  }
+
+  .button-row {
+    margin-top: 1.8rem;
+  }
+
+  .resume-layout {
+    display: grid;
+    grid-template-columns: 10rem minmax(0, 1fr);
+    gap: clamp(3rem, 8vw, 7rem);
+    align-items: start;
+    padding-bottom: 7rem;
+  }
+
+  .resume-nav {
+    position: sticky;
+    top: 7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .resume-nav .eyebrow {
+    margin-bottom: 0.35rem;
+  }
+
+  .resume-nav a {
+    color: var(--muted);
+    font-size: 0.86rem;
+    font-weight: 650;
+    text-decoration: none;
+  }
+
+  .resume-nav a:hover {
+    color: var(--accent);
+  }
+
+  .resume-section {
+    padding-block: 4rem;
+    border-top: 1px solid var(--line);
+  }
+
+  .resume-section:first-child {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .resume-section > h2 {
+    max-width: 45rem;
+    margin-bottom: 2.25rem;
+  }
+
+  .summary > p,
+  .summary > ul {
+    max-width: 49rem;
+  }
+
+  .summary > h3 {
+    margin: 2rem 0 0.75rem;
+  }
+
+  .resume-content ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+
+  .resume-content li + li {
+    margin-top: 0.45rem;
+  }
+
+  .organization + .organization {
+    margin-top: 3rem;
+  }
+
+  .organization-heading,
+  .role-heading,
+  .project-list > li > div {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .organization-heading > span,
+  .role-heading > span,
+  .project-list span,
+  .publication-list span,
+  .period {
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 0.75rem;
+  }
+
+  .role {
+    margin-top: 1.6rem;
+  }
+
+  .role h4 {
+    font-size: 1.05rem;
+  }
+
+  .role ul,
+  .education-entry ul {
+    margin-top: 0.65rem;
+  }
+
+  .degree {
+    margin: 0.7rem 0 0;
+    font-weight: 680;
+  }
+
+  .period {
+    margin-bottom: 0.75rem;
+  }
+
+  .publication-list,
+  .project-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .publication-list > li,
+  .project-list > li {
+    padding-block: 1.25rem;
+    border-top: 1px solid var(--line);
+  }
+
+  .publication-list > li:last-child,
+  .project-list > li:last-child {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .publication-list h3,
+  .project-list h3 {
+    font-size: 1.05rem;
+  }
+
+  .publication-list h3 a {
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .publication-list h3 a:hover {
+    color: var(--accent);
+  }
+
+  .publication-list p,
+  .project-list p {
+    margin: 0.45rem 0 0.25rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  .skill-list {
+    margin: 0;
+  }
+
+  .skill-list > div {
+    display: grid;
+    grid-template-columns: 8rem 1fr;
+    gap: 1.25rem;
+    padding-block: 1rem;
+    border-top: 1px solid var(--line);
+  }
+
+  .skill-list > div:last-child {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .skill-list dt {
+    color: var(--accent);
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .skill-list dd {
+    margin: 0;
+  }
+
+  @media (max-width: 760px) {
+    .about-header,
+    .resume-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .resume-layout {
+      gap: 3rem;
+    }
+
+    .resume-nav {
+      position: static;
+      flex-flow: row wrap;
+      gap: 0.6rem 1rem;
+    }
+
+    .resume-nav .eyebrow {
+      width: 100%;
+    }
+
+    .organization-heading,
+    .role-heading,
+    .project-list > li > div {
+      align-items: start;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .skill-list > div {
+      grid-template-columns: 1fr;
+      gap: 0.35rem;
+    }
+  }
+</style>

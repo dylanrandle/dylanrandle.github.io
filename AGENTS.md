@@ -1,105 +1,82 @@
 # Repository Guide
 
-## Overview
+Read `README.md` for the site structure, setup, content model, and deployment
+overview. This file contains contributor constraints that should guide code and
+content changes.
 
-This repository is Dylan Randle's personal website and portfolio. It is a static
-Jekyll site using the `jekyll-theme-chirpy` gem and is deployed to GitHub Pages
-with GitHub Actions. There is no JavaScript application or Git submodule-based
-theme checkout in this repository.
+## Core invariants
 
-Use Ruby 3.4 as specified by `.ruby-version` and `Gemfile`. Keep
-`Gemfile.lock` committed and preserve its Linux platforms because the production
-build runs on Ubuntu.
+- Use Node.js 22 as specified by `.nvmrc`.
+- Keep `package-lock.json` committed so local and CI builds resolve the same
+  packages.
+- Treat `src/data/profile.ts` as the canonical source for identity,
+  introduction, links, and résumé data used by Home, About, TeX, and PDF.
+- Keep `src/data/profile-schema.ts` as the reusable runtime contract for the
+  canonical profile.
+- Edit `src/data/profile.ts` for résumé content or
+  `resume/DylanRandleResume.tex.template` for its TeX presentation, then run
+  `npm run resume:generate`; do not edit `resume/DylanRandleResume.tex` or the
+  published résumé PDF directly.
+- Keep blog posts in `src/content/posts/` and project/research entries in
+  `src/content/projects/`.
 
-## Important Paths
+## Important paths
 
-- `_posts/`: Blog, project, and publication posts.
-- `_tabs/`: Chirpy sidebar pages for About, Archives, Categories, and Tags.
-- `_config.yml`: Site metadata, theme settings, post defaults, permalinks, and
-  Jekyll exclusions.
-- `_data/`: Contact and post-sharing configuration.
-- `_plugins/posts-lastmod-hook.rb`: Derives post modification dates from Git
-  history. Builds therefore expect Git metadata to be available.
-- `assets/img/`: Post images, the headshot, and favicons.
-- `assets/videos/`: Locally hosted project videos.
-- `assets/docs/`: Published PDFs plus the LaTeX resume source.
-- `assets/css/jekyll-theme-chirpy.scss`: Small site-specific Chirpy overrides.
-- `.github/workflows/pages-deploy.yml`: Production build, link check, and Pages
-  deployment workflow.
+- `src/pages/`: File-based top-level and detail routes, plus `robots.txt` and
+  the 404 page.
+- `src/content.config.ts`: Shared Zod schema and collection definitions.
+- `src/config.ts`: Canonical routes, labels, locale, and website/résumé theme colors.
+- `src/data/profile-schema.ts`: Runtime validation for canonical profile data.
+- `src/layouts/` and `src/components/`: Shared page structure and presentation.
+- `src/styles/global.css`: Site tokens, layout, responsive behavior, and
+  article styling.
+- `public/assets/`: Published images, videos, PDFs, and icons.
+- `resume/DylanRandleResume.tex.template`: Maintained TeX layout template.
+- `scripts/generate-resume.mjs`: TeX/PDF generation and freshness validation.
+- `scripts/check-internal-links.mjs`: Generated-output link validation.
+- `tests/e2e/` and `playwright.config.ts`: Chromium browser smoke tests and
+  their local server configuration.
 
-`_site/`, `.jekyll-cache/`, LaTeX auxiliary files, and dependency caches are
-generated artifacts and must not be committed.
+`dist/`, `.astro/`, `node_modules/`, dependency caches, and LaTeX auxiliary files are generated artifacts and must not be committed.
 
-## Local Commands
+## Required validation
 
-Install dependencies:
-
-```sh
-bundle install
-```
-
-Run the development server:
-
-```sh
-bundle exec jekyll serve
-```
-
-Before handing off website changes, run a clean production build and the same
-internal-link validation used in CI:
+Before handing off changes, run:
 
 ```sh
-bundle exec jekyll clean
-JEKYLL_ENV=production bundle exec jekyll build
-bundle exec htmlproofer _site --disable-external
+npm run check
 git diff --check
 ```
 
-To rebuild the resume, run the following from `assets/docs/` and inspect the
-resulting PDF for layout regressions:
+`npm run check` includes Astro type-checking, résumé validation, a production
+build, formatting validation, generated internal-link validation, and Playwright
+browser tests. Install the managed Chromium browser once with
+`npm run setup:e2e`. After changing the canonical profile, regenerate before
+running the checks:
 
 ```sh
-latexmk -pdf -interaction=nonstopmode DylanRandleResume.tex
+npm run resume:generate
+npm run check:resume
 ```
 
-The compiled `DylanRandleResume.pdf` is published by the site, while
-`DylanRandleResume.tex` is excluded from `_site`.
+## Content conventions
 
-## Content Conventions
+- Name collection files with stable, lowercase, hyphenated IDs. Each ID becomes the route slug.
+- Keep frontmatter concise and conform to `src/content.config.ts`; important portfolio metadata belongs in content rather than templates.
+- Use `America/New_York` for authored dates unless the historical event requires otherwise.
+- Prefer one broad field plus specific method/application tags. Reuse existing vocabulary.
+- Use descriptive alt text and root-relative asset paths such as `/assets/img/example.webp`.
+- Prefer optimized WebP raster images when quality remains acceptable.
+- Ground publication and project claims in the linked paper, report, repository, or existing source post.
+- Reuse route, label, locale, and theme values from `src/config.ts` rather than
+  repeating them in components, pages, scripts, or tests.
+- Put essays and notes in `src/content/posts/`; put project and research
+  write-ups in `src/content/projects/`. Both indexes sort published entries
+  newest first.
 
-- Name posts `YYYY-MM-DD-lowercase-hyphenated-title.md`. Use `git mv` for
-  renames, especially case-only renames on macOS.
-- Keep front matter concise and valid YAML. Posts normally include `title`,
-  `description`, `date`, `categories`, and `tags`; add `image` and `math` only
-  where applicable. The post layout and permalink are supplied by `_config.yml`.
-- Keep dates in the `America/New_York` timezone unless the historical event
-  requires otherwise.
-- Use one relevant category and 3-5 lowercase tags per post. Order tags from
-  broad field to specific method, application, and affiliation. Reuse existing
-  vocabulary instead of introducing synonyms or incidental tool names.
-- Use separate `amazon` and `robotics` tags where both apply; do not use the
-  compound tag `amazon robotics`. Use `harvard` consistently for Harvard work.
-- Prefer descriptive image alt text. Store local media under `assets/` and use
-  root-relative paths such as `/assets/img/example.webp` in posts.
-- Prefer optimized WebP raster assets when quality remains acceptable. The CSS
-  intentionally fits PNG/WebP technical figures inside preview frames, while
-  the Rubik's Cube photograph retains a cover crop.
-- Keep publication and project claims grounded in the linked paper, report,
-  repository, or other source already associated with the post.
+## Deployment and safety
 
-## Theme and Deployment
+Pushes to `main` or `master` trigger the Pages workflow. Other branches do not
+deploy over production automatically.
 
-Chirpy is consumed through the `jekyll-theme-chirpy` gem. Do not restore an
-`assets/lib` theme submodule or copy generated theme assets into the repository.
-Make custom styling changes in `assets/css/jekyll-theme-chirpy.scss` and keep
-them as narrow as possible so theme upgrades remain straightforward.
-
-Pushes to `main` or `master` trigger the Pages workflow. CI builds in production
-mode, checks internal links with HTML-Proofer, and uploads `_site` as the Pages
-artifact. External URLs are intentionally not checked by HTML-Proofer.
-
-## Working Safely
-
-The worktree may contain unrelated, uncommitted, or partially staged content.
-Inspect `git status` and both staged and unstaged diffs before editing. Preserve
-existing work, do not stage files unless asked, and avoid broad cleanup or
-destructive Git commands.
+The worktree may contain unrelated, uncommitted, or partially staged content. Inspect Git status and both staged and unstaged diffs before editing. Preserve unrelated work, do not stage files unless asked, and avoid broad cleanup or destructive Git commands.
