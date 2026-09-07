@@ -60,8 +60,10 @@ Content placement determines where an entry is listed and routed:
 
 Each Markdown filename is its route slug. Frontmatter supplies the card title,
 description, date, category, tags, and optional image. An entry can also set a
-`video` path; its image then serves as the poster and non-video fallback. Both
-collections share the schema in `src/content.config.ts`.
+`video` path; its image then serves as the loading and non-video fallback. Use
+`previewVideo` for an optional smaller card-specific encode while retaining the
+full-size `video` on the detail page. Both collections share the schema in
+`src/content.config.ts`.
 
 Identity, introduction, links, and structured résumé content have one source of
 truth: `src/data/profile.ts`. The reusable schema in

@@ -200,12 +200,23 @@ test('About renders the canonical résumé and offers its PDF', async ({
 test('motion-focused projects use muted looping video previews and heroes', async ({
   page,
 }) => {
-  const projectIds = ['golf-cv', 'rubiks-cube-robot'];
+  const projects = [
+    {
+      id: 'golf-cv',
+      previewVideo: '/assets/videos/golf-cv-preview.mp4',
+      video: '/assets/videos/golf-cv.mp4',
+    },
+    {
+      id: 'rubiks-cube-robot',
+      previewVideo: '/assets/videos/rubiks-cube-robot-solve-preview.mp4',
+      video: '/assets/videos/rubiks-cube-robot-solve.mp4',
+    },
+  ];
 
   await page.goto(CONTENT_SECTIONS.projects.indexPath);
 
-  for (const projectId of projectIds) {
-    const detailPath = contentDetailPath(CONTENT_SECTIONS.projects, projectId);
+  for (const project of projects) {
+    const detailPath = contentDetailPath(CONTENT_SECTIONS.projects, project.id);
     const cardVideo = page.locator(
       `.content-card > a[href="${detailPath}"] video`,
     );
@@ -214,17 +225,44 @@ test('motion-focused projects use muted looping video previews and heroes', asyn
     await expect(cardVideo).toHaveJSProperty('loop', true);
 
     const source = await cardVideo.locator('source').getAttribute('src');
-    expect(source).toBeTruthy();
+    expect(source).toBe(project.previewVideo);
 
     await page.goto(detailPath);
     const heroVideo = page.locator('video.article-hero');
     await expect(heroVideo).toBeVisible();
     await expect(heroVideo).toHaveJSProperty('muted', true);
     await expect(heroVideo).toHaveJSProperty('loop', true);
-    await expect(heroVideo).toHaveJSProperty('controls', true);
-    await expect(heroVideo.locator('source')).toHaveAttribute('src', source!);
+    await expect(heroVideo).toHaveJSProperty('controls', false);
+    await expect(heroVideo.locator('source')).toHaveAttribute(
+      'src',
+      project.video,
+    );
 
     await page.goto(CONTENT_SECTIONS.projects.indexPath);
+  }
+});
+
+test('loaded video previews show their first frame instead of the poster', async ({
+  page,
+}) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto(CONTENT_SECTIONS.projects.indexPath);
+
+  const videos = page.locator('.content-card video');
+  await expect(videos).toHaveCount(2);
+
+  for (let index = 0; index < (await videos.count()); index += 1) {
+    const video = videos.nth(index);
+    await expect
+      .poll(() =>
+        video.evaluate(
+          (element: HTMLVideoElement) =>
+            element.readyState >= element.HAVE_CURRENT_DATA,
+        ),
+      )
+      .toBe(true);
+    await expect(video).not.toHaveAttribute('poster', /.+/);
+    await expect(video).toHaveJSProperty('paused', true);
   }
 });
 
@@ -240,7 +278,15 @@ test('Rubik project includes a separate inspection video', async ({ page }) => {
   await expect(inspectionVideo).toBeVisible();
   await expect(inspectionVideo).toHaveJSProperty('muted', true);
   await expect(inspectionVideo).toHaveJSProperty('loop', true);
-  await expect(inspectionVideo).toHaveJSProperty('controls', true);
+  await expect(inspectionVideo).toHaveJSProperty('controls', false);
+  await expect(inspectionVideo).toHaveAttribute('data-autoplay-video', '');
+
+  await inspectionVideo.scrollIntoViewIfNeeded();
+  await expect
+    .poll(() =>
+      inspectionVideo.evaluate((video: HTMLVideoElement) => !video.paused),
+    )
+    .toBe(true);
 
   const heroSource = await heroVideo.locator('source').getAttribute('src');
   const inspectionSource = await inspectionVideo

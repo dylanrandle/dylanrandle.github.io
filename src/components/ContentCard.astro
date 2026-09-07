@@ -34,13 +34,16 @@ const formatter = new Intl.DateTimeFormat(CONTENT_DATE_FORMAT.locale, {
           muted
           loop
           playsinline
-          preload="metadata"
+          preload="auto"
           poster={entry.data.image}
           aria-hidden="true"
           tabindex="-1"
           data-autoplay-video
         >
-          <source src={entry.data.video} type="video/mp4" />
+          <source
+            src={entry.data.previewVideo ?? entry.data.video}
+            type="video/mp4"
+          />
         </video>
       ) : entry.data.image ? (
         <img

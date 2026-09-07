@@ -1,4 +1,5 @@
-const VIDEO_SELECTOR = 'video[data-autoplay-video]';
+const VIDEO_SELECTOR = 'video';
+const AUTOPLAY_VIDEO_SELECTOR = 'video[data-autoplay-video]';
 const REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)';
 
 export const initializeAutoplayVideos = () => {
@@ -7,16 +8,31 @@ export const initializeAutoplayVideos = () => {
   ];
   if (videos.length === 0) return;
 
+  for (const video of videos) {
+    const revealLoadedFrame = () => video.removeAttribute('poster');
+
+    if (video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
+      revealLoadedFrame();
+    } else {
+      video.addEventListener('loadeddata', revealLoadedFrame, { once: true });
+    }
+  }
+
+  const autoplayVideos = videos.filter((video) =>
+    video.matches(AUTOPLAY_VIDEO_SELECTOR),
+  );
+  if (autoplayVideos.length === 0) return;
+
   const reducedMotion = window.matchMedia(REDUCED_MOTION_QUERY);
   const visibleVideos = new Set<HTMLVideoElement>();
 
   const updatePlayback = () => {
-    for (const video of videos) {
+    for (const video of autoplayVideos) {
       if (reducedMotion.matches || !visibleVideos.has(video)) {
         video.pause();
       } else {
         void video.play().catch(() => {
-          // The poster remains visible if a browser declines autoplay.
+          // The first decoded frame remains visible if autoplay is declined.
         });
       }
     }
@@ -34,6 +50,6 @@ export const initializeAutoplayVideos = () => {
     { threshold: 0.25 },
   );
 
-  videos.forEach((video) => observer.observe(video));
+  autoplayVideos.forEach((video) => observer.observe(video));
   reducedMotion.addEventListener('change', updatePlayback);
 };

@@ -69,11 +69,10 @@ const formatDate = (value: Date) =>
     video ? (
       <video
         class="article-hero"
-        controls
         muted
         loop
         playsinline
-        preload="metadata"
+        preload="auto"
         poster={image}
         aria-label={imageAlt}
         data-autoplay-video
