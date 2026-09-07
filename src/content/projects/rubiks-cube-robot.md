@@ -4,7 +4,7 @@ description: A robot that autonomously solves a Rubik's cube.
 date: 2024-11-03T23:51:00-05:00
 category: Projects
 tags: [robotics, computer vision, hardware]
-image: /assets/img/rubiks-cube-robot.webp
+image: /assets/images/rubiks-cube-robot.webp
 imageAlt: A custom six-motor robot holding a Rubik's Cube
 imageFit: cover
 video: /assets/videos/rubiks-cube-robot-solve.mp4
@@ -28,7 +28,7 @@ The computer-vision pipeline samples the visible sticker regions and classifies 
 
 The inspection video is shown at twice its original speed.
 
-<video controls playsinline loop muted preload="metadata" poster="/assets/img/rubiks-cube-robot.webp" aria-label="The robot rotating a Rubik's Cube while its cameras inspect the sticker colors">
+<video controls playsinline loop muted preload="metadata" poster="/assets/images/rubiks-cube-robot.webp" aria-label="The robot rotating a Rubik's Cube while its cameras inspect the sticker colors">
   <source src="/assets/videos/rubiks-cube-robot-inspect.mp4" type="video/mp4" />
 </video>
 

@@ -4,7 +4,7 @@ description: We distilled black-box reinforcement-learning policies into readabl
 date: 2019-12-15T16:01:00-05:00
 category: Projects
 tags: [reinforcement learning, imitation learning, interpretable machine learning, healthcare, harvard]
-image: /assets/img/interpretable-rl.webp
+image: /assets/images/interpretable-rl.webp
 imageAlt: Cumulative rewards of interpretable models trained with DAgger in an HIV simulator
 ---
 

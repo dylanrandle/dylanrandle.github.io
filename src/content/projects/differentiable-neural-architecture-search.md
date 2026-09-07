@@ -4,7 +4,7 @@ description: We evaluated DARTS as an efficient way to discover neural architect
 date: 2019-12-15T16:02:00-05:00
 category: Projects
 tags: [deep learning, neural architecture search, automl, scientific machine learning, harvard]
-image: /assets/img/darts-scientific-datasets.webp
+image: /assets/images/darts-scientific-datasets.webp
 imageAlt: Training, validation, and test learning curves for a DARTS model on graphene kirigami data
 ---
 

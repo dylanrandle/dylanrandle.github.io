@@ -4,7 +4,7 @@ description: Reflections on completing a master’s in data science at Harvard a
 date: 2020-08-29T16:00:00-05:00
 category: Updates
 tags: [education, harvard, graduation]
-image: /assets/img/harvard-grad.webp
+image: /assets/images/harvard-grad.webp
 imageAlt: Dylan Randle in graduation robes outside Harvard's Memorial Hall
 imageFit: cover
 ---

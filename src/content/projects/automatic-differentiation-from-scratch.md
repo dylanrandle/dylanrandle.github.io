@@ -4,7 +4,7 @@ description: We built a Python library for forward- and reverse-mode automatic d
 date: 2018-12-15T16:04:00-05:00
 category: Projects
 tags: [machine learning, automatic differentiation, optimization, python, harvard]
-image: /assets/img/autograd.webp
+image: /assets/images/autograd.webp
 imageAlt: Gradient descent following a path across a three-dimensional objective surface
 ---
 

@@ -4,7 +4,7 @@ description: We used sparse LSTM models and Granger-causal analysis to compare m
 date: 2019-05-01T16:06:00-05:00
 category: Projects
 tags: [deep learning, time series, causality, computational biology, harvard]
-image: /assets/img/microbiome-causal-lstm.webp
+image: /assets/images/microbiome-causal-lstm.webp
 imageAlt: Estimated microbial interaction networks for healthy and IBD mice
 ---
 

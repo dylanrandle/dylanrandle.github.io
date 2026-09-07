@@ -80,7 +80,7 @@ are generated artifacts stamped with a fingerprint of the canonical profile,
 generator, template, and portrait. Edit the profile for content or the template
 for presentation; do not edit the generated files directly. Published images,
 videos, documents, and icons live beneath `public/assets/` and use root-relative
-URLs such as `/assets/img/example.webp`.
+URLs such as `/assets/images/example.webp`.
 
 ## Routes and project structure
 

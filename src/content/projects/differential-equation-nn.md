@@ -4,7 +4,7 @@ description: We developed an adversarial training objective that lets physics-in
 date: 2020-05-15T16:00:00-05:00
 category: Research
 tags: [scientific machine learning, physics-informed neural networks, differential equations, generative adversarial networks, harvard]
-image: /assets/img/deqgan.webp
+image: /assets/images/deqgan.webp
 imageAlt: Diagram of the DEQGAN generator, differential equation residual, and discriminator
 ---
 
@@ -32,7 +32,7 @@ DEQGAN achieved lower test mean-squared error than each fixed-loss neural baseli
 
 In a 500-run ablation on exponential decay, combining residual monitoring with instance noise eliminated the high-error runs observed with the original training procedure. The broader limitation remains the same as for other physics-informed neural methods: unlike classical numerical schemes, the learned solution does not arrive with a general error bound, and interpreting the discriminator's learned loss is still an open question.
 
-![DEQGAN predictions against analytical solutions](/assets/img/deqgan-results.webp)
+![DEQGAN predictions against analytical solutions](/assets/images/deqgan-results.webp)
 
 _DEQGAN predictions and errors compared with fixed-loss physics-informed networks._
 

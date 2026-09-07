@@ -4,7 +4,7 @@ description: We learned to score multi-suction robot picks from real industrial 
 date: 2025-06-21T16:00:00-05:00
 category: Research
 tags: [robotics, computer vision, multimodal learning, warehouse automation, amazon]
-image: /assets/img/multi-suction-pick-success.webp
+image: /assets/images/multi-suction-pick-success.webp
 imageAlt: A multimodal perception model scoring candidate multi-suction picks in an industrial workcell
 ---
 

@@ -65,7 +65,7 @@ npm run check:resume
 - Keep frontmatter concise and conform to `src/content.config.ts`; important portfolio metadata belongs in content rather than templates.
 - Use `America/New_York` for authored dates unless the historical event requires otherwise.
 - Prefer one broad field plus specific method/application tags. Reuse existing vocabulary.
-- Use descriptive alt text and root-relative asset paths such as `/assets/img/example.webp`.
+- Use descriptive alt text and root-relative asset paths such as `/assets/images/example.webp`.
 - Prefer optimized WebP raster images when quality remains acceptable.
 - Ground publication and project claims in the linked paper, report, repository, or existing source post.
 - Reuse route, label, locale, and theme values from `src/config.ts` rather than

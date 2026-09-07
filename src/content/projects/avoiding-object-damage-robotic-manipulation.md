@@ -4,7 +4,7 @@ description: We built and deployed a damage-risk classifier that reduced robot-i
 date: 2024-10-14T16:00:00-05:00
 category: Research
 tags: [robotics, machine learning, multimodal learning, warehouse automation, amazon]
-image: /assets/img/robotic-object-damage.webp
+image: /assets/images/robotic-object-damage.webp
 imageAlt: An Amazon Robotics workcell, an object flagged as high risk, and an example of package damage
 ---
 

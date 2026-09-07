@@ -4,7 +4,7 @@ description: We compared text representations and classifiers for identifying tw
 date: 2018-12-15T16:03:00-05:00
 category: Projects
 tags: [machine learning, natural language processing, social media, harvard]
-image: /assets/img/twitter-troll-detection.webp
+image: /assets/images/twitter-troll-detection.webp
 imageAlt: Principal-component projections showing troll and non-troll tweets separating across neural-network layers
 ---
 

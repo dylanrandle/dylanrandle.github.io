@@ -240,7 +240,7 @@ const profileData = {
   displayName: 'Dylan Randle',
   email: 'dylanrandle@gmail.com',
   portrait: {
-    src: '/assets/img/headshot.jpg',
+    src: '/assets/images/headshot.jpg',
     alt: 'Dylan Randle',
   },
   links: {

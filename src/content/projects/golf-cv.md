@@ -4,7 +4,7 @@ description: I explored how well human pose estimation could track a golfer's bo
 date: 2020-07-20T00:01:00-05:00
 category: Projects
 tags: [computer vision, pose estimation, sports]
-image: /assets/img/golf-cv.jpg
+image: /assets/images/golf-cv.jpg
 imageAlt: Pose-estimation keypoints overlaid on a golfer preparing to swing
 imageFit: cover
 video: /assets/videos/golf-cv.mp4

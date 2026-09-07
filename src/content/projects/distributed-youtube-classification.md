@@ -4,7 +4,7 @@ description: We trained bidirectional LSTM video classifiers over YouTube-8M usi
 date: 2019-05-01T16:05:00-05:00
 category: Projects
 tags: [deep learning, computer vision, distributed systems, video classification, harvard]
-image: /assets/img/spark-tensorflow.webp
+image: /assets/images/spark-tensorflow.webp
 imageAlt: Measured training speedup as the number of Spark worker nodes increases
 ---
 

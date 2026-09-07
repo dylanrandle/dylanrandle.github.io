@@ -4,7 +4,7 @@ description: We developed a transformer policy that learns reusable manipulation
 date: 2025-05-19T16:00:00-05:00
 category: Research
 tags: [robotics, imitation learning, transformers, dexterous manipulation, amazon]
-image: /assets/img/must-skill-transformer.webp
+image: /assets/images/must-skill-transformer.webp
 imageAlt: MuST chaining flipping, picking, packing, and pushing skills using progress-guided selection
 ---
 

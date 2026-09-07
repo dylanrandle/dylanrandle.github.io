@@ -16,6 +16,7 @@
 \usepackage[normalem]{ulem}
 \usepackage[english]{babel}
 \usepackage{graphicx}
+\usepackage{tikz}
 \usepackage[default]{sourcesans}
 
 \input glyphtounicode
@@ -72,6 +73,16 @@
   \begin{itemize}[leftmargin=0.15in, label={}]
 }
 \newcommand{\resumeHeadingListEnd}{\end{itemize}}
+\newsavebox{\resumePortrait}
+\newcommand{\roundedPortrait}[2]{
+  \sbox{\resumePortrait}{\includegraphics[width=#1]{#2}}
+  \begin{tikzpicture}[baseline=(current bounding box.south)]
+    % 5 CSS pixels at 96 pixels per inch equals 3.75 PostScript points.
+    \clip[rounded corners=3.75bp]
+      (0, 0) rectangle (\wd\resumePortrait, \ht\resumePortrait);
+    \node[anchor=south west, inner sep=0pt] at (0, 0) {\usebox{\resumePortrait}};
+  \end{tikzpicture}
+}
 
 \begin{document}
 
@@ -84,7 +95,7 @@
 } &
 {
   \hfill
-  \includegraphics[width=1.25in]{\detokenize{<<PORTRAIT_PATH>>}}
+  \roundedPortrait{1.25in}{\detokenize{<<PORTRAIT_PATH>>}}
 }
 \end{tabularx}
 

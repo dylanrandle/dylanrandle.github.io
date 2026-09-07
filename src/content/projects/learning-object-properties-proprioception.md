@@ -4,7 +4,7 @@ description: We used differentiable robot-object simulations to estimate mass an
 date: 2025-05-19T16:05:00-05:00
 category: Research
 tags: [robotics, differentiable simulation, system identification, proprioception, amazon]
-image: /assets/img/differentiable-robot-object-interaction.webp
+image: /assets/images/differentiable-robot-object-interaction.webp
 imageAlt: Differentiable-physics calibration of object mass and material properties using robot joint positions
 ---
 
