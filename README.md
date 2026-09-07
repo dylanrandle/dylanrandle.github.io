@@ -13,7 +13,7 @@ detail pages.
 
 ## Requirements
 
-- Node.js 22 LTS (see `.nvmrc`)
+- Node.js 26 (see `.nvmrc`)
 - npm 11+
 - TeX Live with `latexmk` when regenerating the résumé PDF
 

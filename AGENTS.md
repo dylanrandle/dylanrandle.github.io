@@ -6,7 +6,7 @@ content changes.
 
 ## Core invariants
 
-- Use Node.js 22 as specified by `.nvmrc`.
+- Use Node.js 26 as specified by `.nvmrc`.
 - Keep `package-lock.json` committed so local and CI builds resolve the same
   packages.
 - Treat `src/data/profile.ts` as the canonical source for identity,
