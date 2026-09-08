@@ -1,7 +1,7 @@
 ---
 title: Real-Time Quantitative Trading System
 description: I built a live trading system that used topic models over financial news to predict cross-sectional price movements at the market open.
-date: 2023-06-01T16:00:00-04:00
+date: 2021-10-01T16:00:00-04:00
 category: Projects
 tags: [quantitative finance, natural language processing, topic modeling, real-time systems]
 image: /assets/images/stocks-lda.webp

@@ -159,7 +159,7 @@ const projects = [
   },
   {
     title: 'Real-Time Quantitative Trading System',
-    date: 'Jun 2023',
+    date: 'Oct 2021',
     description:
       'Built and deployed a live quantitative trading system that uses real-time NLP analysis of news articles to generate market signals and execute trades.',
   },
