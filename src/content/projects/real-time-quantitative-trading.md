@@ -4,13 +4,11 @@ description: I built a live trading system that used topic models over financial
 date: 2021-10-01T16:00:00-04:00
 category: Projects
 tags: [quantitative finance, natural language processing, topic modeling, real-time systems]
-image: /assets/images/stocks-lda.webp
-previewImages:
-  - src: /assets/images/stocks-lda-480w.webp
-    width: 480
-  - src: /assets/images/stocks-lda-960w.webp
-    width: 960
-imageAlt: Illustration of a document represented as a mixture of latent topics and word assignments
+image:
+  src: /assets/images/stocks-lda.webp
+  alt: Illustration of a document represented as a mixture of latent topics and word assignments
+resume:
+  description: Built and deployed a live quantitative trading system that uses real-time NLP analysis of news articles to generate market signals and execute trades.
 ---
 
 _Image source: [IBM's overview of latent Dirichlet allocation](https://www.ibm.com/think/topics/latent-dirichlet-allocation)._

@@ -4,16 +4,13 @@ description: I explored how well human pose estimation could track a golfer's bo
 date: 2020-07-20T00:01:00-05:00
 category: Projects
 tags: [computer vision, pose estimation, sports]
-image: /assets/images/golf-cv.jpg
-previewImages:
-  - src: /assets/images/golf-cv-480w.webp
-    width: 480
-  - src: /assets/images/golf-cv-960w.webp
-    width: 960
-imageAlt: Pose-estimation keypoints overlaid on a golfer preparing to swing
-imageFit: cover
+image:
+  src: /assets/images/golf-cv.jpg
+  alt: Pose-estimation keypoints overlaid on a golfer preparing to swing
+  fit: cover
 video: /assets/videos/golf-cv.mp4
-previewVideo: /assets/videos/golf-cv-960w.mp4
+resume:
+  description: Applied monocular 3D human-pose estimation to analyze body mechanics throughout a golf swing.
 ---
 
 A golf swing is a compact stress test for human pose estimation. The subject rotates quickly, limbs cross in the image, and motion blur and self-occlusion make individual joints difficult to localize. I used a short, ordinary side-view video to explore how well an off-the-shelf pose estimator could follow that motion.

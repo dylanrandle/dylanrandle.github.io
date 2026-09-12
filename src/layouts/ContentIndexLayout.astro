@@ -1,0 +1,31 @@
+---
+import type { ContentSection } from '../config';
+import type { ContentEntry } from '../lib/content';
+import ContentList from '../components/ContentList.astro';
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  entries: ContentEntry[];
+  section: ContentSection;
+  description: string;
+  listLabel: string;
+}
+const { entries, section, description, listLabel } = Astro.props;
+---
+
+<BaseLayout title={section.label} description={description}>
+  <header class="page-header shell">
+    <p class="eyebrow">{section.label}</p>
+    <h1><slot name="heading" /></h1>
+    <p class="lede"><slot name="intro" /></p>
+  </header>
+  <section class="content-index shell" aria-label={listLabel}>
+    <ContentList entries={entries} section={section} />
+  </section>
+</BaseLayout>
+
+<style>
+  .content-index {
+    padding-bottom: clamp(5rem, 9vw, 8rem);
+  }
+</style>

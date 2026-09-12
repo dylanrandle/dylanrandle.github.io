@@ -4,13 +4,62 @@ description: We developed an adversarial training objective that lets physics-in
 date: 2020-05-15T16:00:00-05:00
 category: Research
 tags: [scientific machine learning, physics-informed neural networks, differential equations, generative adversarial networks, harvard]
-image: /assets/images/deqgan.webp
-previewImages:
-  - src: /assets/images/deqgan-480w.webp
-    width: 480
-  - src: /assets/images/deqgan-960w.webp
-    width: 960
-imageAlt: Diagram of the DEQGAN generator, differential equation residual, and discriminator
+image:
+  src: /assets/images/deqgan.webp
+  alt: Diagram of the DEQGAN generator, differential equation residual, and discriminator
+publications:
+  - id: deqgan-icml-2022
+    title: "DEQGAN: Learning the Loss Function for PINNs with Generative Adversarial Networks"
+    authors:
+      - name: Blake Bullwinkel
+        citation: B. Bullwinkel
+        equalContribution: true
+      - name: Dylan Randle
+        citation: D. Randle
+        equalContribution: true
+      - name: Pavlos Protopapas
+        citation: P. Protopapas
+        role: advisor
+      - name: David Sondak
+        citation: D. Sondak
+        role: advisor
+    kind: conference
+    venue: ICML
+    year: 2022
+    track: AI for Science
+  - id: differential-equations-arxiv-2020
+    title: Unsupervised Learning of Solutions to Differential Equations with Generative Adversarial Networks
+    authors:
+      - name: Dylan Randle
+        citation: D. Randle
+      - name: Pavlos Protopapas
+        citation: P. Protopapas
+      - name: David Sondak
+        citation: D. Sondak
+    kind: preprint
+    venue: arXiv:2007.11133
+    year: 2020
+  - id: harvard-thesis-2020
+    title: Unsupervised Neural Network Methods for Solving Differential Equations
+    authors:
+      - name: Dylan Randle
+        citation: D. Randle
+    kind: thesis
+    venue: Harvard University
+    year: 2020
+links:
+  - label: ICML AI4Science paper
+    href: /assets/docs/deqgan-icml.pdf
+  - label: Preprint
+    href: /assets/docs/deqgan-arxiv.pdf
+  - label: Thesis
+    href: /assets/docs/harvard-thesis.pdf
+  - label: Defense slides
+    href: /assets/docs/harvard-defense.pdf
+  - label: Source code
+    href: https://github.com/dylanrandle/denn
+  - label: Recorded defense
+    href: https://www.youtube.com/watch?v=bq2FurxD2Xo
 ---
 
 Physics-informed neural networks can solve differential equations without labeled examples: a network proposes a solution, automatic differentiation evaluates its derivatives, and training minimizes the equation's residual. The usual approach still requires choosing a fixed residual loss such as L1, L2, or Huber loss.
@@ -40,7 +89,3 @@ In a 500-run ablation on exponential decay, combining residual monitoring with i
 ![DEQGAN predictions against analytical solutions](/assets/images/deqgan-results.webp)
 
 _DEQGAN predictions and errors compared with fixed-loss physics-informed networks._
-
-This work was an equal contribution with Blake Bullwinkel, advised by Pavlos Protopapas and David Sondak.
-
-> Read the [ICML AI4Science paper](/assets/docs/deqgan-icml.pdf), the [preprint](/assets/docs/deqgan-arxiv.pdf), or my master's [thesis](/assets/docs/harvard-thesis.pdf) and [defense slides](/assets/docs/harvard-defense.pdf). The [implementation is available on GitHub](https://github.com/dylanrandle/denn), and the [recorded defense](https://www.youtube.com/watch?v=bq2FurxD2Xo) gives a longer walkthrough.

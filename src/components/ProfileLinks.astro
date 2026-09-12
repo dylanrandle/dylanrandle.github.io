@@ -1,0 +1,19 @@
+---
+import { getProfileLinks } from '../lib/site';
+
+interface Props {
+  compact?: boolean;
+  arrows?: boolean;
+}
+
+const { compact = false, arrows = false } = Astro.props;
+---
+
+{
+  getProfileLinks('social').map((link) => (
+    <a href={link.href}>
+      {compact ? link.compactLabel : link.label}
+      {arrows ? ' ↗' : ''}
+    </a>
+  ))
+}

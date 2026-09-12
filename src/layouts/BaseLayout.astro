@@ -3,11 +3,12 @@ import {
   CONTENT_DATE_FORMAT,
   NAV_ITEMS,
   ROUTES,
-  SITE,
   THEME,
   UI_LABELS,
 } from '../config';
 import '../styles/global.css';
+import { SITE } from '../lib/site';
+import ProfileLinks from '../components/ProfileLinks.astro';
 
 interface Props {
   title?: string;
@@ -122,9 +123,7 @@ const themeVariables = `
       <div class="footer-inner shell">
         <span>© {new Date().getFullYear()} {SITE.title}</span>
         <div class="footer-links">
-          <a href={SITE.links.github}>GitHub</a>
-          <a href={SITE.links.linkedin}>LinkedIn</a>
-          <a href={SITE.links.scholar}>Scholar</a>
+          <ProfileLinks compact />
         </div>
       </div>
     </footer>

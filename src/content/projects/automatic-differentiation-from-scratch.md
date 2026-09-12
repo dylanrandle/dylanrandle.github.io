@@ -4,13 +4,16 @@ description: We built a Python library for forward- and reverse-mode automatic d
 date: 2018-12-15T16:04:00-05:00
 category: Projects
 tags: [machine learning, automatic differentiation, optimization, python, harvard]
-image: /assets/images/autograd.webp
-previewImages:
-  - src: /assets/images/autograd-480w.webp
-    width: 480
-  - src: /assets/images/autograd.webp
-    width: 505
-imageAlt: Gradient descent following a path across a three-dimensional objective surface
+image:
+  src: /assets/images/autograd.webp
+  alt: Gradient descent following a path across a three-dimensional objective surface
+resume:
+  description: Built and published the dragongrad Python package with forward- and reverse-mode differentiation, Jacobians, and gradient-based optimization.
+links:
+  - label: Source code
+    href: https://github.com/dylanrandle/autograd
+  - label: Documentation
+    href: https://autograd.readthedocs.io/en/latest/
 ---
 
 Automatic differentiation (AD) powers gradient-based optimization in modern machine learning. It avoids the expression growth of symbolic differentiation and the numerical error of finite differences by applying the chain rule to a program's sequence of elementary operations.
@@ -29,5 +32,3 @@ Composing blocks builds a computational graph. In forward mode, derivative infor
 Building these pieces made the machinery behind libraries such as TensorFlow and PyTorch much more concrete: backpropagation is an organized application of the chain rule over a graph of simple operations.
 
 This was a team project with Paxton Maeder-York, Adam Nitido, and Simon Sebbagh. The package was published to PyPI as `dragongrad`.
-
-> Explore the [source code](https://github.com/dylanrandle/autograd) and its [documentation](https://autograd.readthedocs.io/en/latest/).

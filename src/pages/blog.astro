@@ -1,31 +1,20 @@
 ---
-import ContentList from '../components/ContentList.astro';
-import BaseLayout from '../layouts/BaseLayout.astro';
-import { CONTENT_SECTIONS, SITE } from '../config';
+import ContentIndexLayout from '../layouts/ContentIndexLayout.astro';
+import { CONTENT_SECTIONS } from '../config';
+import { SITE } from '../lib/site';
 import { getPublishedPosts } from '../lib/content';
-
 const posts = await getPublishedPosts();
 ---
 
-<BaseLayout
-  title={CONTENT_SECTIONS.posts.label}
+<ContentIndexLayout
+  entries={posts}
+  section={CONTENT_SECTIONS.posts}
   description={`Essays and notes on statistics, artificial intelligence, inference, and expertise by ${SITE.title}.`}
+  listLabel="Blog posts"
 >
-  <header class="page-header shell">
-    <p class="eyebrow">{CONTENT_SECTIONS.posts.label}</p>
-    <h1>Ideas worth<br />writing down.</h1>
-    <p class="lede">
-      Essays and reference notes on statistics, artificial intelligence,
-      inference, and the work of building expertise.
-    </p>
-  </header>
-  <section class="blog-posts shell" aria-label="Blog posts">
-    <ContentList entries={posts} section={CONTENT_SECTIONS.posts} />
-  </section>
-</BaseLayout>
-
-<style>
-  .blog-posts {
-    padding-bottom: clamp(5rem, 9vw, 8rem);
-  }
-</style>
+  <Fragment slot="heading">Ideas worth<br />writing down.</Fragment>
+  <Fragment slot="intro"
+    >Essays and reference notes on statistics, artificial intelligence,
+    inference, and the work of building expertise.</Fragment
+  >
+</ContentIndexLayout>

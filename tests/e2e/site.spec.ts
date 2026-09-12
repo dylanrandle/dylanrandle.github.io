@@ -4,10 +4,20 @@ import {
   contentDetailPath,
   NAV_ITEMS,
   ROUTES,
-  SITE,
   UI_LABELS,
 } from '../../src/config.ts';
-import { profile } from '../../src/data/profile.ts';
+import { resumeSelection } from '../../src/data/profile.ts';
+import { getProfile } from '../../src/lib/resume.ts';
+import { SITE } from '../../src/lib/site.ts';
+import { readContentEntries } from '../../src/lib/read-content.ts';
+import { resolveContentMedia } from '../../src/lib/media.ts';
+
+const profile = getProfile();
+
+const contentInventory = {
+  projects: readContentEntries('projects').filter(({ data }) => !data.draft),
+  posts: readContentEntries('posts').filter(({ data }) => !data.draft),
+};
 
 const topLevelPages = [
   {
@@ -53,21 +63,47 @@ for (const entry of contentIndexes) {
     await page.goto(entry.indexPath);
 
     const cardLinks = page.locator('.content-card > a');
-    expect(await cardLinks.count()).toBeGreaterThan(0);
+    const expectedEntries = contentInventory[entry.collection].toSorted(
+      (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+    );
+    expect(expectedEntries.length).toBeGreaterThan(0);
+    await expect(cardLinks).toHaveCount(expectedEntries.length);
+    await expect(page.locator('.content-card-body > p')).toHaveText(
+      expectedEntries.map(({ data }) => data.description),
+    );
 
     const hrefs = await cardLinks.evaluateAll((links) =>
       links.map((link) => link.getAttribute('href')),
+    );
+    expect(hrefs).toEqual(
+      expectedEntries.map((record) => contentDetailPath(entry, record.id)),
     );
     const routePattern = new RegExp(`^${entry.detailBase}/[^/]+/$`);
     expect(
       hrefs.every((href) => href !== null && routePattern.test(href)),
     ).toBe(true);
 
-    const firstHref = await cardLinks.first().getAttribute('href');
-    expect(firstHref).toMatch(routePattern);
-    await cardLinks.first().click();
+    // Exercise distinct website/résumé wording when the collection has it.
+    const example =
+      expectedEntries.find(({ data }) => data.resume?.description) ??
+      expectedEntries[0];
+    const detailPath = contentDetailPath(entry, example.id);
+    await page.locator(`.content-card > a[href="${detailPath}"]`).click();
     await expect(page).toHaveURL(new RegExp(`${entry.detailBase}/[^/]+/$`));
     await expect(page.locator('main h1').first()).toBeVisible();
+    await expect(page.locator('.page-header .lede')).toHaveText(
+      example.data.description,
+    );
+    for (const selector of [
+      'meta[name="description"]',
+      'meta[property="og:description"]',
+      'meta[name="twitter:description"]',
+    ]) {
+      await expect(page.locator(selector)).toHaveAttribute(
+        'content',
+        example.data.description,
+      );
+    }
   });
 }
 
@@ -105,6 +141,22 @@ test('About renders the canonical résumé and offers its PDF', async ({
   request,
 }) => {
   await page.goto(ROUTES.about.href);
+
+  expect(profile.resume.projects.map(({ id }) => id)).toEqual(
+    resumeSelection.projects,
+  );
+  expect(profile.resume.publications.map(({ id }) => id)).toEqual(
+    resumeSelection.publications.flatMap((id) => {
+      const entry = contentInventory.projects.find((entry) => entry.id === id)!;
+      return entry.data.publications.map(({ id }) => id);
+    }),
+  );
+  await expect(page.locator('#projects .project-list h3')).toHaveText(
+    profile.resume.projects.map(({ title }) => title),
+  );
+  await expect(page.locator('#publications .publication-list h3')).toHaveText(
+    profile.resume.publications.map(({ title }) => title),
+  );
 
   const sectionExpectations = [
     {
@@ -200,20 +252,20 @@ test('About renders the canonical résumé and offers its PDF', async ({
 test('motion-focused projects use muted looping video previews and heroes', async ({
   page,
 }) => {
-  const projects = [
-    {
-      id: 'golf-cv',
-      previewPoster: '/assets/images/golf-cv-960w.webp',
-      previewVideo: '/assets/videos/golf-cv-960w.mp4',
-      video: '/assets/videos/golf-cv.mp4',
-    },
-    {
-      id: 'rubiks-cube-robot',
-      previewPoster: '/assets/images/rubiks-cube-robot-960w.webp',
-      previewVideo: '/assets/videos/rubiks-cube-robot-solve-960w.mp4',
-      video: '/assets/videos/rubiks-cube-robot-solve.mp4',
-    },
-  ];
+  const projects = await Promise.all(
+    contentInventory.projects
+      .filter(({ data }) => data.video)
+      .map(async (entry) => {
+        const media = await resolveContentMedia(entry.data);
+        return {
+          id: entry.id,
+          video: entry.data.video!,
+          previewVideo: media.previewVideo ?? entry.data.video!,
+          previewPoster: media.previewImages!.at(-1)!.src,
+        };
+      }),
+  );
+  expect(projects.length).toBeGreaterThan(0);
 
   await page.goto(CONTENT_SECTIONS.projects.indexPath);
   const indexResponse = await page.request.get(
@@ -256,7 +308,9 @@ test('loaded video previews show their first frame instead of the poster', async
   await page.goto(CONTENT_SECTIONS.projects.indexPath);
 
   const videos = page.locator('.content-card video');
-  await expect(videos).toHaveCount(2);
+  await expect(videos).toHaveCount(
+    contentInventory.projects.filter(({ data }) => data.video).length,
+  );
 
   for (let index = 0; index < (await videos.count()); index += 1) {
     const video = videos.nth(index);
@@ -274,31 +328,79 @@ test('loaded video previews show their first frame instead of the poster', async
 });
 
 test('all image cards use responsive preview assets', async ({ page }) => {
-  const sections = [
-    { path: CONTENT_SECTIONS.projects.indexPath, imageCount: 14 },
-    { path: CONTENT_SECTIONS.posts.indexPath, imageCount: 2 },
-  ];
-
-  for (const section of sections) {
-    await page.goto(section.path);
-    const cardImages = page.locator('.content-card img');
-    await expect(cardImages).toHaveCount(section.imageCount);
-
-    for (let index = 0; index < section.imageCount; index += 1) {
-      const cardImage = cardImages.nth(index);
-      await expect(cardImage).toHaveAttribute('srcset', / 480w(?:,|$)/);
-      await expect(cardImage).toHaveAttribute(
-        'sizes',
-        '(max-width: 600px) calc(100vw - 1.5rem), (max-width: 1200px) 30vw, 348px',
+  await page.setViewportSize({ width: 390, height: 844 });
+  for (const section of contentIndexes) {
+    const expectedImages = contentInventory[section.collection].filter(
+      ({ data }) => data.image && !data.video,
+    );
+    await page.goto(section.indexPath);
+    await expect(page.locator('.content-card img')).toHaveCount(
+      expectedImages.length,
+    );
+    for (const entry of expectedImages) {
+      const media = await resolveContentMedia(entry.data);
+      const cardImage = page.locator(
+        `.content-card > a[href="${contentDetailPath(section, entry.id)}"] img`,
       );
-
+      await expect(cardImage).toHaveAttribute('alt', entry.data.image!.alt);
+      await expect(cardImage).toHaveAttribute('src', entry.data.image!.src);
+      await expect(cardImage).toHaveAttribute(
+        'srcset',
+        media
+          .previewImages!.map(({ src, width }) => `${src} ${width}w`)
+          .join(', '),
+      );
+      await expect(cardImage).toHaveAttribute('sizes', /.+/);
       await cardImage.scrollIntoViewIfNeeded();
       await expect
         .poll(() =>
-          cardImage.evaluate((image: HTMLImageElement) => image.currentSrc),
+          cardImage.evaluate((image: HTMLImageElement) => ({
+            path: image.currentSrc ? new URL(image.currentSrc).pathname : '',
+            loaded: image.complete && image.naturalWidth > 0,
+          })),
         )
-        .toMatch(/-480w\.webp$/);
+        .toEqual({ path: media.previewImages![0].src, loaded: true });
     }
+  }
+});
+
+test('project pages end with collaborator credits and inline resource links', async ({
+  page,
+}) => {
+  for (const entry of contentInventory.projects.filter(
+    ({ data }) => data.links.length,
+  )) {
+    await page.goto(contentDetailPath(CONTENT_SECTIONS.projects, entry.id));
+    const footer = page.locator('.content-footer');
+    await expect(footer).toBeVisible();
+    await expect(footer.getByRole('heading')).toHaveCount(0);
+    await expect(footer.locator('ul, ol')).toHaveCount(0);
+    const publications = entry.data.publications;
+    const collaborators = [
+      ...new Set(
+        publications.flatMap(({ authors }) => authors.map(({ name }) => name)),
+      ),
+    ].filter((name) => name !== profile.displayName);
+    if (collaborators.length) {
+      const credits = footer.locator('.content-credits');
+      await expect(credits).toHaveCount(1);
+      const text = await credits.innerText();
+      for (const name of collaborators)
+        expect(text.split(name).length - 1).toBe(1);
+    }
+    expect(
+      await footer.locator('.content-links a').evaluateAll((anchors) =>
+        anchors.map((anchor) => ({
+          label: anchor.textContent?.trim(),
+          href: anchor.getAttribute('href'),
+        })),
+      ),
+    ).toEqual(entry.data.links);
+    await expect(
+      page.locator(
+        'a[href="#publications-heading"], a[href="#resources-heading"]',
+      ),
+    ).toHaveCount(0);
   }
 });
 

@@ -1,7 +1,13 @@
 ---
+import { formatContentDate } from '../lib/dates';
+import {
+  previewImageSrcset,
+  previewPoster,
+  resolveContentMedia,
+} from '../lib/media';
 import type { ContentEntry } from '../lib/content';
 import {
-  CONTENT_DATE_FORMAT,
+  CARD_IMAGE_SIZES,
   contentDetailPath,
   type ContentSection,
 } from '../config';
@@ -14,21 +20,9 @@ interface Props {
 
 const { entry, section, headingLevel = 'h2' } = Astro.props;
 const Heading = headingLevel;
-const formatter = new Intl.DateTimeFormat(CONTENT_DATE_FORMAT.locale, {
-  day: 'numeric',
-  month: 'short',
-  year: 'numeric',
-  timeZone: CONTENT_DATE_FORMAT.timeZone,
-});
-const previewImageSrcset = entry.data.previewImages
-  ?.map(({ src, width }) => `${src} ${width}w`)
-  .join(', ');
-const previewPoster =
-  entry.data.previewImages?.reduce((largest, candidate) =>
-    candidate.width > largest.width ? candidate : largest,
-  ).src ?? entry.data.image;
-const previewImageSizes =
-  '(max-width: 600px) calc(100vw - 1.5rem), (max-width: 1200px) 30vw, 348px';
+const media = await resolveContentMedia(entry.data);
+const srcset = previewImageSrcset(media);
+const poster = previewPoster({ ...media, image: entry.data.image });
 ---
 
 <article class="content-card">
@@ -38,19 +32,19 @@ const previewImageSizes =
         <video
           class:list={[
             'content-card-media',
-            { cover: entry.data.imageFit === 'cover' },
+            { cover: entry.data.image?.fit === 'cover' },
           ]}
           muted
           loop
           playsinline
           preload="auto"
-          poster={previewPoster}
+          poster={poster}
           aria-hidden="true"
           tabindex="-1"
           data-autoplay-video
         >
           <source
-            src={entry.data.previewVideo ?? entry.data.video}
+            src={media.previewVideo ?? entry.data.video}
             type="video/mp4"
           />
         </video>
@@ -58,15 +52,15 @@ const previewImageSizes =
         <img
           class:list={[
             'content-card-media',
-            { cover: entry.data.imageFit === 'cover' },
+            { cover: entry.data.image.fit === 'cover' },
           ]}
-          src={entry.data.image}
-          srcset={previewImageSrcset}
-          sizes={previewImageSrcset ? previewImageSizes : undefined}
-          alt={entry.data.imageAlt ?? ''}
+          src={entry.data.image.src}
+          srcset={srcset}
+          sizes={srcset ? CARD_IMAGE_SIZES : undefined}
+          alt={entry.data.image.alt}
           loading="lazy"
-          width="1200"
-          height="675"
+          width={media.imageWidth}
+          height={media.imageHeight}
         />
       ) : (
         <div class="content-card-placeholder" aria-hidden="true">
@@ -78,7 +72,7 @@ const previewImageSizes =
       <div class="content-card-meta">
         <span>{entry.data.category ?? section.singularLabel}</span>
         <time datetime={entry.data.date.toISOString()}>
-          {formatter.format(entry.data.date)}
+          {formatContentDate(entry.data.date, 'card')}
         </time>
       </div>
       <Heading class="content-card-title">{entry.data.title}</Heading>

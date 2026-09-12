@@ -9,11 +9,14 @@ content changes.
 - Use Node.js 26 as specified by `.nvmrc`.
 - Keep `package-lock.json` committed so local and CI builds resolve the same
   packages.
-- Treat `src/data/profile.ts` as the canonical source for identity,
-  introduction, links, and résumé data used by Home, About, TeX, and PDF.
+- Treat project Markdown as the canonical source for project and publication
+  facts, resource links, website descriptions, and optional résumé wording. Keep
+  identity, introduction, professional links, employment, education, skills, and résumé selection in
+  `src/data/profile.ts`. Both `resumeSelection` lists contain project Markdown
+  IDs in display order; `getProfile()` in `src/lib/resume.ts` resolves them.
 - Keep `src/data/profile-schema.ts` as the reusable runtime contract for the
   canonical profile.
-- Edit `src/data/profile.ts` for résumé content or
+- Edit the appropriate project Markdown or `src/data/profile.ts` for résumé content, or
   `resume/DylanRandleResume.tex.template` for its TeX presentation, then run
   `npm run resume:generate`; do not edit `resume/DylanRandleResume.tex` or the
   published résumé PDF directly.
@@ -24,8 +27,15 @@ content changes.
 
 - `src/pages/`: File-based top-level and detail routes, plus `robots.txt` and
   the 404 page.
-- `src/content.config.ts`: Shared Zod schema and collection definitions.
-- `src/config.ts`: Canonical routes, labels, locale, and website/résumé theme colors.
+- `src/content.config.ts`: Astro collection definitions using the shared content schema.
+- `src/data/profile.ts`: Authored profile data and ordered résumé selections.
+- `src/data/content-schema.ts`: Shared frontmatter contract and content types.
+- `src/lib/content.ts` and `src/lib/read-content.ts`: Astro collection queries and the Node Markdown reader.
+- `src/config.ts`: Profile-independent routes, labels, locale, media sizing, and theme colors.
+- `src/lib/site.ts`: Site identity and professional links derived directly from authored profile data.
+- `src/lib/resume.ts`: Validated content lookup and résumé assembly for HTML and PDF.
+- `src/lib/publications.ts`: Shared publication titles, author citations, and venue formatting.
+- `src/lib/media.ts`: Asset-derived preview metadata and dimensions.
 - `src/data/profile-schema.ts`: Runtime validation for canonical profile data.
 - `src/layouts/` and `src/components/`: Shared page structure and presentation.
 - `src/styles/global.css`: Site tokens, layout, responsive behavior, and
@@ -62,10 +72,31 @@ npm run check:resume
 ## Content conventions
 
 - Name collection files with stable, lowercase, hyphenated IDs. Each ID becomes the route slug.
-- Keep frontmatter concise and conform to `src/content.config.ts`; important portfolio metadata belongs in content rather than templates.
+- Keep frontmatter concise and conform to `src/data/content-schema.ts`; important portfolio metadata belongs in content rather than templates.
+- Both `resumeSelection.projects` and `resumeSelection.publications` in
+  `src/data/profile.ts` select project Markdown IDs in the exact display order.
+  Each selected publications entry contributes its publications in frontmatter
+  order. Keep the two selections independent; reject unknown, draft, or duplicate
+  references and publication selections without papers. Do not add unselected
+  posts automatically or sort résumé entries by date.
+- Dates are display metadata on the résumé. Distinguish article dates from
+  publication years, and use `resume.date` when the completion date differs
+  from the article date. Individual publication IDs remain available for
+  references such as `thesisPublicationId` in education.
+- Use the top-level project `description` for personal website wording. An
+  optional, nonempty `resume.description` supplies formal wording for both the
+  HTML résumé and PDF; omit it to reuse the top-level description. Keep both
+  versions in the project's Markdown.
+- Render short research collaborator credits and inline resource links from
+  structured frontmatter at the end of articles. Keep full publication citations
+  on the résumé; do not duplicate the bibliography or resource URLs in prose.
+- Keep all article resources in the top-level `links` array, in display order.
+  Publications contain citation and author metadata, without nested `links`.
 - Use `America/New_York` for authored dates unless the historical event requires otherwise.
 - Prefer one broad field plus specific method/application tags. Reuse existing vocabulary.
-- Use descriptive alt text and root-relative asset paths such as `/assets/images/example.webp`.
+- Group cover-image metadata as `image: { src, alt, fit? }`. Require descriptive
+  `image.alt`, use root-relative `image.src` paths such as
+  `/assets/images/example.webp`, and default `image.fit` to `contain`.
 - Prefer optimized WebP raster images when quality remains acceptable.
 - Ground publication and project claims in the linked paper, report, repository, or existing source post.
 - Reuse route, label, locale, and theme values from `src/config.ts` rather than
@@ -81,16 +112,16 @@ npm run check:resume
   `example-480w.webp`, `example-960w.webp`, or `demo-960w.mp4`; the `w` makes
   explicit that the number is the pixel width. Do not use generic
   suffixes such as `-preview`.
-- Every content `image` must define `previewImages` with accurate width
-  descriptors. List candidates smallest to largest for readability. Generate a
+- Preview paths and width descriptors are derived from the assets; do not define
+  `previewImages`, `previewVideo`, or image dimensions in frontmatter. Generate a
   480-pixel-wide WebP and, when the source is large enough, a 960-pixel-wide
   WebP. Never upscale; reuse an already-small optimized source as the upper
   candidate when appropriate.
 - Preserve animation frame count, timing, transparency, and looping when
   deriving previews from animated WebP sources.
-- Keep `video` pointed at the full-resolution detail asset and `previewVideo`
-  pointed at the 960-pixel-wide card encode. Card video posters should use the
-  largest `previewImages` candidate.
+- Keep `video` pointed at the full-resolution detail asset. Its matching
+  `-960w.mp4` encode is discovered automatically for cards. Card video posters
+  use the largest derived image candidate.
 - Encode published MP4 files as H.264 High Profile with `yuv420p` pixel format
   and fast-start metadata. Preserve source frame rate, aspect ratio, and color
   tags; omit audio when the source is silent. The current balanced encode uses

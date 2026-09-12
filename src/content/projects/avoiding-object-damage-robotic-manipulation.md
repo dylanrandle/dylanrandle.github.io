@@ -4,13 +4,36 @@ description: We built and deployed a damage-risk classifier that reduced robot-i
 date: 2024-10-14T16:00:00-05:00
 category: Research
 tags: [robotics, machine learning, multimodal learning, warehouse automation, amazon]
-image: /assets/images/robotic-object-damage.webp
-previewImages:
-  - src: /assets/images/robotic-object-damage-480w.webp
-    width: 480
-  - src: /assets/images/robotic-object-damage-960w.webp
-    width: 960
-imageAlt: An Amazon Robotics workcell, an object flagged as high risk, and an example of package damage
+image:
+  src: /assets/images/robotic-object-damage.webp
+  alt: An Amazon Robotics workcell, an object flagged as high risk, and an example of package damage
+publications:
+  - id: object-damage-iros-2024
+    authors:
+      - name: Erica Aduh
+        citation: E. Aduh
+        role: lead
+      - name: Fan Wang
+        citation: F. Wang
+        role: lead
+      - name: Dylan Randle
+        citation: D. Randle
+      - name: Kaiwen Wang
+        citation: K. Wang
+      - name: Priyesh Shah
+        citation: P. Shah
+      - name: Chaitanya Mitash
+        citation: C. Mitash
+      - name: Manikantan Nambi
+        citation: M. Nambi
+    kind: conference
+    venue: IROS
+    year: 2024
+links:
+  - label: Amazon Science publication page
+    href: https://www.amazon.science/publications/avoiding-object-damage-in-robotic-manipulation
+  - label: Full paper
+    href: https://cdn.amazon.science/c3/22/865c882d484492a4ba9df499f945/avoiding-object-damage-in-robotic-manipulation.pdf
 ---
 
 Reliable warehouse robots need to do more than complete picks: they must also avoid damaging the enormous variety of objects they encounter. Damage is rare relative to the number of successful manipulations, but each event can destroy inventory, interrupt a workcell, or harm sensitive equipment.
@@ -32,7 +55,3 @@ The multimodal model performed best in the offline study, showing that product d
 We evaluated the system over **50,687 real pick-and-place operations** using control and treatment groups. When damage avoidance was enabled, the robot skipped picks predicted to be unsafe. This reduced the object-damage rate by **64%**, with a **9% reduction in picking volume**.
 
 That tradeoff is central to deploying safety models: a system needs to prevent costly failures without rejecting so many actions that throughput collapses. The study demonstrates how operational data and multimodal learning can turn an infrequent failure mode into a prediction problem that can be managed before a robot acts.
-
-This work was led by Erica Aduh and Fan Wang, with Dylan Randle, Kaiwen Wang, Priyesh Shah, Chaitanya Mitash, and Manikantan Nambi.
-
-> Read the [Amazon Science publication page](https://www.amazon.science/publications/avoiding-object-damage-in-robotic-manipulation) or the [full paper](https://cdn.amazon.science/c3/22/865c882d484492a4ba9df499f945/avoiding-object-damage-in-robotic-manipulation.pdf).

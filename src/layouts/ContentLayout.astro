@@ -1,53 +1,28 @@
 ---
+import type { MarkdownHeading } from 'astro';
 import BaseLayout from './BaseLayout.astro';
 import TableOfContents from '../components/TableOfContents.astro';
 import Tags from '../components/Tags.astro';
-import { CONTENT_DATE_FORMAT } from '../config';
-
-interface Heading {
-  depth: number;
-  slug: string;
-  text: string;
-}
+import type { ContentSection } from '../config';
+import type { ContentEntry } from '../lib/content';
+import { formatContentDate } from '../lib/dates';
+import { resolveContentMedia } from '../lib/media';
 
 interface Props {
-  title: string;
-  description: string;
-  date?: Date;
-  updated?: Date;
-  tags?: string[];
-  image?: string;
-  video?: string;
-  imageAlt?: string;
-  imageFit?: 'contain' | 'cover';
-  headings?: Heading[];
-  eyebrow?: string;
+  entry: ContentEntry;
+  section: ContentSection;
+  headings: MarkdownHeading[];
 }
-
-const {
-  title,
-  description,
-  date,
-  updated,
-  tags = [],
-  image,
-  video,
-  imageAlt = '',
-  imageFit = 'contain',
-  headings = [],
-  eyebrow = 'Writing',
-} = Astro.props;
-const formatDate = (value: Date) =>
-  new Intl.DateTimeFormat(CONTENT_DATE_FORMAT.locale, {
-    dateStyle: 'long',
-    timeZone: CONTENT_DATE_FORMAT.timeZone,
-  }).format(value);
+const { entry, section, headings } = Astro.props;
+const { title, description, date, updated, tags, image, video } = entry.data;
+const { imageWidth, imageHeight } = await resolveContentMedia(entry.data);
+const eyebrow = entry.data.category ?? section.singularLabel;
 ---
 
 <BaseLayout
   title={title}
   description={description}
-  image={image}
+  image={image?.src}
   type="article"
 >
   <header class="page-header shell">
@@ -57,8 +32,10 @@ const formatDate = (value: Date) =>
     {
       date && (
         <p class="post-date">
-          <time datetime={date.toISOString()}>{formatDate(date)}</time>
-          {updated && ` · Updated ${formatDate(updated)}`}
+          <time datetime={date.toISOString()}>
+            {formatContentDate(date, 'article')}
+          </time>
+          {updated && ` · Updated ${formatContentDate(updated, 'article')}`}
         </p>
       )
     }
@@ -73,19 +50,19 @@ const formatDate = (value: Date) =>
         loop
         playsinline
         preload="auto"
-        poster={image}
-        aria-label={imageAlt}
+        poster={image?.src}
+        aria-label={image?.alt}
         data-autoplay-video
       >
         <source src={video} type="video/mp4" />
       </video>
     ) : image ? (
       <img
-        class:list={['article-hero', { cover: imageFit === 'cover' }]}
-        src={image}
-        alt={imageAlt}
-        width="1600"
-        height="900"
+        class:list={['article-hero', { cover: image.fit === 'cover' }]}
+        src={image.src}
+        alt={image.alt}
+        width={imageWidth}
+        height={imageHeight}
       />
     ) : null
   }

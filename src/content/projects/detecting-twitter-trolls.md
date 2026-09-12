@@ -4,13 +4,17 @@ description: We compared text representations and classifiers for identifying tw
 date: 2018-12-15T16:03:00-05:00
 category: Projects
 tags: [machine learning, natural language processing, social media, harvard]
-image: /assets/images/twitter-troll-detection.webp
-previewImages:
-  - src: /assets/images/twitter-troll-detection-480w.webp
-    width: 480
-  - src: /assets/images/twitter-troll-detection.webp
-    width: 915
-imageAlt: Principal-component projections showing troll and non-troll tweets separating across neural-network layers
+image:
+  src: /assets/images/twitter-troll-detection.webp
+  alt: Principal-component projections showing troll and non-troll tweets separating across neural-network layers
+resume:
+  title: Twitter Troll Detection
+  description: Built NLP classifiers for identifying Internet Research Agency tweets, achieving 95.9% accuracy on a temporally separated test set.
+links:
+  - label: Full project site
+    href: https://dylanrandle.github.io/troll_classification/
+  - label: Source code
+    href: https://github.com/dylanrandle/troll_classification
 ---
 
 This project asked whether machine-learning models could distinguish tweets written by accounts associated with the Internet Research Agency (IRA) from ordinary election-related tweets. We began with FiveThirtyEight's archive of nearly three million IRA tweets and collected a comparison set related to the 2016 U.S. election.
@@ -34,5 +38,3 @@ Logistic regression with Bag of Words was the strongest model, reaching 96.7% te
 The result needs an important qualification: the positive examples came from one known organization and the negative examples came from election-related searches. The model therefore learned to identify patterns associated with this dataset of IRA accounts—not a universal definition of trolling.
 
 This was a team project with Joe Davison, Julien Laasri, and Abhimanyu Talwar.
-
-> See the [full project site](https://dylanrandle.github.io/troll_classification/) and [source code](https://github.com/dylanrandle/troll_classification).

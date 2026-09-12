@@ -4,13 +4,15 @@ description: We used sparse LSTM models and Granger-causal analysis to compare m
 date: 2019-05-01T16:06:00-05:00
 category: Projects
 tags: [deep learning, time series, causality, computational biology, harvard]
-image: /assets/images/microbiome-causal-lstm.webp
-previewImages:
-  - src: /assets/images/microbiome-causal-lstm-480w.webp
-    width: 480
-  - src: /assets/images/microbiome-causal-lstm-960w.webp
-    width: 960
-imageAlt: Estimated microbial interaction networks for healthy and IBD mice
+image:
+  src: /assets/images/microbiome-causal-lstm.webp
+  alt: Estimated microbial interaction networks for healthy and IBD mice
+resume:
+  title: Causal LSTM Microbiome Modeling
+  description: Used sparse LSTMs, neural Granger-causality analysis, and Bayesian optimization to compare microbial interactions in healthy and IBD mice.
+links:
+  - label: Project repository
+    href: https://github.com/dylanrandle/microbiome
 ---
 
 Microbiome measurements form a collection of interacting time series: the abundance of one organism may help predict how another changes later. In this project, we studied those temporal relationships in longitudinal data from healthy mice and mice with inflammatory bowel disease (IBD).
@@ -28,5 +30,3 @@ Because the model was sensitive to training and regularization choices, we used 
 The learned interaction patterns were more similar within each health group than across groups. The healthy and IBD networks emphasized different OTUs and predictive relationships, while sparsity made those differences possible to inspect visually. These links should be read as **Granger-predictive relationships**, not proof of biological causation; they are hypotheses for further study rather than intervention-level conclusions.
 
 This was a team project with Joe Davison, Robbert Struyven, and Simon Sebbagh.
-
-> Explore the analysis notebooks and code in the [project repository](https://github.com/dylanrandle/microbiome).

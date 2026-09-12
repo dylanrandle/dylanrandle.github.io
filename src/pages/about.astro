@@ -2,7 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { ROUTES } from '../config';
 import Portrait from '../components/Portrait.astro';
-import { profile } from '../data/profile';
+import { getProfile } from '../lib/resume';
+
+const profile = getProfile();
 
 const { education, experience, projects, publications, skills, summary } =
   profile.resume;
@@ -11,7 +13,7 @@ const { education, experience, projects, publications, skills, summary } =
 <BaseLayout title={ROUTES.about.label} description={profile.intro.headline}>
   <header class="about-header shell">
     <div>
-      <p class="eyebrow">About</p>
+      <p class="eyebrow">{ROUTES.about.label}</p>
       <h1>{profile.intro.aboutHeading}</h1>
       <p class="lede">{profile.intro.headline}</p>
       <p class="about-detail">{profile.intro.detail}</p>
@@ -109,7 +111,7 @@ const { education, experience, projects, publications, skills, summary } =
 
       <section class="resume-section" id="projects">
         <p class="eyebrow">Projects</p>
-        <h2>Selected systems and experiments.</h2>
+        <h2>Systems and experiments.</h2>
         <ol class="project-list">
           {
             projects.map((project) => (

@@ -1,5 +1,3 @@
-import { profile } from './data/profile.ts';
-
 const brandBlue = '#0000aa';
 const withoutTrailingSlash = (path: string) =>
   path === '/' ? path : path.replace(/\/$/, '');
@@ -30,6 +28,7 @@ export const CONTENT_SECTIONS = {
 
 export type ContentSection =
   (typeof CONTENT_SECTIONS)[keyof typeof CONTENT_SECTIONS];
+export type ContentCollection = keyof typeof CONTENT_SECTIONS;
 
 export const contentDetailPath = (section: ContentSection, id: string) =>
   `${section.detailBase}/${id}/`;
@@ -61,14 +60,20 @@ export const UI_LABELS = {
   themeToggle: 'Toggle color theme',
 } as const;
 
-export const SITE = {
-  title: profile.displayName,
-  tagline: 'AI & Robotics',
-  description: profile.intro.headline,
-  url: profile.links.website.replace(/\/$/, ''),
-  email: profile.email,
-  image: profile.portrait.src,
-  links: profile.links,
+export const NAV_ITEMS = [ROUTES.projects, ROUTES.blog, ROUTES.about] as const;
+
+export const PROFILE_LINK_LABELS = {
+  website: { label: 'Website', compactLabel: 'Website' },
+  github: { label: 'GitHub', compactLabel: 'GitHub' },
+  linkedin: { label: 'LinkedIn', compactLabel: 'LinkedIn' },
+  scholar: { label: 'Google Scholar', compactLabel: 'Scholar' },
 } as const;
 
-export const NAV_ITEMS = [ROUTES.projects, ROUTES.blog, ROUTES.about] as const;
+export const PROFILE_LINK_GROUPS = {
+  social: ['github', 'linkedin', 'scholar'],
+  resume: ['website', 'linkedin', 'github', 'scholar'],
+} as const;
+
+export const CARD_IMAGE_SIZES =
+  '(max-width: 600px) calc(100vw - 1.5rem), (max-width: 1200px) 30vw, 348px';
+export const PREVIEW_WIDTHS = [480, 960] as const;

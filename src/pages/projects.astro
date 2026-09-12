@@ -1,31 +1,20 @@
 ---
-import ContentList from '../components/ContentList.astro';
-import BaseLayout from '../layouts/BaseLayout.astro';
-import { CONTENT_SECTIONS, SITE, UI_LABELS } from '../config';
+import ContentIndexLayout from '../layouts/ContentIndexLayout.astro';
+import { CONTENT_SECTIONS, UI_LABELS } from '../config';
+import { SITE } from '../lib/site';
 import { getPublishedProjects } from '../lib/content';
-
 const projects = await getPublishedProjects();
 ---
 
-<BaseLayout
-  title={CONTENT_SECTIONS.projects.label}
+<ContentIndexLayout
+  entries={projects}
+  section={CONTENT_SECTIONS.projects}
   description={`Projects and research in robotics, machine learning, and applied artificial intelligence by ${SITE.title}.`}
+  listLabel={UI_LABELS.projectsAndResearch}
 >
-  <header class="page-header shell">
-    <p class="eyebrow">{CONTENT_SECTIONS.projects.label}</p>
-    <h1>Projects &<br />research.</h1>
-    <p class="lede">
-      Work across robotics, machine learning, computer vision, and applied
-      artificial intelligence.
-    </p>
-  </header>
-  <section class="projects shell" aria-label={UI_LABELS.projectsAndResearch}>
-    <ContentList entries={projects} section={CONTENT_SECTIONS.projects} />
-  </section>
-</BaseLayout>
-
-<style>
-  .projects {
-    padding-bottom: clamp(5rem, 9vw, 8rem);
-  }
-</style>
+  <Fragment slot="heading">Projects &<br />research.</Fragment>
+  <Fragment slot="intro"
+    >Work across robotics, machine learning, computer vision, and applied
+    artificial intelligence.</Fragment
+  >
+</ContentIndexLayout>

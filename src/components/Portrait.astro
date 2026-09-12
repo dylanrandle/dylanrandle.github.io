@@ -1,13 +1,16 @@
 ---
-import { profile } from '../data/profile';
+import { profileData as profile } from '../data/profile';
+import { readImageMetadata } from '../lib/media';
+
+const { width, height } = await readImageMetadata(profile.portrait.src);
 ---
 
 <div class="portrait">
   <img
     src={profile.portrait.src}
     alt={profile.portrait.alt}
-    width="259"
-    height="323"
+    width={width}
+    height={height}
   />
 </div>
 
@@ -18,7 +21,7 @@ import { profile } from '../data/profile';
     aspect-ratio: 4 / 5;
     margin-top: 1.4rem;
     border: 1px solid var(--line);
-    border-radius: 18px;
+    border-radius: var(--radius);
     background: var(--accent-soft);
     box-shadow: var(--shadow);
   }

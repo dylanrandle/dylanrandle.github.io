@@ -4,13 +4,17 @@ description: We evaluated DARTS as an efficient way to discover neural architect
 date: 2019-12-15T16:02:00-05:00
 category: Projects
 tags: [deep learning, neural architecture search, automl, scientific machine learning, harvard]
-image: /assets/images/darts-scientific-datasets.webp
-previewImages:
-  - src: /assets/images/darts-scientific-datasets-480w.webp
-    width: 480
-  - src: /assets/images/darts-scientific-datasets.webp
-    width: 720
-imageAlt: Training, validation, and test learning curves for a DARTS model on graphene kirigami data
+image:
+  src: /assets/images/darts-scientific-datasets.webp
+  alt: Training, validation, and test learning curves for a DARTS model on graphene kirigami data
+resume:
+  title: Differentiable Neural Architecture Search
+  description: Partnered with Google AI to adapt and evaluate DARTS across materials science, astronomy, and medical-imaging datasets.
+links:
+  - label: Full project article
+    href: https://medium.com/data-science/investigating-differentiable-neural-architecture-search-for-scientific-datasets-62899be8714e
+  - label: Project code
+    href: https://github.com/capstone2019-neuralsearch/AC297r_2019_NAS
 ---
 
 Designing a neural network usually requires substantial manual experimentation. Neural Architecture Search (NAS) tries to automate that process, but many search strategies are computationally expensive enough to be impractical for ordinary research teams.
@@ -32,5 +36,3 @@ The work required adapting the original DARTS implementation to new input shapes
 DARTS was capable of modest improvements, but it was often unnecessary for simpler tasks where random search or a well-designed baseline already performed well. More importantly, the final discretization step could degrade a strong continuous model. The project highlighted that an efficient search algorithm still needs careful tuning and a robust way to convert its soft architecture weights into a deployable network.
 
 This was a team project with Julien Laasri, Michael Emanuel, and Jiawei Zhuang.
-
-> Read the [full project article](https://medium.com/data-science/investigating-differentiable-neural-architecture-search-for-scientific-datasets-62899be8714e) or explore the [project code](https://github.com/capstone2019-neuralsearch/AC297r_2019_NAS).

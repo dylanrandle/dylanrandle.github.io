@@ -1,8 +1,9 @@
 ---
 import ContentList from '../components/ContentList.astro';
 import Portrait from '../components/Portrait.astro';
+import ProfileLinks from '../components/ProfileLinks.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { profile } from '../data/profile';
+import { profileData as profile } from '../data/profile';
 import { getPublishedProjects } from '../lib/content';
 import { CONTENT_SECTIONS, ROUTES, UI_LABELS } from '../config';
 
@@ -21,9 +22,7 @@ const projects = await getPublishedProjects();
         <a class="button" href={profile.links.cv}>Download CV</a>
       </div>
       <div class="intro-links" aria-label="Professional profiles">
-        <a href={profile.links.github}>GitHub ↗</a>
-        <a href={profile.links.linkedin}>LinkedIn ↗</a>
-        <a href={profile.links.scholar}>Google Scholar ↗</a>
+        <ProfileLinks arrows />
       </div>
     </div>
     <Portrait />

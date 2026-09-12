@@ -4,13 +4,32 @@ description: We developed a transformer policy that learns reusable manipulation
 date: 2025-05-19T16:00:00-05:00
 category: Research
 tags: [robotics, imitation learning, transformers, dexterous manipulation, amazon]
-image: /assets/images/must-skill-transformer.webp
-previewImages:
-  - src: /assets/images/must-skill-transformer-480w.webp
-    width: 480
-  - src: /assets/images/must-skill-transformer.webp
-    width: 887
-imageAlt: MuST chaining flipping, picking, packing, and pushing skills using progress-guided selection
+image:
+  src: /assets/images/must-skill-transformer.webp
+  alt: MuST chaining flipping, picking, packing, and pushing skills using progress-guided selection
+publications:
+  - id: must-icra-2025
+    title: "MuST: Multi-Head Skill Transformer for Long-Horizon Dexterous Manipulation with Skill Progress"
+    authors:
+      - name: Kai Gao
+        citation: K. Gao
+        role: lead
+      - name: Fan Wang
+        citation: F. Wang
+      - name: Erica Aduh
+        citation: E. Aduh
+      - name: Dylan Randle
+        citation: D. Randle
+      - name: Jane Shi
+        citation: J. Shi
+    kind: conference
+    venue: ICRA
+    year: 2025
+links:
+  - label: Amazon Science publication page
+    href: https://www.amazon.science/publications/must-multi-head-skill-transformer-for-long-horizon-dexterous-manipulation-with-skill-progress
+  - label: Paper on arXiv
+    href: https://arxiv.org/abs/2502.02753
 ---
 
 Long-horizon manipulation tasks are difficult because a robot must do more than predict the next motion. It must determine which skill is appropriate, recognize when that skill is complete, and recover when the environment changes unexpectedly.
@@ -33,7 +52,3 @@ This structure has several practical advantages:
 On a simulated pick-and-pack task, the single-head Octo baseline completed 32.5% of the full tasks, while MuST achieved **80–90% success** and completed successful trials **23.7–38.4% faster**. Tests with new object shapes exposed the remaining challenge: early pick-and-place skills generalized well, while precise pushing was more sensitive to unfamiliar geometry.
 
 The physical-robot experiments showed the value of the decomposition more directly. MuST completed 88% of trials across a diverse object set and could handle both small and previously unseen objects that the single-head baseline failed to complete.
-
-This work was led by Kai Gao with Fan Wang, Erica Aduh, Dylan Randle, and Jane Shi.
-
-> Read the [Amazon Science publication page](https://www.amazon.science/publications/must-multi-head-skill-transformer-for-long-horizon-dexterous-manipulation-with-skill-progress) or the [paper on arXiv](https://arxiv.org/abs/2502.02753).

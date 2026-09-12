@@ -4,13 +4,17 @@ description: We trained bidirectional LSTM video classifiers over YouTube-8M usi
 date: 2019-05-01T16:05:00-05:00
 category: Projects
 tags: [deep learning, computer vision, distributed systems, video classification, harvard]
-image: /assets/images/spark-tensorflow.webp
-previewImages:
-  - src: /assets/images/spark-tensorflow-480w.webp
-    width: 480
-  - src: /assets/images/spark-tensorflow.webp
-    width: 846
-imageAlt: Measured training speedup as the number of Spark worker nodes increases
+image:
+  src: /assets/images/spark-tensorflow.webp
+  alt: Measured training speedup as the number of Spark worker nodes increases
+resume:
+  title: Distributed YouTube-8M Classification
+  description: Trained bidirectional LSTM video classifiers with Spark, TensorFlow, Elephas, HDFS, and a custom AWS EMR cluster.
+links:
+  - label: Source code and setup notes
+    href: https://github.com/dylanrandle/spark-tensorflow
+  - label: Project report
+    href: https://cs205youtubeteam.github.io/index.html
 ---
 
 YouTube-8M contains features from more than eight million videos and poses a systems problem as much as a modeling problem. Training over terabytes of audio and visual data requires a pipeline that can move data efficiently, coordinate workers, and recover useful scaling from additional machines.
@@ -24,5 +28,3 @@ Much of the project involved integration rather than model architecture. We conf
 In our scaling experiment, epoch-level asynchronous updates benefited much more from additional workers than batch-level asynchronous updates, which quickly saturated. The result illustrated an important distributed-learning lesson: adding machines only helps when coordination and communication overhead do not dominate the work performed by each worker.
 
 This was a 2019 course project, so the documented TensorFlow, Spark, EMR, and Python versions describe the system we built at the time rather than current deployment guidance.
-
-> Explore the [source code and setup notes](https://github.com/dylanrandle/spark-tensorflow) or read the [project report](https://cs205youtubeteam.github.io/index.html).

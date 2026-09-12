@@ -2,7 +2,6 @@ import { spawnSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import {
   copyFileSync,
-  existsSync,
   mkdirSync,
   mkdtempSync,
   readFileSync,
@@ -12,10 +11,13 @@ import {
 } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { profile } from '../src/data/profile.ts';
+import { getProfile } from '../src/lib/resume.ts';
 import { THEME } from '../src/config.ts';
+import { getProfileLinks } from '../src/lib/site.ts';
 
-const RESUME_BASENAME = 'DylanRandleResume';
+const profile = getProfile();
+
+const RESUME_BASENAME = path.posix.basename(profile.links.cv, '.pdf');
 const RESUME_DIRECTORY = 'resume';
 const GENERATE_COMMAND = 'npm run resume:generate';
 const LATEX_COMMAND = 'latexmk';
@@ -47,6 +49,7 @@ const publicPath = (rootRelativePath) =>
 const paths = Object.freeze({
   generator: generatorPath,
   profile: projectPath('src', 'data', 'profile.ts'),
+  projects: projectPath('src', 'content', 'projects'),
   template: path.join(resumeDirectory, FILE_NAMES.template),
   tex: path.join(resumeDirectory, FILE_NAMES.tex),
   pdf: publicPath(profile.links.cv),
@@ -57,12 +60,6 @@ const sourceBuildPaths = SOURCE_BUILD_EXTENSIONS.map((extension) =>
   path.join(resumeDirectory, `${RESUME_BASENAME}${extension}`),
 );
 
-if (path.posix.basename(profile.links.cv) !== FILE_NAMES.pdf) {
-  throw new Error(
-    `profile.links.cv must end with ${FILE_NAMES.pdf}; received ${profile.links.cv}.`,
-  );
-}
-
 const relativeProjectPath = (filePath) =>
   path.relative(projectRoot, filePath).split(path.sep).join('/');
 const portraitTexPath = path
@@ -70,11 +67,13 @@ const portraitTexPath = path
   .split(path.sep)
   .join('/');
 const templateSource = readFileSync(paths.template, 'utf8');
+const contactLinks = getProfileLinks('resume');
 const profileSource = JSON.stringify(profile);
 const profileHash = createHash('sha256').update(profileSource).digest('hex');
 const artifactHash = createHash('sha256')
   .update(profileSource)
   .update(JSON.stringify(THEME.resume))
+  .update(JSON.stringify(contactLinks))
   .update(readFileSync(paths.generator))
   .update(templateSource)
   .update(readFileSync(paths.portrait))
@@ -173,17 +172,11 @@ const renderSkills = () =>
     )
     .join('\n');
 
-const contactLinks = [
-  ['Website', profile.links.website],
-  ['LinkedIn', profile.links.linkedin],
-  ['GitHub', profile.links.github],
-  ['Scholar', profile.links.scholar],
-];
 const renderContactLinks = () =>
   contactLinks
     .map(
-      ([label, url]) =>
-        `  \\href{${escapeUrl(url)}}{\\uline{${escapeLatex(label)}}}`,
+      ({ compactLabel, href }) =>
+        `  \\href{${escapeUrl(href)}}{\\uline{${escapeLatex(compactLabel)}}}`,
     )
     .join(' \\textbf{\\textperiodcentered{}}\n');
 
@@ -213,6 +206,7 @@ const tex = renderTemplate(templateSource, {
   GENERATOR_PATH: relativeProjectPath(paths.generator),
   TEMPLATE_PATH: relativeProjectPath(paths.template),
   PROFILE_PATH: relativeProjectPath(paths.profile),
+  PROJECTS_PATH: relativeProjectPath(paths.projects),
   GENERATE_COMMAND,
   GENERATED_TEX_PATH: relativeProjectPath(paths.tex),
   PROFILE_HASH: profileHash,
@@ -267,15 +261,6 @@ if (process.argv.includes('--check')) {
 
   if (currentPdf !== undefined && !pdfHasArtifactFingerprint(currentPdf)) {
     fail(`Generated PDF is stale. Run ${GENERATE_COMMAND}.`);
-  }
-
-  const unexpectedArtifacts = sourceBuildPaths.filter(existsSync);
-  if (unexpectedArtifacts.length > 0) {
-    fail(
-      `Unexpected résumé build artifacts: ${unexpectedArtifacts
-        .map(relativeProjectPath)
-        .join(', ')}. Run ${GENERATE_COMMAND}.`,
-    );
   }
 
   if (!validationFailed) {

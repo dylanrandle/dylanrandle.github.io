@@ -4,13 +4,15 @@ description: We distilled black-box reinforcement-learning policies into readabl
 date: 2019-12-15T16:01:00-05:00
 category: Projects
 tags: [reinforcement learning, imitation learning, interpretable machine learning, healthcare, harvard]
-image: /assets/images/interpretable-rl.webp
-previewImages:
-  - src: /assets/images/interpretable-rl-480w.webp
-    width: 480
-  - src: /assets/images/interpretable-rl.webp
-    width: 806
-imageAlt: Cumulative rewards of interpretable models trained with DAgger in an HIV simulator
+image:
+  src: /assets/images/interpretable-rl.webp
+  alt: Cumulative rewards of interpretable models trained with DAgger in an HIV simulator
+resume:
+  title: Interpretable Reinforcement Learning
+  description: Distilled black-box policies into readable decision sets using DAgger and quantified the interpretability-performance tradeoff in an HIV treatment simulator.
+links:
+  - label: Full project report
+    href: /assets/docs/interpretable-rl.pdf
 ---
 
 Reinforcement-learning agents can learn effective policies while making it difficult to understand why they choose a particular action. That is a serious limitation in a high-stakes setting such as healthcare, where a practitioner needs to inspect and trust a model's behavior.
@@ -33,5 +35,3 @@ DAgger substantially improved the learned policies because it addressed the dist
 This was a team project with Nam Luu Nhat and Nicholas Stern.
 
 We also released [`pynterp`](https://github.com/dylanrandle/pynterp), an open-source Python package providing some of the interpretable algorithms developed for this work, including decision sets.
-
-> Read the [full project report](/assets/docs/interpretable-rl.pdf).

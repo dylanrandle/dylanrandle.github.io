@@ -1,19 +1,20 @@
 import { z } from 'astro/zod';
+import { CONTENT_SECTIONS, contentDetailPath } from '../config.ts';
+import {
+  addDuplicateIssues,
+  contentId,
+  nonEmptyText,
+  rootRelativePath,
+} from './validation.ts';
 
-const nonEmptyText = z.string().trim().min(1);
 const nonEmptyTextList = z.array(nonEmptyText).min(1);
-const rootRelativePath = nonEmptyText
-  .regex(
-    /^\/(?!\/)/,
-    'Expected a root-relative path beginning with a single slash',
-  )
-  .refine((value) => !value.split('/').includes('..'), {
-    message: 'Root-relative paths cannot traverse parent directories',
-  });
-const projectPath = nonEmptyText.regex(
-  /^\/projects\/[a-z0-9]+(?:-[a-z0-9]+)*\/$/,
-  'Expected a canonical project path such as /projects/example/',
-);
+const projectPath = rootRelativePath.refine((value) => {
+  const id = value.slice(CONTENT_SECTIONS.projects.detailBase.length + 1, -1);
+  return (
+    contentId.safeParse(id).success &&
+    value === contentDetailPath(CONTENT_SECTIONS.projects, id)
+  );
+}, 'Expected a canonical project detail path');
 
 const roleSchema = z.object({
   title: nonEmptyText,
@@ -36,6 +37,7 @@ const educationSchema = z.object({
 });
 
 const publicationSchema = z.object({
+  id: contentId,
   title: nonEmptyText,
   href: projectPath,
   authors: nonEmptyText,
@@ -43,6 +45,8 @@ const publicationSchema = z.object({
 });
 
 const projectSchema = z.object({
+  id: contentId,
+  href: projectPath,
   title: nonEmptyText,
   date: nonEmptyText,
   description: nonEmptyText,
@@ -53,56 +57,52 @@ const skillSchema = z.object({
   value: nonEmptyText,
 });
 
-const addDuplicateIssues = (
-  values: readonly string[],
-  path: readonly PropertyKey[],
-  label: string,
-  context: z.RefinementCtx,
-) => {
-  const seen = new Set<string>();
+const resumeSchema = z.object({
+  summary: nonEmptyText,
+  experience: z.array(experienceSchema).min(1),
+  education: z.array(educationSchema).min(1),
+  skills: z.array(skillSchema).min(1),
+});
 
-  values.forEach((value, index) => {
-    const normalized = value.toLocaleLowerCase('en-US');
-    if (seen.has(normalized)) {
-      context.addIssue({
-        code: 'custom',
-        message: `Duplicate ${label}: ${value}`,
-        path: [...path, index],
-      });
-    }
-    seen.add(normalized);
-  });
-};
+// Authored profile data can refer to a publication without repeating its title.
+export const profileDataSchema = z.object({
+  name: nonEmptyText,
+  displayName: nonEmptyText,
+  email: z.email().trim(),
+  portrait: z.object({
+    src: rootRelativePath,
+    alt: nonEmptyText,
+  }),
+  links: z.object({
+    website: z.url().trim(),
+    github: z.url().trim(),
+    linkedin: z.url().trim(),
+    scholar: z.url().trim(),
+    cv: rootRelativePath,
+  }),
+  intro: z.object({
+    eyebrow: nonEmptyText,
+    headline: nonEmptyText,
+    detail: nonEmptyText,
+    aboutHeading: nonEmptyText,
+  }),
+  resume: resumeSchema.extend({
+    education: z
+      .array(
+        educationSchema.extend({
+          thesisPublicationId: contentId.optional(),
+        }),
+      )
+      .min(1),
+  }),
+});
 
-export const profileSchema = z
-  .object({
-    name: nonEmptyText,
-    displayName: nonEmptyText,
-    email: z.email().trim(),
-    portrait: z.object({
-      src: rootRelativePath,
-      alt: nonEmptyText,
-    }),
-    links: z.object({
-      website: z.url().trim(),
-      github: z.url().trim(),
-      linkedin: z.url().trim(),
-      scholar: z.url().trim(),
-      cv: rootRelativePath,
-    }),
-    intro: z.object({
-      eyebrow: nonEmptyText,
-      headline: nonEmptyText,
-      detail: nonEmptyText,
-      aboutHeading: nonEmptyText,
-    }),
-    resume: z.object({
-      summary: nonEmptyText,
-      experience: z.array(experienceSchema).min(1),
-      education: z.array(educationSchema).min(1),
+// The HTML résumé and PDF generator share this fully resolved contract.
+export const profileSchema = profileDataSchema
+  .extend({
+    resume: resumeSchema.extend({
       publications: z.array(publicationSchema).min(1),
       projects: z.array(projectSchema).min(1),
-      skills: z.array(skillSchema).min(1),
     }),
   })
   .superRefine((profile, context) => {
@@ -132,5 +132,5 @@ export const profileSchema = z
     );
   });
 
-export type ProfileInput = z.input<typeof profileSchema>;
+export type ProfileData = z.output<typeof profileDataSchema>;
 export type Profile = z.output<typeof profileSchema>;

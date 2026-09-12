@@ -1,0 +1,35 @@
+---
+import type { ContentRecord } from '../data/content-schema';
+import { profileData } from '../data/profile';
+import { formatProjectCredits } from '../lib/publications';
+
+interface Props {
+  entry: ContentRecord;
+}
+const { entry } = Astro.props;
+const credits = formatProjectCredits(
+  entry.data.publications,
+  profileData.displayName,
+);
+const { links } = entry.data;
+---
+
+{
+  (credits || links.length > 0) && (
+    <footer class="content-footer">
+      {credits && <p class="content-credits">{credits}</p>}
+      {links.length > 0 && (
+        <blockquote class="content-links">
+          <p>
+            {links.map((link, index) => (
+              <Fragment>
+                {index > 0 && ' · '}
+                <a href={link.href}>{link.label}</a>
+              </Fragment>
+            ))}
+          </p>
+        </blockquote>
+      )}
+    </footer>
+  )
+}

@@ -3,10 +3,10 @@ import sitemap from '@astrojs/sitemap';
 import { unified } from '@astrojs/markdown-remark';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
-import { profile } from './src/data/profile.ts';
+import { profileData } from './src/data/profile.ts';
 
 export default defineConfig({
-  site: profile.links.website,
+  site: profileData.links.website,
   integrations: [sitemap()],
   markdown: {
     processor: unified({

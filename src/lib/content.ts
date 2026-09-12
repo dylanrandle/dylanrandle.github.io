@@ -1,5 +1,5 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
-import { CONTENT_SECTIONS } from '../config';
+import { CONTENT_SECTIONS, type ContentCollection } from '../config';
 
 export type ContentEntry =
   CollectionEntry<'posts'> | CollectionEntry<'projects'>;
@@ -7,18 +7,16 @@ export type ContentEntry =
 const newestFirst = (a: ContentEntry, b: ContentEntry) =>
   b.data.date.valueOf() - a.data.date.valueOf();
 
-export const getPublishedPosts = async () =>
-  (
-    await getCollection(
-      CONTENT_SECTIONS.posts.collection,
-      ({ data }) => !data.draft,
-    )
-  ).sort(newestFirst);
+// Astro caches getStaticPaths() props, so keep asset-derived metadata out of
+// these entries. Cards and detail layouts resolve media when they render.
+export const getPublishedContent = async <T extends ContentCollection>(
+  collection: T,
+) =>
+  (await getCollection(collection, ({ data }) => !data.draft)).sort(
+    newestFirst,
+  );
 
-export const getPublishedProjects = async () =>
-  (
-    await getCollection(
-      CONTENT_SECTIONS.projects.collection,
-      ({ data }) => !data.draft,
-    )
-  ).sort(newestFirst);
+export const getPublishedPosts = () =>
+  getPublishedContent(CONTENT_SECTIONS.posts.collection);
+export const getPublishedProjects = () =>
+  getPublishedContent(CONTENT_SECTIONS.projects.collection);
