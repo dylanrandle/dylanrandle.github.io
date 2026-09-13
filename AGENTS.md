@@ -35,7 +35,8 @@ content changes.
 - `src/lib/site.ts`: Site identity and professional links derived directly from authored profile data.
 - `src/lib/resume.ts`: Validated content lookup and résumé assembly for HTML and PDF.
 - `src/lib/publications.ts`: Shared publication titles, author citations, and venue formatting.
-- `src/lib/media.ts`: Asset-derived preview metadata and dimensions.
+- `src/lib/media.ts`: Asset-derived image/video metadata and dimensions.
+- `src/lib/render-media.ts`: Shared responsive markup and article-media enhancement.
 - `src/data/profile-schema.ts`: Runtime validation for canonical profile data.
 - `src/layouts/` and `src/components/`: Shared page structure and presentation.
 - `src/styles/global.css`: Site tokens, layout, responsive behavior, and
@@ -108,20 +109,26 @@ npm run check:resume
 ## Image and video conventions
 
 - Keep the full-detail asset at an unsuffixed path such as `example.webp` or
-  `demo.mp4`. Name derived card media with its actual pixel width, such as
-  `example-480w.webp`, `example-960w.webp`, or `demo-960w.mp4`; the `w` makes
+  `demo.mp4`. Name derived media with its actual pixel width, such as
+  `example-480w.webp`, `example-720w.webp`, `example-960w.webp`, or `demo-960w.mp4`; the `w` makes
   explicit that the number is the pixel width. Do not use generic
   suffixes such as `-preview`.
 - Preview paths and width descriptors are derived from the assets; do not define
-  `previewImages`, `previewVideo`, or image dimensions in frontmatter. Generate a
-  480-pixel-wide WebP and, when the source is large enough, a 960-pixel-wide
-  WebP. Never upscale; reuse an already-small optimized source as the upper
-  candidate when appropriate.
+  `previewImages`, `previewVideos`, or image dimensions in frontmatter. Generate
+  480-, 720-, and 960-pixel-wide WebP variants when the source is large enough, using
+  `npm run media:generate`. Never upscale; reuse an already-small optimized
+  source as the upper candidate when appropriate. Use responsive variants on
+  cards, detail heroes, article images, and video posters.
 - Preserve animation frame count, timing, transparency, and looping when
   deriving previews from animated WebP sources.
 - Keep `video` pointed at the full-resolution detail asset. Its matching
-  `-960w.mp4` encode is discovered automatically for cards. Card video posters
-  use the largest derived image candidate.
+  `-480w.mp4`, `-720w.mp4`, and `-960w.mp4` encodes are discovered automatically
+  for cards, heroes, and inline videos. Use native source media queries that
+  account for layout width and pixel density. Generate missing encodes with
+  `npm run media:generate -- --videos`.
+  Derive video dimensions with `ffprobe` and reserve the actual video aspect
+  ratio before loading. Posters use responsive image overlays in that same
+  stable frame; do not force every viewport to download the largest poster.
 - Encode published MP4 files as H.264 High Profile with `yuv420p` pixel format
   and fast-start metadata. Preserve source frame rate, aspect ratio, and color
   tags; omit audio when the source is silent. The current balanced encode uses

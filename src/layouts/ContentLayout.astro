@@ -6,7 +6,9 @@ import Tags from '../components/Tags.astro';
 import type { ContentSection } from '../config';
 import type { ContentEntry } from '../lib/content';
 import { formatContentDate } from '../lib/dates';
-import { resolveContentMedia } from '../lib/media';
+import ContentMedia from '../components/ContentMedia.astro';
+import { renderArticleMedia } from '../lib/render-media';
+import mathStyles from 'katex/dist/katex.min.css?inline';
 
 interface Props {
   entry: ContentEntry;
@@ -15,7 +17,10 @@ interface Props {
 }
 const { entry, section, headings } = Astro.props;
 const { title, description, date, updated, tags, image, video } = entry.data;
-const { imageWidth, imageHeight } = await resolveContentMedia(entry.data);
+const articleMarkup = await renderArticleMedia(
+  await Astro.slots.render('default'),
+);
+const hasMath = articleMarkup.includes('class="katex');
 const eyebrow = entry.data.category ?? section.singularLabel;
 ---
 
@@ -25,6 +30,7 @@ const eyebrow = entry.data.category ?? section.singularLabel;
   image={image?.src}
   type="article"
 >
+  {hasMath && <style is:inline set:html={mathStyles} slot="head" />}
   <header class="page-header shell">
     <p class="eyebrow">{eyebrow}</p>
     <h1>{title}</h1>
@@ -42,33 +48,10 @@ const eyebrow = entry.data.category ?? section.singularLabel;
     {tags.length > 0 && <Tags tags={tags} />}
     <slot name="links" />
   </header>
-  {
-    video ? (
-      <video
-        class="article-hero"
-        muted
-        loop
-        playsinline
-        preload="auto"
-        poster={image?.src}
-        aria-label={image?.alt}
-        data-autoplay-video
-      >
-        <source src={video} type="video/mp4" />
-      </video>
-    ) : image ? (
-      <img
-        class:list={['article-hero', { cover: image.fit === 'cover' }]}
-        src={image.src}
-        alt={image.alt}
-        width={imageWidth}
-        height={imageHeight}
-      />
-    ) : null
-  }
+  {image && <ContentMedia image={image} video={video} context="hero" />}
   <div class="article-shell shell">
     <article class="prose">
-      <slot />
+      <Fragment set:html={articleMarkup} />
     </article>
     <TableOfContents headings={headings} />
   </div>

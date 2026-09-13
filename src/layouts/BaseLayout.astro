@@ -5,6 +5,9 @@ import {
   ROUTES,
   THEME,
   UI_LABELS,
+  HERO_MAX_HEIGHT_REM,
+  CARD_ASPECT_RATIO,
+  CARD_MIN_HEIGHT_REM,
 } from '../config';
 import '../styles/global.css';
 import { SITE } from '../lib/site';
@@ -31,6 +34,9 @@ const socialImage = new URL(image, SITE.url);
 const activePath = Astro.url.pathname;
 const themeVariables = `
   :root {
+    --hero-max-height: ${HERO_MAX_HEIGHT_REM}rem;
+    --card-aspect-ratio: ${CARD_ASPECT_RATIO};
+    --card-min-height: ${CARD_MIN_HEIGHT_REM}rem;
     --accent: ${THEME.light.accent};
     --accent-strong: ${THEME.light.accentStrong};
     --accent-soft: ${THEME.light.accentSoft};
@@ -71,6 +77,7 @@ const themeVariables = `
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImage} />
     <title>{pageTitle}</title>
+    <slot name="head" />
     <style is:inline set:html={themeVariables}></style>
     <script is:inline>
       const storedTheme = localStorage.getItem('theme');

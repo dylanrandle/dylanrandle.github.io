@@ -1,16 +1,19 @@
 ---
 import { profileData as profile } from '../data/profile';
-import { readImageMetadata } from '../lib/media';
+import { resolveContentMedia } from '../lib/media';
 
-const { width, height } = await readImageMetadata(profile.portrait.src);
+const { imageSrc, imageWidth, imageHeight } = await resolveContentMedia({
+  image: { ...profile.portrait, fit: 'cover' },
+});
 ---
 
 <div class="portrait">
   <img
-    src={profile.portrait.src}
+    src={imageSrc}
     alt={profile.portrait.alt}
-    width={width}
-    height={height}
+    width={imageWidth}
+    height={imageHeight}
+    fetchpriority="high"
   />
 </div>
 

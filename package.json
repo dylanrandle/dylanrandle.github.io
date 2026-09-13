@@ -19,6 +19,7 @@
     "check:links": "node scripts/check-internal-links.mjs dist",
     "format": "prettier --write .",
     "resume:generate": "node scripts/generate-resume.mjs",
+    "media:generate": "node scripts/generate-media.mjs",
     "setup:e2e": "playwright install --with-deps chromium"
   },
   "dependencies": {
@@ -26,15 +27,16 @@
     "@astrojs/sitemap": "latest",
     "astro": "latest",
     "katex": "latest",
+    "parse5": "^7.3.0",
     "rehype-katex": "latest",
-    "remark-math": "latest"
+    "remark-math": "latest",
+    "sharp": "latest"
   },
   "devDependencies": {
     "@astrojs/check": "latest",
     "@playwright/test": "latest",
     "prettier": "latest",
     "prettier-plugin-astro": "latest",
-    "sharp": "latest",
     "typescript": "latest",
     "vite": "latest"
   }

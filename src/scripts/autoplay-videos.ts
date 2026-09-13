@@ -9,7 +9,13 @@ export const initializeAutoplayVideos = () => {
   if (videos.length === 0) return;
 
   for (const video of videos) {
-    const revealLoadedFrame = () => video.removeAttribute('poster');
+    const revealLoadedFrame = () => {
+      video.removeAttribute('poster');
+      const poster = video.parentElement?.querySelector<HTMLImageElement>(
+        '[data-video-poster]',
+      );
+      if (poster) poster.hidden = true;
+    };
 
     if (video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
       revealLoadedFrame();

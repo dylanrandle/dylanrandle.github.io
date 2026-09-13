@@ -260,8 +260,7 @@ test('motion-focused projects use muted looping video previews and heroes', asyn
         return {
           id: entry.id,
           video: entry.data.video!,
-          previewVideo: media.previewVideo ?? entry.data.video!,
-          previewPoster: media.previewImages!.at(-1)!.src,
+          previewVideo: media.previewVideos?.[0]?.src ?? entry.data.video!,
         };
       }),
   );
@@ -282,17 +281,20 @@ test('motion-focused projects use muted looping video previews and heroes', asyn
     await expect(cardVideo).toHaveJSProperty('muted', true);
     await expect(cardVideo).toHaveJSProperty('loop', true);
 
-    const source = await cardVideo.locator('source').getAttribute('src');
+    const source = await cardVideo
+      .locator('source')
+      .first()
+      .getAttribute('src');
     expect(source).toBe(project.previewVideo);
-    expect(indexMarkup).toContain(`poster="${project.previewPoster}"`);
+    expect(indexMarkup).toContain('data-video-poster');
 
     await page.goto(detailPath);
-    const heroVideo = page.locator('video.article-hero');
+    const heroVideo = page.locator('.article-hero video');
     await expect(heroVideo).toBeVisible();
     await expect(heroVideo).toHaveJSProperty('muted', true);
     await expect(heroVideo).toHaveJSProperty('loop', true);
     await expect(heroVideo).toHaveJSProperty('controls', false);
-    await expect(heroVideo.locator('source')).toHaveAttribute(
+    await expect(heroVideo.locator('source').last()).toHaveAttribute(
       'src',
       project.video,
     );
@@ -322,47 +324,54 @@ test('loaded video previews show their first frame instead of the poster', async
         ),
       )
       .toBe(true);
-    await expect(video).not.toHaveAttribute('poster', /.+/);
+    await expect(
+      video.locator('..').locator('[data-video-poster]'),
+    ).toBeHidden();
     await expect(video).toHaveJSProperty('paused', true);
   }
 });
 
-test('all image cards use responsive preview assets', async ({ page }) => {
-  await page.setViewportSize({ width: 390, height: 844 });
-  for (const section of contentIndexes) {
-    const expectedImages = contentInventory[section.collection].filter(
-      ({ data }) => data.image && !data.video,
-    );
-    await page.goto(section.indexPath);
-    await expect(page.locator('.content-card img')).toHaveCount(
-      expectedImages.length,
-    );
-    for (const entry of expectedImages) {
-      const media = await resolveContentMedia(entry.data);
-      const cardImage = page.locator(
-        `.content-card > a[href="${contentDetailPath(section, entry.id)}"] img`,
+for (const width of [390, 1440]) {
+  test(`all image cards use visible responsive previews at ${width}px`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width, height: 844 });
+    for (const section of contentIndexes) {
+      const expectedImages = contentInventory[section.collection].filter(
+        ({ data }) => data.image && !data.video,
       );
-      await expect(cardImage).toHaveAttribute('alt', entry.data.image!.alt);
-      await expect(cardImage).toHaveAttribute('src', entry.data.image!.src);
-      await expect(cardImage).toHaveAttribute(
-        'srcset',
-        media
-          .previewImages!.map(({ src, width }) => `${src} ${width}w`)
-          .join(', '),
-      );
-      await expect(cardImage).toHaveAttribute('sizes', /.+/);
-      await cardImage.scrollIntoViewIfNeeded();
-      await expect
-        .poll(() =>
-          cardImage.evaluate((image: HTMLImageElement) => ({
-            path: image.currentSrc ? new URL(image.currentSrc).pathname : '',
-            loaded: image.complete && image.naturalWidth > 0,
-          })),
-        )
-        .toEqual({ path: media.previewImages![0].src, loaded: true });
+      await page.goto(section.indexPath);
+      await expect(
+        page.locator('.content-card img:not([data-video-poster])'),
+      ).toHaveCount(expectedImages.length);
+      for (const entry of expectedImages) {
+        const media = await resolveContentMedia(entry.data);
+        const cardImage = page.locator(
+          `.content-card > a[href="${contentDetailPath(section, entry.id)}"] img`,
+        );
+        await expect(cardImage).toHaveAttribute('alt', entry.data.image!.alt);
+        await expect(cardImage).toHaveAttribute('src', media.imageSrc!);
+        await expect(cardImage).toHaveAttribute(
+          'srcset',
+          media
+            .previewImages!.map(({ src, width }) => `${src} ${width}w`)
+            .join(', '),
+        );
+        await expect(cardImage).toHaveAttribute('sizes', /.+/);
+        await cardImage.scrollIntoViewIfNeeded();
+        await expect(cardImage).toBeVisible();
+        await expect
+          .poll(() =>
+            cardImage.evaluate((image: HTMLImageElement) => ({
+              path: image.currentSrc ? new URL(image.currentSrc).pathname : '',
+              loaded: image.complete && image.naturalWidth > 0,
+            })),
+          )
+          .toEqual({ path: media.previewImages![0].src, loaded: true });
+      }
     }
-  }
-});
+  });
+}
 
 test('project pages end with collaborator credits and inline resource links', async ({
   page,
@@ -409,7 +418,7 @@ test('Rubik project includes a separate inspection video', async ({ page }) => {
     contentDetailPath(CONTENT_SECTIONS.projects, 'rubiks-cube-robot'),
   );
 
-  const heroVideo = page.locator('video.article-hero');
+  const heroVideo = page.locator('.article-hero video');
   const inspectionVideo = page.locator('.prose video');
   await expect(heroVideo).toBeVisible();
   await expect(heroVideo).toHaveCSS('object-fit', 'contain');
@@ -426,9 +435,13 @@ test('Rubik project includes a separate inspection video', async ({ page }) => {
     )
     .toBe(true);
 
-  const heroSource = await heroVideo.locator('source').getAttribute('src');
+  const heroSource = await heroVideo
+    .locator('source')
+    .last()
+    .getAttribute('src');
   const inspectionSource = await inspectionVideo
     .locator('source')
+    .last()
     .getAttribute('src');
   expect(heroSource).toBeTruthy();
   expect(inspectionSource).toBeTruthy();

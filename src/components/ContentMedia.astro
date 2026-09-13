@@ -1,0 +1,14 @@
+---
+import type { ContentImage } from '../data/content-schema';
+import { renderMedia, type MediaContext } from '../lib/render-media';
+
+interface Props {
+  image: ContentImage;
+  video?: string;
+  context: MediaContext;
+}
+const { context, ...data } = Astro.props;
+const markup = await renderMedia(data, context);
+---
+
+<Fragment set:html={markup} />

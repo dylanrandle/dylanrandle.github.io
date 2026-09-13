@@ -15,7 +15,15 @@ detail pages.
 
 - Node.js 26 (see `.nvmrc`)
 - npm 11+
+- FFmpeg (`ffprobe` reads video dimensions during rendering; `ffmpeg` creates video variants)
 - TeX Live with `latexmk` when regenerating the résumé PDF
+
+Packages used to build and render the website belong in `dependencies`,
+following [Astro's dependency guidance](https://docs.astro.build/en/basics/project-structure/#packagejson).
+This includes Markdown, math, HTML, and image processing. Type-checking,
+formatting, browser testing, and the test preview server belong in
+`devDependencies`. Local development and CI validation install both groups;
+deployment publishes only the generated `dist/` files.
 
 ## Local development
 
@@ -170,20 +178,48 @@ image:
 
 `image.src` points to the full-detail asset, and `image.alt` is required.
 An optional `video` still points directly to the full-resolution video file.
-The image serves as the video's detail-page poster and supplies its accessible
-description. Preview paths and dimensions are derived from the assets.
+The image supplies the video's responsive poster and accessible description.
+Paths and dimensions are derived from the assets.
 
 `src/lib/media.ts` derives responsive metadata from the files at render time.
-It discovers `example-480w.webp` and `example-960w.webp`, reads their actual
-dimensions, checks aspect ratios and animation metadata, and reuses a smaller
-original as the upper candidate without upscaling. A matching `demo-960w.mp4`
-is used on cards when present; otherwise the full video is used. Card posters
-use the largest image candidate. Do not author `previewImages`, `previewVideo`,
-or dimensions in frontmatter. Generate the required image variants when adding
-an image. Existing media files are inspected, never re-encoded during builds.
-Cards and detail layouts resolve media during each render. Derived metadata is
-kept out of Astro's Markdown cache and cached `getStaticPaths()` props, so replacing
-an asset does not leave stale dimensions in a later build or development render.
+It discovers `example-480w.webp`, `example-720w.webp`, and `example-960w.webp`,
+checks their dimensions, aspect ratios, and animation metadata, and reuses a
+smaller original without upscaling. A same-size WebP beside a JPEG/PNG is used
+for the website; the authored source stays available for uses such as the TeX
+résumé and social metadata.
+
+`src/lib/render-media.ts` supplies shared markup for cards, detail heroes, and
+local images and autoplay videos in article bodies. Detail images can select
+the original as well as the derived sizes. Lazy card images use their actual
+display width via `sizes="auto"`; detail images use predictable layout hints
+from `src/config.ts`, which also supplies fallbacks for cards.
+Contained images are sized to their visible area, including the hero height cap.
+Video posters use a responsive image overlay until the first video frame is
+available. Frames reserve the video's actual aspect ratio before either asset
+loads, preventing the poster-to-video transition from shifting the article.
+
+A matching set of `demo-480w.mp4`, `demo-720w.mp4`, and `demo-960w.mp4` is
+discovered for cards, heroes, and inline videos. Native `<source media>` rules
+select a version for the layout width and display density before downloading;
+selection needs no JavaScript. Cover videos also account for the video's aspect
+ratio and the card's minimum height, including the mobile card aspect ratio.
+Cards cap at the largest derived version, and
+details retain the original as a fallback. Videos retain eager preload, muted looping playback, viewport
+awareness, reduced-motion support, and disabled native controls.
+
+Do not author `previewImages`, `previewVideos`, or dimensions in frontmatter.
+Generate the image variants and any missing video variants explicitly:
+
+```sh
+npm run media:generate
+npm run media:generate -- --videos
+```
+
+Builds inspect assets without re-encoding them. Both the detail hero and rendered
+article slot resolve media on every render. Metadata stays out of Astro's
+Markdown cache and cached `getStaticPaths()` props, so replacing an asset does
+not leave stale dimensions. Math styles are included only on articles containing
+rendered equations, keeping them out of the homepage and non-math articles.
 
 ## Routes and project structure
 

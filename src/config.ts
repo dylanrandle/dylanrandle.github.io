@@ -74,6 +74,71 @@ export const PROFILE_LINK_GROUPS = {
   resume: ['website', 'linkedin', 'github', 'scholar'],
 } as const;
 
-export const CARD_IMAGE_SIZES =
-  '(max-width: 600px) calc(100vw - 1.5rem), (max-width: 1200px) 30vw, 348px';
-export const PREVIEW_WIDTHS = [480, 960] as const;
+export const MEDIA_IMAGE_SIZES = {
+  card: [
+    ['(max-width: 600px)', 'calc(100vw - 1.5rem - 2px)'],
+    ['(max-width: 1200px)', 'max(12rem, calc((100vw - 2.5rem - 2px) * 0.3))'],
+    ['', '347.4px'],
+  ],
+  hero: [
+    ['(max-width: 600px)', 'calc(100vw - 1.5rem - 2px)'],
+    ['', 'min(1158px, calc(100vw - 2.5rem - 2px))'],
+  ],
+  article: [
+    ['(max-width: 600px)', 'calc(100vw - 1.5rem - 2px)'],
+    ['(max-width: 820px)', 'calc(100vw - 2.5rem - 2px)'],
+    [
+      '',
+      'min(758px, calc(100vw - 2.5rem - 11rem - clamp(2.5rem, 6vw, 6rem) - 2px))',
+    ],
+  ],
+} as const;
+export const HERO_MAX_HEIGHT_REM = 38;
+export const CARD_ASPECT_RATIO = 16 / 9;
+export const CARD_MIN_HEIGHT_REM = 13;
+export const PREVIEW_WIDTHS = [480, 720, 960] as const;
+
+// Video sources have no srcset. Match the layout's available width at common
+// pixel densities, rounding density up so intermediate displays stay sharp.
+export const videoSourceMedia = (
+  width: number,
+  context: keyof typeof MEDIA_IMAGE_SIZES,
+  aspectRatio: number,
+  fit: 'contain' | 'cover',
+) =>
+  [1, 1.5, 1.75, 2, 3]
+    .flatMap((density) => {
+      const slot = width / density;
+      const resolution = `(max-resolution: ${density}dppx)`;
+      const mobileSlot =
+        context === 'card' && fit === 'cover'
+          ? slot / Math.max(1, aspectRatio / CARD_ASPECT_RATIO)
+          : slot;
+      const mobile = `(max-width: 600px) and (max-width: calc(${mobileSlot}px + 1.5rem + 2px))`;
+      const desktop = `(min-width: 600.01px) and (max-width: calc(${slot}px + 2.5rem + 2px))`;
+      const layouts = [mobile];
+      if (context === 'card') {
+        // Desktop cards occupy 30% of the capped page width, at least 12rem.
+        // Cover can scale past that width to fill the 13rem minimum height.
+        // Use the same height as the layout (with the default 16px rem).
+        const minimumWidth =
+          fit === 'cover' ? CARD_MIN_HEIGHT_REM * 16 * aspectRatio : 0;
+        if (slot >= minimumWidth)
+          layouts.push(
+            slot >= 347.4
+              ? '(min-width: 600.01px)'
+              : `(min-width: 600.01px) and (max-width: calc(${slot / 0.3}px + 2.5rem + 2px))`,
+          );
+      } else if (context === 'article') {
+        layouts.push(`${desktop} and (max-width: 820px)`);
+        layouts.push(
+          slot >= 758
+            ? '(min-width: 820.01px)'
+            : `(min-width: 820.01px) and (max-width: calc(${slot}px + 2.5rem + 11rem + clamp(2.5rem, 6vw, 6rem) + 2px))`,
+        );
+      } else {
+        layouts.push(slot >= 1158 ? '(min-width: 600.01px)' : desktop);
+      }
+      return layouts.map((layout) => `${resolution} and ${layout}`);
+    })
+    .join(', ');
