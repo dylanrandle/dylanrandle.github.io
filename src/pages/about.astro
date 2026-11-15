@@ -38,8 +38,8 @@ const {
       <a href="#experience">Experience</a>
       <a href="#education">Education</a>
       <a href="#publications">Publications</a>
-      {invitedTalks.length > 0 && <a href="#invited-talks">Invited talks</a>}
       <a href="#projects">Projects</a>
+      {invitedTalks.length > 0 && <a href="#invited-talks">Invited talks</a>}
       <a href="#skills">Technical skills</a>
     </nav>
 
@@ -117,23 +117,6 @@ const {
         </ol>
       </section>
 
-      {
-        invitedTalks.length > 0 && (
-          <section class="resume-section" id="invited-talks">
-            <h2>Invited talks</h2>
-            <ol class="talk-list">
-              {invitedTalks.map((talk) => (
-                <li>
-                  <h3>{talk.host}</h3>
-                  <p>{talk.topic}</p>
-                  <span>{talk.period}</span>
-                </li>
-              ))}
-            </ol>
-          </section>
-        )
-      }
-
       <section class="resume-section" id="projects">
         <p class="eyebrow">Projects</p>
         <h2>Systems and experiments.</h2>
@@ -151,6 +134,23 @@ const {
           }
         </ol>
       </section>
+
+      {
+        invitedTalks.length > 0 && (
+          <section class="resume-section" id="invited-talks">
+            <h2>Invited talks</h2>
+            <ol class="talk-list">
+              {invitedTalks.map((talk) => (
+                <li>
+                  <h3>{talk.host}</h3>
+                  <p>{talk.topic}</p>
+                  <span>{talk.period}</span>
+                </li>
+              ))}
+            </ol>
+          </section>
+        )
+      }
 
       <section class="resume-section" id="skills">
         <p class="eyebrow">Technical skills</p>

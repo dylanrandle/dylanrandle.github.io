@@ -118,12 +118,12 @@
 <<PUBLICATIONS>>
 \resumeItemListEnd
 
-<<INVITED_TALKS>>
-
 \section{Projects}
 \resumeItemListStart
 <<PROJECTS>>
 \resumeItemListEnd
+
+<<INVITED_TALKS>>
 
 \section{Technical Skills}
 \resumeItemListStart
