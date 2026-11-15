@@ -1,4 +1,5 @@
 ---
+import { getEntry } from 'astro:content';
 import ContentDetail from '../../components/ContentDetail.astro';
 import { getPublishedPosts } from '../../lib/content';
 import { CONTENT_SECTIONS } from '../../config';
@@ -6,10 +7,12 @@ import { CONTENT_SECTIONS } from '../../config';
 export async function getStaticPaths() {
   return (await getPublishedPosts()).map((entry) => ({
     params: { slug: entry.id },
-    props: { entry },
+    props: { id: entry.id },
   }));
 }
-const { entry } = Astro.props;
+const { id } = Astro.props;
+const entry = await getEntry(CONTENT_SECTIONS.posts.collection, id);
+if (!entry) throw new Error(`Post not found: ${id}`);
 ---
 
 <ContentDetail entry={entry} section={CONTENT_SECTIONS.posts} />

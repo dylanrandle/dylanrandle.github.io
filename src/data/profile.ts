@@ -18,6 +18,10 @@ export const resumeSelection = {
     'automatic-differentiation-from-scratch',
   ],
   publications: [
+    'anchorq',
+    'agent-guided-robot-rl',
+    'uniwalm',
+    'compact-wam',
     'multimodal-multi-suction-picking',
     'must-skill-transformer',
     'learning-object-properties-proprioception',
@@ -144,6 +148,18 @@ export const profileData = profileDataSchema.parse({
           'Inducted into Phi Beta Kappa, Tau Beta Pi, and Alpha Pi Mu.',
           'Coursework focused on statistics and optimization.',
         ],
+      },
+    ],
+    invitedTalks: [
+      {
+        host: 'MIT Breakthrough Tech',
+        topic: 'Machine Learning in Robotic Manipulation and Perception',
+        period: 'June 2023 and June 2024',
+      },
+      {
+        host: 'Harvard IACS Seminar',
+        topic: 'Machine Learning in Robotic Manipulation and Perception',
+        period: 'April 2023',
       },
     ],
     skills: [

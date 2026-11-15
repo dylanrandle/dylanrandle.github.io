@@ -26,7 +26,7 @@ publications:
     kind: conference
     venue: ICML
     year: 2022
-    track: AI for Science
+    track: AI4Science Workshop
   - id: differential-equations-arxiv-2020
     title: Unsupervised Learning of Solutions to Differential Equations with Generative Adversarial Networks
     authors:

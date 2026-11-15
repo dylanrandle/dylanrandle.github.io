@@ -198,6 +198,15 @@ test('About renders the canonical résumé and offers its PDF', async ({
       ]),
     },
     {
+      name: 'invited talks',
+      locator: page.locator('#invited-talks'),
+      values: profile.resume.invitedTalks.flatMap((talk) => [
+        talk.host,
+        talk.topic,
+        talk.period,
+      ]),
+    },
+    {
       name: 'projects',
       locator: page.locator('#projects'),
       values: profile.resume.projects.flatMap((project) => [

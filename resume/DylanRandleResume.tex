@@ -3,8 +3,8 @@
 % Edit project and publication content in src/content/projects/*.md.
 % Regenerate with npm run resume:generate.
 % The generated output is written to resume/DylanRandleResume.tex.
-% Profile SHA-256: 74b121b7053a3d3c80f125a75310dd2fdab4751be14e2c64434c1ed39b26e0dd
-% Artifact SHA-256: 0b737a20bc1ec6797507d5e3c5a5e1a9a570218c2be05622a6baf21eea07e90c
+% Profile SHA-256: 84ec648cb837cd8b443637d699c013b7c778ba86cdd75a2f5ae7b8d1f6972849
+% Artifact SHA-256: 245d03e43f14275061c6ab4fc5a9c363808ca872b70eb650b548a901fcbe0351
 \documentclass[a4paper,11pt]{article}
 \usepackage{titlesec}
 \usepackage{xcolor}
@@ -30,7 +30,7 @@
 \hypersetup{
   pdftitle={Dylan L Randle Resume},
   pdfauthor={Dylan L Randle},
-  pdfsubject={profile-sha256:74b121b7053a3d3c80f125a75310dd2fdab4751be14e2c64434c1ed39b26e0dd;artifact-sha256:0b737a20bc1ec6797507d5e3c5a5e1a9a570218c2be05622a6baf21eea07e90c}
+  pdfsubject={profile-sha256:84ec648cb837cd8b443637d699c013b7c778ba86cdd75a2f5ae7b8d1f6972849;artifact-sha256:245d03e43f14275061c6ab4fc5a9c363808ca872b70eb650b548a901fcbe0351}
 }
 \urlstyle{same}
 \pagestyle{fancy}
@@ -48,6 +48,7 @@
 
 \titleformat{\section}
   {\scshape\large}{}{0em}{\color{resumeaccent}}[\color{black}\titlerule\vspace{0pt}]
+\titlespacing*{\section}{0pt}{10pt}{4pt}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand{\ULdepth}{2pt}
 
@@ -55,7 +56,7 @@
   \item\small{#1}
 }
 \newcommand{\resumeItemListStart}{
-  \begin{itemize}[rightmargin=0.11in, itemsep=2pt, topsep=4pt, parsep=0pt, partopsep=0pt]
+  \begin{itemize}[rightmargin=0.11in, itemsep=1.5pt, topsep=4pt, parsep=0pt, partopsep=0pt]
 }
 \newcommand{\resumeItemListEnd}{\end{itemize}}
 \newcommand{\resumeQuadHeading}[4]{
@@ -147,11 +148,6 @@
       \resumeItem{Recognized with Scholarship in Applied Computation and Distinction in Teaching.}
       \resumeItem{Research and coursework focused on machine learning.}
     \resumeItemListEnd
-\resumeHeadingListEnd
-
-\newpage
-\section{Education (continued)}
-\resumeHeadingListStart
   \resumeQuadHeading{University of California, Berkeley}{Berkeley, CA, USA}{Bachelor of Science in Industrial Engineering \& Operations Research \textperiodcentered{} GPA 3.9}{Aug 2012--May 2016}
     \resumeItemListStart
       \resumeItem{Graduated with High Honors (magna cum laude) and received the Frank Kraft Award.}
@@ -160,15 +156,26 @@
     \resumeItemListEnd
 \resumeHeadingListEnd
 
+\newpage
 \section{Publications}
 \resumeItemListStart
+      \resumeItem{\textbf{Sample-Efficient Reinforcement Learning for Policy Improvement via Flow-Reversed Action Anchors} C. Qi, W. Dong, X. Wang, P. Chen, R. Sajnani, M. Zhang, A. Zhang, J. Barreiros, M. Nambi, L. J. Ratliff, D. Randle. Preprint, 2026.}
+      \resumeItem{\textbf{Agent-Guided Reinforcement Learning for Robot Policy Improvement} W. Dong, C. Qi, M. Zhang, M. Nambi, L. J. Ratliff, J. Vanbaar, D. Randle, J. Barreiros. CoRL 2026, R2RL Workshop.}
+      \resumeItem{\textbf{UniWALM: Unified World Action Language Model for Embodied Robot Control} R. Sajnani, D. Romeres, M. Zhang, K. Gao, C. Qi, B. Huang, S. Sridhar, D. Randle, L. J. Ratliff, J. Barreiros, M. Nambi, J. Vanbaar. Preprint, 2026.}
+      \resumeItem{\textbf{Predicting What Matters: Interaction-Centric 4D World-Action Models} L. Ye, B. Huang, K. Gao, R. Ye, D. Randle, J. Vanbaar, A. Yuille, M. Nambi, J. Barreiros. Preprint, 2026.}
       \resumeItem{\textbf{Demonstrating Multi-Suction Item Picking at Scale via Multi-Modal Learning of Pick Success} C. Wang, J. van Baar, C. Mitash, S. Li, D. Randle, W. Wang, S. Sontakke, K. E. Bekris, K. Katyal. RSS 2025.}
       \resumeItem{\textbf{MuST: Multi-Head Skill Transformer for Long-Horizon Dexterous Manipulation with Skill Progress} K. Gao, F. Wang, E. Aduh, D. Randle, J. Shi. ICRA 2025.}
       \resumeItem{\textbf{Learning Object Properties Using Robot Proprioception via Differentiable Robot-Object Interaction} P. Y. Chen, C. Liu, P. Ma, J. Eastman, D. Rus, D. Randle, Y. Ivanov, W. Matusik. ICRA 2025.}
       \resumeItem{\textbf{Avoiding Object Damage in Robotic Manipulation} E. Aduh, F. Wang, D. Randle, K. Wang, P. Shah, C. Mitash, M. Nambi. IROS 2024.}
-      \resumeItem{\textbf{DEQGAN: Learning the Loss Function for PINNs with Generative Adversarial Networks} B. Bullwinkel*, D. Randle*, P. Protopapas, D. Sondak. ICML 2022, AI for Science \textperiodcentered{} Equal contribution.}
+      \resumeItem{\textbf{DEQGAN: Learning the Loss Function for PINNs with Generative Adversarial Networks} B. Bullwinkel*, D. Randle*, P. Protopapas, D. Sondak. ICML 2022, AI4Science Workshop \textperiodcentered{} Equal contribution.}
       \resumeItem{\textbf{Unsupervised Learning of Solutions to Differential Equations with Generative Adversarial Networks} D. Randle, P. Protopapas, D. Sondak. arXiv:2007.11133 \textperiodcentered{} 2020.}
       \resumeItem{\textbf{Unsupervised Neural Network Methods for Solving Differential Equations} D. Randle. Master's thesis, Harvard University \textperiodcentered{} 2020.}
+\resumeItemListEnd
+
+\section{Invited Talks}
+\resumeItemListStart
+      \resumeItem{\textbf{MIT Breakthrough Tech} (June 2023 and June 2024). Machine Learning in Robotic Manipulation and Perception.}
+      \resumeItem{\textbf{Harvard IACS Seminar} (April 2023). Machine Learning in Robotic Manipulation and Perception.}
 \resumeItemListEnd
 
 \section{Projects}

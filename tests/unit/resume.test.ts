@@ -117,6 +117,7 @@ test('one project can supply multiple publications with their own titles, years,
           },
         ],
         track: 'AI for Science',
+        status: 'Selected for a workshop poster. Under review elsewhere',
       }),
       paper('preprint', {
         title: 'Earlier paper',

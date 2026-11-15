@@ -57,10 +57,17 @@ const skillSchema = z.object({
   value: nonEmptyText,
 });
 
+const invitedTalkSchema = z.object({
+  host: nonEmptyText,
+  topic: nonEmptyText,
+  period: nonEmptyText,
+});
+
 const resumeSchema = z.object({
   summary: nonEmptyText,
   experience: z.array(experienceSchema).min(1),
   education: z.array(educationSchema).min(1),
+  invitedTalks: z.array(invitedTalkSchema).default([]),
   skills: z.array(skillSchema).min(1),
 });
 

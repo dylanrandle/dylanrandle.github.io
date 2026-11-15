@@ -11,13 +11,25 @@ const credits = formatProjectCredits(
   entry.data.publications,
   profileData.displayName,
 );
-const { links } = entry.data;
+const { links, publications } = entry.data;
+const statusNotes = publications.flatMap(({ title, status }) =>
+  status
+    ? [
+        publications.length > 1
+          ? `${title ?? entry.data.title} — ${status}`
+          : status,
+      ]
+    : [],
+);
 ---
 
 {
-  (credits || links.length > 0) && (
+  (credits || statusNotes.length > 0 || links.length > 0) && (
     <footer class="content-footer">
       {credits && <p class="content-credits">{credits}</p>}
+      {statusNotes.map((note) => (
+        <p>{note}.</p>
+      ))}
       {links.length > 0 && (
         <blockquote class="content-links">
           <p>

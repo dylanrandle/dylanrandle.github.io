@@ -29,6 +29,8 @@ export const publicationSchema = z.strictObject({
   venue: nonEmptyText,
   year: z.number().int().positive(),
   track: nonEmptyText.optional(),
+  status: nonEmptyText.optional(),
+  resumeVenue: nonEmptyText.optional(),
 });
 
 export const contentSchema = z

@@ -164,6 +164,14 @@ const renderProjects = () =>
     )
     .join('\n');
 
+const renderInvitedTalks = () =>
+  profile.resume.invitedTalks
+    .map(
+      (talk) =>
+        `      \\resumeItem{\\textbf{${escapeLatex(talk.host)}} (${escapeLatex(talk.period)}). ${escapeLatex(talk.topic)}.}`,
+    )
+    .join('\n');
+
 const renderSkills = () =>
   profile.resume.skills
     .map(
@@ -201,7 +209,6 @@ const renderTemplate = (source, values) => {
   return source.replace(TEMPLATE_TOKEN_PATTERN, (_, token) => values[token]);
 };
 
-const [firstEducation, ...remainingEducation] = profile.resume.education;
 const tex = renderTemplate(templateSource, {
   GENERATOR_PATH: relativeProjectPath(paths.generator),
   TEMPLATE_PATH: relativeProjectPath(paths.template),
@@ -221,9 +228,14 @@ const tex = renderTemplate(templateSource, {
   SUMMARY: escapeLatex(profile.resume.summary),
   PORTRAIT_PATH: portraitTexPath,
   EXPERIENCE: renderExperience(),
-  FIRST_EDUCATION: renderEducationEntry(firstEducation),
-  REMAINING_EDUCATION: remainingEducation.map(renderEducationEntry).join('\n'),
+  EDUCATION: profile.resume.education.map(renderEducationEntry).join('\n'),
   PUBLICATIONS: renderPublications(),
+  INVITED_TALKS: profile.resume.invitedTalks.length
+    ? `\\section{Invited Talks}
+\\resumeItemListStart
+${renderInvitedTalks()}
+\\resumeItemListEnd`
+    : '',
   PROJECTS: renderProjects(),
   SKILLS: renderSkills(),
 });

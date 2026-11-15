@@ -6,8 +6,15 @@ import { getProfile } from '../lib/resume';
 
 const profile = getProfile();
 
-const { education, experience, projects, publications, skills, summary } =
-  profile.resume;
+const {
+  education,
+  experience,
+  invitedTalks,
+  projects,
+  publications,
+  skills,
+  summary,
+} = profile.resume;
 ---
 
 <BaseLayout title={ROUTES.about.label} description={profile.intro.headline}>
@@ -31,6 +38,7 @@ const { education, experience, projects, publications, skills, summary } =
       <a href="#experience">Experience</a>
       <a href="#education">Education</a>
       <a href="#publications">Publications</a>
+      {invitedTalks.length > 0 && <a href="#invited-talks">Invited talks</a>}
       <a href="#projects">Projects</a>
       <a href="#skills">Technical skills</a>
     </nav>
@@ -108,6 +116,23 @@ const { education, experience, projects, publications, skills, summary } =
           }
         </ol>
       </section>
+
+      {
+        invitedTalks.length > 0 && (
+          <section class="resume-section" id="invited-talks">
+            <h2>Invited talks</h2>
+            <ol class="talk-list">
+              {invitedTalks.map((talk) => (
+                <li>
+                  <h3>{talk.host}</h3>
+                  <p>{talk.topic}</p>
+                  <span>{talk.period}</span>
+                </li>
+              ))}
+            </ol>
+          </section>
+        )
+      }
 
       <section class="resume-section" id="projects">
         <p class="eyebrow">Projects</p>
@@ -248,6 +273,7 @@ const { education, experience, projects, publications, skills, summary } =
   .role-heading > span,
   .project-list span,
   .publication-list span,
+  .talk-list span,
   .period {
     color: var(--muted);
     font-family: var(--mono);
@@ -277,6 +303,7 @@ const { education, experience, projects, publications, skills, summary } =
   }
 
   .publication-list,
+  .talk-list,
   .project-list {
     margin: 0;
     padding: 0;
@@ -284,17 +311,20 @@ const { education, experience, projects, publications, skills, summary } =
   }
 
   .publication-list > li,
+  .talk-list > li,
   .project-list > li {
     padding-block: 1.25rem;
     border-top: 1px solid var(--line);
   }
 
   .publication-list > li:last-child,
+  .talk-list > li:last-child,
   .project-list > li:last-child {
     border-bottom: 1px solid var(--line);
   }
 
   .publication-list h3,
+  .talk-list h3,
   .project-list h3 {
     font-size: 1.05rem;
   }
@@ -309,6 +339,7 @@ const { education, experience, projects, publications, skills, summary } =
   }
 
   .publication-list p,
+  .talk-list p,
   .project-list p {
     margin: 0.45rem 0 0.25rem;
     color: var(--muted);

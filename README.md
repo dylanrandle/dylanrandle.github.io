@@ -95,6 +95,11 @@ consistent while adapting the voice and emphasis to each audience.
 Research entries contain a `publications` array. Each publication has a globally
 unique `id`, formal `title` (defaults to the project title), `authors`, `kind`
 (`conference`, `preprint`, or `thesis`), `venue`, `year`, and optional `track`.
+For workshop papers, use the host conference as `venue` and name the workshop
+in `track` (for example, `CoRL` and `R2RL Workshop`). The research article
+footer uses the optional `status` for poster selections and ongoing reviews.
+Use `resumeVenue` to override the formatted venue on the résumé, for example
+with `under review`.
 Each author defines a full `name` and abbreviated `citation`,
 with optional `role` (`lead` or `advisor`) and `equalContribution`. Article
 endings use these records for a short collaborator sentence, preserving lead,
@@ -127,7 +132,9 @@ membership; article dates control index order.
 
 `src/data/profile.ts` is the editing surface for personal information. Its
 `profileData` contains identity, introduction, professional links, employment,
-education, and skills. It contains no file loading or résumé assembly logic.
+education, invited talks, and skills. It contains no file loading or résumé assembly logic.
+Each invited talk records its host, topic, and period. Repeat invitations can
+share one entry listing both dates.
 An education entry can use `thesisPublicationId` to draw its thesis title from
 Markdown instead of repeating that title.
 
@@ -231,6 +238,8 @@ It has no dependency on the profile. `src/lib/site.ts` derives site identity and
 professional-link presentation directly from `profileData`, so rendering a
 footer, portrait, or introduction does not need to load project Markdown.
 `ContentDetail` and `ContentIndexLayout` share project/blog page wiring;
+detail routes cache entry IDs and read the current content when rendering, so
+frontmatter edits appear in the development preview.
 `ContentFooter` renders the compact collaborator-and-links ending, and
 `ProfileLinks` shares the home/footer link rendering. Tests derive the expected
 content inventory from Markdown and independently check rendered routes, media

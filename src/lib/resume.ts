@@ -70,7 +70,7 @@ export const createProjectCatalog = (entries: ContentRecord[]) => {
           title: entry.title,
           href: entry.href,
           authors: entry.citationAuthors,
-          venue: entry.citationVenue,
+          venue: entry.resumeVenue ?? entry.citationVenue,
         })),
     projects: (ids: readonly string[]) =>
       selectProjects(ids, project, 'projects').map(({ id, data }) => ({
