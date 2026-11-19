@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test';
+import { loadEnv } from 'vite';
 import {
   CONTENT_SECTIONS,
   contentDetailPath,
@@ -14,9 +15,15 @@ import { resolveContentMedia } from '../../src/lib/media.ts';
 
 const profile = getProfile();
 
+const showDrafts =
+  loadEnv('production', process.cwd(), 'SHOW_DRAFTS').SHOW_DRAFTS === 'true';
 const contentInventory = {
-  projects: readContentEntries('projects').filter(({ data }) => !data.draft),
-  posts: readContentEntries('posts').filter(({ data }) => !data.draft),
+  projects: readContentEntries('projects').filter(
+    ({ data }) => showDrafts || !data.draft,
+  ),
+  posts: readContentEntries('posts').filter(
+    ({ data }) => showDrafts || !data.draft,
+  ),
 };
 
 const topLevelPages = [

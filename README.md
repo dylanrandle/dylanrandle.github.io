@@ -33,6 +33,8 @@ npm run dev
 ```
 
 The development server is available at `http://localhost:4321` by default.
+Draft projects and posts are hidden by default. Run `SHOW_DRAFTS=true npm run dev` to preview them locally. For a static build that includes drafts, run `SHOW_DRAFTS=true npm run build`.
+
 Install Playwright's managed Chromium browser once before running the complete
 validation suite:
 
