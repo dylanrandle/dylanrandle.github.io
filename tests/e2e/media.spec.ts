@@ -186,12 +186,14 @@ for (const width of [601, 700, 900, 1440]) {
         const pathname = new URL(request.url()).pathname;
         if (pathname.endsWith('.mp4')) requested.add(pathname);
       });
-      await page.goto(ROUTES.home.href);
+      // The full index includes both videos regardless of homepage features.
+      await page.goto(ROUTES.projects.href);
       for (const [path, filename] of [
         [golfPath, 'golf-cv-960w.mp4'],
         [cubePath, 'rubiks-cube-robot-solve-720w.mp4'],
       ]) {
         const video = page.locator(`.content-card > a[href="${path}"] video`);
+        await expect(video).toHaveCount(1);
         await expect
           .poll(() =>
             video.evaluate((element: HTMLVideoElement) =>
