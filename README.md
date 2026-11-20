@@ -3,8 +3,8 @@
 Dylan Randle's personal portfolio is a static TypeScript site deployed to
 GitHub Pages. Its primary pages are:
 
-- Home introduces Dylan and highlights all projects and research.
-- Projects provides a dedicated index of the same project collection.
+- Home introduces Dylan and highlights selected projects and research in the order listed in `src/pages/index.astro`.
+- Projects provides the full project index, newest first.
 - Blog contains essays and notes.
 - About renders the full résumé as HTML.
 
@@ -63,8 +63,7 @@ Every individual validation command follows the `check:<area>` convention:
 
 Content placement determines where an entry is listed and routed:
 
-- `src/content/projects/` contains project and research entries. They appear on
-  Home and Projects at `/projects/<slug>/`.
+- `src/content/projects/` contains project and research entries. Each published entry appears in the Projects index and has a detail page at `/projects/<slug>/`.
 - `src/content/posts/` contains the essays and notes shown on Blog at
   `/posts/<slug>/`.
 

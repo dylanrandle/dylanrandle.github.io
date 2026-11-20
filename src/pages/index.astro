@@ -5,9 +5,19 @@ import ProfileLinks from '../components/ProfileLinks.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { profileData as profile } from '../data/profile';
 import { getPublishedProjects } from '../lib/content';
-import { CONTENT_SECTIONS, ROUTES, UI_LABELS } from '../config';
+import { CONTENT_SECTIONS, ROUTES } from '../config';
 
+const featuredProjectIds = [
+  'anchorq',
+  'rubiks-cube-robot',
+  'agent-guided-robot-rl',
+  'uniwalm',
+  'compact-wam',
+];
 const projects = await getPublishedProjects();
+const featuredProjects = featuredProjectIds
+  .map((id) => projects.find((project) => project.id === id))
+  .filter((project) => project !== undefined);
 ---
 
 <BaseLayout>
@@ -29,11 +39,12 @@ const projects = await getPublishedProjects();
   </section>
 
   <section class="projects-section shell" aria-labelledby="projects-heading">
-    <h2 class="projects-heading" id="projects-heading">
-      {UI_LABELS.projectsAndResearch}
-    </h2>
+    <header class="projects-header">
+      <h2 id="projects-heading">Featured projects &amp; research</h2>
+      <a class="button" href={ROUTES.projects.href}>View all</a>
+    </header>
     <ContentList
-      entries={projects}
+      entries={featuredProjects}
       section={CONTENT_SECTIONS.projects}
       headingLevel="h3"
     />
@@ -90,8 +101,16 @@ const projects = await getPublishedProjects();
     padding-bottom: clamp(5rem, 9vw, 8rem);
   }
 
-  .projects-heading {
+  .projects-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
     margin-bottom: 1.75rem;
+  }
+
+  .projects-header h2 {
     font-size: clamp(1.75rem, 3.5vw, 2.5rem);
   }
 
